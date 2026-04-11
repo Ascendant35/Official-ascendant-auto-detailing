@@ -24,7 +24,7 @@ export default function Header({ lang }) {
         {/* LOGO */}
         <Link href={isFR ? "/fr" : "/en"}>
           <img
-            src="/logo.png"
+  src="/AscendantAutoDetailing.png"
             alt="Ascendant Auto Detailing"
             style={{
               height: "55px",
