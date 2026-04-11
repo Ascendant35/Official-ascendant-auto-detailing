@@ -1,4 +1,5 @@
 import Header from "../../components/Header";
+import Link from "next/link";
 
 export default function TarifsFR() {
   return (
@@ -25,7 +26,7 @@ export default function TarifsFR() {
 
           <p style={{ fontSize: "20px", color: "#d6d6d6", maxWidth: "700px", lineHeight: "1.8" }}>
             Trois niveaux de service conçus pour répondre à différents besoins,
-            que ce soit pour un entretien régulier ou une finition haut de gamme.
+            du simple entretien jusqu’à une finition haut de gamme complète.
           </p>
         </div>
       </section>
@@ -46,7 +47,7 @@ export default function TarifsFR() {
           <h2 style={titleStyle}>Ascendant Care</h2>
 
           <p style={descStyle}>
-            Un service essentiel pour garder votre véhicule propre et bien entretenu.
+            Idéal pour un entretien régulier et garder votre véhicule propre au quotidien.
           </p>
 
           <div style={priceStyle}>
@@ -60,18 +61,23 @@ export default function TarifsFR() {
             <li>Nettoyage intérieur rapide</li>
             <li>Lavage extérieur</li>
             <li>Nettoyage des vitres</li>
-            <li>Nettoyage des surfaces</li>
+            <li>Essuyage des surfaces</li>
+            <li>Finition générale</li>
           </ul>
+
+          <Link href="/fr/reserver" style={buttonStyle}>
+            Réserver
+          </Link>
         </div>
 
-        {/* ELITE (MOST POPULAR) */}
+        {/* ELITE */}
         <div style={{ ...cardStyle, border: "1px solid #d4af37", position: "relative" }}>
           <div style={badgeStyle}>PLUS POPULAIRE</div>
 
           <h2 style={titleStyle}>Ascendant Elite</h2>
 
           <p style={descStyle}>
-            Nettoyage approfondi avec plus de précision et une finition améliorée.
+            Le meilleur choix pour un nettoyage en profondeur avec un résultat visiblement supérieur.
           </p>
 
           <div style={priceStyle}>
@@ -83,11 +89,16 @@ export default function TarifsFR() {
           <ul style={listStyle}>
             <li>Tout inclus dans Care</li>
             <li>Shampoing des sièges</li>
-            <li>Nettoyage en profondeur des tapis</li>
-            <li>Dégraissage des surfaces</li>
+            <li>Nettoyage des tapis</li>
+            <li>Dégraissage complet</li>
+            <li>Zones difficiles</li>
             <li>Lavage extérieur détaillé</li>
             <li>Finition améliorée</li>
           </ul>
+
+          <Link href="/fr/reserver" style={goldButtonStyle}>
+            Réserver
+          </Link>
         </div>
 
         {/* SIGNATURE */}
@@ -95,7 +106,7 @@ export default function TarifsFR() {
           <h2 style={titleStyle}>Ascendant Signature</h2>
 
           <p style={descStyle}>
-            Expérience haut de gamme avec un niveau de détail supérieur.
+            Une expérience premium complète pour un résultat impeccable.
           </p>
 
           <div style={priceStyle}>
@@ -106,12 +117,48 @@ export default function TarifsFR() {
 
           <ul style={listStyle}>
             <li>Tout inclus dans Elite</li>
-            <li>Nettoyage intérieur en profondeur</li>
-            <li>Traitement complet des surfaces</li>
+            <li>Nettoyage en profondeur</li>
+            <li>Traitement complet</li>
             <li>Finition haut de gamme</li>
-            <li>Nettoyage détaillé extérieur</li>
-            <li>Résultat premium</li>
+            <li>Nettoyage extérieur premium</li>
+            <li>Détails minutieux</li>
+            <li>Résultat showroom</li>
           </ul>
+
+          <Link href="/fr/reserver" style={buttonStyle}>
+            Réserver
+          </Link>
+        </div>
+      </section>
+
+      {/* WHY CHOOSE */}
+      <section
+        style={{
+          maxWidth: "1100px",
+          margin: "0 auto",
+          padding: "0 50px 100px",
+          textAlign: "center",
+        }}
+      >
+        <h2 style={{ fontSize: "42px", marginBottom: "30px" }}>
+          Quel forfait choisir?
+        </h2>
+
+        <div style={{ display: "grid", gap: "20px", textAlign: "left" }}>
+          <div style={choiceStyle}>
+            <strong style={{ color: "#d4af37" }}>Ascendant Care:</strong>
+            <p>Parfait pour entretien rapide et régulier.</p>
+          </div>
+
+          <div style={choiceStyle}>
+            <strong style={{ color: "#d4af37" }}>Ascendant Elite:</strong>
+            <p>Le meilleur rapport qualité/prix pour la majorité des clients.</p>
+          </div>
+
+          <div style={choiceStyle}>
+            <strong style={{ color: "#d4af37" }}>Ascendant Signature:</strong>
+            <p>Pour un résultat impeccable et une finition haut de gamme.</p>
+          </div>
         </div>
       </section>
     </div>
@@ -125,6 +172,7 @@ const cardStyle = {
   borderRadius: "24px",
   padding: "30px",
   border: "1px solid rgba(255,255,255,0.05)",
+  transition: "0.3s",
 };
 
 const titleStyle = {
@@ -135,20 +183,18 @@ const titleStyle = {
 const descStyle = {
   color: "#cfcfcf",
   marginBottom: "20px",
-  lineHeight: "1.7",
 };
 
 const priceStyle = {
   color: "#d4af37",
   fontSize: "18px",
   marginBottom: "20px",
-  lineHeight: "1.8",
 };
 
 const listStyle = {
   color: "#c8c8c8",
-  lineHeight: "1.8",
   paddingLeft: "18px",
+  lineHeight: "1.8",
 };
 
 const badgeStyle = {
@@ -158,7 +204,28 @@ const badgeStyle = {
   backgroundColor: "#d4af37",
   color: "#111",
   padding: "6px 12px",
-  fontSize: "12px",
-  fontWeight: "bold",
   borderRadius: "999px",
+  fontWeight: "bold",
+};
+
+const buttonStyle = {
+  display: "inline-block",
+  marginTop: "20px",
+  padding: "12px 24px",
+  borderRadius: "999px",
+  border: "1px solid #d4af37",
+  color: "#fff",
+  textDecoration: "none",
+};
+
+const goldButtonStyle = {
+  ...buttonStyle,
+  backgroundColor: "#d4af37",
+  color: "#111",
+};
+
+const choiceStyle = {
+  backgroundColor: "#111",
+  padding: "20px",
+  borderRadius: "16px",
 };
