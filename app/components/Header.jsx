@@ -15,7 +15,7 @@ export default function Header({ lang }) {
         style={{
           maxWidth: "1400px",
           margin: "0 auto",
-          padding: "20px 40px",
+          padding: "25px 50px",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
@@ -25,9 +25,9 @@ export default function Header({ lang }) {
         <Link href={isFR ? "/fr" : "/en"}>
           <img
             src="/logo.png"
-            alt="logo"
+            alt="Ascendant Auto Detailing"
             style={{
-              height: "50px",
+              height: "55px",
               objectFit: "contain",
             }}
           />
@@ -37,8 +37,9 @@ export default function Header({ lang }) {
         <nav
           style={{
             display: "flex",
-            gap: "35px",
-            fontSize: "16px",
+            gap: "40px",
+            fontSize: "18px",
+            fontWeight: "500",
           }}
         >
           {isFR ? (
@@ -61,13 +62,20 @@ export default function Header({ lang }) {
         </nav>
 
         {/* LANGUAGE SWITCH */}
-        <div style={{ display: "flex", gap: "10px", fontSize: "14px" }}>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "10px",
+            fontSize: "15px",
+          }}
+        >
           <Link
             href="/fr"
             style={{
               color: isFR ? "white" : "#888",
-              fontWeight: isFR ? "bold" : "normal",
               textDecoration: "none",
+              fontWeight: isFR ? "bold" : "normal",
             }}
           >
             FR
@@ -79,8 +87,8 @@ export default function Header({ lang }) {
             href="/en"
             style={{
               color: !isFR ? "white" : "#888",
-              fontWeight: !isFR ? "bold" : "normal",
               textDecoration: "none",
+              fontWeight: !isFR ? "bold" : "normal",
             }}
           >
             EN
