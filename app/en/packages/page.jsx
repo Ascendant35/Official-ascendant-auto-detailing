@@ -98,76 +98,10 @@ export default function TarifsEN() {
 </div>
 
     {/* ===================== */}
-    {/* NEW PACKAGE DEALS SECTION */}
-    {/* ===================== */}
-
-    <div className="mt-20 text-center">
-      <p className="text-sm tracking-[0.25em] text-slate-500">
-        EXCLUSIVE OFFER
-      </p>
-      <h2 className="mt-3 text-3xl md:text-4xl font-semibold">
-        4 Visit Package Deals
-      </h2>
-      <p className="mt-4 text-slate-600 max-w-2xl mx-auto">
-        Designed for clients who want consistent, high-end results year-round.
-      </p>
-    </div>
-
-    <div className="mt-12 grid gap-6 md:grid-cols-3">
-
-      {/* CARE DEAL */}
-      <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-        <h3 className="text-xl font-semibold">Ascendant Care</h3>
-
-        <div className="mt-6 space-y-2 text-sm">
-          <p>Car: $679.99</p>
-          <p>SUV: $779.99</p>
-          <p>Truck / Large SUV: $879.99</p>
-        </div>
-
-        <p className="mt-6 text-xs text-slate-400">
-          4 detailing visits
-        </p>
-      </div>
-
-      {/* ELITE DEAL */}
-      <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-md">
-        <h3 className="text-xl font-semibold">Ascendant Elite</h3>
-
-        <div className="mt-6 space-y-2 text-sm">
-          <p>Car: $999.99</p>
-          <p>SUV: $1089.99</p>
-          <p>Truck / Large SUV: $1239.99</p>
-        </div>
-
-        <p className="mt-6 text-xs text-slate-400">
-          4 premium visits
-        </p>
-      </div>
-
-      {/* SIGNATURE DEAL */}
-      <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-        <h3 className="text-xl font-semibold">Ascendant Signature</h3>
-
-        <div className="mt-6 space-y-2 text-sm">
-          <p>Car: $1349.99</p>
-          <p>SUV: $1449.99</p>
-          <p>Truck / Large SUV: $1499.99</p>
-        </div>
-
-        <p className="mt-6 text-xs text-slate-400">
-          4 signature visits
-        </p>
-      </div>
-
-    </div>
-
-    {/* ===================== */}
     {/* EXTRAS SERVICES (KEEP YOUR EXISTING BELOW THIS) */}
     {/* ===================== */}
 
   </div>
-</section>
       {/* WHY CHOOSE */}
       <section style={whySection}>
         <h2 style={whyTitle}>Which package should you choose?</h2>
