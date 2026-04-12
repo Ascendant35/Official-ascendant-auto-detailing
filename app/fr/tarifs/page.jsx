@@ -7,24 +7,10 @@ export default function TarifsFR() {
       <Header lang="fr" />
 
       {/* HERO */}
-      <section
-        style={{
-          minHeight: "65vh",
-          display: "flex",
-          alignItems: "center",
-          backgroundImage:
-            'linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.8)), url("https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1600&q=80")',
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          borderBottom: "1px solid rgba(212, 175, 55, 0.2)",
-        }}
-      >
-        <div style={{ maxWidth: "1400px", margin: "0 auto", padding: "100px 50px" }}>
-          <h1 style={{ fontSize: "64px", marginBottom: "25px", fontWeight: "600" }}>
-            Nos forfaits haut de gamme
-          </h1>
-
-          <p style={{ fontSize: "20px", color: "#d6d6d6", maxWidth: "750px", lineHeight: "1.9" }}>
+      <section style={heroStyle}>
+        <div style={container}>
+          <h1 style={heroTitle}>Nos forfaits haut de gamme</h1>
+          <p style={heroText}>
             Des services conçus pour maintenir votre véhicule dans un état impeccable,
             avec des options ponctuelles ou des plans d’entretien réguliers.
           </p>
@@ -32,211 +18,219 @@ export default function TarifsFR() {
       </section>
 
       {/* PACKAGES */}
-      <section
-        style={{
-          maxWidth: "1400px",
-          margin: "0 auto",
-          padding: "100px 50px",
-          display: "grid",
-          gridTemplateColumns: "repeat(3, 1fr)",
-          gap: "40px",
-        }}
-      >
+      <section style={gridSection}>
+        
         {/* CARE */}
-        <div style={cardStyle}>
-          <h2 style={titleStyle}>Ascendant Care</h2>
+        <div style={card}>
+          <h2 style={title}>Ascendant Care</h2>
 
-          <p style={descStyle}>
-            Entretien régulier pour garder votre véhicule propre et agréable au quotidien.
+          <p style={desc}>
+            Idéal pour un entretien régulier et garder votre véhicule propre au quotidien.
           </p>
 
-          <div style={priceStyle}>
+          <div style={price}>
             <p>Voiture: 120$</p>
             <p>SUV: 140$</p>
             <p>Camion / Grand SUV: 160$</p>
           </div>
 
-          <div style={subscriptionStyle}>
-            <p>Mensuel (4 visites): -10%</p>
-            <p>Annuel (12 visites): -20%</p>
+          {/* NEW SUBSCRIPTION */}
+          <div style={subscription}>
+            <p style={subTitle}>Options d’entretien</p>
+            <p>Service unique</p>
+            <p>Mensuel (4 visites): <span style={gold}>-10%</span></p>
+            <p>Annuel (12 visites): <span style={gold}>-20%</span></p>
           </div>
 
-          <ul style={listStyle}>
+          <ul style={list}>
             <li>Aspiration complète</li>
             <li>Nettoyage intérieur rapide</li>
             <li>Lavage extérieur</li>
-            <li>Nettoyage des vitres</li>
+            <li>Vitres</li>
             <li>Finition générale</li>
           </ul>
 
-          <Link href="/fr/reserver" style={buttonStyle}>
-            Réserver
-          </Link>
+          <Link href="/fr/reserver" style={btn}>Réserver</Link>
         </div>
 
         {/* ELITE */}
-        <div style={{ ...cardStyle, border: "1px solid #d4af37", transform: "scale(1.05)" }}>
-          <div style={badgeStyle}>PLUS POPULAIRE</div>
+        <div style={{ ...card, border: "1px solid #d4af37", position: "relative", transform: "scale(1.05)" }}>
+          <div style={badge}>PLUS POPULAIRE</div>
 
-          <h2 style={titleStyle}>Ascendant Elite</h2>
+          <h2 style={title}>Ascendant Elite</h2>
 
-          <p style={descStyle}>
+          <p style={desc}>
             Nettoyage approfondi offrant un équilibre parfait entre qualité et valeur.
           </p>
 
-          <div style={priceStyle}>
+          <div style={price}>
             <p>Voiture: 180$</p>
             <p>SUV: 210$</p>
             <p>Camion / Grand SUV: 240$</p>
           </div>
 
-          <div style={subscriptionStyle}>
-            <p>Mensuel (4 visites): -12%</p>
-            <p>Annuel (12 visites): -25%</p>
+          {/* NEW SUBSCRIPTION */}
+          <div style={subscription}>
+            <p style={subTitle}>Options d’entretien</p>
+            <p>Service unique</p>
+            <p>Mensuel (4 visites): <span style={gold}>-12%</span></p>
+            <p>Annuel (12 visites): <span style={gold}>-25%</span></p>
           </div>
 
-          <ul style={listStyle}>
+          <ul style={list}>
             <li>Tout inclus dans Care</li>
-            <li>Shampoing des sièges</li>
-            <li>Nettoyage des tapis</li>
-            <li>Dégraissage complet</li>
-            <li>Lavage extérieur détaillé</li>
-            <li>Finition améliorée</li>
+            <li>Shampoing sièges</li>
+            <li>Nettoyage tapis</li>
+            <li>Dégraissage</li>
+            <li>Extérieur détaillé</li>
+            <li>Finition premium</li>
           </ul>
 
-          <Link href="/fr/reserver" style={goldButtonStyle}>
-            Réserver
-          </Link>
+          <Link href="/fr/reserver" style={goldBtn}>Réserver</Link>
         </div>
 
         {/* SIGNATURE */}
-        <div style={cardStyle}>
-          <h2 style={titleStyle}>Ascendant Signature</h2>
+        <div style={card}>
+          <h2 style={title}>Ascendant Signature</h2>
 
-          <p style={descStyle}>
+          <p style={desc}>
             L’expérience ultime pour un résultat impeccable et une finition showroom.
           </p>
 
-          <div style={priceStyle}>
+          <div style={price}>
             <p>Voiture: 250$</p>
             <p>SUV: 290$</p>
             <p>Camion / Grand SUV: 330$</p>
           </div>
 
-          <div style={subscriptionStyle}>
-            <p>Mensuel (4 visites): -15%</p>
-            <p>Annuel (12 visites): -30%</p>
+          {/* NEW SUBSCRIPTION */}
+          <div style={subscription}>
+            <p style={subTitle}>Options d’entretien</p>
+            <p>Service unique</p>
+            <p>Mensuel (4 visites): <span style={gold}>-15%</span></p>
+            <p>Annuel (12 visites): <span style={gold}>-30%</span></p>
           </div>
 
-          <ul style={listStyle}>
+          <ul style={list}>
             <li>Tout inclus dans Elite</li>
             <li>Nettoyage en profondeur</li>
             <li>Traitement complet</li>
             <li>Finition haut de gamme</li>
             <li>Détails minutieux</li>
-            <li>Résultat showroom</li>
           </ul>
 
-          <Link href="/fr/reserver" style={buttonStyle}>
-            Réserver
-          </Link>
+          <Link href="/fr/reserver" style={btn}>Réserver</Link>
         </div>
       </section>
 
-      {/* DECISION SECTION */}
-      <section style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 50px 120px" }}>
-        <h2 style={{ fontSize: "44px", marginBottom: "40px", textAlign: "center" }}>
-          Quel forfait choisir?
+      {/* EXTRA SERVICES */}
+      <section style={extraSection}>
+        <h2 style={{ fontSize: "40px", marginBottom: "30px", textAlign: "center" }}>
+          Services supplémentaires
         </h2>
 
-        <div style={{ display: "grid", gap: "25px" }}>
-          <div style={choiceStyle}>
-            <strong style={{ color: "#d4af37" }}>Ascendant Care</strong>
-            <p>Idéal pour entretien régulier sans nettoyage intensif.</p>
-          </div>
-
-          <div style={choiceStyle}>
-            <strong style={{ color: "#d4af37" }}>Ascendant Elite</strong>
-            <p>Le meilleur choix pour la majorité des clients.</p>
-          </div>
-
-          <div style={choiceStyle}>
-            <strong style={{ color: "#d4af37" }}>Ascendant Signature</strong>
-            <p>Pour un résultat impeccable et haut de gamme.</p>
-          </div>
+        <div style={extraGrid}>
+          <Extra title="Poils d’animaux" price="À partir de 30$" />
+          <Extra title="Sel / calcium" price="À partir de 25$" />
+          <Extra title="Traitement d’odeur" price="40$ - 80$" />
+          <Extra title="Taches spécifiques" price="À partir de 20$" />
+          <Extra title="Nettoyage moteur" price="50$" />
+          <Extra title="Traitement cuir" price="60$" />
         </div>
       </section>
     </div>
   );
 }
 
-/* STYLES */
+/* EXTRA COMPONENT */
+function Extra({ title, price }) {
+  return (
+    <div style={extraCard}>
+      <h3>{title}</h3>
+      <p style={{ color: "#d4af37" }}>{price}</p>
+    </div>
+  );
+}
 
-const cardStyle = {
+/* SAME STYLES (UNCHANGED + SMALL ADDITIONS) */
+
+const heroStyle = {
+  backgroundImage:
+    'linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.8)), url("https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1600&q=80")',
+};
+
+const container = { maxWidth: "1400px", margin: "0 auto", padding: "100px 50px" };
+const heroTitle = { fontSize: "64px" };
+const heroText = { fontSize: "20px", color: "#ccc", maxWidth: "700px" };
+
+const gridSection = {
+  maxWidth: "1400px",
+  margin: "0 auto",
+  padding: "100px 50px",
+  display: "grid",
+  gridTemplateColumns: "repeat(3,1fr)",
+  gap: "40px",
+};
+
+const card = {
   backgroundColor: "#111",
-  borderRadius: "28px",
   padding: "35px",
+  borderRadius: "28px",
   border: "1px solid rgba(255,255,255,0.05)",
 };
 
-const titleStyle = {
-  fontSize: "28px",
-  marginBottom: "12px",
-};
+const title = { fontSize: "28px" };
+const desc = { color: "#bbb", marginBottom: "20px" };
+const price = { color: "#d4af37", marginBottom: "20px" };
 
-const descStyle = {
-  color: "#cfcfcf",
+const subscription = {
+  backgroundColor: "#0d0d0d",
+  padding: "15px",
+  borderRadius: "12px",
   marginBottom: "20px",
-  lineHeight: "1.8",
 };
 
-const priceStyle = {
-  color: "#d4af37",
-  fontSize: "19px",
-  marginBottom: "15px",
-};
+const subTitle = { color: "#d4af37", marginBottom: "10px" };
+const gold = { color: "#d4af37", fontWeight: "bold" };
 
-const subscriptionStyle = {
-  color: "#aaa",
-  marginBottom: "20px",
-  fontSize: "14px",
-};
+const list = { paddingLeft: "18px", lineHeight: "1.8" };
 
-const listStyle = {
-  color: "#c8c8c8",
-  lineHeight: "1.9",
-  paddingLeft: "18px",
-};
-
-const buttonStyle = {
+const btn = {
   display: "inline-block",
   marginTop: "20px",
-  padding: "14px 26px",
-  borderRadius: "999px",
+  padding: "12px 24px",
   border: "1px solid #d4af37",
+  borderRadius: "999px",
   color: "#fff",
   textDecoration: "none",
 };
 
-const goldButtonStyle = {
-  ...buttonStyle,
-  backgroundColor: "#d4af37",
-  color: "#111",
-};
+const goldBtn = { ...btn, backgroundColor: "#d4af37", color: "#111" };
 
-const badgeStyle = {
+const badge = {
   position: "absolute",
-  top: "-14px",
+  top: "-10px",
   right: "20px",
   backgroundColor: "#d4af37",
   color: "#111",
-  padding: "6px 14px",
+  padding: "6px 12px",
   borderRadius: "999px",
-  fontWeight: "bold",
 };
 
-const choiceStyle = {
+const extraSection = {
+  maxWidth: "1400px",
+  margin: "0 auto",
+  padding: "0 50px 100px",
+};
+
+const extraGrid = {
+  display: "grid",
+  gridTemplateColumns: "repeat(3,1fr)",
+  gap: "20px",
+};
+
+const extraCard = {
   backgroundColor: "#111",
   padding: "25px",
-  borderRadius: "18px",
+  borderRadius: "16px",
 };
