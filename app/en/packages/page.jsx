@@ -1,5 +1,14 @@
 import Header from "../../components/Header";
 import Link from "next/link";
+/* EXTRA COMPONENT */
+function Extra({ title, price }) {
+  return (
+    <div style={extraCard}>
+      <h3>{title}</h3>
+      <p style={{ color: "#d4af37" }}>{price}</p>
+    </div>
+  );
+}
 
 export default function TarifsEN() {
   return (
@@ -139,16 +148,6 @@ export default function TarifsEN() {
           <Extra title="Leather treatment" price="$60" />
         </div>
       </section>
-    </div>
-  );
-}
-
-/* EXTRA COMPONENT */
-function Extra({ title, price }) {
-  return (
-    <div style={extraCard}>
-      <h3>{title}</h3>
-      <p style={{ color: "#d4af37" }}>{price}</p>
     </div>
   );
 }
