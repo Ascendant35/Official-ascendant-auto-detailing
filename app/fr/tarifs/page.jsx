@@ -34,7 +34,6 @@ export default function TarifsFR() {
             <p>Camion / Grand SUV: 160$</p>
           </div>
 
-          {/* NEW SUBSCRIPTION */}
           <div style={subscription}>
             <p style={subTitle}>Options d’entretien</p>
             <p>Service unique</p>
@@ -69,7 +68,6 @@ export default function TarifsFR() {
             <p>Camion / Grand SUV: 240$</p>
           </div>
 
-          {/* NEW SUBSCRIPTION */}
           <div style={subscription}>
             <p style={subTitle}>Options d’entretien</p>
             <p>Service unique</p>
@@ -103,7 +101,6 @@ export default function TarifsFR() {
             <p>Camion / Grand SUV: 330$</p>
           </div>
 
-          {/* NEW SUBSCRIPTION */}
           <div style={subscription}>
             <p style={subTitle}>Options d’entretien</p>
             <p>Service unique</p>
@@ -120,6 +117,28 @@ export default function TarifsFR() {
           </ul>
 
           <Link href="/fr/reserver" style={btn}>Réserver</Link>
+        </div>
+      </section>
+
+      {/* WHY CHOOSE */}
+      <section style={whySection}>
+        <h2 style={whyTitle}>Quel forfait choisir?</h2>
+
+        <div style={whyGrid}>
+          <div style={choiceStyle}>
+            <strong style={gold}>Ascendant Care</strong>
+            <p>Parfait pour un entretien régulier.</p>
+          </div>
+
+          <div style={choiceStyle}>
+            <strong style={gold}>Ascendant Elite</strong>
+            <p>Le meilleur choix pour la majorité des clients.</p>
+          </div>
+
+          <div style={choiceStyle}>
+            <strong style={gold}>Ascendant Signature</strong>
+            <p>Pour un résultat impeccable et haut de gamme.</p>
+          </div>
         </div>
       </section>
 
@@ -152,11 +171,16 @@ function Extra({ title, price }) {
   );
 }
 
-/* SAME STYLES (UNCHANGED + SMALL ADDITIONS) */
+/* STYLES */
 
 const heroStyle = {
+  minHeight: "65vh",
+  display: "flex",
+  alignItems: "center",
   backgroundImage:
-    'linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.8)), url("https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1600&q=80")',
+    'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url("https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=1600&q=80")',
+  backgroundSize: "cover",
+  backgroundPosition: "center",
 };
 
 const container = { maxWidth: "1400px", margin: "0 auto", padding: "100px 50px" };
@@ -215,6 +239,27 @@ const badge = {
   color: "#111",
   padding: "6px 12px",
   borderRadius: "999px",
+};
+
+const whySection = {
+  maxWidth: "1100px",
+  margin: "0 auto",
+  padding: "0 50px 100px",
+  textAlign: "center",
+};
+
+const whyTitle = { fontSize: "44px", marginBottom: "40px" };
+
+const whyGrid = {
+  display: "grid",
+  gap: "25px",
+  textAlign: "left",
+};
+
+const choiceStyle = {
+  backgroundColor: "#111",
+  padding: "25px",
+  borderRadius: "18px",
 };
 
 const extraSection = {
