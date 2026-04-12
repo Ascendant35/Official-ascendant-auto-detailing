@@ -28,7 +28,7 @@ export default function TarifsFR() {
           </p>
 
           <div style={price}>
-            <p>Voiture: $189.99</p>
+            <p>Berline: $189.99</p>
             <p>SUV: $209.99</p>
             <p>Camion / Grand SUV: $249.99</p>
           </div>
@@ -63,7 +63,7 @@ export default function TarifsFR() {
           </p>
 
           <div style={price}>
-            <p>Voiture: $289.99</p>
+            <p>Berline: $289.99</p>
             <p>SUV: $309.99</p>
             <p>Camion / Grand SUV: $349.99</p>
           </div>
@@ -97,7 +97,7 @@ export default function TarifsFR() {
           </p>
 
           <div style={price}>
-            <p>Voiture: $389.99</p>
+            <p>Berline: $389.99</p>
             <p>SUV: $409.99</p>
             <p>Camion / Grand SUV: $449.99</p>
           </div>
