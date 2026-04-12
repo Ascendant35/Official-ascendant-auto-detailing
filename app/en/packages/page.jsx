@@ -173,5 +173,113 @@ function Extra({ title, price }) {
     </div>
   );
 }
+/* STYLES */
+
+const heroStyle = {
+  minHeight: "65vh",
+  display: "flex",
+  alignItems: "center",
+  backgroundImage:
+    'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url("https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=1600&q=80")',
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+};
+
+const container = { maxWidth: "1400px", margin: "0 auto", padding: "100px 50px" };
+const heroTitle = { fontSize: "64px" };
+const heroText = { fontSize: "20px", color: "#ccc", maxWidth: "700px" };
+
+const gridSection = {
+  maxWidth: "1400px",
+  margin: "0 auto",
+  padding: "100px 50px",
+  display: "grid",
+  gridTemplateColumns: "repeat(3,1fr)",
+  gap: "40px",
+};
+
+const card = {
+  backgroundColor: "#111",
+  padding: "35px",
+  borderRadius: "28px",
+  border: "1px solid rgba(255,255,255,0.05)",
+};
+
+const title = { fontSize: "28px" };
+const desc = { color: "#bbb", marginBottom: "20px" };
+const price = { color: "#d4af37", marginBottom: "20px" };
+
+const subscription = {
+  backgroundColor: "#0d0d0d",
+  padding: "15px",
+  borderRadius: "12px",
+  marginBottom: "20px",
+};
+
+const subTitle = { color: "#d4af37", marginBottom: "10px" };
+const gold = { color: "#d4af37", fontWeight: "bold" };
+
+const list = { paddingLeft: "18px", lineHeight: "1.8" };
+
+const btn = {
+  display: "inline-block",
+  marginTop: "20px",
+  padding: "12px 24px",
+  border: "1px solid #d4af37",
+  borderRadius: "999px",
+  color: "#fff",
+  textDecoration: "none",
+};
+
+const goldBtn = { ...btn, backgroundColor: "#d4af37", color: "#111" };
+
+const badge = {
+  position: "absolute",
+  top: "-10px",
+  right: "20px",
+  backgroundColor: "#d4af37",
+  color: "#111",
+  padding: "6px 12px",
+  borderRadius: "999px",
+};
+
+const whySection = {
+  maxWidth: "1100px",
+  margin: "0 auto",
+  padding: "0 50px 100px",
+  textAlign: "center",
+};
+
+const whyTitle = { fontSize: "44px", marginBottom: "40px" };
+
+const whyGrid = {
+  display: "grid",
+  gap: "25px",
+  textAlign: "left",
+};
+
+const choiceStyle = {
+  backgroundColor: "#111",
+  padding: "25px",
+  borderRadius: "18px",
+};
+
+const extraSection = {
+  maxWidth: "1400px",
+  margin: "0 auto",
+  padding: "0 50px 100px",
+};
+
+const extraGrid = {
+  display: "grid",
+  gridTemplateColumns: "repeat(3,1fr)",
+  gap: "20px",
+};
+
+const extraCard = {
+  backgroundColor: "#111",
+  padding: "25px",
+  borderRadius: "16px",
+};
 
 /* STYLES (UNCHANGED) */
