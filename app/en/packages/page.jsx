@@ -28,7 +28,7 @@ export default function TarifsFR() {
           </p>
 
           <div style={price}>
-            <p>Car: $189.99</p>
+            <p>Sedan: $189.99</p>
             <p>SUV: $209.99</p>
             <p>Truck / Large SUV: $249.99</p>
           </div>
@@ -37,7 +37,7 @@ export default function TarifsFR() {
           <div style={subscription}>
             <p style={subTitle}>4 Visit Package</p>
             <p>Take advantage of our bundled 4-visit package, usable whenever you want.</p>
-            <p>Sedanr: $669.99</p>
+            <p>Sedan: $669.99</p>
             <p>SUV: $739.99</p>
             <p>Truck / Large SUV: $859.99</p>
           </div>
@@ -63,7 +63,7 @@ export default function TarifsFR() {
           </p>
 
           <div style={price}>
-            <p>Car: $289.99</p>
+            <p>Sedan: $289.99</p>
             <p>SUV: $309.99</p>
             <p>Truck / Large SUV: $349.99</p>
           </div>
@@ -72,7 +72,7 @@ export default function TarifsFR() {
           <div style={subscription}>
             <p style={subTitle}>4 Visit Package</p>
             <p>Take advantage of our bundled 4-visit package, usable whenever you want.</p>
-            <p>Car: $1049.99</p>
+            <p>Sedan: $1049.99</p>
             <p>SUV: $1129.99</p>
             <p>Truck / Large SUV: $1249.99</p>
           </div>
@@ -97,7 +97,7 @@ export default function TarifsFR() {
           </p>
 
           <div style={price}>
-            <p>Car: $389.99</p>
+            <p>Sedan: $389.99</p>
             <p>SUV: $409.99</p>
             <p>Truck / Large SUV: $449.99</p>
           </div>
@@ -106,7 +106,7 @@ export default function TarifsFR() {
           <div style={subscription}>
             <p style={subTitle}>4 Visit Package</p>
             <p>Take advantage of our bundled 4-visit package, usable whenever you want.</p>
-            <p>Car: $1399.99</p>
+            <p>Sedan: $1399.99</p>
             <p>SUV: $1499.99</p>
             <p>Truck / Large SUV: $1599.99</p>
           </div>
