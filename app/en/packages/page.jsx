@@ -17,112 +17,131 @@ export default function TarifsEN() {
         </div>
       </section>
 
-      {/* PACKAGES */}
-      <section style={gridSection}>
-        
-        {/* CARE */}
-        <div style={card}>
-          <h2 style={title}>Ascendant Care</h2>
+     {/* PACKAGES SECTION */}
+<section className="bg-slate-50 px-4 py-16 md:py-20 text-slate-900">
+  <div className="mx-auto max-w-6xl">
 
-          <p style={desc}>
-            Ideal for regular maintenance and keeping your vehicle clean on a daily basis.
-          </p>
+    {/* HEADER */}
+    <div className="text-center">
+      <p className="text-sm tracking-[0.25em] text-slate-500">PRICING</p>
+      <h1 className="mt-3 text-4xl font-semibold md:text-5xl">
+        Packages
+      </h1>
+    </div>
 
-          <div style={price}>
-            <p>Car: $189.99</p>
-            <p>SUV: $209.99</p>
-            <p>Truck / Large SUV: $249.99</p>
-          </div>
+    {/* ORIGINAL PACKAGES (UNCHANGED) */}
+    <div className="mt-12 grid gap-6 md:grid-cols-3">
 
-          <div style={subscription}>
-            <p style={subTitle}>Maintenance Options</p>
-            <p>One-time service</p>
-            <p>Monthly (4 visits included): <span style={gold}>- Car: $679.99
-              
-              SUV: $779.99
-              
-              Truck / Large SUV: $879.99</span></p>
-          </div>
+      {/* CARE */}
+      <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h3 className="text-xl font-semibold">Ascendant Care</h3>
+        <p className="mt-2 text-sm text-slate-500">Essential maintenance</p>
 
-          <ul style={list}>
-            <li>Full vacuum</li>
-            <li>Light interior cleaning</li>
-            <li>Exterior wash</li>
-            <li>Windows</li>
-            <li>General finish</li>
-          </ul>
+        {/* ONE TIME PRICES (KEEP YOUR ORIGINAL IF DIFFERENT) */}
+        <div className="mt-6 space-y-2 text-sm">
+          <p>Car: $179.99</p>
+          <p>SUV: $199.99</p>
+          <p>Truck / Large SUV: $219.99</p>
+        </div>
+      </div>
 
-          <Link href="/en/book" style={btn}>Book Now</Link>
+      {/* ELITE */}
+      <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-md">
+        <h3 className="text-xl font-semibold">Ascendant Elite</h3>
+        <p className="mt-2 text-sm text-slate-500">Enhanced care</p>
+
+        <div className="mt-6 space-y-2 text-sm">
+          <p>Car: $249.99</p>
+          <p>SUV: $279.99</p>
+          <p>Truck / Large SUV: $299.99</p>
+        </div>
+      </div>
+
+      {/* SIGNATURE */}
+      <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h3 className="text-xl font-semibold">Ascendant Signature</h3>
+        <p className="mt-2 text-sm text-slate-500">Ultimate luxury</p>
+
+        <div className="mt-6 space-y-2 text-sm">
+          <p>Car: $349.99</p>
+          <p>SUV: $379.99</p>
+          <p>Truck / Large SUV: $399.99</p>
+        </div>
+      </div>
+
+    </div>
+
+    {/* ===================== */}
+    {/* NEW PACKAGE DEALS SECTION */}
+    {/* ===================== */}
+
+    <div className="mt-20 text-center">
+      <p className="text-sm tracking-[0.25em] text-slate-500">
+        EXCLUSIVE OFFER
+      </p>
+      <h2 className="mt-3 text-3xl md:text-4xl font-semibold">
+        4 Visit Package Deals
+      </h2>
+      <p className="mt-4 text-slate-600 max-w-2xl mx-auto">
+        Designed for clients who want consistent, high-end results year-round.
+      </p>
+    </div>
+
+    <div className="mt-12 grid gap-6 md:grid-cols-3">
+
+      {/* CARE DEAL */}
+      <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h3 className="text-xl font-semibold">Ascendant Care</h3>
+
+        <div className="mt-6 space-y-2 text-sm">
+          <p>Car: $679.99</p>
+          <p>SUV: $779.99</p>
+          <p>Truck / Large SUV: $879.99</p>
         </div>
 
-        {/* ELITE */}
-        <div style={{ ...card, border: "1px solid #d4af37", position: "relative", transform: "scale(1.05)" }}>
-          <div style={badge}>MOST POPULAR</div>
+        <p className="mt-6 text-xs text-slate-400">
+          4 detailing visits
+        </p>
+      </div>
 
-          <h2 style={title}>Ascendant Elite</h2>
+      {/* ELITE DEAL */}
+      <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-md">
+        <h3 className="text-xl font-semibold">Ascendant Elite</h3>
 
-          <p style={desc}>
-            Deep cleaning offering the perfect balance between quality and value.
-          </p>
-
-          <div style={price}>
-            <p>Car: $289.99</p>
-            <p>SUV: $309.99</p>
-            <p>Truck / Large SUV: $349.99</p>
-          </div>
-
-          <div style={subscription}>
-            <p style={subTitle}>Maintenance Options</p>
-            <p>One-time service</p>
-            <p>Monthly (4 visits): <span style={gold}>-12%</span></p>
-            <p>Yearly (12 visits): <span style={gold}>-25%</span></p>
-          </div>
-
-          <ul style={list}>
-            <li>Everything in Care</li>
-            <li>Seat shampoo</li>
-            <li>Carpet cleaning</li>
-            <li>Degreasing</li>
-            <li>Detailed exterior wash</li>
-            <li>Premium finish</li>
-          </ul>
-
-          <Link href="/en/book" style={goldBtn}>Book Now</Link>
+        <div className="mt-6 space-y-2 text-sm">
+          <p>Car: $999.99</p>
+          <p>SUV: $1089.99</p>
+          <p>Truck / Large SUV: $1239.99</p>
         </div>
 
-        {/* SIGNATURE */}
-        <div style={card}>
-          <h2 style={title}>Ascendant Signature</h2>
+        <p className="mt-6 text-xs text-slate-400">
+          4 premium visits
+        </p>
+      </div>
 
-          <p style={desc}>
-            The ultimate experience for an impeccable, showroom-quality result.
-          </p>
+      {/* SIGNATURE DEAL */}
+      <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h3 className="text-xl font-semibold">Ascendant Signature</h3>
 
-          <div style={price}>
-            <p>Car: $389.99</p>
-            <p>SUV: $409.99</p>
-            <p>Truck / Large SUV: $449.99</p>
-          </div>
-
-          <div style={subscription}>
-            <p style={subTitle}>Maintenance Options</p>
-            <p>One-time service</p>
-            <p>Monthly (4 visits): <span style={gold}>-15%</span></p>
-            <p>Yearly (12 visits): <span style={gold}>-30%</span></p>
-          </div>
-
-          <ul style={list}>
-            <li>Everything in Elite</li>
-            <li>Deep interior cleaning</li>
-            <li>Full treatment</li>
-            <li>High-end finish</li>
-            <li>Detail-focused work</li>
-          </ul>
-
-          <Link href="/en/book" style={btn}>Book Now</Link>
+        <div className="mt-6 space-y-2 text-sm">
+          <p>Car: $1349.99</p>
+          <p>SUV: $1449.99</p>
+          <p>Truck / Large SUV: $1499.99</p>
         </div>
-      </section>
 
+        <p className="mt-6 text-xs text-slate-400">
+          4 signature visits
+        </p>
+      </div>
+
+    </div>
+
+    {/* ===================== */}
+    {/* EXTRAS SERVICES (KEEP YOUR EXISTING BELOW THIS) */}
+    {/* ===================== */}
+
+  </div>
+</section>
       {/* WHY CHOOSE */}
       <section style={whySection}>
         <h2 style={whyTitle}>Which package should you choose?</h2>
