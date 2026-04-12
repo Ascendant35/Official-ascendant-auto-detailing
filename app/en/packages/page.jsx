@@ -37,7 +37,9 @@ export default function TarifsEN() {
           <div style={subscription}>
             <p style={subTitle}>Maintenance Options</p>
             <p>One-time service</p>
-            <p>Monthly (4 visits): <span style={gold}>-$679.99/$779.99/$879.99</span></p>
+            <p>Monthly (4 visits included): <span style={gold}>- Car: $679.99
+              SUV: $779.99
+              Truck / Large SUV: $879.99</span></p>
           </div>
 
           <ul style={list}>
