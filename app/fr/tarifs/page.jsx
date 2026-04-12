@@ -23,7 +23,6 @@ export default function TarifsFR() {
         {/* CARE */}
         <div style={card}>
           <h2 style={title}>Ascendant Care</h2>
-
           <p style={desc}>
             Idéal pour un entretien régulier et garder votre véhicule propre au quotidien.
           </p>
@@ -34,12 +33,10 @@ export default function TarifsFR() {
             <p>Camion / Grand SUV: $249.99</p>
           </div>
 
-          {/* ✅ NEW 4 VISIT SECTION */}
+          {/* 4 VISIT */}
           <div style={subscription}>
             <p style={subTitle}>Forfait 4 visites</p>
-            <p>
-              Profitez de notre forfait groupé de 4 visites, utilisables quand vous le souhaitez.
-            </p>
+            <p>Profitez de notre forfait groupé de 4 visites, utilisables quand vous le souhaitez.</p>
             <p>Voiture: ?</p>
             <p>SUV: ?</p>
             <p>Camion / Grand SUV: ?</p>
@@ -61,7 +58,6 @@ export default function TarifsFR() {
           <div style={badge}>PLUS POPULAIRE</div>
 
           <h2 style={title}>Ascendant Elite</h2>
-
           <p style={desc}>
             Nettoyage approfondi offrant un équilibre parfait entre qualité et valeur.
           </p>
@@ -72,12 +68,10 @@ export default function TarifsFR() {
             <p>Camion / Grand SUV: $349.99</p>
           </div>
 
-          {/* ✅ NEW 4 VISIT SECTION */}
+          {/* 4 VISIT */}
           <div style={subscription}>
             <p style={subTitle}>Forfait 4 visites</p>
-            <p>
-              Profitez de notre forfait groupé de 4 visites, utilisables quand vous le souhaitez.
-            </p>
+            <p>Profitez de notre forfait groupé de 4 visites, utilisables quand vous le souhaitez.</p>
             <p>Voiture: ?</p>
             <p>SUV: ?</p>
             <p>Camion / Grand SUV: ?</p>
@@ -98,7 +92,6 @@ export default function TarifsFR() {
         {/* SIGNATURE */}
         <div style={card}>
           <h2 style={title}>Ascendant Signature</h2>
-
           <p style={desc}>
             L’expérience ultime pour un résultat impeccable et une finition showroom.
           </p>
@@ -109,12 +102,10 @@ export default function TarifsFR() {
             <p>Camion / Grand SUV: $449.99</p>
           </div>
 
-          {/* ✅ NEW 4 VISIT SECTION */}
+          {/* 4 VISIT */}
           <div style={subscription}>
             <p style={subTitle}>Forfait 4 visites</p>
-            <p>
-              Profitez de notre forfait groupé de 4 visites, utilisables quand vous le souhaitez.
-            </p>
+            <p>Profitez de notre forfait groupé de 4 visites, utilisables quand vous le souhaitez.</p>
             <p>Voiture: ?</p>
             <p>SUV: ?</p>
             <p>Camion / Grand SUV: ?</p>
@@ -171,8 +162,19 @@ export default function TarifsFR() {
       </section>
     </div>
   );
-/* STYLES */
+}
 
+/* EXTRA COMPONENT */
+function Extra({ title, price }) {
+  return (
+    <div style={extraCard}>
+      <h3>{title}</h3>
+      <p style={{ color: "#d4af37" }}>{price}</p>
+    </div>
+  );
+}
+
+/* STYLES */
 const heroStyle = {
   minHeight: "65vh",
   display: "flex",
