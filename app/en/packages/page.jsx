@@ -34,42 +34,68 @@ export default function TarifsEN() {
 
       {/* CARE */}
       <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-        <h3 className="text-xl font-semibold">Ascendant Care</h3>
-        <p className="mt-2 text-sm text-slate-500">Essential maintenance</p>
+  <h3 className="text-xl font-semibold">Ascendant Care</h3>
+  <p className="mt-2 text-sm text-slate-500">Essential maintenance</p>
 
-        {/* ONE TIME PRICES (KEEP YOUR ORIGINAL IF DIFFERENT) */}
-        <div className="mt-6 space-y-2 text-sm">
-          <p>Car: $179.99</p>
-          <p>SUV: $199.99</p>
-          <p>Truck / Large SUV: $219.99</p>
-        </div>
-      </div>
+  {/* ONE TIME */}
+  <div className="mt-6 space-y-2 text-sm">
+    <p className="font-medium">One-Time Service</p>
+    <p>Car: $179.99</p>
+    <p>SUV: $199.99</p>
+    <p>Truck / Large SUV: $219.99</p>
+  </div>
+
+  {/* 4 VISIT DEAL */}
+  <div className="mt-6 border-t pt-4 space-y-2 text-sm">
+    <p className="font-medium text-slate-800">4 Visit Package</p>
+    <p>Car: $679.99</p>
+    <p>SUV: $779.99</p>
+    <p>Truck / Large SUV: $879.99</p>
+  </div>
+</div>
 
       {/* ELITE */}
       <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-md">
-        <h3 className="text-xl font-semibold">Ascendant Elite</h3>
-        <p className="mt-2 text-sm text-slate-500">Enhanced care</p>
+  <h3 className="text-xl font-semibold">Ascendant Elite</h3>
+  <p className="mt-2 text-sm text-slate-500">Enhanced care</p>
 
-        <div className="mt-6 space-y-2 text-sm">
-          <p>Car: $249.99</p>
-          <p>SUV: $279.99</p>
-          <p>Truck / Large SUV: $299.99</p>
-        </div>
-      </div>
+  {/* ONE TIME */}
+  <div className="mt-6 space-y-2 text-sm">
+    <p className="font-medium">One-Time Service</p>
+    <p>Car: $249.99</p>
+    <p>SUV: $279.99</p>
+    <p>Truck / Large SUV: $299.99</p>
+  </div>
 
+  {/* 4 VISIT DEAL */}
+  <div className="mt-6 border-t pt-4 space-y-2 text-sm">
+    <p className="font-medium text-slate-800">4 Visit Package</p>
+    <p>Car: $999.99</p>
+    <p>SUV: $1089.99</p>
+    <p>Truck / Large SUV: $1239.99</p>
+  </div>
+</div>
       {/* SIGNATURE */}
-      <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-        <h3 className="text-xl font-semibold">Ascendant Signature</h3>
-        <p className="mt-2 text-sm text-slate-500">Ultimate luxury</p>
+     <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+  <h3 className="text-xl font-semibold">Ascendant Signature</h3>
+  <p className="mt-2 text-sm text-slate-500">Ultimate luxury</p>
 
-        <div className="mt-6 space-y-2 text-sm">
-          <p>Car: $349.99</p>
-          <p>SUV: $379.99</p>
-          <p>Truck / Large SUV: $399.99</p>
-        </div>
-      </div>
+  {/* ONE TIME */}
+  <div className="mt-6 space-y-2 text-sm">
+    <p className="font-medium">One-Time Service</p>
+    <p>Car: $349.99</p>
+    <p>SUV: $379.99</p>
+    <p>Truck / Large SUV: $399.99</p>
+  </div>
 
-    </div>
+  {/* 4 VISIT DEAL */}
+  <div className="mt-6 border-t pt-4 space-y-2 text-sm">
+    <p className="font-medium text-slate-800">4 Visit Package</p>
+    <p>Car: $1349.99</p>
+    <p>SUV: $1449.99</p>
+    <p>Truck / Large SUV: $1499.99</p>
+  </div>
+</div>
 
     {/* ===================== */}
     {/* NEW PACKAGE DEALS SECTION */}
