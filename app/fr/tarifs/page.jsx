@@ -37,9 +37,9 @@ export default function TarifsFR() {
           <div style={subscription}>
             <p style={subTitle}>Forfait 4 visites</p>
             <p>Profitez de notre forfait groupé de 4 visites, utilisables quand vous le souhaitez.</p>
-            <p>Voiture: ?</p>
-            <p>SUV: ?</p>
-            <p>Camion / Grand SUV: ?</p>
+            <p>Berline: $669.99</p>
+            <p>SUV: $739.99</p>
+            <p>Camion / Grand SUV: $859.99</p>
           </div>
 
           <ul style={list}>
@@ -72,9 +72,9 @@ export default function TarifsFR() {
           <div style={subscription}>
             <p style={subTitle}>Forfait 4 visites</p>
             <p>Profitez de notre forfait groupé de 4 visites, utilisables quand vous le souhaitez.</p>
-            <p>Voiture: ?</p>
-            <p>SUV: ?</p>
-            <p>Camion / Grand SUV: ?</p>
+            <p>Berline: $1049.99</p>
+            <p>SUV: $1129.99</p>
+            <p>Camion / Grand SUV: $1249.99</p>
           </div>
 
           <ul style={list}>
@@ -106,9 +106,9 @@ export default function TarifsFR() {
           <div style={subscription}>
             <p style={subTitle}>Forfait 4 visites</p>
             <p>Profitez de notre forfait groupé de 4 visites, utilisables quand vous le souhaitez.</p>
-            <p>Voiture: ?</p>
-            <p>SUV: ?</p>
-            <p>Camion / Grand SUV: ?</p>
+            <p>Berline: $1399.99</p>
+            <p>SUV: $1499.99</p>
+            <p>Camion / Grand SUV: $1599.99</p>
           </div>
 
           <ul style={list}>
