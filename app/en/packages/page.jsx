@@ -282,3 +282,68 @@ const extraCard = {
   padding: "25px",
   borderRadius: "16px",
 };
+{/* PACKAGE DEALS SECTION */}
+<section className="mt-20 px-4 md:px-8">
+  <div className="max-w-6xl mx-auto text-center">
+    <p className="text-sm tracking-[0.25em] text-slate-500">EXCLUSIVE OFFERS</p>
+    <h2 className="mt-3 text-3xl md:text-4xl font-semibold text-slate-900">
+      4 Visit Package Deals
+    </h2>
+    <p className="mt-4 text-slate-600 max-w-2xl mx-auto">
+      Maintain your vehicle at its peak condition with our 4 visit packages.
+      Designed for clients who demand consistency, quality, and long-term care.
+    </p>
+  </div>
+
+  <div className="mt-12 grid gap-6 md:grid-cols-3 max-w-6xl mx-auto">
+    
+    {/* ASCENDANT CARE */}
+    <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <h3 className="text-xl font-semibold text-slate-900">Ascendant Care</h3>
+      <p className="mt-2 text-sm text-slate-500">Essential maintenance package</p>
+
+      <div className="mt-6 space-y-2 text-slate-700">
+        <p>Car: <span className="font-medium">$679.99</span></p>
+        <p>SUV: <span className="font-medium">$779.99</span></p>
+        <p>Truck / Large SUV: <span className="font-medium">$879.99</span></p>
+      </div>
+
+      <p className="mt-6 text-xs text-slate-400">
+        4 professional detailing visits
+      </p>
+    </div>
+
+    {/* ASCENDANT ELITE */}
+    <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-md">
+      <h3 className="text-xl font-semibold text-slate-900">Ascendant Elite</h3>
+      <p className="mt-2 text-sm text-slate-500">Enhanced interior & exterior care</p>
+
+      <div className="mt-6 space-y-2 text-slate-700">
+        <p>Car: <span className="font-medium">$999.99</span></p>
+        <p>SUV: <span className="font-medium">$1089.99</span></p>
+        <p>Truck / Large SUV: <span className="font-medium">$1239.99</span></p>
+      </div>
+
+      <p className="mt-6 text-xs text-slate-400">
+        4 premium detailing visits
+      </p>
+    </div>
+
+    {/* ASCENDANT SIGNATURE */}
+    <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <h3 className="text-xl font-semibold text-slate-900">Ascendant Signature</h3>
+      <p className="mt-2 text-sm text-slate-500">Ultimate luxury detailing experience</p>
+
+      <div className="mt-6 space-y-2 text-slate-700">
+        <p>Car: <span className="font-medium">$1349.99</span></p>
+        <p>SUV: <span className="font-medium">$1449.99</span></p>
+        <p>Truck / Large SUV: <span className="font-medium">$1499.99</span></p>
+      </div>
+
+      <p className="mt-6 text-xs text-slate-400">
+        4 signature-level detailing visits
+      </p>
+    </div>
+
+  </div>
+</section>
