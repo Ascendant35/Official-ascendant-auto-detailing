@@ -29,9 +29,9 @@ export default function TarifsEN() {
           </p>
 
           <div style={price}>
-            <p>Car: $120</p>
-            <p>SUV: $140</p>
-            <p>Truck / Large SUV: $160</p>
+            <p>Car: $189.99</p>
+            <p>SUV: $209.99</p>
+            <p>Truck / Large SUV: $249.99</p>
           </div>
 
           <div style={subscription}>
@@ -63,9 +63,9 @@ export default function TarifsEN() {
           </p>
 
           <div style={price}>
-            <p>Car: $180</p>
-            <p>SUV: $210</p>
-            <p>Truck / Large SUV: $240</p>
+            <p>Car: $289.99</p>
+            <p>SUV: $309.99.99</p>
+            <p>Truck / Large SUV: $349.99</p>
           </div>
 
           <div style={subscription}>
@@ -96,9 +96,9 @@ export default function TarifsEN() {
           </p>
 
           <div style={price}>
-            <p>Car: $250</p>
-            <p>SUV: $290</p>
-            <p>Truck / Large SUV: $330</p>
+            <p>Car: $389.99</p>
+            <p>SUV: $409.99</p>
+            <p>Truck / Large SUV: $449.99</p>
           </div>
 
           <div style={subscription}>
