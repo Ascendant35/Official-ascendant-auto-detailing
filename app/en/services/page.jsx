@@ -19,13 +19,12 @@ export default function Services() {
       {/* SERVICES GRID */}
       <section style={gridSection}>
 
-        <Service img="/images/exterior.jpg" title="Exterior Detailing" desc="A refined exterior treatment restoring gloss, depth, and a flawless finish." />
-        <Service img="/images/interior.jpg" title="Interior Detailing" desc="A deep interior reset focused on cleanliness, comfort, and luxury feel." />
-        <Service img="/images/full.jpg" title="Full Detailing" desc="Complete interior and exterior transformation for a showroom-quality result." />
-        <Service img="/images/headlight.jpg" title="Headlight Restoration" desc="Restore clarity and brightness for improved visibility and aesthetics." />
-        <Service img="/images/engine.jpg" title="Engine Bay Cleaning" desc="Careful detailing that revitalizes and enhances your engine compartment." />
-        <Service img="/images/protection.jpg" title="Paint Protection" desc="Maintain deep gloss and preserve your vehicle’s finish over time." />
-
+        <Service img="/exterior.jpg" />
+<Service img="/interior.jpg" />
+<Service img="/full.jpg" />
+<Service img="/headlight.jpg" />
+<Service img="/engine.jpg" />
+<Service img="/protection.jpg" />
       </section>
 
       {/* PREMIUM EXTRA SERVICES BOX */}
