@@ -7,7 +7,7 @@ export default function Services() {
     <div style={{ backgroundColor: "#0a0a0a", color: "#f5f5f5", minHeight: "100vh" }}>
       <Header lang="en" />
 
-      {/* HERO (FIXED ZOOM + PREMIUM) */}
+      {/* HERO (YOUR IMAGE FIXED) */}
       <section style={heroStyle}>
         <div style={container}>
           <h1 style={heroTitle}>Our Premium Services</h1>
@@ -19,14 +19,12 @@ export default function Services() {
 
       {/* SERVICES GRID */}
       <section style={gridSection}>
-
         <Service img="/exterior.jpg" title="Exterior Detailing" desc="A refined exterior treatment restoring gloss, depth, and a flawless finish." />
         <Service img="/interior.jpg" title="Interior Detailing" desc="A deep interior reset focused on cleanliness, comfort, and a truly luxurious feel." />
         <Service img="/full.jpg" title="Full Detailing" desc="A complete transformation delivering a showroom-level finish inside and out." />
         <Service img="/headlight.jpg" title="Headlight Restoration" desc="Restore clarity and brightness for enhanced visibility and a sharper appearance." />
         <Service img="/engine.jpg" title="Engine Bay Cleaning" desc="Careful detailing that revitalizes and elevates your engine compartment." />
         <Service img="/protection.jpg" title="Paint Protection" desc="Preserve your vehicle’s finish with long-lasting care and deep gloss retention." />
-
       </section>
 
       {/* PREMIUM CTA */}
@@ -39,12 +37,11 @@ export default function Services() {
           </p>
         </div>
       </section>
-
     </div>
   );
 }
 
-/* COMPONENT WITH HOVER EFFECT */
+/* COMPONENT */
 function Service({ img, title, desc }) {
   return (
     <div
@@ -79,16 +76,22 @@ function Service({ img, title, desc }) {
   );
 }
 
-/* HERO FIXED */
+/* HERO (YOUR IMAGE + FIXED FRAMING) */
 const heroStyle = {
   minHeight: "50vh",
   display: "flex",
   alignItems: "center",
   backgroundImage:
-    'linear-gradient(rgba(0,0,0,0.65), rgba(212,175,55,0.2)), url("https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=1600&q=80")',
+    'linear-gradient(rgba(0,0,0,0.65), rgba(212,175,55,0.25)), url("/hero.jpg")',
   backgroundSize: "cover",
-  backgroundPosition: "center 30%", // 🔥 THIS FIXES ZOOM
+  backgroundPosition: "center 40%", // 🔥 THIS FIXES THE ZOOM (shows full car)
 };
+
+/* IMPORTANT:
+👉 Put your Mercedes + yacht image inside:
+
+public/hero.jpg
+*/
 
 const container = {
   maxWidth: "1400px",
