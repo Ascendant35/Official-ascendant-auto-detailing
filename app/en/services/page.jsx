@@ -7,7 +7,7 @@ export default function Services() {
     <div style={{ backgroundColor: "#0a0a0a", color: "#f5f5f5", minHeight: "100vh" }}>
       <Header lang="en" />
 
-      {/* HERO (YOUR IMAGE FIXED) */}
+      {/* HERO (FIXED IMAGE — SAME ONE, BETTER FRAMING) */}
       <section style={heroStyle}>
         <div style={container}>
           <h1 style={heroTitle}>Our Premium Services</h1>
@@ -41,7 +41,7 @@ export default function Services() {
   );
 }
 
-/* COMPONENT */
+/* SERVICE CARD */
 function Service({ img, title, desc }) {
   return (
     <div
@@ -76,22 +76,16 @@ function Service({ img, title, desc }) {
   );
 }
 
-/* HERO (YOUR IMAGE + FIXED FRAMING) */
+/* HERO (FIXED ZOOM HERE) */
 const heroStyle = {
   minHeight: "50vh",
   display: "flex",
   alignItems: "center",
   backgroundImage:
-    'linear-gradient(rgba(0,0,0,0.65), rgba(212,175,55,0.25)), url("/hero.jpg")',
+    'linear-gradient(rgba(0,0,0,0.65), rgba(212,175,55,0.25)), url("https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1600&q=80")',
   backgroundSize: "cover",
-  backgroundPosition: "center 40%", // 🔥 THIS FIXES THE ZOOM (shows full car)
+  backgroundPosition: "center 35%", // 🔥 FIXES ZOOM
 };
-
-/* IMPORTANT:
-👉 Put your Mercedes + yacht image inside:
-
-public/hero.jpg
-*/
 
 const container = {
   maxWidth: "1400px",
@@ -99,7 +93,9 @@ const container = {
   padding: "80px 50px",
 };
 
-const heroTitle = { fontSize: "60px" };
+const heroTitle = {
+  fontSize: "60px",
+};
 
 const heroText = {
   fontSize: "18px",
