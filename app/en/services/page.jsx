@@ -7,7 +7,7 @@ export default function Services() {
     <div style={{ backgroundColor: "#0a0a0a", color: "#f5f5f5", minHeight: "100vh" }}>
       <Header lang="en" />
 
-      {/* HERO (FIXED IMAGE — SAME ONE, BETTER FRAMING) */}
+      {/* HERO (FIXED — SHOWS CAR) */}
       <section style={heroStyle}>
         <div style={container}>
           <h1 style={heroTitle}>Our Premium Services</h1>
@@ -27,7 +27,7 @@ export default function Services() {
         <Service img="/protection.jpg" title="Paint Protection" desc="Preserve your vehicle’s finish with long-lasting care and deep gloss retention." />
       </section>
 
-      {/* PREMIUM CTA */}
+      {/* CTA */}
       <section style={extraSection}>
         <div style={extraBox}>
           <h2 style={extraTitle}>Not Finding What You’re Looking For?</h2>
@@ -44,39 +44,23 @@ export default function Services() {
 /* SERVICE CARD */
 function Service({ img, title, desc }) {
   return (
-    <div
-      style={card}
-      onMouseEnter={(e) => {
-        e.currentTarget.style.transform = "translateY(-8px)";
-        e.currentTarget.style.boxShadow = "0 20px 40px rgba(0,0,0,0.6)";
-        e.currentTarget.style.border = "1px solid rgba(212,175,55,0.4)";
-      }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.transform = "translateY(0)";
-        e.currentTarget.style.boxShadow = "none";
-        e.currentTarget.style.border = "1px solid rgba(255,255,255,0.05)";
-      }}
-    >
+    <div style={card}>
       <div style={{ overflow: "hidden", borderRadius: "16px" }}>
-        <img
-          src={img}
-          style={image}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.transform = "scale(1.08)";
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.transform = "scale(1)";
-          }}
-        />
+        <img src={img} style={image} />
       </div>
 
       <h2 style={titleStyle}>{title}</h2>
       <p style={descStyle}>{desc}</p>
+
+      {/* 🔥 BOOK BUTTON */}
+      <a href="/en/book" style={goldBtn}>
+        Book Now
+      </a>
     </div>
   );
 }
 
-/* HERO (FIXED ZOOM HERE) */
+/* HERO (FIXED HERE) */
 const heroStyle = {
   minHeight: "50vh",
   display: "flex",
@@ -84,7 +68,7 @@ const heroStyle = {
   backgroundImage:
     'linear-gradient(rgba(0,0,0,0.65), rgba(212,175,55,0.25)), url("https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1600&q=80")',
   backgroundSize: "cover",
-  backgroundPosition: "center 35%", // 🔥 FIXES ZOOM
+  backgroundPosition: "center 75%", // 🔥 FIX (shows car)
 };
 
 const container = {
@@ -93,9 +77,7 @@ const container = {
   padding: "80px 50px",
 };
 
-const heroTitle = {
-  fontSize: "60px",
-};
+const heroTitle = { fontSize: "60px" };
 
 const heroText = {
   fontSize: "18px",
@@ -118,14 +100,12 @@ const card = {
   padding: "20px",
   borderRadius: "24px",
   border: "1px solid rgba(255,255,255,0.05)",
-  transition: "all 0.35s ease",
 };
 
 const image = {
   width: "100%",
   height: "240px",
   objectFit: "cover",
-  transition: "transform 0.4s ease",
   marginBottom: "20px",
 };
 
@@ -137,6 +117,18 @@ const titleStyle = {
 const descStyle = {
   color: "#bbb",
   lineHeight: "1.6",
+  marginBottom: "20px",
+};
+
+/* GOLD BUTTON */
+const goldBtn = {
+  display: "inline-block",
+  padding: "12px 24px",
+  borderRadius: "999px",
+  backgroundColor: "#d4af37",
+  color: "#111",
+  textDecoration: "none",
+  fontWeight: "bold",
 };
 
 /* CTA */
