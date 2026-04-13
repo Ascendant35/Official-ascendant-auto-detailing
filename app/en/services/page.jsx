@@ -5,13 +5,12 @@ export default function Services() {
     <div style={{ backgroundColor: "#0a0a0a", color: "#f5f5f5", minHeight: "100vh" }}>
       <Header lang="en" />
 
-      {/* HERO (UPDATED IMAGE) */}
+      {/* HERO (SMALLER + GOLD TONE) */}
       <section style={heroStyle}>
         <div style={container}>
           <h1 style={heroTitle}>Our Premium Services</h1>
           <p style={heroText}>
-            Precision, care, and attention to detail define every service we offer.
-            Experience a new standard of automotive refinement.
+            Precision, refinement, and attention to detail define every service we offer.
           </p>
         </div>
       </section>
@@ -19,22 +18,52 @@ export default function Services() {
       {/* SERVICES GRID */}
       <section style={gridSection}>
 
-        <Service img="/exterior.jpg" />
-<Service img="/interior.jpg" />
-<Service img="/full.jpg" />
-<Service img="/headlight.jpg" />
-<Service img="/engine.jpg" />
-<Service img="/protection.jpg" />
+        <Service 
+          img="/exterior.jpg" 
+          title="Exterior Detailing" 
+          desc="A refined exterior treatment restoring gloss, depth, and a flawless finish." 
+        />
+
+        <Service 
+          img="/interior.jpg" 
+          title="Interior Detailing" 
+          desc="A deep interior reset focused on cleanliness, comfort, and a truly luxurious feel." 
+        />
+
+        <Service 
+          img="/full.jpg" 
+          title="Full Detailing" 
+          desc="A complete transformation delivering a showroom-level finish inside and out." 
+        />
+
+        <Service 
+          img="/headlight.jpg" 
+          title="Headlight Restoration" 
+          desc="Restore clarity and brightness for enhanced visibility and a sharper appearance." 
+        />
+
+        <Service 
+          img="/engine.jpg" 
+          title="Engine Bay Cleaning" 
+          desc="Careful detailing that revitalizes and elevates your engine compartment." 
+        />
+
+        <Service 
+          img="/protection.jpg" 
+          title="Paint Protection" 
+          desc="Preserve your vehicle’s finish with long-lasting care and deep gloss retention." 
+        />
+
       </section>
 
-      {/* PREMIUM EXTRA SERVICES BOX */}
+      {/* PREMIUM CTA BOX */}
       <section style={extraSection}>
         <div style={extraBox}>
-          <h2 style={extraTitle}>More Than Just Services</h2>
+          <h2 style={extraTitle}>Not Finding What You’re Looking For?</h2>
           <p style={extraText}>
-            Every vehicle is unique. If you have specific needs or requests, we offer
-            fully customized solutions tailored to your expectations. Simply let us know,
-            and we will take care of the rest with the highest level of precision.
+            Our team of professionals is trained to handle a wide range of specialized requests.
+            Whatever your vehicle needs, we offer tailored solutions designed to meet the highest
+            standards of care and precision.
           </p>
         </div>
       </section>
@@ -47,21 +76,20 @@ export default function Services() {
 function Service({ img, title, desc }) {
   return (
     <div style={card}>
-      <img src={img} style={image} />
+      <img src={img} style={image} alt={title} />
       <h2 style={titleStyle}>{title}</h2>
       <p style={descStyle}>{desc}</p>
     </div>
   );
 }
 
-/* STYLES */
-
+/* HERO (FIXED) */
 const heroStyle = {
-  minHeight: "65vh",
+  minHeight: "45vh", // 🔥 smaller
   display: "flex",
   alignItems: "center",
   backgroundImage:
-    'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.85)), url("https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1600&q=80")',
+    'linear-gradient(rgba(0,0,0,0.7), rgba(212,175,55,0.25)), url("https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1600&q=80")',
   backgroundSize: "cover",
   backgroundPosition: "center",
 };
@@ -69,21 +97,22 @@ const heroStyle = {
 const container = {
   maxWidth: "1400px",
   margin: "0 auto",
-  padding: "100px 50px",
+  padding: "80px 50px",
 };
 
-const heroTitle = { fontSize: "64px" };
+const heroTitle = { fontSize: "56px" };
 
 const heroText = {
-  fontSize: "20px",
-  color: "#ccc",
-  maxWidth: "700px",
+  fontSize: "18px",
+  color: "#ddd",
+  maxWidth: "600px",
 };
 
+/* GRID */
 const gridSection = {
   maxWidth: "1400px",
   margin: "0 auto",
-  padding: "100px 50px",
+  padding: "80px 50px",
   display: "grid",
   gridTemplateColumns: "repeat(3,1fr)",
   gap: "40px",
@@ -105,7 +134,7 @@ const image = {
 };
 
 const titleStyle = {
-  fontSize: "24px",
+  fontSize: "22px",
   marginBottom: "10px",
 };
 
@@ -114,24 +143,23 @@ const descStyle = {
   lineHeight: "1.6",
 };
 
-/* EXTRA BOX */
-
+/* PREMIUM BOX */
 const extraSection = {
   maxWidth: "1200px",
   margin: "0 auto",
-  padding: "0 50px 120px",
+  padding: "0 50px 100px",
 };
 
 const extraBox = {
   backgroundColor: "#111",
   padding: "50px",
   borderRadius: "28px",
-  border: "1px solid rgba(212,175,55,0.3)",
+  border: "1px solid rgba(212,175,55,0.4)",
   textAlign: "center",
 };
 
 const extraTitle = {
-  fontSize: "40px",
+  fontSize: "36px",
   marginBottom: "20px",
   color: "#d4af37",
 };
