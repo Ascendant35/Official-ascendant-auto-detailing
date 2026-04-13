@@ -5,13 +5,13 @@ export default function Services() {
     <div style={{ backgroundColor: "#0a0a0a", color: "#f5f5f5", minHeight: "100vh" }}>
       <Header lang="en" />
 
-      {/* HERO */}
+      {/* HERO (UPDATED IMAGE) */}
       <section style={heroStyle}>
         <div style={container}>
           <h1 style={heroTitle}>Our Premium Services</h1>
           <p style={heroText}>
-            Discover a curated selection of high-end detailing services designed to elevate,
-            protect, and preserve your vehicle to the highest standard.
+            Precision, care, and attention to detail define every service we offer.
+            Experience a new standard of automotive refinement.
           </p>
         </div>
       </section>
@@ -19,79 +19,50 @@ export default function Services() {
       {/* SERVICES GRID */}
       <section style={gridSection}>
 
-        {/* EXTERIOR */}
-        <div style={card}>
-          <img src="/images/exterior.jpg" style={image} />
-          <h2 style={title}>Exterior Detailing</h2>
-          <p style={desc}>
-            A meticulous exterior treatment that enhances your vehicle’s finish
-            while restoring depth, clarity, and a refined shine.
-          </p>
-        </div>
-
-        {/* INTERIOR */}
-        <div style={card}>
-          <img src="/images/interior.jpg" style={image} />
-          <h2 style={title}>Interior Detailing</h2>
-          <p style={desc}>
-            A deep interior refinement focused on cleanliness, comfort, and restoring
-            a luxurious cabin environment.
-          </p>
-        </div>
-
-        {/* FULL DETAIL */}
-        <div style={card}>
-          <img src="/images/full.jpg" style={image} />
-          <h2 style={title}>Full Detailing</h2>
-          <p style={desc}>
-            A complete transformation combining interior and exterior care for a
-            flawless, showroom-quality result.
-          </p>
-        </div>
-
-        {/* HEADLIGHT */}
-        <div style={card}>
-          <img src="/images/headlight.jpg" style={image} />
-          <h2 style={title}>Headlight Restoration</h2>
-          <p style={desc}>
-            Restore clarity and brightness to your headlights, enhancing both
-            appearance and nighttime visibility.
-          </p>
-        </div>
-
-        {/* ENGINE */}
-        <div style={card}>
-          <img src="/images/engine.jpg" style={image} />
-          <h2 style={title}>Engine Bay Cleaning</h2>
-          <p style={desc}>
-            A careful and precise cleaning process that revitalizes your engine bay
-            while maintaining its integrity.
-          </p>
-        </div>
-
-        {/* PAINT PROTECTION */}
-        <div style={card}>
-          <img src="/images/protection.jpg" style={image} />
-          <h2 style={title}>Paint Protection</h2>
-          <p style={desc}>
-            Preserve your vehicle’s finish with advanced care that maintains deep gloss
-            and long-lasting protection over time.
-          </p>
-        </div>
+        <Service img="/images/exterior.jpg" title="Exterior Detailing" desc="A refined exterior treatment restoring gloss, depth, and a flawless finish." />
+        <Service img="/images/interior.jpg" title="Interior Detailing" desc="A deep interior reset focused on cleanliness, comfort, and luxury feel." />
+        <Service img="/images/full.jpg" title="Full Detailing" desc="Complete interior and exterior transformation for a showroom-quality result." />
+        <Service img="/images/headlight.jpg" title="Headlight Restoration" desc="Restore clarity and brightness for improved visibility and aesthetics." />
+        <Service img="/images/engine.jpg" title="Engine Bay Cleaning" desc="Careful detailing that revitalizes and enhances your engine compartment." />
+        <Service img="/images/protection.jpg" title="Paint Protection" desc="Maintain deep gloss and preserve your vehicle’s finish over time." />
 
       </section>
+
+      {/* PREMIUM EXTRA SERVICES BOX */}
+      <section style={extraSection}>
+        <div style={extraBox}>
+          <h2 style={extraTitle}>More Than Just Services</h2>
+          <p style={extraText}>
+            Every vehicle is unique. If you have specific needs or requests, we offer
+            fully customized solutions tailored to your expectations. Simply let us know,
+            and we will take care of the rest with the highest level of precision.
+          </p>
+        </div>
+      </section>
+
     </div>
   );
 }
 
-/* STYLES (MATCH YOUR SITE) */
+/* COMPONENT */
+function Service({ img, title, desc }) {
+  return (
+    <div style={card}>
+      <img src={img} style={image} />
+      <h2 style={titleStyle}>{title}</h2>
+      <p style={descStyle}>{desc}</p>
+    </div>
+  );
+}
+
+/* STYLES */
 
 const heroStyle = {
   minHeight: "65vh",
   display: "flex",
   alignItems: "center",
   backgroundImage:
-    'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url("https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=1600&q=80")',
+    'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.85)), url("https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1600&q=80")',
   backgroundSize: "cover",
   backgroundPosition: "center",
 };
@@ -103,6 +74,7 @@ const container = {
 };
 
 const heroTitle = { fontSize: "64px" };
+
 const heroText = {
   fontSize: "20px",
   color: "#ccc",
@@ -114,7 +86,7 @@ const gridSection = {
   margin: "0 auto",
   padding: "100px 50px",
   display: "grid",
-  gridTemplateColumns: "repeat(3, 1fr)",
+  gridTemplateColumns: "repeat(3,1fr)",
   gap: "40px",
 };
 
@@ -133,12 +105,41 @@ const image = {
   marginBottom: "20px",
 };
 
-const title = {
+const titleStyle = {
   fontSize: "24px",
   marginBottom: "10px",
 };
 
-const desc = {
+const descStyle = {
   color: "#bbb",
   lineHeight: "1.6",
+};
+
+/* EXTRA BOX */
+
+const extraSection = {
+  maxWidth: "1200px",
+  margin: "0 auto",
+  padding: "0 50px 120px",
+};
+
+const extraBox = {
+  backgroundColor: "#111",
+  padding: "50px",
+  borderRadius: "28px",
+  border: "1px solid rgba(212,175,55,0.3)",
+  textAlign: "center",
+};
+
+const extraTitle = {
+  fontSize: "40px",
+  marginBottom: "20px",
+  color: "#d4af37",
+};
+
+const extraText = {
+  fontSize: "18px",
+  color: "#ccc",
+  maxWidth: "800px",
+  margin: "0 auto",
 };
