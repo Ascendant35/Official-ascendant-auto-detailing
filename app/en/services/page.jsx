@@ -1,3 +1,5 @@
+"use client";
+
 import Header from "../../components/Header";
 
 export default function Services() {
@@ -5,7 +7,7 @@ export default function Services() {
     <div style={{ backgroundColor: "#0a0a0a", color: "#f5f5f5", minHeight: "100vh" }}>
       <Header lang="en" />
 
-      {/* HERO (SMALLER + GOLD TONE) */}
+      {/* HERO (FIXED ZOOM + PREMIUM) */}
       <section style={heroStyle}>
         <div style={container}>
           <h1 style={heroTitle}>Our Premium Services</h1>
@@ -18,52 +20,22 @@ export default function Services() {
       {/* SERVICES GRID */}
       <section style={gridSection}>
 
-        <Service 
-          img="/exterior.jpg" 
-          title="Exterior Detailing" 
-          desc="A refined exterior treatment restoring gloss, depth, and a flawless finish." 
-        />
-
-        <Service 
-          img="/interior.jpg" 
-          title="Interior Detailing" 
-          desc="A deep interior reset focused on cleanliness, comfort, and a truly luxurious feel." 
-        />
-
-        <Service 
-          img="/full.jpg" 
-          title="Full Detailing" 
-          desc="A complete transformation delivering a showroom-level finish inside and out." 
-        />
-
-        <Service 
-          img="/headlight.jpg" 
-          title="Headlight Restoration" 
-          desc="Restore clarity and brightness for enhanced visibility and a sharper appearance." 
-        />
-
-        <Service 
-          img="/engine.jpg" 
-          title="Engine Bay Cleaning" 
-          desc="Careful detailing that revitalizes and elevates your engine compartment." 
-        />
-
-        <Service 
-          img="/protection.jpg" 
-          title="Paint Protection" 
-          desc="Preserve your vehicle’s finish with long-lasting care and deep gloss retention." 
-        />
+        <Service img="/exterior.jpg" title="Exterior Detailing" desc="A refined exterior treatment restoring gloss, depth, and a flawless finish." />
+        <Service img="/interior.jpg" title="Interior Detailing" desc="A deep interior reset focused on cleanliness, comfort, and a truly luxurious feel." />
+        <Service img="/full.jpg" title="Full Detailing" desc="A complete transformation delivering a showroom-level finish inside and out." />
+        <Service img="/headlight.jpg" title="Headlight Restoration" desc="Restore clarity and brightness for enhanced visibility and a sharper appearance." />
+        <Service img="/engine.jpg" title="Engine Bay Cleaning" desc="Careful detailing that revitalizes and elevates your engine compartment." />
+        <Service img="/protection.jpg" title="Paint Protection" desc="Preserve your vehicle’s finish with long-lasting care and deep gloss retention." />
 
       </section>
 
-      {/* PREMIUM CTA BOX */}
+      {/* PREMIUM CTA */}
       <section style={extraSection}>
         <div style={extraBox}>
           <h2 style={extraTitle}>Not Finding What You’re Looking For?</h2>
           <p style={extraText}>
-            Our team of professionals is trained to handle a wide range of specialized requests.
-            Whatever your vehicle needs, we offer tailored solutions designed to meet the highest
-            standards of care and precision.
+            Our team of experts is trained to handle a wide range of specialized requests.
+            Whatever your needs may be, we deliver tailored solutions with unmatched precision and care.
           </p>
         </div>
       </section>
@@ -72,26 +44,50 @@ export default function Services() {
   );
 }
 
-/* COMPONENT */
+/* COMPONENT WITH HOVER EFFECT */
 function Service({ img, title, desc }) {
   return (
-    <div style={card}>
-      <img src={img} style={image} alt={title} />
+    <div
+      style={card}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.transform = "translateY(-8px)";
+        e.currentTarget.style.boxShadow = "0 20px 40px rgba(0,0,0,0.6)";
+        e.currentTarget.style.border = "1px solid rgba(212,175,55,0.4)";
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.transform = "translateY(0)";
+        e.currentTarget.style.boxShadow = "none";
+        e.currentTarget.style.border = "1px solid rgba(255,255,255,0.05)";
+      }}
+    >
+      <div style={{ overflow: "hidden", borderRadius: "16px" }}>
+        <img
+          src={img}
+          style={image}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = "scale(1.08)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = "scale(1)";
+          }}
+        />
+      </div>
+
       <h2 style={titleStyle}>{title}</h2>
       <p style={descStyle}>{desc}</p>
     </div>
   );
 }
 
-/* HERO (FIXED) */
+/* HERO FIXED */
 const heroStyle = {
-  minHeight: "45vh", // 🔥 smaller
+  minHeight: "50vh",
   display: "flex",
   alignItems: "center",
   backgroundImage:
-    'linear-gradient(rgba(0,0,0,0.7), rgba(212,175,55,0.25)), url("https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1600&q=80")',
+    'linear-gradient(rgba(0,0,0,0.65), rgba(212,175,55,0.2)), url("https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=1600&q=80")',
   backgroundSize: "cover",
-  backgroundPosition: "center",
+  backgroundPosition: "center 30%", // 🔥 THIS FIXES ZOOM
 };
 
 const container = {
@@ -100,7 +96,7 @@ const container = {
   padding: "80px 50px",
 };
 
-const heroTitle = { fontSize: "56px" };
+const heroTitle = { fontSize: "60px" };
 
 const heroText = {
   fontSize: "18px",
@@ -123,13 +119,14 @@ const card = {
   padding: "20px",
   borderRadius: "24px",
   border: "1px solid rgba(255,255,255,0.05)",
+  transition: "all 0.35s ease",
 };
 
 const image = {
   width: "100%",
   height: "240px",
   objectFit: "cover",
-  borderRadius: "16px",
+  transition: "transform 0.4s ease",
   marginBottom: "20px",
 };
 
@@ -143,7 +140,7 @@ const descStyle = {
   lineHeight: "1.6",
 };
 
-/* PREMIUM BOX */
+/* CTA */
 const extraSection = {
   maxWidth: "1200px",
   margin: "0 auto",
