@@ -34,12 +34,12 @@ export default function AboutEN() {
       />
 
       {/* OUR PHILOSOPHY */}
-      <Section
-        title="Our Philosophy"
-        text="We believe that true quality lies in the smallest details. Every vehicle is approached with the same level of attention, precision, and discipline — because excellence is not optional. Our philosophy is simple: no shortcuts, no compromises, only results that meet our highest standards."
-        image="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80"
-        reverse
-      />
+<Section
+  title="Our Philosophy"
+  text="We believe that true quality lies in the smallest details. Every vehicle is approached with the same level of attention, precision, and discipline — because excellence is not optional. Our philosophy is simple: no shortcuts, no compromises, only results that meet our highest standards."
+  image="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1200&q=80"
+  reverse
+/>
 
       {/* OUR PROCESS */}
       <Section
