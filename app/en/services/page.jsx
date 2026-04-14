@@ -68,7 +68,7 @@ function Service({ img, title, desc }) {
 const heroWrapper = {
   position: "relative",
   width: "100%",
-  height: "500px",
+  height: "800px",
   overflow: "hidden",
 };
 
@@ -76,7 +76,7 @@ const heroImage = {
   width: "100%",
   height: "100%",
   objectFit: "cover",
-  objectPosition: "center 105%", // 
+  objectPosition: "center 55%", // 
 };
 
 const heroOverlay = {
