@@ -17,41 +17,95 @@ export default function TarifsFR() {
         </div>
       </section>
 
-      {/* ✅ NEW PREMIUM INTRO SECTION (ONLY ADDITION) */}
+           {/* ✅ PREMIUM INTRO BOX */}
       <section
         style={{
-          maxWidth: "900px",
-          margin: "60px auto",
-          padding: "0 20px",
-          textAlign: "center",
-          lineHeight: "1.8",
+          maxWidth: "1100px",
+          margin: "70px auto 30px",
+          padding: "0 30px",
         }}
       >
-        <p
+        <div
           style={{
-            fontSize: "20px",
-            fontWeight: "400",
-            color: "#d4af37",
-            marginBottom: "20px",
-            letterSpacing: "1px",
+            background:
+              "linear-gradient(180deg, rgba(18,18,18,0.96), rgba(10,10,10,0.98))",
+            border: "1px solid rgba(212,175,55,0.45)",
+            borderRadius: "24px",
+            padding: "42px 38px",
+            textAlign: "center",
+            boxShadow: "0 18px 60px rgba(0,0,0,0.35)",
           }}
         >
-          Tailored Luxury Detailing Experience
-        </p>
+          <p
+            style={{
+              fontSize: "13px",
+              textTransform: "uppercase",
+              letterSpacing: "3px",
+              color: "#d4af37",
+              marginBottom: "18px",
+            }}
+          >
+            Refined Detailing Experience
+          </p>
 
-        <p style={{ fontSize: "17px", color: "#cccccc" }}>
-          Explore our range of premium detailing packages, each designed to elevate your vehicle to its highest standard.
-          Select the package that suits your needs, then customize your experience by choosing your vehicle size.
-        </p>
+          <h2
+            style={{
+              fontSize: "34px",
+              marginBottom: "18px",
+              color: "#f5f5f5",
+              fontWeight: "500",
+            }}
+          >
+            Choose the level of care your vehicle deserves
+          </h2>
 
-        <p style={{ fontSize: "17px", color: "#cccccc", marginTop: "15px" }}>
-          For those seeking a complete transformation, full-visit packages are available for the ultimate care experience.
-          You may also enhance your service with exclusive add-ons, all available below.
-        </p>
+          <p
+            style={{
+              fontSize: "17px",
+              color: "#cfcfcf",
+              lineHeight: "1.9",
+              maxWidth: "860px",
+              margin: "0 auto 14px",
+            }}
+          >
+            Discover our premium detailing packages, each thoughtfully designed
+            to deliver a distinct level of care, refinement, and finish.
+            Begin by selecting the package that best reflects your vehicle’s
+            needs, then choose the size of your vehicle for a service tailored
+            with precision.
+          </p>
 
-        <p style={{ fontSize: "17px", color: "#cccccc", marginTop: "15px" }}>
-          Every service is crafted with precision, attention to detail, and a commitment to excellence — because your vehicle deserves nothing less.
-        </p>
+          <p
+            style={{
+              fontSize: "17px",
+              color: "#cfcfcf",
+              lineHeight: "1.9",
+              maxWidth: "860px",
+              margin: "0 auto 14px",
+            }}
+          >
+            For clients seeking exceptional value and ongoing upkeep, our{" "}
+            <span style={{ color: "#d4af37", fontWeight: "600" }}>
+              4-visit packages
+            </span>{" "}
+            offer a refined way to maintain your vehicle at the highest
+            standard throughout the season.
+          </p>
+
+          <p
+            style={{
+              fontSize: "17px",
+              color: "#cfcfcf",
+              lineHeight: "1.9",
+              maxWidth: "860px",
+              margin: "0 auto",
+            }}
+          >
+            You may also elevate your experience further with our selection of
+            add-on services found below, created to bring an even more complete,
+            luxurious finish to every visit.
+          </p>
+        </div>
       </section>
 
       {/* PACKAGES */}
