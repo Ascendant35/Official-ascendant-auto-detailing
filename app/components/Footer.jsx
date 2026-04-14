@@ -13,7 +13,7 @@ export default function Footer() {
       </p>
 
       <a
-        href="/book"
+        href="#"
         style={{
           backgroundColor: "#C9A34E",
           color: "#000",
