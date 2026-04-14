@@ -211,27 +211,61 @@ export default function TarifsFR() {
         </div>
       </section>
 
-      {/* WHY CHOOSE */}
-      <section style={whySection}>
-        <h2 style={whyTitle}>Which package should you choose?</h2>
+     {/* WHY CHOOSE */}
+<section style={whySection}>
+  <h2 style={whyTitle}>Which package should you choose?</h2>
 
-        <div style={whyGrid}>
-          <div style={choiceStyle}>
-            <strong style={gold}>Ascendant Care</strong>
-            <p>Perfect for regular maintenance.</p>
-          </div>
+  <div style={whyGrid}>
+    
+    <div style={choiceStyle}>
+      <strong style={gold}>Ascendant Care</strong>
+      <p style={{ marginTop: "10px", lineHeight: "1.8", color: "#ccc" }}>
+        Designed for consistent upkeep, this package maintains your vehicle in clean,
+        refined condition on a regular basis.
+      </p>
+      <p style={{ lineHeight: "1.8", color: "#ccc" }}>
+        Ideal for clients who value a polished appearance at all times without the need
+        for intensive restoration.
+      </p>
+      <p style={{ lineHeight: "1.8", color: "#ccc" }}>
+        A perfect balance between efficiency and elegance for everyday driving.
+      </p>
+    </div>
 
-          <div style={choiceStyle}>
-            <strong style={gold}>Ascendant Elite</strong>
-            <p>The best choice for most clients.</p>
-          </div>
+    <div style={choiceStyle}>
+      <strong style={gold}>Ascendant Elite</strong>
+      <p style={{ marginTop: "10px", lineHeight: "1.8", color: "#ccc" }}>
+        Our most popular choice, offering a deeper level of cleaning and attention
+        to detail both inside and out.
+      </p>
+      <p style={{ lineHeight: "1.8", color: "#ccc" }}>
+        Restores freshness to your interior while enhancing the exterior finish
+        with a noticeably elevated result.
+      </p>
+      <p style={{ lineHeight: "1.8", color: "#ccc" }}>
+        Perfect for those seeking a premium transformation without going to the
+        highest tier.
+      </p>
+    </div>
 
-          <div style={choiceStyle}>
-            <strong style={gold}>Ascendant Signature</strong>
-            <p>For a flawless, high-end result.</p>
-          </div>
-        </div>
-      </section>
+    <div style={choiceStyle}>
+      <strong style={gold}>Ascendant Signature</strong>
+      <p style={{ marginTop: "10px", lineHeight: "1.8", color: "#ccc" }}>
+        The ultimate detailing experience, crafted for clients who expect nothing
+        short of perfection.
+      </p>
+      <p style={{ lineHeight: "1.8", color: "#ccc" }}>
+        Every surface is meticulously treated, delivering a showroom-level finish
+        with unmatched precision.
+      </p>
+      <p style={{ lineHeight: "1.8", color: "#ccc" }}>
+        Ideal for special occasions, luxury vehicles, or achieving the highest
+        possible standard of presentation.
+      </p>
+    </div>
+
+  </div>
+</section>
 
       {/* EXTRA SERVICES */}
       <section style={extraSection}>
