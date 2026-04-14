@@ -9,10 +9,100 @@ export default function TarifsFR() {
       {/* HERO */}
       <section style={heroStyle}>
         <div style={container}>
-          <h1 style={heroTitle}>Nos forfaits haut de gamme</h1>
+          <h1 style={heroTitle}>Nos Forfaits Premium</h1>
           <p style={heroText}>
             Des services conçus pour maintenir votre véhicule dans un état impeccable,
-            avec des options ponctuelles ou des plans d’entretien réguliers.
+            avec des options à la visite ou des forfaits d’entretien régulier.
+          </p>
+        </div>
+      </section>
+
+      {/* ✅ PREMIUM INTRO BOX */}
+      <section
+        style={{
+          maxWidth: "1100px",
+          margin: "70px auto 30px",
+          padding: "0 30px",
+        }}
+      >
+        <div
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(18,18,18,0.96), rgba(10,10,10,0.98))",
+            border: "1px solid rgba(212,175,55,0.45)",
+            borderRadius: "24px",
+            padding: "42px 38px",
+            textAlign: "center",
+            boxShadow: "0 18px 60px rgba(0,0,0,0.35)",
+          }}
+        >
+          <p
+            style={{
+              fontSize: "13px",
+              textTransform: "uppercase",
+              letterSpacing: "3px",
+              color: "#d4af37",
+              marginBottom: "18px",
+            }}
+          >
+            Expérience de detailing raffinée
+          </p>
+
+          <h2
+            style={{
+              fontSize: "34px",
+              marginBottom: "18px",
+              color: "#f5f5f5",
+              fontWeight: "500",
+            }}
+          >
+            Choisissez le niveau de soin que votre véhicule mérite
+          </h2>
+
+          <p
+            style={{
+              fontSize: "17px",
+              color: "#cfcfcf",
+              lineHeight: "1.9",
+              maxWidth: "860px",
+              margin: "0 auto 14px",
+            }}
+          >
+            Découvrez nos forfaits premium de detailing, chacun soigneusement conçu
+            pour offrir un niveau distinct de soin, de raffinement et de finition.
+            Commencez par sélectionner le forfait qui correspond le mieux aux besoins
+            de votre véhicule, puis choisissez sa taille pour un service exécuté avec précision.
+          </p>
+
+          <p
+            style={{
+              fontSize: "17px",
+              color: "#cfcfcf",
+              lineHeight: "1.9",
+              maxWidth: "860px",
+              margin: "0 auto 14px",
+            }}
+          >
+            Pour les clients recherchant une valeur exceptionnelle et un entretien continu, nos{" "}
+            <span style={{ color: "#d4af37", fontWeight: "600" }}>
+              forfaits 4 visites
+            </span>{" "}
+            offrent une façon raffinée de maintenir votre véhicule au plus haut niveau
+            tout au long de la saison.
+          </p>
+
+          <p
+            style={{
+              fontSize: "17px",
+              color: "#cfcfcf",
+              lineHeight: "1.9",
+              maxWidth: "860px",
+              margin: "0 auto",
+            }}
+          >
+            Vous pouvez également rehausser davantage votre expérience grâce à notre sélection
+            de services complémentaires ci-dessous, conçus pour offrir une finition encore plus
+            complète et luxueuse à chaque visite.
           </p>
         </div>
       </section>
@@ -24,30 +114,29 @@ export default function TarifsFR() {
         <div style={card}>
           <h2 style={title}>Ascendant Care</h2>
           <p style={desc}>
-            Idéal pour un entretien régulier et garder votre véhicule propre au quotidien.
+            Idéal pour un entretien régulier et pour garder votre véhicule propre au quotidien.
           </p>
 
           <div style={price}>
-            <p>Berline: $189.99</p>
-            <p>SUV: $209.99</p>
-            <p>Camion / Grand SUV: $249.99</p>
+            <p>Berline : 189.99$</p>
+            <p>VUS : 209.99$</p>
+            <p>Camion / Grand VUS : 249.99$</p>
           </div>
 
-          {/* 4 VISIT */}
           <div style={subscription}>
             <p style={subTitle}>Forfait 4 visites</p>
-            <p>Profitez de notre forfait groupé de 4 visites, utilisables quand vous le souhaitez.</p>
-            <p>Berline: $669.99</p>
-            <p>SUV: $739.99</p>
-            <p>Camion / Grand SUV: $859.99</p>
+            <p>Profitez de notre forfait regroupé de 4 visites, utilisable quand vous le souhaitez.</p>
+            <p>Berline : 669.99$</p>
+            <p>VUS : 739.99$</p>
+            <p>Camion / Grand VUS : 859.99$</p>
           </div>
 
           <ul style={list}>
             <li>Aspiration complète</li>
-            <li>Nettoyage intérieur rapide</li>
+            <li>Nettoyage intérieur léger</li>
             <li>Lavage extérieur</li>
             <li>Vitres</li>
-            <li>Finition générale</li>
+            <li>Finition finale</li>
           </ul>
 
           <Link href="/fr/reserver" style={btn}>Réserver</Link>
@@ -55,34 +144,33 @@ export default function TarifsFR() {
 
         {/* ELITE */}
         <div style={{ ...card, border: "1px solid #d4af37", position: "relative", transform: "scale(1.05)" }}>
-          <div style={badge}>PLUS POPULAIRE</div>
+          <div style={badge}>LE PLUS POPULAIRE</div>
 
           <h2 style={title}>Ascendant Elite</h2>
           <p style={desc}>
-            Nettoyage approfondi offrant un équilibre parfait entre qualité et valeur.
+            Nettoyage en profondeur offrant l’équilibre parfait entre qualité et valeur.
           </p>
 
           <div style={price}>
-            <p>Berline: $289.99</p>
-            <p>SUV: $309.99</p>
-            <p>Camion / Grand SUV: $349.99</p>
+            <p>Berline : 289.99$</p>
+            <p>VUS : 309.99$</p>
+            <p>Camion / Grand VUS : 349.99$</p>
           </div>
 
-          {/* 4 VISIT */}
           <div style={subscription}>
             <p style={subTitle}>Forfait 4 visites</p>
-            <p>Profitez de notre forfait groupé de 4 visites, utilisables quand vous le souhaitez.</p>
-            <p>Berline: $1049.99</p>
-            <p>SUV: $1129.99</p>
-            <p>Camion / Grand SUV: $1249.99</p>
+            <p>Profitez de notre forfait regroupé de 4 visites, utilisable quand vous le souhaitez.</p>
+            <p>Berline : 1049.99$</p>
+            <p>VUS : 1129.99$</p>
+            <p>Camion / Grand VUS : 1249.99$</p>
           </div>
 
           <ul style={list}>
-            <li>Tout inclus dans Care</li>
-            <li>Shampoing sièges</li>
-            <li>Nettoyage tapis</li>
+            <li>Tout ce qui est inclus dans Care</li>
+            <li>Shampoing des sièges</li>
+            <li>Nettoyage des tapis</li>
             <li>Dégraissage</li>
-            <li>Extérieur détaillé</li>
+            <li>Détail extérieur complet</li>
             <li>Finition premium</li>
           </ul>
 
@@ -93,30 +181,29 @@ export default function TarifsFR() {
         <div style={card}>
           <h2 style={title}>Ascendant Signature</h2>
           <p style={desc}>
-            L’expérience ultime pour un résultat impeccable et une finition showroom.
+            L’expérience ultime pour un résultat impeccable et une finition digne d’une salle de montre.
           </p>
 
           <div style={price}>
-            <p>Berline: $389.99</p>
-            <p>SUV: $409.99</p>
-            <p>Camion / Grand SUV: $449.99</p>
+            <p>Berline : 389.99$</p>
+            <p>VUS : 409.99$</p>
+            <p>Camion / Grand VUS : 449.99$</p>
           </div>
 
-          {/* 4 VISIT */}
           <div style={subscription}>
             <p style={subTitle}>Forfait 4 visites</p>
-            <p>Profitez de notre forfait groupé de 4 visites, utilisables quand vous le souhaitez.</p>
-            <p>Berline: $1399.99</p>
-            <p>SUV: $1499.99</p>
-            <p>Camion / Grand SUV: $1599.99</p>
+            <p>Profitez de notre forfait regroupé de 4 visites, utilisable quand vous le souhaitez.</p>
+            <p>Berline : 1399.99$</p>
+            <p>VUS : 1499.99$</p>
+            <p>Camion / Grand VUS : 1599.99$</p>
           </div>
 
           <ul style={list}>
-            <li>Tout inclus dans Elite</li>
+            <li>Tout ce qui est inclus dans Elite</li>
             <li>Nettoyage en profondeur</li>
             <li>Traitement complet</li>
             <li>Finition haut de gamme</li>
-            <li>Détails minutieux</li>
+            <li>Détail méticuleux</li>
           </ul>
 
           <Link href="/fr/reserver" style={btn}>Réserver</Link>
@@ -125,39 +212,153 @@ export default function TarifsFR() {
 
       {/* WHY CHOOSE */}
       <section style={whySection}>
-        <h2 style={whyTitle}>Quel forfait choisir?</h2>
+        <h2 style={whyTitle}>Quel forfait devriez-vous choisir ?</h2>
 
         <div style={whyGrid}>
-          <div style={choiceStyle}>
-            <strong style={gold}>Ascendant Care</strong>
-            <p>Parfait pour un entretien régulier.</p>
+          
+          {/* CARE */}
+          <div
+            style={{
+              ...choiceStyle,
+              border: "1px solid rgba(212,175,55,0.25)",
+              transition: "all 0.3s ease",
+            }}
+          >
+            <div
+              style={{
+                width: "40px",
+                height: "2px",
+                backgroundColor: "#d4af37",
+                marginBottom: "15px",
+              }}
+            />
+
+            <strong
+              style={{
+                fontSize: "24px",
+                color: "#f5f5f5",
+                display: "block",
+                marginBottom: "15px",
+              }}
+            >
+              Ascendant Care
+            </strong>
+
+            <p style={{ lineHeight: "1.9", color: "#ccc", marginBottom: "12px" }}>
+              Conçu pour un entretien constant, ce forfait permet de garder votre véhicule
+              propre, soigné et raffiné sur une base régulière.
+            </p>
+
+            <p style={{ lineHeight: "1.9", color: "#ccc", marginBottom: "12px" }}>
+              Idéal pour les clients qui souhaitent conserver une apparence impeccable
+              en tout temps, sans nécessiter une restauration plus intensive.
+            </p>
+
+            <p style={{ lineHeight: "1.9", color: "#ccc" }}>
+              Un équilibre parfait entre efficacité, élégance et entretien quotidien.
+            </p>
           </div>
 
-          <div style={choiceStyle}>
-            <strong style={gold}>Ascendant Elite</strong>
-            <p>Le meilleur choix pour la majorité des clients.</p>
+          {/* ELITE */}
+          <div
+            style={{
+              ...choiceStyle,
+              border: "1px solid rgba(212,175,55,0.5)",
+              transform: "scale(1.03)",
+            }}
+          >
+            <div
+              style={{
+                width: "40px",
+                height: "2px",
+                backgroundColor: "#d4af37",
+                marginBottom: "15px",
+              }}
+            />
+
+            <strong
+              style={{
+                fontSize: "26px",
+                color: "#d4af37",
+                display: "block",
+                marginBottom: "15px",
+              }}
+            >
+              Ascendant Elite
+            </strong>
+
+            <p style={{ lineHeight: "1.9", color: "#ccc", marginBottom: "12px" }}>
+              Notre choix le plus populaire, offrant un niveau de nettoyage plus approfondi
+              ainsi qu’une attention supérieure aux détails, à l’intérieur comme à l’extérieur.
+            </p>
+
+            <p style={{ lineHeight: "1.9", color: "#ccc", marginBottom: "12px" }}>
+              Il redonne fraîcheur à l’habitacle tout en rehaussant la finition extérieure
+              avec un résultat nettement plus raffiné.
+            </p>
+
+            <p style={{ lineHeight: "1.9", color: "#ccc" }}>
+              Parfait pour ceux qui recherchent une transformation premium sans aller jusqu’au niveau ultime.
+            </p>
           </div>
 
-          <div style={choiceStyle}>
-            <strong style={gold}>Ascendant Signature</strong>
-            <p>Pour un résultat impeccable et haut de gamme.</p>
+          {/* SIGNATURE */}
+          <div
+            style={{
+              ...choiceStyle,
+              border: "1px solid rgba(212,175,55,0.25)",
+            }}
+          >
+            <div
+              style={{
+                width: "40px",
+                height: "2px",
+                backgroundColor: "#d4af37",
+                marginBottom: "15px",
+              }}
+            />
+
+            <strong
+              style={{
+                fontSize: "24px",
+                color: "#f5f5f5",
+                display: "block",
+                marginBottom: "15px",
+              }}
+            >
+              Ascendant Signature
+            </strong>
+
+            <p style={{ lineHeight: "1.9", color: "#ccc", marginBottom: "12px" }}>
+              L’expérience de detailing ultime, conçue pour les clients qui n’acceptent rien de moins que la perfection.
+            </p>
+
+            <p style={{ lineHeight: "1.9", color: "#ccc", marginBottom: "12px" }}>
+              Chaque surface est traitée avec minutie afin d’offrir une finition digne d’une salle de montre,
+              avec une précision incomparable.
+            </p>
+
+            <p style={{ lineHeight: "1.9", color: "#ccc" }}>
+              Idéal pour les véhicules de luxe, les occasions spéciales ou pour atteindre le plus haut niveau de présentation.
+            </p>
           </div>
+
         </div>
       </section>
 
       {/* EXTRA SERVICES */}
       <section style={extraSection}>
         <h2 style={{ fontSize: "40px", marginBottom: "30px", textAlign: "center" }}>
-          Services supplémentaires
+          Services complémentaires
         </h2>
 
         <div style={extraGrid}>
           <Extra title="Poils d’animaux" price="À partir de 30$" />
-          <Extra title="Sel / calcium" price="À partir de 25$" />
-          <Extra title="Traitement d’odeur" price="40$ - 80$" />
+          <Extra title="Sel / Calcium" price="À partir de 25$" />
+          <Extra title="Traitement des odeurs" price="40$ - 80$" />
           <Extra title="Taches spécifiques" price="À partir de 20$" />
-          <Extra title="Nettoyage moteur" price="50$" />
-          <Extra title="Traitement cuir" price="60$" />
+          <Extra title="Nettoyage du moteur" price="50$" />
+          <Extra title="Traitement du cuir" price="60$" />
         </div>
       </section>
     </div>
