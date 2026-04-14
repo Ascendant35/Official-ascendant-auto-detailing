@@ -74,7 +74,7 @@ const heroWrapper = {
 
 const heroImage = {
   width: "100%",
-  height: "250%",
+  height: "450%",
   objectFit: "cover",
   objectPosition: "center 85%", // 
 };
