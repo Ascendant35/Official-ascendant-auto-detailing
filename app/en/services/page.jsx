@@ -4,12 +4,19 @@ import Header from "../../components/Header";
 
 export default function Services() {
   return (
-    <div style={{ backgroundColor: "#0a0a0a", color: "#f5f5f5", minHeight: "100vh" }}>
+    <div style={{ backgroundColor: "#0a0a0a", color: "#f5f5f5" }}>
       <Header lang="en" />
 
-      {/* HERO (PROPERLY FIXED) */}
-      <section style={heroStyle}>
-        <div style={container}>
+      {/* 🔥 HERO (NO MORE CROPPING) */}
+      <section style={heroWrapper}>
+        <img
+          src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1600&q=80"
+          style={heroImage}
+        />
+
+        <div style={heroOverlay} />
+
+        <div style={heroContent}>
           <h1 style={heroTitle}>Our Premium Services</h1>
           <p style={heroText}>
             Precision, refinement, and attention to detail define every service we offer.
@@ -17,7 +24,7 @@ export default function Services() {
         </div>
       </section>
 
-      {/* SERVICES GRID */}
+      {/* SERVICES */}
       <section style={gridSection}>
         <Service img="/exterior.jpg" title="Exterior Detailing" desc="A refined exterior treatment restoring gloss, depth, and a flawless finish." />
         <Service img="/interior.jpg" title="Interior Detailing" desc="A deep interior reset focused on cleanliness, comfort, and a truly luxurious feel." />
@@ -27,7 +34,7 @@ export default function Services() {
         <Service img="/protection.jpg" title="Paint Protection" desc="Preserve your vehicle’s finish with long-lasting care and deep gloss retention." />
       </section>
 
-      {/* PREMIUM CTA */}
+      {/* CTA */}
       <section style={extraSection}>
         <div style={extraBox}>
           <h2 style={extraTitle}>Not Finding What You’re Looking For?</h2>
@@ -45,14 +52,11 @@ export default function Services() {
 function Service({ img, title, desc }) {
   return (
     <div style={card}>
-      <div style={{ overflow: "hidden", borderRadius: "16px" }}>
-        <img src={img} style={image} alt={title} />
-      </div>
+      <img src={img} style={image} />
 
       <h2 style={titleStyle}>{title}</h2>
       <p style={descStyle}>{desc}</p>
 
-      {/* BOOK BUTTON */}
       <a href="/en/book" style={goldBtn}>
         Book Now
       </a>
@@ -60,32 +64,42 @@ function Service({ img, title, desc }) {
   );
 }
 
-/* HERO (REAL FIX APPLIED HERE) */
-const heroStyle = {
-  minHeight: "55vh",
-  display: "flex",
-  alignItems: "center",
-  backgroundImage:
-    'linear-gradient(rgba(0,0,0,0.6), rgba(212,175,55,0.2)), url("https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1600&q=80")',
-  backgroundSize: "110%", // 🔥 reduces cropping
-  backgroundPosition: "center 80%", // 🔥 shows car + yacht
-  backgroundRepeat: "no-repeat",
+/* 🔥 HERO FIX */
+const heroWrapper = {
+  position: "relative",
+  width: "100%",
+  height: "500px",
+  overflow: "hidden",
 };
 
-const container = {
-  maxWidth: "1400px",
-  margin: "0 auto",
-  padding: "80px 50px",
+const heroImage = {
+  width: "100%",
+  height: "100%",
+  objectFit: "cover", // keeps it clean but less aggressive than background
+};
+
+const heroOverlay = {
+  position: "absolute",
+  inset: 0,
+  background: "linear-gradient(rgba(0,0,0,0.6), rgba(212,175,55,0.2))",
+};
+
+const heroContent = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  textAlign: "center",
 };
 
 const heroTitle = {
   fontSize: "60px",
+  marginBottom: "10px",
 };
 
 const heroText = {
-  fontSize: "18px",
   color: "#ddd",
-  maxWidth: "600px",
+  fontSize: "18px",
 };
 
 /* GRID */
@@ -102,7 +116,6 @@ const card = {
   backgroundColor: "#111",
   padding: "20px",
   borderRadius: "24px",
-  border: "1px solid rgba(255,255,255,0.05)",
 };
 
 const image = {
@@ -119,11 +132,10 @@ const titleStyle = {
 
 const descStyle = {
   color: "#bbb",
-  lineHeight: "1.6",
   marginBottom: "20px",
 };
 
-/* GOLD BUTTON */
+/* BUTTON */
 const goldBtn = {
   display: "inline-block",
   padding: "12px 24px",
@@ -151,13 +163,9 @@ const extraBox = {
 
 const extraTitle = {
   fontSize: "36px",
-  marginBottom: "20px",
   color: "#d4af37",
 };
 
 const extraText = {
-  fontSize: "18px",
   color: "#ccc",
-  maxWidth: "800px",
-  margin: "0 auto",
 };
