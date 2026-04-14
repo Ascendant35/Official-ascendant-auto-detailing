@@ -211,7 +211,7 @@ export default function TarifsFR() {
         </div>
       </section>
 
-     {/* WHY CHOOSE */}
+    {/* WHY CHOOSE */}
 <section style={whySection}>
   <h2 style={whyTitle}>Which package should you choose?</h2>
 
@@ -221,16 +221,8 @@ export default function TarifsFR() {
     <div
       style={{
         ...choiceStyle,
-        border: "1px solid rgba(212,175,55,0.2)",
+        border: "1px solid rgba(212,175,55,0.25)",
         transition: "all 0.3s ease",
-      }}
-      onMouseEnter={(e) => {
-        e.currentTarget.style.border = "1px solid rgba(212,175,55,0.6)";
-        e.currentTarget.style.transform = "translateY(-5px)";
-      }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.border = "1px solid rgba(212,175,55,0.2)";
-        e.currentTarget.style.transform = "translateY(0)";
       }}
     >
       <div
@@ -253,12 +245,12 @@ export default function TarifsFR() {
         Ascendant Care
       </strong>
 
-      <p style={{ lineHeight: "1.9", color: "#ccc", marginBottom: "10px" }}>
+      <p style={{ lineHeight: "1.9", color: "#ccc", marginBottom: "12px" }}>
         Designed for consistent upkeep, this package maintains your vehicle in a clean,
         refined condition on a regular basis.
       </p>
 
-      <p style={{ lineHeight: "1.9", color: "#ccc", marginBottom: "10px" }}>
+      <p style={{ lineHeight: "1.9", color: "#ccc", marginBottom: "12px" }}>
         Ideal for clients who value a polished appearance at all times without the need
         for intensive restoration.
       </p>
@@ -272,17 +264,8 @@ export default function TarifsFR() {
     <div
       style={{
         ...choiceStyle,
-        border: "1px solid rgba(212,175,55,0.4)",
+        border: "1px solid rgba(212,175,55,0.5)",
         transform: "scale(1.03)",
-        transition: "all 0.3s ease",
-      }}
-      onMouseEnter={(e) => {
-        e.currentTarget.style.border = "1px solid #d4af37";
-        e.currentTarget.style.transform = "scale(1.05)";
-      }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.border = "1px solid rgba(212,175,55,0.4)";
-        e.currentTarget.style.transform = "scale(1.03)";
       }}
     >
       <div
@@ -305,12 +288,12 @@ export default function TarifsFR() {
         Ascendant Elite
       </strong>
 
-      <p style={{ lineHeight: "1.9", color: "#ccc", marginBottom: "10px" }}>
+      <p style={{ lineHeight: "1.9", color: "#ccc", marginBottom: "12px" }}>
         Our most popular choice, offering a deeper level of cleaning and attention
         to detail both inside and out.
       </p>
 
-      <p style={{ lineHeight: "1.9", color: "#ccc", marginBottom: "10px" }}>
+      <p style={{ lineHeight: "1.9", color: "#ccc", marginBottom: "12px" }}>
         Restores freshness to your interior while enhancing the exterior finish
         with a noticeably elevated result.
       </p>
@@ -325,16 +308,7 @@ export default function TarifsFR() {
     <div
       style={{
         ...choiceStyle,
-        border: "1px solid rgba(212,175,55,0.2)",
-        transition: "all 0.3s ease",
-      }}
-      onMouseEnter={(e) => {
-        e.currentTarget.style.border = "1px solid rgba(212,175,55,0.6)";
-        e.currentTarget.style.transform = "translateY(-5px)";
-      }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.border = "1px solid rgba(212,175,55,0.2)";
-        e.currentTarget.style.transform = "translateY(0)";
+        border: "1px solid rgba(212,175,55,0.25)",
       }}
     >
       <div
@@ -357,12 +331,12 @@ export default function TarifsFR() {
         Ascendant Signature
       </strong>
 
-      <p style={{ lineHeight: "1.9", color: "#ccc", marginBottom: "10px" }}>
+      <p style={{ lineHeight: "1.9", color: "#ccc", marginBottom: "12px" }}>
         The ultimate detailing experience, crafted for clients who expect nothing
         short of perfection.
       </p>
 
-      <p style={{ lineHeight: "1.9", color: "#ccc", marginBottom: "10px" }}>
+      <p style={{ lineHeight: "1.9", color: "#ccc", marginBottom: "12px" }}>
         Every surface is meticulously treated, delivering a showroom-level finish
         with unmatched precision.
       </p>
