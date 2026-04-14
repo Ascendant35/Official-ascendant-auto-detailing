@@ -217,49 +217,158 @@ export default function TarifsFR() {
 
   <div style={whyGrid}>
     
-    <div style={choiceStyle}>
-      <strong style={gold}>Ascendant Care</strong>
-      <p style={{ marginTop: "10px", lineHeight: "1.8", color: "#ccc" }}>
-        Designed for consistent upkeep, this package maintains your vehicle in clean,
+    {/* CARE */}
+    <div
+      style={{
+        ...choiceStyle,
+        border: "1px solid rgba(212,175,55,0.2)",
+        transition: "all 0.3s ease",
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.border = "1px solid rgba(212,175,55,0.6)";
+        e.currentTarget.style.transform = "translateY(-5px)";
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.border = "1px solid rgba(212,175,55,0.2)";
+        e.currentTarget.style.transform = "translateY(0)";
+      }}
+    >
+      <div
+        style={{
+          width: "40px",
+          height: "2px",
+          backgroundColor: "#d4af37",
+          marginBottom: "15px",
+        }}
+      />
+
+      <strong
+        style={{
+          fontSize: "24px",
+          color: "#f5f5f5",
+          display: "block",
+          marginBottom: "15px",
+        }}
+      >
+        Ascendant Care
+      </strong>
+
+      <p style={{ lineHeight: "1.9", color: "#ccc", marginBottom: "10px" }}>
+        Designed for consistent upkeep, this package maintains your vehicle in a clean,
         refined condition on a regular basis.
       </p>
-      <p style={{ lineHeight: "1.8", color: "#ccc" }}>
+
+      <p style={{ lineHeight: "1.9", color: "#ccc", marginBottom: "10px" }}>
         Ideal for clients who value a polished appearance at all times without the need
         for intensive restoration.
       </p>
-      <p style={{ lineHeight: "1.8", color: "#ccc" }}>
+
+      <p style={{ lineHeight: "1.9", color: "#ccc" }}>
         A perfect balance between efficiency and elegance for everyday driving.
       </p>
     </div>
 
-    <div style={choiceStyle}>
-      <strong style={gold}>Ascendant Elite</strong>
-      <p style={{ marginTop: "10px", lineHeight: "1.8", color: "#ccc" }}>
+    {/* ELITE */}
+    <div
+      style={{
+        ...choiceStyle,
+        border: "1px solid rgba(212,175,55,0.4)",
+        transform: "scale(1.03)",
+        transition: "all 0.3s ease",
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.border = "1px solid #d4af37";
+        e.currentTarget.style.transform = "scale(1.05)";
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.border = "1px solid rgba(212,175,55,0.4)";
+        e.currentTarget.style.transform = "scale(1.03)";
+      }}
+    >
+      <div
+        style={{
+          width: "40px",
+          height: "2px",
+          backgroundColor: "#d4af37",
+          marginBottom: "15px",
+        }}
+      />
+
+      <strong
+        style={{
+          fontSize: "26px",
+          color: "#d4af37",
+          display: "block",
+          marginBottom: "15px",
+        }}
+      >
+        Ascendant Elite
+      </strong>
+
+      <p style={{ lineHeight: "1.9", color: "#ccc", marginBottom: "10px" }}>
         Our most popular choice, offering a deeper level of cleaning and attention
         to detail both inside and out.
       </p>
-      <p style={{ lineHeight: "1.8", color: "#ccc" }}>
+
+      <p style={{ lineHeight: "1.9", color: "#ccc", marginBottom: "10px" }}>
         Restores freshness to your interior while enhancing the exterior finish
         with a noticeably elevated result.
       </p>
-      <p style={{ lineHeight: "1.8", color: "#ccc" }}>
+
+      <p style={{ lineHeight: "1.9", color: "#ccc" }}>
         Perfect for those seeking a premium transformation without going to the
         highest tier.
       </p>
     </div>
 
-    <div style={choiceStyle}>
-      <strong style={gold}>Ascendant Signature</strong>
-      <p style={{ marginTop: "10px", lineHeight: "1.8", color: "#ccc" }}>
+    {/* SIGNATURE */}
+    <div
+      style={{
+        ...choiceStyle,
+        border: "1px solid rgba(212,175,55,0.2)",
+        transition: "all 0.3s ease",
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.border = "1px solid rgba(212,175,55,0.6)";
+        e.currentTarget.style.transform = "translateY(-5px)";
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.border = "1px solid rgba(212,175,55,0.2)";
+        e.currentTarget.style.transform = "translateY(0)";
+      }}
+    >
+      <div
+        style={{
+          width: "40px",
+          height: "2px",
+          backgroundColor: "#d4af37",
+          marginBottom: "15px",
+        }}
+      />
+
+      <strong
+        style={{
+          fontSize: "24px",
+          color: "#f5f5f5",
+          display: "block",
+          marginBottom: "15px",
+        }}
+      >
+        Ascendant Signature
+      </strong>
+
+      <p style={{ lineHeight: "1.9", color: "#ccc", marginBottom: "10px" }}>
         The ultimate detailing experience, crafted for clients who expect nothing
         short of perfection.
       </p>
-      <p style={{ lineHeight: "1.8", color: "#ccc" }}>
+
+      <p style={{ lineHeight: "1.9", color: "#ccc", marginBottom: "10px" }}>
         Every surface is meticulously treated, delivering a showroom-level finish
         with unmatched precision.
       </p>
-      <p style={{ lineHeight: "1.8", color: "#ccc" }}>
-        Ideal for special occasions, luxury vehicles, or achieving the highest
+
+      <p style={{ lineHeight: "1.9", color: "#ccc" }}>
+        Ideal for luxury vehicles, special occasions, or achieving the highest
         possible standard of presentation.
       </p>
     </div>
