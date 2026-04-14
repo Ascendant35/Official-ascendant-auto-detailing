@@ -7,7 +7,7 @@ export default function Services() {
     <div style={{ backgroundColor: "#0a0a0a", color: "#f5f5f5" }}>
       <Header lang="en" />
 
-      {/* 🔥 HERO (FINAL FIX — NO CROPPING) */}
+      {/* 🔥 HERO (PERFECTLY POSITIONED) */}
       <section style={heroWrapper}>
         <img
           src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1600&q=80"
@@ -57,7 +57,6 @@ function Service({ img, title, desc }) {
       <h2 style={titleStyle}>{title}</h2>
       <p style={descStyle}>{desc}</p>
 
-      {/* 🔥 BOOK BUTTON */}
       <a href="/en/book" style={goldBtn}>
         Book Now
       </a>
@@ -65,37 +64,39 @@ function Service({ img, title, desc }) {
   );
 }
 
-/* 🔥 HERO FINAL FIX */
+/* 🔥 HERO FINAL PERFECT */
 const heroWrapper = {
   position: "relative",
   width: "100%",
   height: "520px",
-  backgroundColor: "#000",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
+  overflow: "hidden",
 };
 
 const heroImage = {
   width: "100%",
   height: "100%",
-  objectFit: "contain", // 🔥 THIS FIXES EVERYTHING
+  objectFit: "cover",
+  objectPosition: "center 88%", // 🔥 FINAL PERFECT POSITION
 };
 
 const heroOverlay = {
   position: "absolute",
   inset: 0,
-  background: "linear-gradient(rgba(0,0,0,0.5), rgba(212,175,55,0.15))",
+  background: "linear-gradient(rgba(0,0,0,0.6), rgba(212,175,55,0.2))",
 };
 
+/* 🔥 TEXT POSITION FIX */
 const heroContent = {
   position: "absolute",
+  top: "60%", // 🔥 moved slightly down so it sits nicely over car
+  left: "50%",
+  transform: "translate(-50%, -50%)",
   textAlign: "center",
 };
 
 const heroTitle = {
-  fontSize: "60px",
-  marginBottom: "10px",
+  fontSize: "58px",
+  marginBottom: "12px",
 };
 
 const heroText = {
