@@ -1,5 +1,3 @@
-import Footer from "../components/Footer";
-
 export const metadata = {
   title: "Ascendant Auto Detailing",
   description: "Premium auto detailing services",
