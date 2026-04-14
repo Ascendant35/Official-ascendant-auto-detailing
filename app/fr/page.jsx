@@ -1,4 +1,6 @@
 import Header from "../components/Header";
+import FooterFR from "../components/FooterFR";
+<FooterFR />
 import Link from "next/link";
 
 export default function HomeFR() {
