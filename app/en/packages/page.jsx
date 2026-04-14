@@ -17,6 +17,43 @@ export default function TarifsFR() {
         </div>
       </section>
 
+      {/* ✅ NEW PREMIUM INTRO SECTION (ONLY ADDITION) */}
+      <section
+        style={{
+          maxWidth: "900px",
+          margin: "60px auto",
+          padding: "0 20px",
+          textAlign: "center",
+          lineHeight: "1.8",
+        }}
+      >
+        <p
+          style={{
+            fontSize: "20px",
+            fontWeight: "400",
+            color: "#d4af37",
+            marginBottom: "20px",
+            letterSpacing: "1px",
+          }}
+        >
+          Tailored Luxury Detailing Experience
+        </p>
+
+        <p style={{ fontSize: "17px", color: "#cccccc" }}>
+          Explore our range of premium detailing packages, each designed to elevate your vehicle to its highest standard.
+          Select the package that suits your needs, then customize your experience by choosing your vehicle size.
+        </p>
+
+        <p style={{ fontSize: "17px", color: "#cccccc", marginTop: "15px" }}>
+          For those seeking a complete transformation, full-visit packages are available for the ultimate care experience.
+          You may also enhance your service with exclusive add-ons, all available below.
+        </p>
+
+        <p style={{ fontSize: "17px", color: "#cccccc", marginTop: "15px" }}>
+          Every service is crafted with precision, attention to detail, and a commitment to excellence — because your vehicle deserves nothing less.
+        </p>
+      </section>
+
       {/* PACKAGES */}
       <section style={gridSection}>
         
@@ -33,7 +70,6 @@ export default function TarifsFR() {
             <p>Truck / Large SUV: $249.99</p>
           </div>
 
-          {/* 4 VISIT */}
           <div style={subscription}>
             <p style={subTitle}>4 Visit Package</p>
             <p>Take advantage of our bundled 4-visit package, usable whenever you want.</p>
@@ -68,7 +104,6 @@ export default function TarifsFR() {
             <p>Truck / Large SUV: $349.99</p>
           </div>
 
-          {/* 4 VISIT */}
           <div style={subscription}>
             <p style={subTitle}>4 Visit Package</p>
             <p>Take advantage of our bundled 4-visit package, usable whenever you want.</p>
@@ -102,7 +137,6 @@ export default function TarifsFR() {
             <p>Truck / Large SUV: $449.99</p>
           </div>
 
-          {/* 4 VISIT */}
           <div style={subscription}>
             <p style={subTitle}>4 Visit Package</p>
             <p>Take advantage of our bundled 4-visit package, usable whenever you want.</p>
@@ -173,8 +207,8 @@ function Extra({ title, price }) {
     </div>
   );
 }
-/* STYLES */
 
+/* STYLES */
 const heroStyle = {
   minHeight: "65vh",
   display: "flex",
@@ -281,5 +315,3 @@ const extraCard = {
   padding: "25px",
   borderRadius: "16px",
 };
-
-/* STYLES (UNCHANGED) */
