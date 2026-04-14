@@ -66,6 +66,7 @@ function Service({ img, title, desc }) {
 
 /* 🔥 HERO FINAL FIX (FULL IMAGE VISIBLE) */
 };
+/* 🔥 HERO FINAL FIX (FULL IMAGE VISIBLE) */
 const heroWrapper = {
   position: "relative",
   width: "100%",
@@ -74,14 +75,13 @@ const heroWrapper = {
   backgroundColor: "#000",
 };
 
-/* 🔥 THIS IS THE KEY FIX */
 const heroImage = {
-  position: "absolute",   // ✅ makes it fill the container
+  position: "absolute",
   top: 0,
   left: 0,
   width: "100%",
   height: "100%",
-  objectFit: "contain",   // keeps full car + background visible
+  objectFit: "contain",
   objectPosition: "center",
 };
 const heroOverlay = {
