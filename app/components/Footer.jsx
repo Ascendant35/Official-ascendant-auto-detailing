@@ -27,7 +27,7 @@ export default function Footer() {
       </a>
 
       <p style={{ marginTop: "20px", fontSize: "12px", color: "#777" }}>
-        © {new Date().getFullYear()} Ascendant Auto Detailing
+        © 2026 Ascendant Auto Detailing
       </p>
     </footer>
   );
