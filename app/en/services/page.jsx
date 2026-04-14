@@ -7,11 +7,12 @@ export default function Services() {
     <div style={{ backgroundColor: "#0a0a0a", color: "#f5f5f5" }}>
       <Header lang="en" />
 
-      {/* 🔥 HERO (PERFECTLY POSITIONED) */}
+      {/* 🔥 HERO */}
       <section style={heroWrapper}>
         <img
-          src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1600&q=80"
+          src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=1600&q=80"
           style={heroImage}
+          alt="Luxury car detailing"
         />
 
         <div style={heroOverlay} />
@@ -20,6 +21,19 @@ export default function Services() {
           <h1 style={heroTitle}>Our Premium Services</h1>
           <p style={heroText}>
             Precision, refinement, and attention to detail define every service we offer.
+          </p>
+        </div>
+      </section>
+
+      {/* 🔥 INTRO SECTION */}
+      <section style={introSection}>
+        <div style={introBox}>
+          <h2 style={introTitle}>A Higher Standard of Detailing</h2>
+          <p style={introText}>
+            At Ascendant Auto Detailing, every service is designed to elevate your vehicle beyond a simple clean.
+            We focus on precision, refinement, and a meticulous attention to detail to deliver a truly premium finish.
+            Whether restoring your vehicle’s interior or enhancing its exterior presence, our services are crafted
+            to exceed expectations and reflect the highest level of automotive care.
           </p>
         </div>
       </section>
@@ -63,11 +77,13 @@ function Service({ img, title, desc }) {
     </div>
   );
 }
-/* 🔥 HERO FINAL FIX (FULL IMAGE VISIBLE) */
+
+/* 🔥 HERO FIXED (FULL WIDTH + FULL IMAGE) */
 const heroWrapper = {
   position: "relative",
   width: "100%",
-  height: "650px",
+  height: "75vh",
+  minHeight: "600px",
   overflow: "hidden",
   backgroundColor: "#000",
 };
@@ -78,32 +94,59 @@ const heroImage = {
   left: 0,
   width: "100%",
   height: "100%",
-  objectFit: "contain",
+  objectFit: "contain", // 🔥 FULL IMAGE visible
   objectPosition: "center",
 };
+
 const heroOverlay = {
   position: "absolute",
   inset: 0,
-  background: "linear-gradient(rgba(0,0,0,0.6), rgba(212,175,55,0.2))",
+  background: "linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.4))",
 };
 
-/* 🔥 TEXT POSITION FIX */
 const heroContent = {
   position: "absolute",
-  top: "60%", // 🔥 moved slightly down so it sits nicely over car
+  top: "60%",
   left: "50%",
   transform: "translate(-50%, -50%)",
   textAlign: "center",
 };
 
 const heroTitle = {
-  fontSize: "58px",
+  fontSize: "60px",
   marginBottom: "12px",
 };
 
 const heroText = {
   color: "#ddd",
   fontSize: "18px",
+};
+
+/* 🔥 INTRO */
+const introSection = {
+  maxWidth: "1100px",
+  margin: "0 auto",
+  padding: "80px 30px 30px",
+};
+
+const introBox = {
+  backgroundColor: "#111",
+  padding: "60px",
+  borderRadius: "28px",
+  border: "1px solid rgba(212,175,55,0.35)",
+  textAlign: "center",
+};
+
+const introTitle = {
+  fontSize: "36px",
+  marginBottom: "20px",
+  color: "#d4af37",
+};
+
+const introText = {
+  color: "#ccc",
+  fontSize: "17px",
+  lineHeight: "1.9",
 };
 
 /* GRID */
@@ -118,8 +161,9 @@ const gridSection = {
 
 const card = {
   backgroundColor: "#111",
-  padding: "20px",
+  padding: "25px",
   borderRadius: "24px",
+  transition: "0.3s",
 };
 
 const image = {
@@ -127,6 +171,7 @@ const image = {
   height: "240px",
   objectFit: "cover",
   marginBottom: "20px",
+  borderRadius: "16px",
 };
 
 const titleStyle = {
@@ -142,7 +187,7 @@ const descStyle = {
 /* BUTTON */
 const goldBtn = {
   display: "inline-block",
-  padding: "12px 24px",
+  padding: "12px 26px",
   borderRadius: "999px",
   backgroundColor: "#d4af37",
   color: "#111",
@@ -159,7 +204,7 @@ const extraSection = {
 
 const extraBox = {
   backgroundColor: "#111",
-  padding: "50px",
+  padding: "60px",
   borderRadius: "28px",
   border: "1px solid rgba(212,175,55,0.4)",
   textAlign: "center",
