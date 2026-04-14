@@ -65,21 +65,25 @@ function Service({ img, title, desc }) {
 }
 
 /* 🔥 HERO FINAL FIX (FULL IMAGE VISIBLE) */
+};
 const heroWrapper = {
   position: "relative",
   width: "100%",
-  height: "650px", // more space so image breathes
+  height: "650px",
   overflow: "hidden",
-  backgroundColor: "#000", // fills empty space cleanly
+  backgroundColor: "#000",
 };
 
+/* 🔥 THIS IS THE KEY FIX */
 const heroImage = {
+  position: "absolute",   // ✅ makes it fill the container
+  top: 0,
+  left: 0,
   width: "100%",
   height: "100%",
-  objectFit: "contain", // ✅ SHOW FULL CAR + BACKGROUND
-  objectPosition: "center", // perfectly centered
+  objectFit: "contain",   // keeps full car + background visible
+  objectPosition: "center",
 };
-
 const heroOverlay = {
   position: "absolute",
   inset: 0,
