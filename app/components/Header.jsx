@@ -15,10 +15,12 @@ export default function Header({ lang }) {
         style={{
           maxWidth: "1400px",
           margin: "0 auto",
-          padding: "25px 50px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
+          height: "120px", // 👈 controls header height
+padding: "0 50px", // 👈 remove vertical padding
+display: "flex",
+alignItems: "center",
+justifyContent: "space-between",
+overflow: "hidden", // 👈 keeps header clean
         }}
       >
         {/* LOGO */}
