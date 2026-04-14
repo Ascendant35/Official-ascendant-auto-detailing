@@ -87,17 +87,15 @@ const heroWrapper = {
   overflow: "hidden",
   backgroundColor: "#000",
 };
-
 const heroImage = {
   position: "absolute",
   top: 0,
   left: 0,
   width: "100%",
   height: "100%",
-  objectFit: "contain", // 🔥 FULL IMAGE visible
-  objectPosition: "center",
+  objectFit: "cover", // 🔥 fills FULL space
+  objectPosition: "center 75%", // 🔥 keeps car visible (adjust if needed)
 };
-
 const heroOverlay = {
   position: "absolute",
   inset: 0,
