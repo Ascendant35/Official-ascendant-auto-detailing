@@ -63,9 +63,6 @@ function Service({ img, title, desc }) {
     </div>
   );
 }
-
-/* 🔥 HERO FINAL FIX (FULL IMAGE VISIBLE) */
-};
 /* 🔥 HERO FINAL FIX (FULL IMAGE VISIBLE) */
 const heroWrapper = {
   position: "relative",
