@@ -64,19 +64,20 @@ function Service({ img, title, desc }) {
   );
 }
 
-/* 🔥 HERO FINAL PERFECT */
+/* 🔥 HERO FINAL FIX (FULL IMAGE VISIBLE) */
 const heroWrapper = {
   position: "relative",
   width: "100%",
-  height: "500px",
+  height: "650px", // more space so image breathes
   overflow: "hidden",
+  backgroundColor: "#000", // fills empty space cleanly
 };
 
 const heroImage = {
-  width: "150%",
-  height: "150%",
-  objectFit: "cover",
-  objectPosition: "center 85%", // 
+  width: "100%",
+  height: "100%",
+  objectFit: "contain", // ✅ SHOW FULL CAR + BACKGROUND
+  objectPosition: "center", // perfectly centered
 };
 
 const heroOverlay = {
