@@ -37,8 +37,7 @@ export default function AboutFR() {
       <Section
         title="Notre Philosophie"
         text="Nous croyons que la véritable qualité se trouve dans les plus petits détails. Chaque véhicule est traité avec le même niveau d’attention, de précision et de rigueur — car l’excellence n’est jamais optionnelle. Notre philosophie est simple : aucun raccourci, aucun compromis, seulement des résultats à la hauteur de nos standards les plus élevés."
-        image="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1200&q=80"
-  reverse
+        image=src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?auto=format&fit=crop&w=1200&q=80"
       />
 
       {/* OUR PROCESS */}
