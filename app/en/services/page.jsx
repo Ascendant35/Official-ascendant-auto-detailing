@@ -73,7 +73,7 @@ const heroWrapper = {
 };
 
 const heroImage = {
-  width: "100%",
+  width: "150%",
   height: "150%",
   objectFit: "cover",
   objectPosition: "center 85%", // 
