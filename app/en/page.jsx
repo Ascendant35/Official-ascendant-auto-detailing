@@ -1,4 +1,6 @@
 import Header from "../components/Header";
+import FooterEN from "../components/FooterEN";
+<FooterEN />
 import Link from "next/link";
 
 export default function HomeEN() {
