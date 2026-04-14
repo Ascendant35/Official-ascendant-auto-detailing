@@ -7,7 +7,7 @@ export default function Services() {
     <div style={{ backgroundColor: "#0a0a0a", color: "#f5f5f5" }}>
       <Header lang="en" />
 
-      {/* 🔥 HERO (NO MORE CROPPING) */}
+      {/* 🔥 HERO (FINAL FIX — NO CROPPING) */}
       <section style={heroWrapper}>
         <img
           src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1600&q=80"
@@ -24,7 +24,7 @@ export default function Services() {
         </div>
       </section>
 
-      {/* SERVICES */}
+      {/* SERVICES GRID */}
       <section style={gridSection}>
         <Service img="/exterior.jpg" title="Exterior Detailing" desc="A refined exterior treatment restoring gloss, depth, and a flawless finish." />
         <Service img="/interior.jpg" title="Interior Detailing" desc="A deep interior reset focused on cleanliness, comfort, and a truly luxurious feel." />
@@ -52,11 +52,12 @@ export default function Services() {
 function Service({ img, title, desc }) {
   return (
     <div style={card}>
-      <img src={img} style={image} />
+      <img src={img} style={image} alt={title} />
 
       <h2 style={titleStyle}>{title}</h2>
       <p style={descStyle}>{desc}</p>
 
+      {/* 🔥 BOOK BUTTON */}
       <a href="/en/book" style={goldBtn}>
         Book Now
       </a>
@@ -64,31 +65,31 @@ function Service({ img, title, desc }) {
   );
 }
 
-/* 🔥 HERO FIX */
+/* 🔥 HERO FINAL FIX */
 const heroWrapper = {
   position: "relative",
   width: "100%",
-  height: "500px",
-  overflow: "hidden",
+  height: "520px",
+  backgroundColor: "#000",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
 };
 
 const heroImage = {
   width: "100%",
   height: "100%",
-  objectFit: "cover", // keeps it clean but less aggressive than background
+  objectFit: "contain", // 🔥 THIS FIXES EVERYTHING
 };
 
 const heroOverlay = {
   position: "absolute",
   inset: 0,
-  background: "linear-gradient(rgba(0,0,0,0.6), rgba(212,175,55,0.2))",
+  background: "linear-gradient(rgba(0,0,0,0.5), rgba(212,175,55,0.15))",
 };
 
 const heroContent = {
   position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
   textAlign: "center",
 };
 
