@@ -7,7 +7,7 @@ export default function Services() {
     <div style={{ backgroundColor: "#0a0a0a", color: "#f5f5f5", minHeight: "100vh" }}>
       <Header lang="en" />
 
-      {/* HERO (FIXED — SHOWS CAR) */}
+      {/* HERO (PROPERLY FIXED) */}
       <section style={heroStyle}>
         <div style={container}>
           <h1 style={heroTitle}>Our Premium Services</h1>
@@ -27,7 +27,7 @@ export default function Services() {
         <Service img="/protection.jpg" title="Paint Protection" desc="Preserve your vehicle’s finish with long-lasting care and deep gloss retention." />
       </section>
 
-      {/* CTA */}
+      {/* PREMIUM CTA */}
       <section style={extraSection}>
         <div style={extraBox}>
           <h2 style={extraTitle}>Not Finding What You’re Looking For?</h2>
@@ -46,13 +46,13 @@ function Service({ img, title, desc }) {
   return (
     <div style={card}>
       <div style={{ overflow: "hidden", borderRadius: "16px" }}>
-        <img src={img} style={image} />
+        <img src={img} style={image} alt={title} />
       </div>
 
       <h2 style={titleStyle}>{title}</h2>
       <p style={descStyle}>{desc}</p>
 
-      {/* 🔥 BOOK BUTTON */}
+      {/* BOOK BUTTON */}
       <a href="/en/book" style={goldBtn}>
         Book Now
       </a>
@@ -60,15 +60,16 @@ function Service({ img, title, desc }) {
   );
 }
 
-/* HERO (FIXED HERE) */
+/* HERO (REAL FIX APPLIED HERE) */
 const heroStyle = {
-  minHeight: "50vh",
+  minHeight: "55vh",
   display: "flex",
   alignItems: "center",
   backgroundImage:
-    'linear-gradient(rgba(0,0,0,0.65), rgba(212,175,55,0.25)), url("https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1600&q=80")',
-  backgroundSize: "cover",
-  backgroundPosition: "center 75%", // 🔥 FIX (shows car)
+    'linear-gradient(rgba(0,0,0,0.6), rgba(212,175,55,0.2)), url("https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1600&q=80")',
+  backgroundSize: "110%", // 🔥 reduces cropping
+  backgroundPosition: "center 80%", // 🔥 shows car + yacht
+  backgroundRepeat: "no-repeat",
 };
 
 const container = {
@@ -77,7 +78,9 @@ const container = {
   padding: "80px 50px",
 };
 
-const heroTitle = { fontSize: "60px" };
+const heroTitle = {
+  fontSize: "60px",
+};
 
 const heroText = {
   fontSize: "18px",
