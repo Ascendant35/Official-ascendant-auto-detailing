@@ -27,7 +27,7 @@ export default function Footer({ lang = "en" }) {
           <img
             src="/AscendantAutoDetailing.png"
             alt="logo"
-            style={{ width: "160px", marginBottom: "15px" }}
+            style={{ width: "250px", marginBottom: "15px" }}
           />
 
           <p style={{ color: "#aaa", lineHeight: "1.6" }}>
