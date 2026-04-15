@@ -17,6 +17,17 @@ export default function Footer({ lang = "en" }) {
           textAlign: "center",
         }}
       >
+        {/* ✅ LOGO */}
+        <img
+          src="/AscendantAutoDetailing.png"
+          alt="Ascendant Auto Detailing"
+          style={{
+            width: "180px",
+            marginBottom: "20px",
+            objectFit: "contain",
+          }}
+        />
+
         {/* BRAND */}
         <p style={{ marginBottom: "15px", fontSize: "16px", color: "#aaa" }}>
           {isFR
@@ -27,6 +38,7 @@ export default function Footer({ lang = "en" }) {
         {/* CONTACT */}
         <p style={{ marginBottom: "20px", lineHeight: "1.8", color: "#aaa" }}>
           📧 ascendantautodetailing@gmail.com <br />
+          📞 (514) 000-0000 <br /> {/* 🔥 PUT YOUR REAL NUMBER HERE */}
           📍 {isFR ? "Montréal et environs" : "Montreal & surrounding areas"} <br />
           {isFR ? "Sur rendez-vous uniquement" : "By appointment only"}
         </p>
@@ -48,7 +60,7 @@ export default function Footer({ lang = "en" }) {
           {isFR ? "Réserver maintenant" : "Book Now"}
         </a>
 
-        {/* NAVIGATION (premium touch) */}
+        {/* NAVIGATION */}
         <div style={{ marginBottom: "25px", fontSize: "14px" }}>
           <a href={isFR ? "/fr/services" : "/en/services"} style={link}>
             {isFR ? "Services" : "Services"}
