@@ -10,86 +10,119 @@ export default function Footer({ lang = "en" }) {
         borderTop: "1px solid #222",
       }}
     >
+      {/* MAIN ROW */}
       <div
         style={{
-          maxWidth: "1200px",
+          maxWidth: "1300px",
           margin: "0 auto",
-          textAlign: "center",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "flex-start",
+          flexWrap: "wrap",
+          gap: "40px",
         }}
       >
-        {/* ✅ LOGO */}
-        <img
-          src="/AscendantAutoDetailing.png"
-          alt="Ascendant Auto Detailing"
-          style={{
-            width: "180px",
-            marginBottom: "20px",
-            objectFit: "contain",
-          }}
-        />
+        {/* LOGO + BRAND */}
+        <div style={{ maxWidth: "300px" }}>
+          <img
+            src="/AscendantAutoDetailing.png"
+            alt="logo"
+            style={{ width: "160px", marginBottom: "15px" }}
+          />
 
-        {/* BRAND */}
-        <p style={{ marginBottom: "15px", fontSize: "16px", color: "#aaa" }}>
-          {isFR
-            ? "Esthétique automobile haut de gamme. Précision. Excellence. Ascendant."
-            : "Premium automotive detailing. Precision. Excellence. Ascendant."}
-        </p>
-
-        {/* CONTACT */}
-        <p style={{ marginBottom: "20px", lineHeight: "1.8", color: "#aaa" }}>
-          📧 ascendantautodetailing@gmail.com <br />
-          📞 (514) 000-0000 <br /> {/* 🔥 PUT YOUR REAL NUMBER HERE */}
-          📍 {isFR ? "Montréal et environs" : "Montreal & surrounding areas"} <br />
-          {isFR ? "Sur rendez-vous uniquement" : "By appointment only"}
-        </p>
-
-        {/* CTA BUTTON */}
-        <a
-          href={isFR ? "/fr/reserver" : "/en/book"}
-          style={{
-            backgroundColor: "#C9A34E",
-            color: "#000",
-            padding: "12px 30px",
-            textDecoration: "none",
-            fontWeight: "600",
-            borderRadius: "5px",
-            display: "inline-block",
-            marginBottom: "30px",
-          }}
-        >
-          {isFR ? "Réserver maintenant" : "Book Now"}
-        </a>
-
-        {/* NAVIGATION */}
-        <div style={{ marginBottom: "25px", fontSize: "14px" }}>
-          <a href={isFR ? "/fr/services" : "/en/services"} style={link}>
-            {isFR ? "Services" : "Services"}
-          </a>{" "}
-          |{" "}
-          <a href={isFR ? "/fr/tarifs" : "/en/packages"} style={link}>
-            {isFR ? "Tarifs" : "Packages"}
-          </a>{" "}
-          |{" "}
-          <a href={isFR ? "/fr/about" : "/en/about"} style={link}>
-            {isFR ? "À propos" : "About"}
-          </a>{" "}
-          |{" "}
-          <a href={isFR ? "/fr/contact" : "/en/contact"} style={link}>
-            {isFR ? "Contact" : "Contact"}
-          </a>
+          <p style={{ color: "#aaa", lineHeight: "1.6" }}>
+            {isFR
+              ? "Esthétique automobile haut de gamme. Précision. Excellence. Ascendant."
+              : "Premium automotive detailing. Precision. Excellence. Ascendant."}
+          </p>
         </div>
 
-        {/* COPYRIGHT */}
-        <p style={{ fontSize: "12px", color: "#777" }}>
-          © 2026 Ascendant Auto Detailing
-        </p>
+        {/* CONTACT */}
+        <div>
+          <h4 style={title}>{isFR ? "Contact" : "Contact"}</h4>
+
+          <p style={text}>
+            📍 Montreal, Laval, South Shore, North Shore <br />
+          </p>
+
+          <p style={text}>
+            📧 ascendantautodetailing@gmail.com
+          </p>
+
+          <p style={text}>
+            📞 (514) 000-0000
+          </p>
+
+          <p style={text}>
+            {isFR ? "Sur rendez-vous uniquement" : "By appointment only"}
+          </p>
+        </div>
+
+        {/* SOCIALS */}
+        <div>
+          <h4 style={title}>Socials</h4>
+
+          <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+            <a href="#" style={social}>📸 Instagram</a>
+            <a href="#" style={social}>🎵 TikTok</a>
+            <a href="#" style={social}>👻 Snapchat</a>
+          </div>
+        </div>
+
+        {/* CTA */}
+        <div>
+          <h4 style={title}>{isFR ? "Réserver" : "Book"}</h4>
+
+          <a
+            href={isFR ? "/fr/reserver" : "/en/book"}
+            style={button}
+          >
+            {isFR ? "Réserver maintenant" : "Book Now"}
+          </a>
+        </div>
+      </div>
+
+      {/* BOTTOM */}
+      <div
+        style={{
+          textAlign: "center",
+          marginTop: "40px",
+          borderTop: "1px solid #222",
+          paddingTop: "20px",
+          fontSize: "13px",
+          color: "#777",
+        }}
+      >
+        © 2026 Ascendant Auto Detailing
       </div>
     </footer>
   );
 }
 
-const link = {
+const title = {
+  color: "#C9A34E",
+  marginBottom: "10px",
+};
+
+const text = {
+  color: "#aaa",
+  marginBottom: "6px",
+  lineHeight: "1.6",
+};
+
+const social = {
   color: "#aaa",
   textDecoration: "none",
-  margin: "0 5px",
+  transition: "0.3s",
+};
+
+const button = {
+  backgroundColor: "#C9A34E",
+  color: "#000",
+  padding: "12px 25px",
+  textDecoration: "none",
+  fontWeight: "600",
+  borderRadius: "5px",
+  display: "inline-block",
+  marginTop: "10px",
 };
