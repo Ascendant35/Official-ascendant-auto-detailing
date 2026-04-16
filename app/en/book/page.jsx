@@ -85,19 +85,25 @@ export default function BookNow() {
           </div>
         </div>
       </section>
-      {/* BOOKING INTRO SECTION */}
+     {/* BOOKING INTRO SECTION */}
 <section
   style={{
     backgroundColor: "#0a0a0a",
-    color: "white",
     padding: "80px 20px",
-    textAlign: "center",
+    display: "flex",
+    justifyContent: "center",
   }}
 >
   <div
     style={{
-      maxWidth: "900px",
-      margin: "0 auto",
+      maxWidth: "1000px",
+      width: "100%",
+      backgroundColor: "#111",
+      borderRadius: "28px",
+      padding: "50px 40px",
+      border: "1px solid rgba(212,175,55,0.4)",
+      boxShadow: "0 0 40px rgba(212,175,55,0.08)",
+      textAlign: "center",
     }}
   >
     <h2
@@ -106,6 +112,7 @@ export default function BookNow() {
         fontWeight: "600",
         marginBottom: "20px",
         letterSpacing: "1px",
+        color: "white",
       }}
     >
       Book Your Service
@@ -142,6 +149,7 @@ export default function BookNow() {
       Once your request is submitted, we will contact you to confirm your appointment and finalize the details.
     </p>
 
+    {/* GOLD LINE */}
     <div
       style={{
         width: "80px",
