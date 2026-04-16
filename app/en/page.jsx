@@ -63,7 +63,7 @@ export default function HomeEN() {
             >
               Give your vehicle a clean, refined and elevated appearance with detailing
               services designed for both everyday cars and luxury vehicles. We offer
-              our services in Montreal, Laval, the North Shore and the South Shore.
+              our services in Montreal, Laval, the North Shore and the South Shore. Our fully equipped mobile detailing service comes directly to you — at your home or workplace — delivering a seamless, high-end experience without interrupting your day.
             </p>
 
             <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
