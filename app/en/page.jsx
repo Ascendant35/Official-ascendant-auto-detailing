@@ -340,7 +340,7 @@ export default function HomeEN() {
             <div style={{ color: "#d4af37", fontSize: "28px", marginBottom: "16px" }}>03</div>
             <h3>Local service</h3>
             <p style={{ color: "#c8c8c8" }}>
-              Serving Montreal, Laval, North Shore and South Shore with professionalism.
+              Our fully equipped mobile detailing comes to you — at home or work — for a seamless, high-end experience, uninterrupted. Serving Montreal, Laval, North Shore and South Shore with professionalism.
             </p>
           </div>
         </div>
