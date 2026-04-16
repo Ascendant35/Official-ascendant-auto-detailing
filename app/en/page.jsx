@@ -281,6 +281,7 @@ export default function HomeEN() {
   </p>
 </div>   {/* ✅ THIS was missing */}
 </div> 
+</div>
 </section>
       {/* WHY CHOOSE US */}
       <section
