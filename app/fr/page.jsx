@@ -415,7 +415,7 @@ export default function HomeFR() {
               Service local
             </h3>
             <p style={{ color: "#c8c8c8", lineHeight: "1.8", fontSize: "16px" }}>
-              Nous servons la grande région de Montréal incluant Laval, la Rive-Nord et la Rive-Sud avec
+              Service de detailing mobile entièrement équipé, directement chez vous ou au travail — une expérience exceptionnelle, sans contrainte. Nous servons la grande région de Montréal incluant Laval, la Rive-Nord et la Rive-Sud avec
               une approche professionnelle, accessible et orientée sur la qualité.
             </p>
           </div>
