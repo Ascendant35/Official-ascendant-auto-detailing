@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import Header from "../../components/Header";
+import Header from "../../../components/Header";
 
 export default function Reserver() {
   const [selectedPackage, setSelectedPackage] = useState("care");
