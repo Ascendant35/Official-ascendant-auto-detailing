@@ -64,7 +64,7 @@ export default function HomeFR() {
               Redonnez à votre véhicule une apparence propre, soignée et raffinée
               grâce à un service de detailing pensé autant pour les voitures du
               quotidien que pour les véhicules haut de gamme. Nous offrons nos
-              services à Montréal, Laval, sur la Rive-Nord et la Rive-Sud.
+              services à Montréal, Laval, sur la Rive-Nord et la Rive-Sud. Notre service de detailing mobile entièrement équipé se déplace directement chez vous — à votre domicile ou sur votre lieu de travail — offrant une expérience haut de gamme, fluide et sans interruption de votre journée.
             </p>
 
             <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
