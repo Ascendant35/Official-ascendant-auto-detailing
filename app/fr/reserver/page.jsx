@@ -84,6 +84,81 @@ export default function Reserver() {
           </div>
         </div>
       </section>
+      {/* SECTION INTRO RÉSERVATION */}
+<section
+  style={{
+    backgroundColor: "#0a0a0a",
+    padding: "80px 20px",
+    display: "flex",
+    justifyContent: "center",
+  }}
+>
+  <div
+    style={{
+      maxWidth: "1000px",
+      width: "100%",
+      backgroundColor: "#111",
+      borderRadius: "28px",
+      padding: "50px 40px",
+      border: "1px solid rgba(212,175,55,0.4)",
+      boxShadow: "0 0 40px rgba(212,175,55,0.08)",
+      textAlign: "center",
+    }}
+  >
+    <h2
+      style={{
+        fontSize: "42px",
+        fontWeight: "600",
+        marginBottom: "20px",
+        letterSpacing: "1px",
+        color: "white",
+      }}
+    >
+      Réservez Votre Service
+    </h2>
+
+    <p
+      style={{
+        fontSize: "18px",
+        lineHeight: "1.8",
+        color: "#ccc",
+        marginBottom: "20px",
+      }}
+    >
+      Planifiez votre expérience de nettoyage haut de gamme en quelques étapes simples. Sélectionnez votre forfait, choisissez le type de véhicule et personnalisez votre service avec des options adaptées à vos besoins.
+    </p>
+
+    <p
+      style={{
+        fontSize: "18px",
+        lineHeight: "1.8",
+        color: "#ccc",
+        marginBottom: "20px",
+      }}
+    >
+      Chaque intervention est réalisée avec précision, en utilisant des produits de qualité supérieure et une attention minutieuse aux détails afin d’offrir un résultat à la hauteur de vos attentes.
+    </p>
+
+    <p
+      style={{
+        fontSize: "16px",
+        color: "#aaa",
+      }}
+    >
+      Une fois votre demande envoyée, nous vous contacterons pour confirmer votre rendez-vous et finaliser les détails.
+    </p>
+
+    {/* LIGNE DORÉE */}
+    <div
+      style={{
+        width: "80px",
+        height: "2px",
+        backgroundColor: "#D4AF37",
+        margin: "40px auto 0",
+      }}
+    />
+  </div>
+</section>
 
       {/* MAIN */}
       <section style={bookingSection}>
