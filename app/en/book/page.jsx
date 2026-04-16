@@ -85,6 +85,73 @@ export default function BookNow() {
           </div>
         </div>
       </section>
+      {/* BOOKING INTRO SECTION */}
+<section
+  style={{
+    backgroundColor: "#0a0a0a",
+    color: "white",
+    padding: "80px 20px",
+    textAlign: "center",
+  }}
+>
+  <div
+    style={{
+      maxWidth: "900px",
+      margin: "0 auto",
+    }}
+  >
+    <h2
+      style={{
+        fontSize: "42px",
+        fontWeight: "600",
+        marginBottom: "20px",
+        letterSpacing: "1px",
+      }}
+    >
+      Book Your Service
+    </h2>
+
+    <p
+      style={{
+        fontSize: "18px",
+        lineHeight: "1.8",
+        color: "#ccc",
+        marginBottom: "20px",
+      }}
+    >
+      Schedule your premium detailing experience in just a few steps. Select your package, choose your vehicle type, and customize your service with optional add-ons tailored to your needs.
+    </p>
+
+    <p
+      style={{
+        fontSize: "18px",
+        lineHeight: "1.8",
+        color: "#ccc",
+        marginBottom: "20px",
+      }}
+    >
+      Every appointment is handled with precision, using high-end products and meticulous care to ensure your vehicle receives the attention it deserves.
+    </p>
+
+    <p
+      style={{
+        fontSize: "16px",
+        color: "#aaa",
+      }}
+    >
+      Once your request is submitted, we will contact you to confirm your appointment and finalize the details.
+    </p>
+
+    <div
+      style={{
+        width: "80px",
+        height: "2px",
+        backgroundColor: "#D4AF37",
+        margin: "40px auto 0",
+      }}
+    />
+  </div>
+</section>
 
       {/* MAIN BOOKING SECTION */}
       <section style={bookingSection}>
