@@ -84,7 +84,7 @@ export default function Reserver() {
           </div>
         </div>
       </section>
-     {/* SECTION INTRO RÉSERVATION */}
+    {/* SECTION INTRO RÉSERVATION */}
 <section
   style={{
     backgroundColor: "#0a0a0a",
@@ -125,7 +125,7 @@ export default function Reserver() {
         marginBottom: "20px",
       }}
     >
-      Profitez d’une expérience de nettoyage haut de gamme sans quitter votre domicile. Notre service mobile entièrement équipé se déplace directement chez vous, vous permettant de gagner du temps tout en offrant à votre véhicule un soin exceptionnel.
+      Profitez d’une expérience de nettoyage haut de gamme sans quitter votre domicile. Notre service mobile entièrement équipé se déplace directement chez vous, vous permettant de gagner du temps tout en offrant à votre véhicule un soin de la plus haute qualité.
     </p>
 
     <p
@@ -136,7 +136,7 @@ export default function Reserver() {
         marginBottom: "20px",
       }}
     >
-      Sélectionnez votre forfait, choisissez le type de véhicule et personnalisez votre service avec des options adaptées à vos besoins — le tout réalisé sur place avec précision et souci du détail.
+      Sélectionnez votre forfait, choisissez le type de véhicule et personnalisez votre service avec des options adaptées à vos besoins — le tout réalisé sur place avec précision et une attention minutieuse aux détails.
     </p>
 
     <p
@@ -159,7 +159,6 @@ export default function Reserver() {
     />
   </div>
 </section>
-
       {/* MAIN */}
       <section style={bookingSection}>
         <div style={bookingBox}>
