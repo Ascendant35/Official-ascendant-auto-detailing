@@ -280,7 +280,7 @@ export default function HomeEN() {
     Detailing goes far beyond a standard car wash by focusing on precision, restoration, and long-term protection. Every surface is carefully treated using specialized tools and techniques to remove embedded dirt, imperfections, and contaminants that a basic wash simply cannot address. The result is a deeper clean, a refined finish, and a noticeably elevated appearance inside and out. More than just cleaning, detailing preserves your vehicle’s condition and enhances its overall value.
   </p>
 </div>   {/* ✅ THIS was missing */}
-
+</div> 
 </section>
       {/* WHY CHOOSE US */}
       <section
