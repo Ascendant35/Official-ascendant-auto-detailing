@@ -84,7 +84,7 @@ export default function Reserver() {
           </div>
         </div>
       </section>
-      {/* SECTION INTRO RÉSERVATION */}
+     {/* SECTION INTRO RÉSERVATION */}
 <section
   style={{
     backgroundColor: "#0a0a0a",
@@ -125,7 +125,7 @@ export default function Reserver() {
         marginBottom: "20px",
       }}
     >
-      Planifiez votre expérience de nettoyage haut de gamme en quelques étapes simples. Sélectionnez votre forfait, choisissez le type de véhicule et personnalisez votre service avec des options adaptées à vos besoins.
+      Profitez d’une expérience de nettoyage haut de gamme sans quitter votre domicile. Notre service mobile entièrement équipé se déplace directement chez vous, vous permettant de gagner du temps tout en offrant à votre véhicule un soin exceptionnel.
     </p>
 
     <p
@@ -136,7 +136,7 @@ export default function Reserver() {
         marginBottom: "20px",
       }}
     >
-      Chaque intervention est réalisée avec précision, en utilisant des produits de qualité supérieure et une attention minutieuse aux détails afin d’offrir un résultat à la hauteur de vos attentes.
+      Sélectionnez votre forfait, choisissez le type de véhicule et personnalisez votre service avec des options adaptées à vos besoins — le tout réalisé sur place avec précision et souci du détail.
     </p>
 
     <p
@@ -145,7 +145,7 @@ export default function Reserver() {
         color: "#aaa",
       }}
     >
-      Une fois votre demande envoyée, nous vous contacterons pour confirmer votre rendez-vous et finaliser les détails.
+      Une fois votre demande envoyée, nous vous contacterons pour confirmer votre rendez-vous et finaliser les détails selon votre disponibilité.
     </p>
 
     {/* LIGNE DORÉE */}
@@ -158,6 +158,7 @@ export default function Reserver() {
       }}
     />
   </div>
+</section>
 </section>
 
       {/* MAIN */}
