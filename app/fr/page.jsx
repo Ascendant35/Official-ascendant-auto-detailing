@@ -248,7 +248,7 @@ export default function HomeFR() {
             lineHeight: "1.15",
           }}
         >
-          Pourquoi le detailing est une meilleure option
+          Pourquoi le detailing est une meilleure option?
         </h2>
 
         <div
