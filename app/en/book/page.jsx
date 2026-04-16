@@ -85,81 +85,36 @@ export default function BookNow() {
           </div>
         </div>
       </section>
-     {/* BOOKING INTRO SECTION */}
-<section
+     <p
   style={{
-    backgroundColor: "#0a0a0a",
-    padding: "80px 20px",
-    display: "flex",
-    justifyContent: "center",
+    fontSize: "18px",
+    lineHeight: "1.8",
+    color: "#ccc",
+    marginBottom: "20px",
   }}
 >
-  <div
-    style={{
-      maxWidth: "1000px",
-      width: "100%",
-      backgroundColor: "#111",
-      borderRadius: "28px",
-      padding: "50px 40px",
-      border: "1px solid rgba(212,175,55,0.4)",
-      boxShadow: "0 0 40px rgba(212,175,55,0.08)",
-      textAlign: "center",
-    }}
-  >
-    <h2
-      style={{
-        fontSize: "42px",
-        fontWeight: "600",
-        marginBottom: "20px",
-        letterSpacing: "1px",
-        color: "white",
-      }}
-    >
-      Book Your Service
-    </h2>
+  Enjoy a premium detailing experience without leaving your home. Our fully equipped mobile service comes directly to you, allowing you to save time while your vehicle receives the highest level of care.
+</p>
 
-    <p
-      style={{
-        fontSize: "18px",
-        lineHeight: "1.8",
-        color: "#ccc",
-        marginBottom: "20px",
-      }}
-    >
-      Schedule your premium detailing experience in just a few steps. Select your package, choose your vehicle type, and customize your service with optional add-ons tailored to your needs.
-    </p>
+<p
+  style={{
+    fontSize: "18px",
+    lineHeight: "1.8",
+    color: "#ccc",
+    marginBottom: "20px",
+  }}
+>
+  Select your package, choose your vehicle type, and customize your service with optional add-ons tailored to your needs — all handled on-site with precision and attention to detail.
+</p>
 
-    <p
-      style={{
-        fontSize: "18px",
-        lineHeight: "1.8",
-        color: "#ccc",
-        marginBottom: "20px",
-      }}
-    >
-      Every appointment is handled with precision, using high-end products and meticulous care to ensure your vehicle receives the attention it deserves.
-    </p>
-
-    <p
-      style={{
-        fontSize: "16px",
-        color: "#aaa",
-      }}
-    >
-      Once your request is submitted, we will contact you to confirm your appointment and finalize the details.
-    </p>
-
-    {/* GOLD LINE */}
-    <div
-      style={{
-        width: "80px",
-        height: "2px",
-        backgroundColor: "#D4AF37",
-        margin: "40px auto 0",
-      }}
-    />
-  </div>
-</section>
+<p
+  style={{
+    fontSize: "16px",
+    color: "#aaa",
+  }}
+>
+  Once your request is submitted, we will contact you to confirm your appointment and finalize the details at your convenience.
+</p>
 
       {/* MAIN BOOKING SECTION */}
       <section style={bookingSection}>
