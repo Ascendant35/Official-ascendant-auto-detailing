@@ -159,7 +159,6 @@ export default function Reserver() {
     />
   </div>
 </section>
-</section>
 
       {/* MAIN */}
       <section style={bookingSection}>
