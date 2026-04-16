@@ -273,7 +273,7 @@ export default function HomeFR() {
               Un lavage traditionnel enlève surtout la saleté de surface. C’est
               rapide et utile pour un entretien de base, mais il ne traite pas en
               profondeur les détails intérieurs, les finitions, les zones moins
-              visibles ou la présentation globale du véhicule.
+              visibles ou la présentation globale du véhicule. Un lavage traditionnel peut aussi endommager la peinture de votre vehicule.
             </p>
           </div>
 
@@ -299,7 +299,7 @@ export default function HomeFR() {
               Le detailing va plus loin: meilleure attention aux matériaux,
               finition plus soignée, nettoyage plus précis et résultat beaucoup
               plus raffiné. C’est le meilleur choix pour les propriétaires qui
-              veulent un véhicule propre, élégant et entretenu avec sérieux.
+              veulent un véhicule propre, élégant et entretenu avec sérieux. 
             </p>
           </div>
         </div>
