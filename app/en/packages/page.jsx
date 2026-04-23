@@ -383,12 +383,10 @@ export default function TarifsFR() {
             title="Exterior Detailing Only"
             price={
               <>
-                <span style={{ display: "block" }}>Sedan: Starting at $100</span>
-                
-                <span style={{ display: "block" }}>SUV: Starting at $125</span>
-                
-                <span style={{ display: "block" }}>Truck / Large SUV: Starting at $160</span>
-              </>
+  <p style={{ margin: "0 0 6px 0" }}>Sedan: Starting at $100</p>
+  <p style={{ margin: "0 0 6px 0" }}>SUV: Starting at $125</p>
+  <p style={{ margin: "0" }}>Truck / Large SUV: Starting at $160</p>
+</>
             }
           />
 
@@ -396,12 +394,10 @@ export default function TarifsFR() {
             title="Interior Detailing Only"
             price={
               <>
-                <span style={{ display: "block" }}>Sedan: Starting at $120</span>
-                
-                <span style={{ display: "block" }}>SUV: Starting at $150</span>
-                
-                <span style={{ display: "block" }}>Truck / Large SUV: Starting at $190</span>
-              </>
+  <p style={{ margin: "0 0 6px 0" }}>Sedan: Starting at $120</p>
+  <p style={{ margin: "0 0 6px 0" }}>SUV: Starting at $150</p>
+  <p style={{ margin: "0" }}>Truck / Large SUV: Starting at $190</p>
+</>
             }
           />
         </div>
