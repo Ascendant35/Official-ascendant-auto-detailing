@@ -376,16 +376,16 @@ export default function TarifsFR() {
           <Extra title="Salt / Calcium" price="Starting at $35" />
           <Extra title="Odor Treatment" price="Starting at $50" />
           <Extra title="Specific Stains" price="Starting at $40" />
-          <Extra title="Engine Cleaning" price="Starting at $70" />
-          <Extra title="Leather Treatment" price="Starting at $60" />
+          <Extra title="Engine Cleaning" price="Starting at $60" />
+          <Extra title="Leather Treatment" price="Starting at $70" />
 
           <Extra
             title="Exterior Detailing Only"
             price={
   <>
-    <p style={{ margin: "0 0 6px 0" }}>Sedan: Starting at $100</p>
-    <p style={{ margin: "0 0 6px 0" }}>SUV: Starting at $125</p>
-    <p style={{ margin: "0" }}>Truck / Large SUV: Starting at $160</p>
+    <p style={{ margin: "0 0 6px 0" }}>Sedan: Starting at $99.99</p>
+    <p style={{ margin: "0 0 6px 0" }}>SUV: Starting at $124.99</p>
+    <p style={{ margin: "0" }}>Truck / Large SUV: Starting at $159.99</p>
   </>
 }
           />
@@ -394,9 +394,9 @@ export default function TarifsFR() {
             title="Interior Detailing Only"
             price={
   <>
-    <p style={{ margin: "0 0 6px 0" }}>Sedan: Starting at $120</p>
-    <p style={{ margin: "0 0 6px 0" }}>SUV: Starting at $150</p>
-    <p style={{ margin: "0" }}>Truck / Large SUV: Starting at $190</p>
+    <p style={{ margin: "0 0 6px 0" }}>Sedan: Starting at $119.99</p>
+    <p style={{ margin: "0 0 6px 0" }}>SUV: Starting at $159.99</p>
+    <p style={{ margin: "0" }}>Truck / Large SUV: Starting at $189.99</p>
   </>
 }
           />
