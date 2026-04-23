@@ -382,23 +382,23 @@ export default function TarifsFR() {
           <Extra
             title="Exterior Detailing Only"
             price={
-             <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
-  <p style={{ margin: 0 }}>Sedan: Starting at $100</p>
-  <p style={{ margin: 0 }}>SUV: Starting at $125</p>
-  <p style={{ margin: 0 }}>Truck / Large SUV: Starting at $160</p>
-</div>
-            }
+  <>
+    <p style={{ margin: "0 0 6px 0" }}>Sedan: Starting at $100</p>
+    <p style={{ margin: "0 0 6px 0" }}>SUV: Starting at $125</p>
+    <p style={{ margin: "0" }}>Truck / Large SUV: Starting at $160</p>
+  </>
+}
           />
 
           <Extra
             title="Interior Detailing Only"
             price={
-              <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
-  <p style={{ margin: 0 }}>Sedan: Starting at $120</p>
-  <p style={{ margin: 0 }}>SUV: Starting at $150</p>
-  <p style={{ margin: 0 }}>Truck / Large SUV: Starting at $190</p>
-</div>
-            }
+  <>
+    <p style={{ margin: "0 0 6px 0" }}>Sedan: Starting at $120</p>
+    <p style={{ margin: "0 0 6px 0" }}>SUV: Starting at $150</p>
+    <p style={{ margin: "0" }}>Truck / Large SUV: Starting at $190</p>
+  </>
+}
           />
         </div>
       </section>
