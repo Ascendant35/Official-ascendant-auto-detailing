@@ -411,7 +411,16 @@ function Extra({ title, price }) {
   return (
     <div style={extraCard}>
       <h3>{title}</h3>
-      <p style={{ color: "#d4af37" }}>{price}</p>
+
+      <div
+        style={{
+          color: "#d4af37",
+          lineHeight: "1.8",
+          marginTop: "8px",
+        }}
+      >
+        {price}
+      </div>
     </div>
   );
 }
