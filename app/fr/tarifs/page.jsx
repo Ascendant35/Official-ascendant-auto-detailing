@@ -116,7 +116,13 @@ export default function TarifsFR() {
           <p style={desc}>
             Idéal pour un entretien régulier et pour garder votre véhicule propre au quotidien.
           </p>
-          <p style={{ color: "#d4af37", marginBottom: "20px" }}>
+
+          <p
+            style={{
+              color: "#d4af37",
+              marginBottom: "20px",
+            }}
+          >
             Durée estimée : 2 heures
           </p>
 
@@ -153,7 +159,13 @@ export default function TarifsFR() {
           <p style={desc}>
             Nettoyage en profondeur offrant l’équilibre parfait entre qualité et valeur.
           </p>
-          <p style={{ color: "#d4af37", marginBottom: "20px" }}>
+
+          <p
+            style={{
+              color: "#d4af37",
+              marginBottom: "20px",
+            }}
+          >
             Durée estimée : 3 à 4 heures
           </p>
 
@@ -189,7 +201,13 @@ export default function TarifsFR() {
           <p style={desc}>
             L’expérience ultime pour un résultat impeccable et une finition digne d’une salle de montre.
           </p>
-          <p style={{ color: "#d4af37", marginBottom: "20px" }}>
+
+          <p
+            style={{
+              color: "#d4af37",
+              marginBottom: "20px",
+            }}
+          >
             Durée estimée : 5 à 6 heures
           </p>
 
@@ -355,57 +373,6 @@ export default function TarifsFR() {
         </div>
       </section>
 
-      {/* ADDITIONAL SERVICE SECTION */}
-      <section
-        style={{
-          maxWidth: "1400px",
-          margin: "0 auto",
-          padding: "0 50px 100px",
-        }}
-      >
-        <h2 style={{ fontSize: "40px", marginBottom: "30px", textAlign: "center" }}>
-          Services de detailing supplémentaires
-        </h2>
-
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(2,1fr)",
-            gap: "40px",
-          }}
-        >
-          <div style={card}>
-            <h2 style={title}>Detailing extérieur uniquement</h2>
-            <p style={desc}>
-              Idéal pour redonner éclat, propreté et raffinement à l’extérieur de votre véhicule.
-            </p>
-
-            <div style={price}>
-              <p>Berline : à partir de 100$</p>
-              <p>VUS : 125$</p>
-              <p>Camion / Grand VUS : 160$</p>
-            </div>
-
-            <Link href="/fr/reserver" style={btn}>Réserver</Link>
-          </div>
-
-          <div style={card}>
-            <h2 style={title}>Detailing intérieur</h2>
-            <p style={desc}>
-              Un nettoyage intérieur approfondi pour restaurer fraîcheur, confort et finition haut de gamme.
-            </p>
-
-            <div style={price}>
-              <p>Berline : à partir de 120$</p>
-              <p>VUS : 150$</p>
-              <p>Camion / Grand VUS : 190$</p>
-            </div>
-
-            <Link href="/fr/reserver" style={btn}>Réserver</Link>
-          </div>
-        </div>
-      </section>
-
       {/* EXTRA SERVICES */}
       <section style={extraSection}>
         <h2 style={{ fontSize: "40px", marginBottom: "30px", textAlign: "center" }}>
@@ -419,6 +386,26 @@ export default function TarifsFR() {
           <Extra title="Taches spécifiques" price="À partir de 20$" />
           <Extra title="Nettoyage du moteur" price="50$" />
           <Extra title="Traitement du cuir" price="60$" />
+          <Extra
+            title="Detailing extérieur seulement"
+            price={
+              <>
+                <p style={{ margin: "0 0 6px 0" }}>Berline : À partir de 100$</p>
+                <p style={{ margin: "0 0 6px 0" }}>VUS : À partir de 125$</p>
+                <p style={{ margin: "0" }}>Camion / Grand VUS : À partir de 160$</p>
+              </>
+            }
+          />
+          <Extra
+            title="Detailing intérieur seulement"
+            price={
+              <>
+                <p style={{ margin: "0 0 6px 0" }}>Berline : À partir de 120$</p>
+                <p style={{ margin: "0 0 6px 0" }}>VUS : À partir de 150$</p>
+                <p style={{ margin: "0" }}>Camion / Grand VUS : À partir de 190$</p>
+              </>
+            }
+          />
         </div>
       </section>
     </div>
@@ -430,7 +417,7 @@ function Extra({ title, price }) {
   return (
     <div style={extraCard}>
       <h3>{title}</h3>
-      <p style={{ color: "#d4af37" }}>{price}</p>
+      <div style={{ color: "#d4af37", lineHeight: "1.8" }}>{price}</div>
     </div>
   );
 }
