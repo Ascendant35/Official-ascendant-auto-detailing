@@ -384,7 +384,9 @@ export default function TarifsFR() {
             price={
               <>
                 <span style={{ display: "block" }}>Sedan: Starting at $100</span>
+                
                 <span style={{ display: "block" }}>SUV: Starting at $125</span>
+                
                 <span style={{ display: "block" }}>Truck / Large SUV: Starting at $160</span>
               </>
             }
@@ -395,7 +397,9 @@ export default function TarifsFR() {
             price={
               <>
                 <span style={{ display: "block" }}>Sedan: Starting at $120</span>
+                
                 <span style={{ display: "block" }}>SUV: Starting at $150</span>
+                
                 <span style={{ display: "block" }}>Truck / Large SUV: Starting at $190</span>
               </>
             }
