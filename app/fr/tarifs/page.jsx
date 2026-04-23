@@ -108,134 +108,149 @@ export default function TarifsFR() {
       </section>
 
       {/* PACKAGES */}
-      <section style={gridSection}>
-        
-        {/* CARE */}
-        <div style={card}>
-          <h2 style={title}>Ascendant Care</h2>
-          <p style={desc}>
-            Idéal pour un entretien régulier et pour garder votre véhicule propre au quotidien.
-          </p>
+<section style={gridSection}>
+  
+  {/* CARE */}
+  <div style={card}>
+    <h2 style={title}>Ascendant Care</h2>
+    <p style={desc}>
+      Idéal pour un entretien régulier et pour garder votre véhicule propre au quotidien.
+    </p>
 
-          <p
-            style={{
-              color: "#d4af37",
-              marginBottom: "20px",
-            }}
-          >
-            Durée estimée : 2 heures
-          </p>
+    <div
+      style={{
+        border: "1px solid rgba(212,175,55,0.4)",
+        borderRadius: "12px",
+        padding: "10px 14px",
+        marginBottom: "20px",
+        display: "inline-block",
+      }}
+    >
+      <p style={{ color: "#d4af37", margin: 0 }}>
+        Durée estimée : 2 heures
+      </p>
+    </div>
 
-          <div style={price}>
-            <p>Berline : 189.99$</p>
-            <p>VUS : 209.99$</p>
-            <p>Camion / Grand VUS : 249.99$</p>
-          </div>
+    <div style={price}>
+      <p>Berline : 189.99$</p>
+      <p>VUS : 209.99$</p>
+      <p>Camion / Grand VUS : 249.99$</p>
+    </div>
 
-          <div style={subscription}>
-            <p style={subTitle}>Forfait 4 visites</p>
-            <p>Profitez de notre forfait regroupé de 4 visites, utilisable quand vous le souhaitez.</p>
-            <p>Berline : 669.99$</p>
-            <p>VUS : 739.99$</p>
-            <p>Camion / Grand VUS : 859.99$</p>
-          </div>
+    <div style={subscription}>
+      <p style={subTitle}>Forfait 4 visites</p>
+      <p>Profitez de notre forfait regroupé de 4 visites, utilisable quand vous le souhaitez.</p>
+      <p>Berline : 669.99$</p>
+      <p>VUS : 739.99$</p>
+      <p>Camion / Grand VUS : 859.99$</p>
+    </div>
 
-          <ul style={list}>
-            <li>Aspiration complète</li>
-            <li>Nettoyage intérieur léger</li>
-            <li>Lavage extérieur</li>
-            <li>Vitres</li>
-            <li>Finition finale</li>
-          </ul>
+    <ul style={list}>
+      <li>Aspiration complète</li>
+      <li>Nettoyage intérieur léger</li>
+      <li>Lavage extérieur</li>
+      <li>Vitres</li>
+      <li>Finition finale</li>
+    </ul>
 
-          <Link href="/fr/reserver" style={btn}>Réserver</Link>
-        </div>
+    <Link href="/fr/reserver" style={btn}>Réserver</Link>
+  </div>
 
-        {/* ELITE */}
-        <div style={{ ...card, border: "1px solid #d4af37", position: "relative", transform: "scale(1.05)" }}>
-          <div style={badge}>LE PLUS POPULAIRE</div>
+  {/* ELITE */}
+  <div style={{ ...card, border: "1px solid #d4af37", position: "relative", transform: "scale(1.05)" }}>
+    <div style={badge}>LE PLUS POPULAIRE</div>
 
-          <h2 style={title}>Ascendant Elite</h2>
-          <p style={desc}>
-            Nettoyage en profondeur offrant l’équilibre parfait entre qualité et valeur.
-          </p>
+    <h2 style={title}>Ascendant Elite</h2>
+    <p style={desc}>
+      Nettoyage en profondeur offrant l’équilibre parfait entre qualité et valeur.
+    </p>
 
-          <p
-            style={{
-              color: "#d4af37",
-              marginBottom: "20px",
-            }}
-          >
-            Durée estimée : 3 à 4 heures
-          </p>
+    <div
+      style={{
+        border: "1px solid rgba(212,175,55,0.4)",
+        borderRadius: "12px",
+        padding: "10px 14px",
+        marginBottom: "20px",
+        display: "inline-block",
+      }}
+    >
+      <p style={{ color: "#d4af37", margin: 0 }}>
+        Durée estimée : 3 à 4 heures
+      </p>
+    </div>
 
-          <div style={price}>
-            <p>Berline : 289.99$</p>
-            <p>VUS : 309.99$</p>
-            <p>Camion / Grand VUS : 349.99$</p>
-          </div>
+    <div style={price}>
+      <p>Berline : 289.99$</p>
+      <p>VUS : 309.99$</p>
+      <p>Camion / Grand VUS : 349.99$</p>
+    </div>
 
-          <div style={subscription}>
-            <p style={subTitle}>Forfait 4 visites</p>
-            <p>Profitez de notre forfait regroupé de 4 visites, utilisable quand vous le souhaitez.</p>
-            <p>Berline : 1049.99$</p>
-            <p>VUS : 1129.99$</p>
-            <p>Camion / Grand VUS : 1249.99$</p>
-          </div>
+    <div style={subscription}>
+      <p style={subTitle}>Forfait 4 visites</p>
+      <p>Profitez de notre forfait regroupé de 4 visites, utilisable quand vous le souhaitez.</p>
+      <p>Berline : 1049.99$</p>
+      <p>VUS : 1129.99$</p>
+      <p>Camion / Grand VUS : 1249.99$</p>
+    </div>
 
-          <ul style={list}>
-            <li>Tout ce qui est inclus dans Care</li>
-            <li>Shampoing des sièges</li>
-            <li>Nettoyage des tapis</li>
-            <li>Dégraissage</li>
-            <li>Détail extérieur complet</li>
-            <li>Finition premium</li>
-          </ul>
+    <ul style={list}>
+      <li>Tout ce qui est inclus dans Care</li>
+      <li>Shampoing des sièges</li>
+      <li>Nettoyage des tapis</li>
+      <li>Dégraissage</li>
+      <li>Détail extérieur complet</li>
+      <li>Finition premium</li>
+    </ul>
 
-          <Link href="/fr/reserver" style={goldBtn}>Réserver</Link>
-        </div>
+    <Link href="/fr/reserver" style={goldBtn}>Réserver</Link>
+  </div>
 
-        {/* SIGNATURE */}
-        <div style={card}>
-          <h2 style={title}>Ascendant Signature</h2>
-          <p style={desc}>
-            L’expérience ultime pour un résultat impeccable et une finition digne d’une salle de montre.
-          </p>
+  {/* SIGNATURE */}
+  <div style={card}>
+    <h2 style={title}>Ascendant Signature</h2>
+    <p style={desc}>
+      L’expérience ultime pour un résultat impeccable et une finition digne d’une salle de montre.
+    </p>
 
-          <p
-            style={{
-              color: "#d4af37",
-              marginBottom: "20px",
-            }}
-          >
-            Durée estimée : 5 à 6 heures
-          </p>
+    <div
+      style={{
+        border: "1px solid rgba(212,175,55,0.4)",
+        borderRadius: "12px",
+        padding: "10px 14px",
+        marginBottom: "20px",
+        display: "inline-block",
+      }}
+    >
+      <p style={{ color: "#d4af37", margin: 0 }}>
+        Durée estimée : 5 à 6 heures
+      </p>
+    </div>
 
-          <div style={price}>
-            <p>Berline : 389.99$</p>
-            <p>VUS : 409.99$</p>
-            <p>Camion / Grand VUS : 449.99$</p>
-          </div>
+    <div style={price}>
+      <p>Berline : 389.99$</p>
+      <p>VUS : 409.99$</p>
+      <p>Camion / Grand VUS : 449.99$</p>
+    </div>
 
-          <div style={subscription}>
-            <p style={subTitle}>Forfait 4 visites</p>
-            <p>Profitez de notre forfait regroupé de 4 visites, utilisable quand vous le souhaitez.</p>
-            <p>Berline : 1399.99$</p>
-            <p>VUS : 1499.99$</p>
-            <p>Camion / Grand VUS : 1599.99$</p>
-          </div>
+    <div style={subscription}>
+      <p style={subTitle}>Forfait 4 visites</p>
+      <p>Profitez de notre forfait regroupé de 4 visites, utilisable quand vous le souhaitez.</p>
+      <p>Berline : 1399.99$</p>
+      <p>VUS : 1499.99$</p>
+      <p>Camion / Grand VUS : 1599.99$</p>
+    </div>
 
-          <ul style={list}>
-            <li>Tout ce qui est inclus dans Elite</li>
-            <li>Nettoyage en profondeur</li>
-            <li>Traitement complet</li>
-            <li>Finition haut de gamme</li>
-            <li>Détail méticuleux</li>
-          </ul>
+    <ul style={list}>
+      <li>Tout ce qui est inclus dans Elite</li>
+      <li>Nettoyage en profondeur</li>
+      <li>Traitement complet</li>
+      <li>Finition haut de gamme</li>
+      <li>Détail méticuleux</li>
+    </ul>
 
-          <Link href="/fr/reserver" style={btn}>Réserver</Link>
-        </div>
-      </section>
+    <Link href="/fr/reserver" style={btn}>Réserver</Link>
+  </div>
+</section>
 
       {/* WHY CHOOSE */}
       <section style={whySection}>
