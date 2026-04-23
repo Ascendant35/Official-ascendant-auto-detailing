@@ -399,14 +399,14 @@ export default function TarifsFR() {
           <Extra title="Sel / Calcium" price="À partir de $35" />
           <Extra title="Traitement des odeurs" price="À partir de $50" />
           <Extra title="Taches spécifiques" price="À partir de $40" />
-          <Extra title="Nettoyage du moteur" price="À partir de $600" />
+          <Extra title="Nettoyage du moteur" price="À partir de $60" />
           <Extra title="Traitement du cuir" price=" À partir de $70" />
           <Extra
             title="Detailing extérieur seulement"
             price={
               <>
                 <p style={{ margin: "0 0 6px 0" }}>Berline : À partir de $99.99</p>
-                <p style={{ margin: "0 0 6px 0" }}>VUS : À partir de 124.99</p>
+                <p style={{ margin: "0 0 6px 0" }}>VUS : À partir de $124.99</p>
                 <p style={{ margin: "0" }}>Camion / Grand VUS : À partir de $159.99</p>
               </>
             }
