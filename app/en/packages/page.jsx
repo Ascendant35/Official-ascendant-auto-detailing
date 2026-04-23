@@ -17,7 +17,7 @@ export default function TarifsFR() {
         </div>
       </section>
 
-           {/* ✅ PREMIUM INTRO BOX */}
+      {/* ✅ PREMIUM INTRO BOX */}
       <section
         style={{
           maxWidth: "1100px",
@@ -118,6 +118,11 @@ export default function TarifsFR() {
             Ideal for regular maintenance and keeping your vehicle clean daily.
           </p>
 
+          <div style={timeBox}>
+            <p style={timeLabel}>Estimated Time</p>
+            <p style={timeText}>2 hours</p>
+          </div>
+
           <div style={price}>
             <p>Sedan: $189.99</p>
             <p>SUV: $209.99</p>
@@ -152,6 +157,11 @@ export default function TarifsFR() {
             Deep cleaning offering the perfect balance between quality and value.
           </p>
 
+          <div style={timeBox}>
+            <p style={timeLabel}>Estimated Time</p>
+            <p style={timeText}>3 to 4 hours</p>
+          </div>
+
           <div style={price}>
             <p>Sedan: $289.99</p>
             <p>SUV: $309.99</p>
@@ -185,6 +195,11 @@ export default function TarifsFR() {
             The ultimate experience for a flawless result and a showroom finish.
           </p>
 
+          <div style={timeBox}>
+            <p style={timeLabel}>Estimated Time</p>
+            <p style={timeText}>5 to 6 hours</p>
+          </div>
+
           <div style={price}>
             <p>Sedan: $389.99</p>
             <p>SUV: $409.99</p>
@@ -211,144 +226,144 @@ export default function TarifsFR() {
         </div>
       </section>
 
-    {/* WHY CHOOSE */}
-<section style={whySection}>
-  <h2 style={whyTitle}>Which package should you choose?</h2>
+      {/* WHY CHOOSE */}
+      <section style={whySection}>
+        <h2 style={whyTitle}>Which package should you choose?</h2>
 
-  <div style={whyGrid}>
-    
-    {/* CARE */}
-    <div
-      style={{
-        ...choiceStyle,
-        border: "1px solid rgba(212,175,55,0.25)",
-        transition: "all 0.3s ease",
-      }}
-    >
-      <div
-        style={{
-          width: "40px",
-          height: "2px",
-          backgroundColor: "#d4af37",
-          marginBottom: "15px",
-        }}
-      />
+        <div style={whyGrid}>
+          
+          {/* CARE */}
+          <div
+            style={{
+              ...choiceStyle,
+              border: "1px solid rgba(212,175,55,0.25)",
+              transition: "all 0.3s ease",
+            }}
+          >
+            <div
+              style={{
+                width: "40px",
+                height: "2px",
+                backgroundColor: "#d4af37",
+                marginBottom: "15px",
+              }}
+            />
 
-      <strong
-        style={{
-          fontSize: "24px",
-          color: "#f5f5f5",
-          display: "block",
-          marginBottom: "15px",
-        }}
-      >
-        Ascendant Care
-      </strong>
+            <strong
+              style={{
+                fontSize: "24px",
+                color: "#f5f5f5",
+                display: "block",
+                marginBottom: "15px",
+              }}
+            >
+              Ascendant Care
+            </strong>
 
-      <p style={{ lineHeight: "1.9", color: "#ccc", marginBottom: "12px" }}>
-        Designed for consistent upkeep, this package maintains your vehicle in a clean,
-        refined condition on a regular basis.
-      </p>
+            <p style={{ lineHeight: "1.9", color: "#ccc", marginBottom: "12px" }}>
+              Designed for consistent upkeep, this package maintains your vehicle in a clean,
+              refined condition on a regular basis.
+            </p>
 
-      <p style={{ lineHeight: "1.9", color: "#ccc", marginBottom: "12px" }}>
-        Ideal for clients who value a polished appearance at all times without the need
-        for intensive restoration.
-      </p>
+            <p style={{ lineHeight: "1.9", color: "#ccc", marginBottom: "12px" }}>
+              Ideal for clients who value a polished appearance at all times without the need
+              for intensive restoration.
+            </p>
 
-      <p style={{ lineHeight: "1.9", color: "#ccc" }}>
-        A perfect balance between efficiency and elegance for everyday driving.
-      </p>
-    </div>
+            <p style={{ lineHeight: "1.9", color: "#ccc" }}>
+              A perfect balance between efficiency and elegance for everyday driving.
+            </p>
+          </div>
 
-    {/* ELITE */}
-    <div
-      style={{
-        ...choiceStyle,
-        border: "1px solid rgba(212,175,55,0.5)",
-        transform: "scale(1.03)",
-      }}
-    >
-      <div
-        style={{
-          width: "40px",
-          height: "2px",
-          backgroundColor: "#d4af37",
-          marginBottom: "15px",
-        }}
-      />
+          {/* ELITE */}
+          <div
+            style={{
+              ...choiceStyle,
+              border: "1px solid rgba(212,175,55,0.5)",
+              transform: "scale(1.03)",
+            }}
+          >
+            <div
+              style={{
+                width: "40px",
+                height: "2px",
+                backgroundColor: "#d4af37",
+                marginBottom: "15px",
+              }}
+            />
 
-      <strong
-        style={{
-          fontSize: "26px",
-          color: "#d4af37",
-          display: "block",
-          marginBottom: "15px",
-        }}
-      >
-        Ascendant Elite
-      </strong>
+            <strong
+              style={{
+                fontSize: "26px",
+                color: "#d4af37",
+                display: "block",
+                marginBottom: "15px",
+              }}
+            >
+              Ascendant Elite
+            </strong>
 
-      <p style={{ lineHeight: "1.9", color: "#ccc", marginBottom: "12px" }}>
-        Our most popular choice, offering a deeper level of cleaning and attention
-        to detail both inside and out.
-      </p>
+            <p style={{ lineHeight: "1.9", color: "#ccc", marginBottom: "12px" }}>
+              Our most popular choice, offering a deeper level of cleaning and attention
+              to detail both inside and out.
+            </p>
 
-      <p style={{ lineHeight: "1.9", color: "#ccc", marginBottom: "12px" }}>
-        Restores freshness to your interior while enhancing the exterior finish
-        with a noticeably elevated result.
-      </p>
+            <p style={{ lineHeight: "1.9", color: "#ccc", marginBottom: "12px" }}>
+              Restores freshness to your interior while enhancing the exterior finish
+              with a noticeably elevated result.
+            </p>
 
-      <p style={{ lineHeight: "1.9", color: "#ccc" }}>
-        Perfect for those seeking a premium transformation without going to the
-        highest tier.
-      </p>
-    </div>
+            <p style={{ lineHeight: "1.9", color: "#ccc" }}>
+              Perfect for those seeking a premium transformation without going to the
+              highest tier.
+            </p>
+          </div>
 
-    {/* SIGNATURE */}
-    <div
-      style={{
-        ...choiceStyle,
-        border: "1px solid rgba(212,175,55,0.25)",
-      }}
-    >
-      <div
-        style={{
-          width: "40px",
-          height: "2px",
-          backgroundColor: "#d4af37",
-          marginBottom: "15px",
-        }}
-      />
+          {/* SIGNATURE */}
+          <div
+            style={{
+              ...choiceStyle,
+              border: "1px solid rgba(212,175,55,0.25)",
+            }}
+          >
+            <div
+              style={{
+                width: "40px",
+                height: "2px",
+                backgroundColor: "#d4af37",
+                marginBottom: "15px",
+              }}
+            />
 
-      <strong
-        style={{
-          fontSize: "24px",
-          color: "#f5f5f5",
-          display: "block",
-          marginBottom: "15px",
-        }}
-      >
-        Ascendant Signature
-      </strong>
+            <strong
+              style={{
+                fontSize: "24px",
+                color: "#f5f5f5",
+                display: "block",
+                marginBottom: "15px",
+              }}
+            >
+              Ascendant Signature
+            </strong>
 
-      <p style={{ lineHeight: "1.9", color: "#ccc", marginBottom: "12px" }}>
-        The ultimate detailing experience, crafted for clients who expect nothing
-        short of perfection.
-      </p>
+            <p style={{ lineHeight: "1.9", color: "#ccc", marginBottom: "12px" }}>
+              The ultimate detailing experience, crafted for clients who expect nothing
+              short of perfection.
+            </p>
 
-      <p style={{ lineHeight: "1.9", color: "#ccc", marginBottom: "12px" }}>
-        Every surface is meticulously treated, delivering a showroom-level finish
-        with unmatched precision.
-      </p>
+            <p style={{ lineHeight: "1.9", color: "#ccc", marginBottom: "12px" }}>
+              Every surface is meticulously treated, delivering a showroom-level finish
+              with unmatched precision.
+            </p>
 
-      <p style={{ lineHeight: "1.9", color: "#ccc" }}>
-        Ideal for luxury vehicles, special occasions, or achieving the highest
-        possible standard of presentation.
-      </p>
-    </div>
+            <p style={{ lineHeight: "1.9", color: "#ccc" }}>
+              Ideal for luxury vehicles, special occasions, or achieving the highest
+              possible standard of presentation.
+            </p>
+          </div>
 
-  </div>
-</section>
+        </div>
+      </section>
 
       {/* EXTRA SERVICES */}
       <section style={extraSection}>
@@ -363,6 +378,28 @@ export default function TarifsFR() {
           <Extra title="Specific Stains" price="Starting at $20" />
           <Extra title="Engine Cleaning" price="$50" />
           <Extra title="Leather Treatment" price="$60" />
+
+          <Extra
+            title="Exterior Detailing Only"
+            price={
+              <>
+                <span style={{ display: "block" }}>Sedan: Starting at $100</span>
+                <span style={{ display: "block" }}>SUV: Starting at $125</span>
+                <span style={{ display: "block" }}>Truck / Large SUV: Starting at $160</span>
+              </>
+            }
+          />
+
+          <Extra
+            title="Interior Detailing Only"
+            price={
+              <>
+                <span style={{ display: "block" }}>Sedan: Starting at $120</span>
+                <span style={{ display: "block" }}>SUV: Starting at $150</span>
+                <span style={{ display: "block" }}>Truck / Large SUV: Starting at $190</span>
+              </>
+            }
+          />
         </div>
       </section>
     </div>
@@ -412,6 +449,29 @@ const card = {
 
 const title = { fontSize: "28px" };
 const desc = { color: "#bbb", marginBottom: "20px" };
+
+const timeBox = {
+  backgroundColor: "#0d0d0d",
+  padding: "14px 16px",
+  borderRadius: "12px",
+  marginBottom: "20px",
+  border: "1px solid rgba(212,175,55,0.18)",
+};
+
+const timeLabel = {
+  color: "#d4af37",
+  marginBottom: "6px",
+  fontSize: "13px",
+  textTransform: "uppercase",
+  letterSpacing: "1.5px",
+};
+
+const timeText = {
+  color: "#f5f5f5",
+  fontSize: "16px",
+  margin: 0,
+};
+
 const price = { color: "#d4af37", marginBottom: "20px" };
 
 const subscription = {
