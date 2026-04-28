@@ -78,8 +78,7 @@ export default function BookNow() {
   const extrasTotal = useMemo(() => {
     return selectedExtras.reduce((total, extraId) => {
       const found = extras.find((extra) => extra.id === extraId);
-      return total + (found ? found.price : 0);
-    }, 0);
+      return total + (found?.price || 0);
   }, [selectedExtras]);
 
   const subtotal = packageBasePrice + extrasTotal;
