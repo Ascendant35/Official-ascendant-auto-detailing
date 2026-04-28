@@ -43,23 +43,26 @@ export default function BookNow() {
     { id: "engineCleaning", name: "Engine Cleaning", price: 60 },
     { id: "leatherTreatment", name: "Leather Treatment", price: 70 },
     {
-  id: "exteriorOnly",
-  name: "Exterior Detailing Only",
-  options: [
-    { label: "Sedan", price: 99.99 },
-    { label: "SUV", price: 124.99 },
-    { label: "Truck / Large SUV", price: 159.99 },
-  ],
-},{
-  id: "interiorOnly",
-  name: "Interior Detailing Only",
-  options: [
-    { label: "Sedan", price: 119.99 },
-    { label: "SUV", price: 159.99 },
-    { label: "Truck / Large SUV", price: 189.99 },
-  ],
-}
-  ];
+  const extras = [
+  {
+    id: "exteriorOnly",
+    name: "Exterior Detailing Only",
+    options: [
+      { label: "Sedan", price: 99.99 },
+      { label: "SUV", price: 124.99 },
+      { label: "Truck / Large SUV", price: 159.99 },
+    ],
+  },
+  {
+    id: "interiorOnly",
+    name: "Interior Detailing Only",
+    options: [
+      { label: "Sedan", price: 119.99 },
+      { label: "SUV", price: 159.99 },
+      { label: "Truck / Large SUV", price: 189.99 },
+    ],
+  }
+];
 
   const toggleExtra = (extraId) => {
     setSelectedExtras((prev) =>
