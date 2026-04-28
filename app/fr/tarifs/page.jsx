@@ -354,11 +354,11 @@ export default function TarifsFR() {
 
         <div style={extraGrid}>
           <Extra title="Poils d’animaux" price="À partir de 30$" />
-          <Extra title="Sel / Calcium" price="À partir de 25$" />
-          <Extra title="Traitement des odeurs" price="40$ - 80$" />
-          <Extra title="Taches spécifiques" price="À partir de 20$" />
-          <Extra title="Nettoyage du moteur" price="50$" />
-          <Extra title="Traitement du cuir" price="60$" />
+          <Extra title="Sel / Calcium" price="À partir de 35$" />
+          <Extra title="Traitement des odeurs" price="À partir de 5$" />
+          <Extra title="Taches spécifiques" price="À partir de 40$" />
+          <Extra title="Nettoyage du moteur" price="À partir de 60$" />
+          <Extra title="Traitement du cuir" price="À partir de 70$" />
         </div>
       </section>
     </div>
