@@ -300,7 +300,11 @@ export default function BookNow() {
                 return (
                   <div key={extraId} style={summaryRow}>
                     <span style={summaryLabel}>{extra.name}</span>
-                    <span>+${extra.price.toFixed(2)}</span>
+                    <span>
+  {extra.price
+    ? `+$${extra.price.toFixed(2)}`
+    : "+ Select vehicle size"}
+</span>
                   </div>
                 );
               })
