@@ -310,7 +310,7 @@ export default function Reserver() {
 
           <div style={retainerBox}>
             <p style={{ margin: 0, color: "#ddd", lineHeight: 1.6 }}>
-              Un dépôt de <span style={gold}>50$</span> est requis pour confirmer votre rendez-vous.
+              Un dépôt de <span style={gold}>50$</span> est requis pour confirmer votre rendez-vous. Le montant du dépôt seras déduit de votre total final aprės votre rendez-vous.
             </p>
           </div>
 
