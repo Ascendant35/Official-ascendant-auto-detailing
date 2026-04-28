@@ -37,11 +37,28 @@ export default function BookNow() {
 
   const extras = [
     { id: "petHair", name: "Pet Hair", price: 30 },
-    { id: "saltRemoval", name: "Salt / Calcium", price: 25 },
-    { id: "odorTreatment", name: "Odor Treatment", price: 40 },
-    { id: "specificStains", name: "Specific Stains", price: 20 },
-    { id: "engineCleaning", name: "Engine Cleaning", price: 50 },
-    { id: "leatherTreatment", name: "Leather Treatment", price: 60 },
+    { id: "saltRemoval", name: "Salt / Calcium", price: 35 },
+    { id: "odorTreatment", name: "Odor Treatment", price: 50 },
+    { id: "specificStains", name: "Specific Stains", price: 40 },
+    { id: "engineCleaning", name: "Engine Cleaning", price: 60 },
+    { id: "leatherTreatment", name: "Leather Treatment", price: 70 },
+    {
+  id: "exteriorOnly",
+  name: "Exterior Detailing Only",
+  options: [
+    { label: "Sedan", price: 99.99 },
+    { label: "SUV", price: 124.99 },
+    { label: "Truck / Large SUV", price: 159.99 },
+  ],
+}{
+  id: "interiorOnly",
+  name: "Interior Detailing Only",
+  options: [
+    { label: "Sedan", price: 119.99 },
+    { label: "SUV", price: 159.99 },
+    { label: "Truck / Large SUV", price: 189.99 },
+  ],
+}
   ];
 
   const toggleExtra = (extraId) => {
