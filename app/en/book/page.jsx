@@ -315,7 +315,7 @@ export default function BookNow() {
 
           <div style={retainerBox}>
             <p style={{ margin: 0, color: "#ddd", lineHeight: 1.6 }}>
-              A <span style={gold}>$50 retainer fee</span> is required to confirm your appointment.
+              All appointments require a <span style={gold}>$50 retainer fee</span> which will be fully credited to your final service cost.
             </p>
           </div>
 
