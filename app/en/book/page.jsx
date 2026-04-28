@@ -74,10 +74,11 @@ const toggleExtra = (extraId) => {
   const packageBasePrice = selectedPackageData[selectedVehicle];
 
   const extrasTotal = useMemo(() => {
-    return selectedExtras.reduce((total, extraId) => {
-      const found = extras.find((extra) => extra.id === extraId);
-      return total + (found?.price || 0);
-  }, [selectedExtras]);
+  return selectedExtras.reduce((total, extraId) => {
+    const found = extras.find((extra) => extra.id === extraId);
+    return total + (found?.price || 0);
+  }, 0);
+}, [selectedExtras]);
 
   const subtotal = packageBasePrice + extrasTotal;
   const gst = subtotal * 0.05;
