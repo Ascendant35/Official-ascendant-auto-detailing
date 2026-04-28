@@ -43,25 +43,6 @@ export default function BookNow() {
     { id: "specificStains", name: "Taches spécifiques", price: 40 },
     { id: "engineCleaning", name: "Nettoyage du moteur", price: 60 },
     { id: "leatherTreatment", name: "Traitement du cuir", price: 70 },
-
-    {
-      id: "exteriorOnly",
-      name: "Détailing extérieur seulement",
-      options: [
-        { label: "Berline", price: 99.99 },
-        { label: "VUS", price: 124.99 },
-        { label: "Camion / Grand VUS", price: 159.99 },
-      ],
-    },
-    {
-      id: "interiorOnly",
-      name: "Détailing intérieur seulement",
-      options: [
-        { label: "Berline", price: 119.99 },
-        { label: "VUS", price: 159.99 },
-        { label: "Camion / Grand VUS", price: 189.99 },
-      ],
-    },
   ];
 
   const toggleExtra = (extraId) => {
@@ -119,7 +100,7 @@ export default function BookNow() {
             <p style={eyebrow}>RÉSERVER</p>
             <h1 style={heroTitle}>Réservez votre expérience de detailing premium</h1>
             <p style={heroText}>
-              Sélectionnez votre forfait, choisissez votre type de véhicule, ajoutez les options nécessaires
+              Sélectionnez votre service, choisissez votre type de véhicule, ajoutez des options
               et consultez votre total avant de confirmer votre rendez-vous.
             </p>
           </div>
@@ -159,38 +140,19 @@ export default function BookNow() {
             Réservez votre service
           </h2>
 
-          <p
-            style={{
-              fontSize: "18px",
-              lineHeight: "1.8",
-              color: "#ccc",
-              marginBottom: "20px",
-            }}
-          >
-            Profitez d’une expérience de detailing premium sans quitter votre domicile. Notre service mobile entièrement équipé se déplace directement à vous, vous permettant de gagner du temps pendant que votre véhicule reçoit un soin de haut niveau.
+          <p style={{ fontSize: "18px", lineHeight: "1.8", color: "#ccc", marginBottom: "20px" }}>
+            Profitez d’une expérience de detailing premium sans quitter votre domicile.
+            Notre service mobile entièrement équipé se déplace directement à vous.
           </p>
 
-          <p
-            style={{
-              fontSize: "18px",
-              lineHeight: "1.8",
-              color: "#ccc",
-              marginBottom: "20px",
-            }}
-          >
-            Sélectionnez votre forfait, choisissez votre type de véhicule et personnalisez votre service avec des options adaptées à vos besoins — le tout effectué sur place avec précision et attention aux détails.
+          <p style={{ fontSize: "18px", lineHeight: "1.8", color: "#ccc", marginBottom: "20px" }}>
+            Sélectionnez votre forfait, choisissez votre véhicule et personnalisez votre service.
           </p>
 
-          <p
-            style={{
-              fontSize: "16px",
-              color: "#aaa",
-            }}
-          >
-            Une fois votre demande soumise, nous vous contacterons afin de confirmer votre rendez-vous et finaliser les détails selon vos disponibilités.
+          <p style={{ fontSize: "16px", color: "#aaa" }}>
+            Nous vous contacterons pour confirmer votre rendez-vous.
           </p>
 
-          {/* GOLD LINE */}
           <div
             style={{
               width: "80px",
@@ -204,15 +166,15 @@ export default function BookNow() {
 
       {/* MAIN BOOKING SECTION */}
       <section style={bookingSection}>
-        {/* LEFT BOX */}
         <div style={bookingBox}>
           <h2 style={title}>Créer votre rendez-vous</h2>
           <p style={desc}>
-            Choisissez le niveau de service qui convient le mieux à votre véhicule et personnalisez-le avec les soins supplémentaires que vous souhaitez ajouter.
+            Choisissez votre service et personnalisez-le selon vos besoins.
           </p>
 
+          {/* SERVICE TYPE */}
           <div style={sectionSpacing}>
-            <h3 style={subTitle}>Sélectionnez le type de service</h3>
+            <h3 style={subTitle}>Choisissez votre service</h3>
             <div style={optionGrid}>
               {[
                 { id: "package", label: "Forfait complet" },
@@ -223,7 +185,6 @@ export default function BookNow() {
                 return (
                   <button
                     key={option.id}
-                    type="button"
                     onClick={() => setServiceType(option.id)}
                     style={{
                       ...optionCard,
@@ -236,17 +197,16 @@ export default function BookNow() {
               })}
             </div>
           </div>
-
+                    {/* PACKAGE */}
           {serviceType === "package" && (
             <div style={sectionSpacing}>
-              <h3 style={subTitle}>Sélectionnez un forfait</h3>
+              <h3 style={subTitle}>Choisissez un forfait</h3>
               <div style={optionGrid}>
                 {Object.entries(packagePrices).map(([key, pkg]) => {
                   const active = selectedPackage === key;
                   return (
                     <button
                       key={key}
-                      type="button"
                       onClick={() => setSelectedPackage(key)}
                       style={{
                         ...optionCard,
@@ -263,14 +223,29 @@ export default function BookNow() {
 
           {/* VEHICLE */}
           <div style={sectionSpacing}>
-            <h3 style={subTitle}>Sélectionnez le type de véhicule</h3>
+            <h3 style={subTitle}>Type de véhicule</h3>
             <div style={optionGrid}>
               {Object.entries(vehicleLabels).map(([key, label]) => {
                 const active = selectedVehicle === key;
+
+                const price =
+                  serviceType === "package"
+                    ? packagePrices[selectedPackage][key]
+                    : serviceType === "exterior"
+                    ? key === "sedan"
+                      ? 99.99
+                      : key === "suv"
+                      ? 124.99
+                      : 159.99
+                    : key === "sedan"
+                    ? 119.99
+                    : key === "suv"
+                    ? 159.99
+                    : 189.99;
+
                 return (
                   <button
                     key={key}
-                    type="button"
                     onClick={() => setSelectedVehicle(key)}
                     style={{
                       ...optionCard,
@@ -278,9 +253,7 @@ export default function BookNow() {
                     }}
                   >
                     <span style={optionTitle}>{label}</span>
-                    <span style={optionSmallPrice}>
-                      ${packagePrices[selectedPackage][key].toFixed(2)}
-                    </span>
+                    <span style={optionSmallPrice}>${price.toFixed(2)}</span>
                   </button>
                 );
               })}
@@ -289,14 +262,13 @@ export default function BookNow() {
 
           {/* EXTRAS */}
           <div style={sectionSpacing}>
-            <h3 style={subTitle}>Ajouter des options</h3>
+            <h3 style={subTitle}>Options supplémentaires</h3>
             <div style={extrasGrid}>
               {extras.map((extra) => {
                 const active = selectedExtras.includes(extra.id);
                 return (
                   <button
                     key={extra.id}
-                    type="button"
                     onClick={() => toggleExtra(extra.id)}
                     style={{
                       ...extraCard,
@@ -304,11 +276,7 @@ export default function BookNow() {
                     }}
                   >
                     <span>{extra.name}</span>
-                    <span style={optionSmallPrice}>
-                      {extra.price
-                        ? `+$${extra.price.toFixed(2)}`
-                        : "Choisir la taille"}
-                    </span>
+                    <span style={optionSmallPrice}>+${extra.price}</span>
                   </button>
                 );
               })}
@@ -327,8 +295,8 @@ export default function BookNow() {
                 {serviceType === "package"
                   ? selectedPackageData.name
                   : serviceType === "exterior"
-                  ? "Détailing extérieur seulement"
-                  : "Détailing intérieur seulement"}
+                  ? "Extérieur seulement"
+                  : "Intérieur seulement"}
               </span>
             </div>
 
@@ -348,7 +316,9 @@ export default function BookNow() {
           <div style={summarySection}>
             <p style={{ ...subTitle, marginBottom: "14px" }}>Options</p>
             {selectedExtras.length === 0 ? (
-              <p style={{ color: "#888", margin: 0 }}>Aucune option sélectionnée</p>
+              <p style={{ color: "#888", margin: 0 }}>
+                Aucune option sélectionnée
+              </p>
             ) : (
               selectedExtras.map((extraId) => {
                 const extra = extras.find((item) => item.id === extraId);
@@ -357,11 +327,7 @@ export default function BookNow() {
                 return (
                   <div key={extraId} style={summaryRow}>
                     <span style={summaryLabel}>{extra.name}</span>
-                    <span>
-                      {extra.price
-                        ? `+$${extra.price.toFixed(2)}`
-                        : "+ Choisir la taille du véhicule"}
-                    </span>
+                    <span>+${extra.price.toFixed(2)}</span>
                   </div>
                 );
               })
@@ -389,14 +355,21 @@ export default function BookNow() {
 
           <div style={{ ...summaryRow, marginTop: "10px" }}>
             <span style={{ fontSize: "28px", fontWeight: 600 }}>Total</span>
-            <span style={{ fontSize: "30px", fontWeight: 700, color: "#d4af37" }}>
+            <span
+              style={{
+                fontSize: "30px",
+                fontWeight: 700,
+                color: "#d4af37",
+              }}
+            >
               ${total.toFixed(2)}
             </span>
           </div>
 
           <div style={retainerBox}>
             <p style={{ margin: 0, color: "#ddd", lineHeight: 1.6 }}>
-              Tous les rendez-vous nécessitent un <span style={gold}>dépôt de retenue de 50 $</span>, qui sera entièrement crédité au coût final de votre service.
+              Tous les rendez-vous nécessitent un{" "}
+              <span style={gold}>dépôt de 50 $</span>, déduit du total final.
             </p>
           </div>
 
