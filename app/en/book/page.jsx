@@ -50,7 +50,7 @@ export default function BookNow() {
     { label: "SUV", price: 124.99 },
     { label: "Truck / Large SUV", price: 159.99 },
   ],
-}{
+},{
   id: "interiorOnly",
   name: "Interior Detailing Only",
   options: [
