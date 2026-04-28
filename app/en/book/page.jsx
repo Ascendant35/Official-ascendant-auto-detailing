@@ -36,34 +36,16 @@ export default function BookNow() {
     truck: "Truck / Large SUV",
   };
 
-const extras = [
-  { id: "petHair", name: "Pet Hair", price: 30 },
-  { id: "saltRemoval", name: "Salt / Calcium", price: 35 },
-  { id: "odorTreatment", name: "Odor Treatment", price: 50 },
-  { id: "specificStains", name: "Specific Stains", price: 40 },
-  { id: "engineCleaning", name: "Engine Cleaning", price: 60 },
-  { id: "leatherTreatment", name: "Leather Treatment", price: 70 },
+  const extras = [
+    { id: "petHair", name: "Pet Hair", price: 30 },
+    { id: "saltRemoval", name: "Salt / Calcium", price: 35 },
+    { id: "odorTreatment", name: "Odor Treatment", price: 50 },
+    { id: "specificStains", name: "Specific Stains", price: 40 },
+    { id: "engineCleaning", name: "Engine Cleaning", price: 60 },
+    { id: "leatherTreatment", name: "Leather Treatment", price: 70 },
+  ];
 
-  {
-    id: "exteriorOnly",
-    name: "Exterior Detailing Only",
-    options: [
-      { label: "Sedan", price: 99.99 },
-      { label: "SUV", price: 124.99 },
-      { label: "Truck / Large SUV", price: 159.99 },
-    ],
-  },
-  {
-    id: "interiorOnly",
-    name: "Interior Detailing Only",
-    options: [
-      { label: "Sedan", price: 119.99 },
-      { label: "SUV", price: 159.99 },
-      { label: "Truck / Large SUV", price: 189.99 },
-    ],
-  }
-];
-const toggleExtra = (extraId) => {
+  const toggleExtra = (extraId) => {
     setSelectedExtras((prev) =>
       prev.includes(extraId)
         ? prev.filter((id) => id !== extraId)
@@ -72,32 +54,34 @@ const toggleExtra = (extraId) => {
   };
 
   const selectedPackageData = packagePrices[selectedPackage];
+
   const standalonePrice = useMemo(() => {
-  if (serviceType === "exterior") {
-    if (selectedVehicle === "sedan") return 99.99;
-    if (selectedVehicle === "suv") return 124.99;
-    if (selectedVehicle === "truck") return 159.99;
-  }
+    if (serviceType === "exterior") {
+      if (selectedVehicle === "sedan") return 99.99;
+      if (selectedVehicle === "suv") return 124.99;
+      if (selectedVehicle === "truck") return 159.99;
+    }
 
-  if (serviceType === "interior") {
-    if (selectedVehicle === "sedan") return 119.99;
-    if (selectedVehicle === "suv") return 159.99;
-    if (selectedVehicle === "truck") return 189.99;
-  }
+    if (serviceType === "interior") {
+      if (selectedVehicle === "sedan") return 119.99;
+      if (selectedVehicle === "suv") return 159.99;
+      if (selectedVehicle === "truck") return 189.99;
+    }
 
-  return 0;
-}, [serviceType, selectedVehicle]);
+    return 0;
+  }, [serviceType, selectedVehicle]);
+
   const packageBasePrice =
-  serviceType === "package"
-    ? selectedPackageData[selectedVehicle]
-    : standalonePrice;
+    serviceType === "package"
+      ? selectedPackageData[selectedVehicle]
+      : standalonePrice;
 
   const extrasTotal = useMemo(() => {
-  return selectedExtras.reduce((total, extraId) => {
-    const found = extras.find((extra) => extra.id === extraId);
-    return total + (found?.price || 0);
-  }, 0);
-}, [selectedExtras]);
+    return selectedExtras.reduce((total, extraId) => {
+      const found = extras.find((extra) => extra.id === extraId);
+      return total + (found?.price || 0);
+    }, 0);
+  }, [selectedExtras]);
 
   const subtotal = packageBasePrice + extrasTotal;
   const gst = subtotal * 0.05;
@@ -116,87 +100,87 @@ const toggleExtra = (extraId) => {
             <p style={eyebrow}>BOOK NOW</p>
             <h1 style={heroTitle}>Reserve Your Premium Detailing Experience</h1>
             <p style={heroText}>
-              Select your package, choose your vehicle type, add any extras you need,
+              Select your service, choose your vehicle type, add any extras you need,
               and review your total before confirming your appointment.
             </p>
           </div>
         </div>
       </section>
-     {/* BOOKING INTRO SECTION */}
-<section
-  style={{
-    backgroundColor: "#0a0a0a",
-    padding: "80px 20px",
-    display: "flex",
-    justifyContent: "center",
-  }}
->
-  <div
-    style={{
-      maxWidth: "1000px",
-      width: "100%",
-      backgroundColor: "#111",
-      borderRadius: "28px",
-      padding: "50px 40px",
-      border: "1px solid rgba(212,175,55,0.4)",
-      boxShadow: "0 0 40px rgba(212,175,55,0.08)",
-      textAlign: "center",
-    }}
-  >
-    <h2
-      style={{
-        fontSize: "42px",
-        fontWeight: "600",
-        marginBottom: "20px",
-        letterSpacing: "1px",
-        color: "white",
-      }}
-    >
-      Book Your Service
-    </h2>
 
-    <p
-      style={{
-        fontSize: "18px",
-        lineHeight: "1.8",
-        color: "#ccc",
-        marginBottom: "20px",
-      }}
-    >
-      Enjoy a premium detailing experience without leaving your home. Our fully equipped mobile service comes directly to you, allowing you to save time while your vehicle receives the highest level of care.
-    </p>
+      {/* BOOKING INTRO SECTION */}
+      <section
+        style={{
+          backgroundColor: "#0a0a0a",
+          padding: "80px 20px",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <div
+          style={{
+            maxWidth: "1000px",
+            width: "100%",
+            backgroundColor: "#111",
+            borderRadius: "28px",
+            padding: "50px 40px",
+            border: "1px solid rgba(212,175,55,0.4)",
+            boxShadow: "0 0 40px rgba(212,175,55,0.08)",
+            textAlign: "center",
+          }}
+        >
+          <h2
+            style={{
+              fontSize: "42px",
+              fontWeight: "600",
+              marginBottom: "20px",
+              letterSpacing: "1px",
+              color: "white",
+            }}
+          >
+            Book Your Service
+          </h2>
 
-    <p
-      style={{
-        fontSize: "18px",
-        lineHeight: "1.8",
-        color: "#ccc",
-        marginBottom: "20px",
-      }}
-    >
-      Select your package, choose your vehicle type, and customize your service with optional add-ons tailored to your needs — all handled on-site with precision and attention to detail.
-    </p>
+          <p
+            style={{
+              fontSize: "18px",
+              lineHeight: "1.8",
+              color: "#ccc",
+              marginBottom: "20px",
+            }}
+          >
+            Enjoy a premium detailing experience without leaving your home. Our fully equipped mobile service comes directly to you, allowing you to save time while your vehicle receives the highest level of care.
+          </p>
 
-    <p
-      style={{
-        fontSize: "16px",
-        color: "#aaa",
-      }}
-    >
-      Once your request is submitted, we will contact you to confirm your appointment and finalize the details at your convenience.
-    </p>
+          <p
+            style={{
+              fontSize: "18px",
+              lineHeight: "1.8",
+              color: "#ccc",
+              marginBottom: "20px",
+            }}
+          >
+            Select your package, choose your vehicle type, and customize your service with optional add-ons tailored to your needs — all handled on-site with precision and attention to detail.
+          </p>
 
-    {/* GOLD LINE */}
-    <div
-      style={{
-        width: "80px",
-        height: "2px",
-        backgroundColor: "#D4AF37",
-        margin: "40px auto 0",
-      }}
-    />
-  </div>
-</section>
+          <p
+            style={{
+              fontSize: "16px",
+              color: "#aaa",
+            }}
+          >
+            Once your request is submitted, we will contact you to confirm your appointment and finalize the details at your convenience.
+          </p>
+
+          <div
+            style={{
+              width: "80px",
+              height: "2px",
+              backgroundColor: "#D4AF37",
+              margin: "40px auto 0",
+            }}
+          />
+        </div>
+      </section>
 
       {/* MAIN BOOKING SECTION */}
       <section style={bookingSection}>
@@ -207,61 +191,80 @@ const toggleExtra = (extraId) => {
             Choose the service level that best fits your vehicle and customize it with any
             additional care you would like to include.
           </p>
-<div style={sectionSpacing}>
-  <h3 style={subTitle}>Select Service Type</h3>
-  <div style={optionGrid}>
-    {[
-      { id: "package", label: "Full Detailing Package" },
-      { id: "exterior", label: "Exterior Only" },
-      { id: "interior", label: "Interior Only" },
-    ].map((option) => {
-      const active = serviceType === option.id;
-      return (
-        <button
-          key={option.id}
-          type="button"
-          onClick={() => setServiceType(option.id)}
-          style={{
-            ...optionCard,
-            ...(active ? activeOptionCard : {}),
-          }}
-        >
-          {option.label}
-        </button>
-      );
-    })}
-  </div>
-</div>
-          {serviceType === "package" && (
-  <div style={sectionSpacing}>
-            <h3 style={subTitle}>Select Package</h3>
+
+          {/* SERVICE TYPE */}
+          <div style={sectionSpacing}>
+            <h3 style={subTitle}>Select Service Type</h3>
             <div style={optionGrid}>
-              {Object.entries(packagePrices).map(([key, pkg]) => {
-                const active = selectedPackage === key;
+              {[
+                { id: "package", label: "Full Detailing Package" },
+                { id: "exterior", label: "Exterior Only" },
+                { id: "interior", label: "Interior Only" },
+              ].map((option) => {
+                const active = serviceType === option.id;
                 return (
                   <button
-                    key={key}
+                    key={option.id}
                     type="button"
-                    onClick={() => setSelectedPackage(key)}
+                    onClick={() => setServiceType(option.id)}
                     style={{
                       ...optionCard,
                       ...(active ? activeOptionCard : {}),
                     }}
                   >
-                    <span style={optionTitle}>{pkg.name}</span>
+                    {option.label}
                   </button>
                 );
               })}
             </div>
           </div>
-)}
+                    {/* PACKAGE */}
+          {serviceType === "package" && (
+            <div style={sectionSpacing}>
+              <h3 style={subTitle}>Select Package</h3>
+              <div style={optionGrid}>
+                {Object.entries(packagePrices).map(([key, pkg]) => {
+                  const active = selectedPackage === key;
+                  return (
+                    <button
+                      key={key}
+                      type="button"
+                      onClick={() => setSelectedPackage(key)}
+                      style={{
+                        ...optionCard,
+                        ...(active ? activeOptionCard : {}),
+                      }}
+                    >
+                      <span style={optionTitle}>{pkg.name}</span>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          )}
 
           {/* VEHICLE */}
           <div style={sectionSpacing}>
-            <h3 style={subTitle}>Select Vehicle Type</h3>
+            <h3 style={subTitle}>Vehicle Type</h3>
             <div style={optionGrid}>
               {Object.entries(vehicleLabels).map(([key, label]) => {
                 const active = selectedVehicle === key;
+
+                const price =
+                  serviceType === "package"
+                    ? packagePrices[selectedPackage][key]
+                    : serviceType === "exterior"
+                    ? key === "sedan"
+                      ? 99.99
+                      : key === "suv"
+                      ? 124.99
+                      : 159.99
+                    : key === "sedan"
+                    ? 119.99
+                    : key === "suv"
+                    ? 159.99
+                    : 189.99;
+
                 return (
                   <button
                     key={key}
@@ -274,7 +277,7 @@ const toggleExtra = (extraId) => {
                   >
                     <span style={optionTitle}>{label}</span>
                     <span style={optionSmallPrice}>
-                      ${packagePrices[selectedPackage][key].toFixed(2)}
+                      ${price.toFixed(2)}
                     </span>
                   </button>
                 );
@@ -300,10 +303,8 @@ const toggleExtra = (extraId) => {
                   >
                     <span>{extra.name}</span>
                     <span style={optionSmallPrice}>
-  {extra.price
-    ? `+$${extra.price.toFixed(2)}`
-    : "Select size"}
-</span>
+                      +${extra.price.toFixed(2)}
+                    </span>
                   </button>
                 );
               })}
@@ -317,14 +318,14 @@ const toggleExtra = (extraId) => {
 
           <div style={summarySection}>
             <div style={summaryRow}>
-              <span style={summaryLabel}>Package</span>
-             <span>
-  {serviceType === "package"
-    ? selectedPackageData.name
-    : serviceType === "exterior"
-    ? "Exterior Detailing Only"
-    : "Interior Detailing Only"}
-</span>
+              <span style={summaryLabel}>Service</span>
+              <span>
+                {serviceType === "package"
+                  ? selectedPackageData.name
+                  : serviceType === "exterior"
+                  ? "Exterior Detailing Only"
+                  : "Interior Detailing Only"}
+              </span>
             </div>
 
             <div style={summaryRow}>
@@ -334,16 +335,22 @@ const toggleExtra = (extraId) => {
 
             <div style={summaryRow}>
               <span style={summaryLabel}>Base Price</span>
-              <span style={gold}>${packageBasePrice.toFixed(2)}</span>
+              <span style={gold}>
+                ${packageBasePrice.toFixed(2)}
+              </span>
             </div>
           </div>
 
           <div style={divider} />
 
           <div style={summarySection}>
-            <p style={{ ...subTitle, marginBottom: "14px" }}>Extras</p>
+            <p style={{ ...subTitle, marginBottom: "14px" }}>
+              Extras
+            </p>
             {selectedExtras.length === 0 ? (
-              <p style={{ color: "#888", margin: 0 }}>No extras selected</p>
+              <p style={{ color: "#888", margin: 0 }}>
+                No extras selected
+              </p>
             ) : (
               selectedExtras.map((extraId) => {
                 const extra = extras.find((item) => item.id === extraId);
@@ -353,10 +360,8 @@ const toggleExtra = (extraId) => {
                   <div key={extraId} style={summaryRow}>
                     <span style={summaryLabel}>{extra.name}</span>
                     <span>
-  {extra.price
-    ? `+$${extra.price.toFixed(2)}`
-    : "+ Select vehicle size"}
-</span>
+                      +${extra.price.toFixed(2)}
+                    </span>
                   </div>
                 );
               })
@@ -383,15 +388,25 @@ const toggleExtra = (extraId) => {
           <div style={divider} />
 
           <div style={{ ...summaryRow, marginTop: "10px" }}>
-            <span style={{ fontSize: "28px", fontWeight: 600 }}>Total</span>
-            <span style={{ fontSize: "30px", fontWeight: 700, color: "#d4af37" }}>
+            <span style={{ fontSize: "28px", fontWeight: 600 }}>
+              Total
+            </span>
+            <span
+              style={{
+                fontSize: "30px",
+                fontWeight: 700,
+                color: "#d4af37",
+              }}
+            >
               ${total.toFixed(2)}
             </span>
           </div>
 
           <div style={retainerBox}>
             <p style={{ margin: 0, color: "#ddd", lineHeight: 1.6 }}>
-              All appointments require a <span style={gold}>$50 retainer fee</span> which will be fully credited to your final service cost.
+              All appointments require a{" "}
+              <span style={gold}>$50 retainer</span>, which will be
+              fully deducted from your final service total.
             </p>
           </div>
 
@@ -401,13 +416,14 @@ const toggleExtra = (extraId) => {
             rel="noreferrer"
             style={goldBtn}
           >
-            Confirm Appointment
+            Confirm Booking
           </a>
-                </div>
+        </div>
       </section>
     </div>
   );
 }
+
 /* STYLES */
 
 const heroStyle = {
