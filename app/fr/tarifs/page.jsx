@@ -1,546 +1,614 @@
-import Header from "../../components/Header";
-import Link from "next/link";
+"use client";
 
-export default function TarifsFR() {
+import { useMemo, useState } from "react";
+import Header from "../../components/Header";
+
+export default function BookNow() {
+  const [selectedPackage, setSelectedPackage] = useState("care");
+  const [selectedVehicle, setSelectedVehicle] = useState("sedan");
+  const [selectedExtras, setSelectedExtras] = useState([]);
+  const [serviceType, setServiceType] = useState("package");
+
+  const packagePrices = {
+    care: {
+      name: "Ascendant Care",
+      sedan: 189.99,
+      suv: 209.99,
+      truck: 249.99,
+    },
+    elite: {
+      name: "Ascendant Elite",
+      sedan: 289.99,
+      suv: 309.99,
+      truck: 349.99,
+    },
+    signature: {
+      name: "Ascendant Signature",
+      sedan: 389.99,
+      suv: 409.99,
+      truck: 449.99,
+    },
+  };
+
+  const vehicleLabels = {
+    sedan: "Berline",
+    suv: "VUS",
+    truck: "Camion / Grand VUS",
+  };
+
+  const extras = [
+    { id: "petHair", name: "Poils d’animaux", price: 30 },
+    { id: "saltRemoval", name: "Sel / Calcium", price: 35 },
+    { id: "odorTreatment", name: "Traitement des odeurs", price: 50 },
+    { id: "specificStains", name: "Taches spécifiques", price: 40 },
+    { id: "engineCleaning", name: "Nettoyage du moteur", price: 60 },
+    { id: "leatherTreatment", name: "Traitement du cuir", price: 70 },
+
+    {
+      id: "exteriorOnly",
+      name: "Détailing extérieur seulement",
+      options: [
+        { label: "Berline", price: 99.99 },
+        { label: "VUS", price: 124.99 },
+        { label: "Camion / Grand VUS", price: 159.99 },
+      ],
+    },
+    {
+      id: "interiorOnly",
+      name: "Détailing intérieur seulement",
+      options: [
+        { label: "Berline", price: 119.99 },
+        { label: "VUS", price: 159.99 },
+        { label: "Camion / Grand VUS", price: 189.99 },
+      ],
+    },
+  ];
+
+  const toggleExtra = (extraId) => {
+    setSelectedExtras((prev) =>
+      prev.includes(extraId)
+        ? prev.filter((id) => id !== extraId)
+        : [...prev, extraId]
+    );
+  };
+
+  const selectedPackageData = packagePrices[selectedPackage];
+
+  const standalonePrice = useMemo(() => {
+    if (serviceType === "exterior") {
+      if (selectedVehicle === "sedan") return 99.99;
+      if (selectedVehicle === "suv") return 124.99;
+      if (selectedVehicle === "truck") return 159.99;
+    }
+
+    if (serviceType === "interior") {
+      if (selectedVehicle === "sedan") return 119.99;
+      if (selectedVehicle === "suv") return 159.99;
+      if (selectedVehicle === "truck") return 189.99;
+    }
+
+    return 0;
+  }, [serviceType, selectedVehicle]);
+
+  const packageBasePrice =
+    serviceType === "package"
+      ? selectedPackageData[selectedVehicle]
+      : standalonePrice;
+
+  const extrasTotal = useMemo(() => {
+    return selectedExtras.reduce((total, extraId) => {
+      const found = extras.find((extra) => extra.id === extraId);
+      return total + (found?.price || 0);
+    }, 0);
+  }, [selectedExtras]);
+
+  const subtotal = packageBasePrice + extrasTotal;
+  const gst = subtotal * 0.05;
+  const qst = subtotal * 0.09975;
+  const total = subtotal + gst + qst;
+
   return (
     <div style={{ backgroundColor: "#0a0a0a", color: "#f5f5f5", minHeight: "100vh" }}>
       <Header lang="fr" />
 
       {/* HERO */}
       <section style={heroStyle}>
+        <div style={heroOverlay} />
         <div style={container}>
-          <h1 style={heroTitle}>Nos Forfaits Premium</h1>
-          <p style={heroText}>
-            Des services conçus pour maintenir votre véhicule dans un état impeccable,
-            avec des options à la visite ou des forfaits d’entretien régulier.
-          </p>
+          <div style={heroContent}>
+            <p style={eyebrow}>RÉSERVER</p>
+            <h1 style={heroTitle}>Réservez votre expérience de detailing premium</h1>
+            <p style={heroText}>
+              Sélectionnez votre forfait, choisissez votre type de véhicule, ajoutez les options nécessaires
+              et consultez votre total avant de confirmer votre rendez-vous.
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* ✅ PREMIUM INTRO BOX */}
+      {/* BOOKING INTRO SECTION */}
       <section
         style={{
-          maxWidth: "1100px",
-          margin: "70px auto 30px",
-          padding: "0 30px",
+          backgroundColor: "#0a0a0a",
+          padding: "80px 20px",
+          display: "flex",
+          justifyContent: "center",
         }}
       >
         <div
           style={{
-            background:
-              "linear-gradient(180deg, rgba(18,18,18,0.96), rgba(10,10,10,0.98))",
-            border: "1px solid rgba(212,175,55,0.45)",
-            borderRadius: "24px",
-            padding: "42px 38px",
+            maxWidth: "1000px",
+            width: "100%",
+            backgroundColor: "#111",
+            borderRadius: "28px",
+            padding: "50px 40px",
+            border: "1px solid rgba(212,175,55,0.4)",
+            boxShadow: "0 0 40px rgba(212,175,55,0.08)",
             textAlign: "center",
-            boxShadow: "0 18px 60px rgba(0,0,0,0.35)",
           }}
         >
-          <p
-            style={{
-              fontSize: "13px",
-              textTransform: "uppercase",
-              letterSpacing: "3px",
-              color: "#d4af37",
-              marginBottom: "18px",
-            }}
-          >
-            Expérience de detailing raffinée
-          </p>
-
           <h2
             style={{
-              fontSize: "34px",
-              marginBottom: "18px",
-              color: "#f5f5f5",
-              fontWeight: "500",
+              fontSize: "42px",
+              fontWeight: "600",
+              marginBottom: "20px",
+              letterSpacing: "1px",
+              color: "white",
             }}
           >
-            Choisissez le niveau de soin que votre véhicule mérite
+            Réservez votre service
           </h2>
 
           <p
             style={{
-              fontSize: "17px",
-              color: "#cfcfcf",
-              lineHeight: "1.9",
-              maxWidth: "860px",
-              margin: "0 auto 14px",
+              fontSize: "18px",
+              lineHeight: "1.8",
+              color: "#ccc",
+              marginBottom: "20px",
             }}
           >
-            Découvrez nos forfaits premium de detailing, chacun soigneusement conçu
-            pour offrir un niveau distinct de soin, de raffinement et de finition.
-            Commencez par sélectionner le forfait qui correspond le mieux aux besoins
-            de votre véhicule, puis choisissez sa taille pour un service exécuté avec précision.
+            Profitez d’une expérience de detailing premium sans quitter votre domicile. Notre service mobile entièrement équipé se déplace directement à vous, vous permettant de gagner du temps pendant que votre véhicule reçoit un soin de haut niveau.
           </p>
 
           <p
             style={{
-              fontSize: "17px",
-              color: "#cfcfcf",
-              lineHeight: "1.9",
-              maxWidth: "860px",
-              margin: "0 auto 14px",
+              fontSize: "18px",
+              lineHeight: "1.8",
+              color: "#ccc",
+              marginBottom: "20px",
             }}
           >
-            Pour les clients recherchant une valeur exceptionnelle et un entretien continu, nos{" "}
-            <span style={{ color: "#d4af37", fontWeight: "600" }}>
-              forfaits 4 visites
-            </span>{" "}
-            offrent une façon raffinée de maintenir votre véhicule au plus haut niveau
-            tout au long de la saison.
+            Sélectionnez votre forfait, choisissez votre type de véhicule et personnalisez votre service avec des options adaptées à vos besoins — le tout effectué sur place avec précision et attention aux détails.
           </p>
 
           <p
             style={{
-              fontSize: "17px",
-              color: "#cfcfcf",
-              lineHeight: "1.9",
-              maxWidth: "860px",
-              margin: "0 auto",
+              fontSize: "16px",
+              color: "#aaa",
             }}
           >
-            Vous pouvez également rehausser davantage votre expérience grâce à notre sélection
-            de services complémentaires ci-dessous, conçus pour offrir une finition encore plus
-            complète et luxueuse à chaque visite.
+            Une fois votre demande soumise, nous vous contacterons afin de confirmer votre rendez-vous et finaliser les détails selon vos disponibilités.
           </p>
-        </div>
-      </section>
 
-      {/* PACKAGES */}
-<section style={gridSection}>
-  
-  {/* CARE */}
-  <div style={card}>
-    <h2 style={title}>Ascendant Care</h2>
-    <p style={desc}>
-      Idéal pour un entretien régulier et pour garder votre véhicule propre au quotidien.
-    </p>
-
-    <div
-      style={{
-        border: "1px solid rgba(212,175,55,0.4)",
-        borderRadius: "12px",
-        padding: "10px 14px",
-        marginBottom: "20px",
-        display: "inline-block",
-      }}
-    >
-      <p style={{ color: "#d4af37", margin: 0 }}>
-        Durée estimée : 2 heures
-      </p>
-    </div>
-
-    <div style={price}>
-      <p>Berline : 189.99$</p>
-      <p>VUS : 209.99$</p>
-      <p>Camion / Grand VUS : 249.99$</p>
-    </div>
-
-    <div style={subscription}>
-      <p style={subTitle}>Forfait 4 visites</p>
-      <p>Profitez de notre forfait regroupé de 4 visites, utilisable quand vous le souhaitez.</p>
-      <p>Berline : 669.99$</p>
-      <p>VUS : 739.99$</p>
-      <p>Camion / Grand VUS : 859.99$</p>
-    </div>
-
-    <ul style={list}>
-      <li>Aspiration complète</li>
-      <li>Nettoyage intérieur léger</li>
-      <li>Lavage extérieur</li>
-      <li>Vitres</li>
-      <li>Finition finale</li>
-    </ul>
-
-    <Link href="/fr/reserver" style={btn}>Réserver</Link>
-  </div>
-
-  {/* ELITE */}
-  <div style={{ ...card, border: "1px solid #d4af37", position: "relative", transform: "scale(1.05)" }}>
-    <div style={badge}>LE PLUS POPULAIRE</div>
-
-    <h2 style={title}>Ascendant Elite</h2>
-    <p style={desc}>
-      Nettoyage en profondeur offrant l’équilibre parfait entre qualité et valeur.
-    </p>
-
-    <div
-      style={{
-        border: "1px solid rgba(212,175,55,0.4)",
-        borderRadius: "12px",
-        padding: "10px 14px",
-        marginBottom: "20px",
-        display: "inline-block",
-      }}
-    >
-      <p style={{ color: "#d4af37", margin: 0 }}>
-        Durée estimée : 3 à 4 heures
-      </p>
-    </div>
-
-    <div style={price}>
-      <p>Berline : 289.99$</p>
-      <p>VUS : 309.99$</p>
-      <p>Camion / Grand VUS : 349.99$</p>
-    </div>
-
-    <div style={subscription}>
-      <p style={subTitle}>Forfait 4 visites</p>
-      <p>Profitez de notre forfait regroupé de 4 visites, utilisable quand vous le souhaitez.</p>
-      <p>Berline : 1049.99$</p>
-      <p>VUS : 1129.99$</p>
-      <p>Camion / Grand VUS : 1249.99$</p>
-    </div>
-
-    <ul style={list}>
-      <li>Tout ce qui est inclus dans Care</li>
-      <li>Shampoing des sièges</li>
-      <li>Nettoyage des tapis</li>
-      <li>Dégraissage</li>
-      <li>Détail extérieur complet</li>
-      <li>Finition premium</li>
-    </ul>
-
-    <Link href="/fr/reserver" style={goldBtn}>Réserver</Link>
-  </div>
-
-  {/* SIGNATURE */}
-  <div style={card}>
-    <h2 style={title}>Ascendant Signature</h2>
-    <p style={desc}>
-      L’expérience ultime pour un résultat impeccable et une finition digne d’une salle de montre.
-    </p>
-
-    <div
-      style={{
-        border: "1px solid rgba(212,175,55,0.4)",
-        borderRadius: "12px",
-        padding: "10px 14px",
-        marginBottom: "20px",
-        display: "inline-block",
-      }}
-    >
-      <p style={{ color: "#d4af37", margin: 0 }}>
-        Durée estimée : 5 à 6 heures
-      </p>
-    </div>
-
-    <div style={price}>
-      <p>Berline : 389.99$</p>
-      <p>VUS : 409.99$</p>
-      <p>Camion / Grand VUS : 449.99$</p>
-    </div>
-
-    <div style={subscription}>
-      <p style={subTitle}>Forfait 4 visites</p>
-      <p>Profitez de notre forfait regroupé de 4 visites, utilisable quand vous le souhaitez.</p>
-      <p>Berline : 1399.99$</p>
-      <p>VUS : 1499.99$</p>
-      <p>Camion / Grand VUS : 1599.99$</p>
-    </div>
-
-    <ul style={list}>
-      <li>Tout ce qui est inclus dans Elite</li>
-      <li>Nettoyage en profondeur</li>
-      <li>Traitement complet</li>
-      <li>Finition haut de gamme</li>
-      <li>Détail méticuleux</li>
-    </ul>
-
-    <Link href="/fr/reserver" style={btn}>Réserver</Link>
-  </div>
-</section>
-
-      {/* WHY CHOOSE */}
-      <section style={whySection}>
-        <h2 style={whyTitle}>Quel forfait devriez-vous choisir ?</h2>
-
-        <div style={whyGrid}>
-          
-          {/* CARE */}
+          {/* GOLD LINE */}
           <div
             style={{
-              ...choiceStyle,
-              border: "1px solid rgba(212,175,55,0.25)",
-              transition: "all 0.3s ease",
+              width: "80px",
+              height: "2px",
+              backgroundColor: "#D4AF37",
+              margin: "40px auto 0",
             }}
-          >
-            <div
-              style={{
-                width: "40px",
-                height: "2px",
-                backgroundColor: "#d4af37",
-                marginBottom: "15px",
-              }}
-            />
-
-            <strong
-              style={{
-                fontSize: "24px",
-                color: "#f5f5f5",
-                display: "block",
-                marginBottom: "15px",
-              }}
-            >
-              Ascendant Care
-            </strong>
-
-            <p style={{ lineHeight: "1.9", color: "#ccc", marginBottom: "12px" }}>
-              Conçu pour un entretien constant, ce forfait permet de garder votre véhicule
-              propre, soigné et raffiné sur une base régulière.
-            </p>
-
-            <p style={{ lineHeight: "1.9", color: "#ccc", marginBottom: "12px" }}>
-              Idéal pour les clients qui souhaitent conserver une apparence impeccable
-              en tout temps, sans nécessiter une restauration plus intensive.
-            </p>
-
-            <p style={{ lineHeight: "1.9", color: "#ccc" }}>
-              Un équilibre parfait entre efficacité, élégance et entretien quotidien.
-            </p>
-          </div>
-
-          {/* ELITE */}
-          <div
-            style={{
-              ...choiceStyle,
-              border: "1px solid rgba(212,175,55,0.5)",
-              transform: "scale(1.03)",
-            }}
-          >
-            <div
-              style={{
-                width: "40px",
-                height: "2px",
-                backgroundColor: "#d4af37",
-                marginBottom: "15px",
-              }}
-            />
-
-            <strong
-              style={{
-                fontSize: "26px",
-                color: "#d4af37",
-                display: "block",
-                marginBottom: "15px",
-              }}
-            >
-              Ascendant Elite
-            </strong>
-
-            <p style={{ lineHeight: "1.9", color: "#ccc", marginBottom: "12px" }}>
-              Notre choix le plus populaire, offrant un niveau de nettoyage plus approfondi
-              ainsi qu’une attention supérieure aux détails, à l’intérieur comme à l’extérieur.
-            </p>
-
-            <p style={{ lineHeight: "1.9", color: "#ccc", marginBottom: "12px" }}>
-              Il redonne fraîcheur à l’habitacle tout en rehaussant la finition extérieure
-              avec un résultat nettement plus raffiné.
-            </p>
-
-            <p style={{ lineHeight: "1.9", color: "#ccc" }}>
-              Parfait pour ceux qui recherchent une transformation premium sans aller jusqu’au niveau ultime.
-            </p>
-          </div>
-
-          {/* SIGNATURE */}
-          <div
-            style={{
-              ...choiceStyle,
-              border: "1px solid rgba(212,175,55,0.25)",
-            }}
-          >
-            <div
-              style={{
-                width: "40px",
-                height: "2px",
-                backgroundColor: "#d4af37",
-                marginBottom: "15px",
-              }}
-            />
-
-            <strong
-              style={{
-                fontSize: "24px",
-                color: "#f5f5f5",
-                display: "block",
-                marginBottom: "15px",
-              }}
-            >
-              Ascendant Signature
-            </strong>
-
-            <p style={{ lineHeight: "1.9", color: "#ccc", marginBottom: "12px" }}>
-              L’expérience de detailing ultime, conçue pour les clients qui n’acceptent rien de moins que la perfection.
-            </p>
-
-            <p style={{ lineHeight: "1.9", color: "#ccc", marginBottom: "12px" }}>
-              Chaque surface est traitée avec minutie afin d’offrir une finition digne d’une salle de montre,
-              avec une précision incomparable.
-            </p>
-
-            <p style={{ lineHeight: "1.9", color: "#ccc" }}>
-              Idéal pour les véhicules de luxe, les occasions spéciales ou pour atteindre le plus haut niveau de présentation.
-            </p>
-          </div>
-
-        </div>
-      </section>
-
-      {/* EXTRA SERVICES */}
-      <section style={extraSection}>
-        <h2 style={{ fontSize: "40px", marginBottom: "30px", textAlign: "center" }}>
-          Services complémentaires
-        </h2>
-
-        <div style={extraGrid}>
-          <Extra title="Poils d’animaux" price="À partir de $30" />
-          <Extra title="Sel / Calcium" price="À partir de $35" />
-          <Extra title="Traitement des odeurs" price="À partir de $50" />
-          <Extra title="Taches spécifiques" price="À partir de $40" />
-          <Extra title="Nettoyage du moteur" price="À partir de $60" />
-          <Extra title="Traitement du cuir" price=" À partir de $70" />
-          <Extra
-            title="Detailing extérieur seulement"
-            price={
-              <>
-                <p style={{ margin: "0 0 6px 0" }}>Berline : À partir de $99.99</p>
-                <p style={{ margin: "0 0 6px 0" }}>VUS : À partir de $124.99</p>
-                <p style={{ margin: "0" }}>Camion / Grand VUS : À partir de $159.99</p>
-              </>
-            }
-          />
-          <Extra
-            title="Detailing intérieur seulement"
-            price={
-              <>
-                <p style={{ margin: "0 0 6px 0" }}>Berline : À partir de $119.99</p>
-                <p style={{ margin: "0 0 6px 0" }}>VUS : À partir de $159.99</p>
-                <p style={{ margin: "0" }}>Camion / Grand VUS : À partir de $189.99</p>
-              </>
-            }
           />
         </div>
       </section>
-    </div>
-  );
-}
 
-/* EXTRA COMPONENT */
-function Extra({ title, price }) {
-  return (
-    <div style={extraCard}>
-      <h3>{title}</h3>
-      <div style={{ color: "#d4af37", lineHeight: "1.8" }}>{price}</div>
+      {/* MAIN BOOKING SECTION */}
+      <section style={bookingSection}>
+        {/* LEFT BOX */}
+        <div style={bookingBox}>
+          <h2 style={title}>Créer votre rendez-vous</h2>
+          <p style={desc}>
+            Choisissez le niveau de service qui convient le mieux à votre véhicule et personnalisez-le avec les soins supplémentaires que vous souhaitez ajouter.
+          </p>
+
+          <div style={sectionSpacing}>
+            <h3 style={subTitle}>Sélectionnez le type de service</h3>
+            <div style={optionGrid}>
+              {[
+                { id: "package", label: "Forfait complet" },
+                { id: "exterior", label: "Extérieur seulement" },
+                { id: "interior", label: "Intérieur seulement" },
+              ].map((option) => {
+                const active = serviceType === option.id;
+                return (
+                  <button
+                    key={option.id}
+                    type="button"
+                    onClick={() => setServiceType(option.id)}
+                    style={{
+                      ...optionCard,
+                      ...(active ? activeOptionCard : {}),
+                    }}
+                  >
+                    {option.label}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          {serviceType === "package" && (
+            <div style={sectionSpacing}>
+              <h3 style={subTitle}>Sélectionnez un forfait</h3>
+              <div style={optionGrid}>
+                {Object.entries(packagePrices).map(([key, pkg]) => {
+                  const active = selectedPackage === key;
+                  return (
+                    <button
+                      key={key}
+                      type="button"
+                      onClick={() => setSelectedPackage(key)}
+                      style={{
+                        ...optionCard,
+                        ...(active ? activeOptionCard : {}),
+                      }}
+                    >
+                      <span style={optionTitle}>{pkg.name}</span>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
+          {/* VEHICLE */}
+          <div style={sectionSpacing}>
+            <h3 style={subTitle}>Sélectionnez le type de véhicule</h3>
+            <div style={optionGrid}>
+              {Object.entries(vehicleLabels).map(([key, label]) => {
+                const active = selectedVehicle === key;
+                return (
+                  <button
+                    key={key}
+                    type="button"
+                    onClick={() => setSelectedVehicle(key)}
+                    style={{
+                      ...optionCard,
+                      ...(active ? activeOptionCard : {}),
+                    }}
+                  >
+                    <span style={optionTitle}>{label}</span>
+                    <span style={optionSmallPrice}>
+                      ${packagePrices[selectedPackage][key].toFixed(2)}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* EXTRAS */}
+          <div style={sectionSpacing}>
+            <h3 style={subTitle}>Ajouter des options</h3>
+            <div style={extrasGrid}>
+              {extras.map((extra) => {
+                const active = selectedExtras.includes(extra.id);
+                return (
+                  <button
+                    key={extra.id}
+                    type="button"
+                    onClick={() => toggleExtra(extra.id)}
+                    style={{
+                      ...extraCard,
+                      ...(active ? activeOptionCard : {}),
+                    }}
+                  >
+                    <span>{extra.name}</span>
+                    <span style={optionSmallPrice}>
+                      {extra.price
+                        ? `+$${extra.price.toFixed(2)}`
+                        : "Choisir la taille"}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+
+        {/* RIGHT BOX */}
+        <div style={totalBox}>
+          <h2 style={title}>Votre total</h2>
+
+          <div style={summarySection}>
+            <div style={summaryRow}>
+              <span style={summaryLabel}>Service</span>
+              <span>
+                {serviceType === "package"
+                  ? selectedPackageData.name
+                  : serviceType === "exterior"
+                  ? "Détailing extérieur seulement"
+                  : "Détailing intérieur seulement"}
+              </span>
+            </div>
+
+            <div style={summaryRow}>
+              <span style={summaryLabel}>Véhicule</span>
+              <span>{vehicleLabels[selectedVehicle]}</span>
+            </div>
+
+            <div style={summaryRow}>
+              <span style={summaryLabel}>Prix de base</span>
+              <span style={gold}>${packageBasePrice.toFixed(2)}</span>
+            </div>
+          </div>
+
+          <div style={divider} />
+
+          <div style={summarySection}>
+            <p style={{ ...subTitle, marginBottom: "14px" }}>Options</p>
+            {selectedExtras.length === 0 ? (
+              <p style={{ color: "#888", margin: 0 }}>Aucune option sélectionnée</p>
+            ) : (
+              selectedExtras.map((extraId) => {
+                const extra = extras.find((item) => item.id === extraId);
+                if (!extra) return null;
+
+                return (
+                  <div key={extraId} style={summaryRow}>
+                    <span style={summaryLabel}>{extra.name}</span>
+                    <span>
+                      {extra.price
+                        ? `+$${extra.price.toFixed(2)}`
+                        : "+ Choisir la taille du véhicule"}
+                    </span>
+                  </div>
+                );
+              })
+            )}
+          </div>
+
+          <div style={divider} />
+
+          <div style={summarySection}>
+            <div style={summaryRow}>
+              <span style={summaryLabel}>Sous-total</span>
+              <span>${subtotal.toFixed(2)}</span>
+            </div>
+            <div style={summaryRow}>
+              <span style={summaryLabel}>TPS (5%)</span>
+              <span>${gst.toFixed(2)}</span>
+            </div>
+            <div style={summaryRow}>
+              <span style={summaryLabel}>TVQ (9.975%)</span>
+              <span>${qst.toFixed(2)}</span>
+            </div>
+          </div>
+
+          <div style={divider} />
+
+          <div style={{ ...summaryRow, marginTop: "10px" }}>
+            <span style={{ fontSize: "28px", fontWeight: 600 }}>Total</span>
+            <span style={{ fontSize: "30px", fontWeight: 700, color: "#d4af37" }}>
+              ${total.toFixed(2)}
+            </span>
+          </div>
+
+          <div style={retainerBox}>
+            <p style={{ margin: 0, color: "#ddd", lineHeight: 1.6 }}>
+              Tous les rendez-vous nécessitent un <span style={gold}>dépôt de retenue de 50 $</span>, qui sera entièrement crédité au coût final de votre service.
+            </p>
+          </div>
+
+          <a
+            href="https://calendly.com/YOUR-LINK"
+            target="_blank"
+            rel="noreferrer"
+            style={goldBtn}
+          >
+            Confirmer le rendez-vous
+          </a>
+        </div>
+      </section>
     </div>
   );
 }
 
 /* STYLES */
+
 const heroStyle = {
-  minHeight: "65vh",
+  minHeight: "58vh",
   display: "flex",
   alignItems: "center",
+  position: "relative",
   backgroundImage:
-    'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url("https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=1600&q=80")',
+    'url("https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1600&q=80")',
   backgroundSize: "cover",
   backgroundPosition: "center",
 };
 
-const container = { maxWidth: "1400px", margin: "0 auto", padding: "100px 50px" };
-const heroTitle = { fontSize: "64px" };
-const heroText = { fontSize: "20px", color: "#ccc", maxWidth: "700px" };
+const heroOverlay = {
+  position: "absolute",
+  inset: 0,
+  background:
+    "linear-gradient(rgba(0,0,0,0.60), rgba(0,0,0,0.78))",
+};
 
-const gridSection = {
+const container = {
+  maxWidth: "1400px",
+  margin: "0 auto",
+  padding: "100px 50px",
+  width: "100%",
+  position: "relative",
+  zIndex: 2,
+};
+
+const heroContent = {
+  maxWidth: "760px",
+};
+
+const eyebrow = {
+  color: "#d4af37",
+  letterSpacing: "0.28em",
+  fontSize: "13px",
+  marginBottom: "16px",
+};
+
+const heroTitle = {
+  fontSize: "64px",
+  lineHeight: 1.05,
+  marginBottom: "20px",
+};
+
+const heroText = {
+  fontSize: "20px",
+  color: "#ccc",
+  maxWidth: "700px",
+  lineHeight: 1.7,
+};
+
+const bookingSection = {
   maxWidth: "1400px",
   margin: "0 auto",
   padding: "100px 50px",
   display: "grid",
-  gridTemplateColumns: "repeat(3,1fr)",
+  gridTemplateColumns: "1.2fr 0.8fr",
   gap: "40px",
 };
 
-const card = {
+const bookingBox = {
   backgroundColor: "#111",
-  padding: "35px",
+  padding: "40px",
   borderRadius: "28px",
   border: "1px solid rgba(255,255,255,0.05)",
 };
 
-const title = { fontSize: "28px" };
-const desc = { color: "#bbb", marginBottom: "20px" };
-const price = { color: "#d4af37", marginBottom: "20px" };
-
-const subscription = {
-  backgroundColor: "#0d0d0d",
-  padding: "15px",
-  borderRadius: "12px",
-  marginBottom: "20px",
-};
-
-const subTitle = { color: "#d4af37", marginBottom: "10px" };
-const gold = { color: "#d4af37", fontWeight: "bold" };
-
-const list = { paddingLeft: "18px", lineHeight: "1.8" };
-
-const btn = {
-  display: "inline-block",
-  marginTop: "20px",
-  padding: "12px 24px",
-  border: "1px solid #d4af37",
-  borderRadius: "999px",
-  color: "#fff",
-  textDecoration: "none",
-};
-
-const goldBtn = { ...btn, backgroundColor: "#d4af37", color: "#111" };
-
-const badge = {
-  position: "absolute",
-  top: "-10px",
-  right: "20px",
-  backgroundColor: "#d4af37",
-  color: "#111",
-  padding: "6px 12px",
-  borderRadius: "999px",
-};
-
-const whySection = {
-  maxWidth: "1100px",
-  margin: "0 auto",
-  padding: "0 50px 100px",
-  textAlign: "center",
-};
-
-const whyTitle = { fontSize: "44px", marginBottom: "40px" };
-
-const whyGrid = {
-  display: "grid",
-  gap: "25px",
-  textAlign: "left",
-};
-
-const choiceStyle = {
+const totalBox = {
   backgroundColor: "#111",
-  padding: "25px",
-  borderRadius: "18px",
+  padding: "40px",
+  borderRadius: "28px",
+  border: "1px solid #d4af37",
+  alignSelf: "start",
+  position: "sticky",
+  top: "40px",
 };
 
-const extraSection = {
-  maxWidth: "1400px",
-  margin: "0 auto",
-  padding: "0 50px 100px",
+const title = {
+  fontSize: "34px",
+  marginBottom: "14px",
 };
 
-const extraGrid = {
+const desc = {
+  color: "#bbb",
+  marginBottom: "30px",
+  lineHeight: 1.7,
+};
+
+const subTitle = {
+  color: "#d4af37",
+  marginBottom: "14px",
+  fontSize: "18px",
+};
+
+const sectionSpacing = {
+  marginBottom: "34px",
+};
+
+const optionGrid = {
   display: "grid",
-  gridTemplateColumns: "repeat(3,1fr)",
-  gap: "20px",
+  gridTemplateColumns: "repeat(3, 1fr)",
+  gap: "16px",
+};
+
+const extrasGrid = {
+  display: "grid",
+  gridTemplateColumns: "repeat(2, 1fr)",
+  gap: "16px",
+};
+
+const optionCard = {
+  backgroundColor: "#0d0d0d",
+  border: "1px solid rgba(255,255,255,0.06)",
+  borderRadius: "18px",
+  padding: "18px",
+  color: "#f5f5f5",
+  cursor: "pointer",
+  textAlign: "left",
+  display: "flex",
+  flexDirection: "column",
+  gap: "8px",
 };
 
 const extraCard = {
-  backgroundColor: "#111",
-  padding: "25px",
+  backgroundColor: "#0d0d0d",
+  border: "1px solid rgba(255,255,255,0.06)",
+  borderRadius: "18px",
+  padding: "18px",
+  color: "#f5f5f5",
+  cursor: "pointer",
+  textAlign: "left",
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+};
+
+const activeOptionCard = {
+  border: "1px solid #d4af37",
+  boxShadow: "0 0 0 1px rgba(212,175,55,0.15) inset",
+};
+
+const optionTitle = {
+  fontSize: "16px",
+  fontWeight: 600,
+};
+
+const optionSmallPrice = {
+  color: "#d4af37",
+  fontSize: "14px",
+};
+
+const summarySection = {
+  marginTop: "20px",
+};
+
+const summaryRow = {
+  display: "flex",
+  justifyContent: "space-between",
+  gap: "20px",
+  marginBottom: "12px",
+  alignItems: "flex-start",
+};
+
+const summaryLabel = {
+  color: "#aaa",
+};
+
+const divider = {
+  height: "1px",
+  backgroundColor: "rgba(255,255,255,0.08)",
+  margin: "24px 0",
+};
+
+const retainerBox = {
+  marginTop: "30px",
+  padding: "18px",
+  backgroundColor: "#0d0d0d",
   borderRadius: "16px",
+  border: "1px solid rgba(212,175,55,0.18)",
+};
+
+const gold = {
+  color: "#d4af37",
+  fontWeight: "bold",
+};
+
+const goldBtn = {
+  display: "inline-block",
+  marginTop: "28px",
+  padding: "14px 28px",
+  borderRadius: "999px",
+  backgroundColor: "#d4af37",
+  color: "#111",
+  textDecoration: "none",
+  fontWeight: "bold",
 };
