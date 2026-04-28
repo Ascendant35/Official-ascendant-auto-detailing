@@ -255,7 +255,11 @@ const toggleExtra = (extraId) => {
                     }}
                   >
                     <span>{extra.name}</span>
-                    <span style={optionSmallPrice}>+${extra.price.toFixed(2)}</span>
+                    <span style={optionSmallPrice}>
+  {extra.price
+    ? `+$${extra.price.toFixed(2)}`
+    : "Select size"}
+</span>
                   </button>
                 );
               })}
