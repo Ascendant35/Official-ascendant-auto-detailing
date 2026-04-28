@@ -35,7 +35,7 @@ export default function BookNow() {
     truck: "Truck / Large SUV",
   };
 
- const extras = [
+const extras = [
   { id: "petHair", name: "Pet Hair", price: 30 },
   { id: "saltRemoval", name: "Salt / Calcium", price: 35 },
   { id: "odorTreatment", name: "Odor Treatment", price: 50 },
@@ -62,7 +62,8 @@ export default function BookNow() {
     ],
   }
 ];
-  const toggleExtra = (extraId) => {
+
+const toggleExtra = (extraId) => {
     setSelectedExtras((prev) =>
       prev.includes(extraId)
         ? prev.filter((id) => id !== extraId)
