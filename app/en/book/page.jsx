@@ -71,7 +71,25 @@ const toggleExtra = (extraId) => {
   };
 
   const selectedPackageData = packagePrices[selectedPackage];
-  const packageBasePrice = selectedPackageData[selectedVehicle];
+  const standalonePrice = useMemo(() => {
+  if (serviceType === "exterior") {
+    if (selectedVehicle === "sedan") return 99.99;
+    if (selectedVehicle === "suv") return 124.99;
+    if (selectedVehicle === "truck") return 159.99;
+  }
+
+  if (serviceType === "interior") {
+    if (selectedVehicle === "sedan") return 119.99;
+    if (selectedVehicle === "suv") return 159.99;
+    if (selectedVehicle === "truck") return 189.99;
+  }
+
+  return 0;
+}, [serviceType, selectedVehicle]);
+  const packageBasePrice =
+  serviceType === "package"
+    ? selectedPackageData[selectedVehicle]
+    : standalonePrice;
 
   const extrasTotal = useMemo(() => {
   return selectedExtras.reduce((total, extraId) => {
@@ -188,9 +206,33 @@ const toggleExtra = (extraId) => {
             Choose the service level that best fits your vehicle and customize it with any
             additional care you would like to include.
           </p>
-
-          {/* PACKAGE */}
-          <div style={sectionSpacing}>
+<div style={sectionSpacing}>
+  <h3 style={subTitle}>Select Service Type</h3>
+  <div style={optionGrid}>
+    {[
+      { id: "package", label: "Full Detailing Package" },
+      { id: "exterior", label: "Exterior Only" },
+      { id: "interior", label: "Interior Only" },
+    ].map((option) => {
+      const active = serviceType === option.id;
+      return (
+        <button
+          key={option.id}
+          type="button"
+          onClick={() => setServiceType(option.id)}
+          style={{
+            ...optionCard,
+            ...(active ? activeOptionCard : {}),
+          }}
+        >
+          {option.label}
+        </button>
+      );
+    })}
+  </div>
+</div>
+          {serviceType === "package" && (
+  <div style={sectionSpacing}>
             <h3 style={subTitle}>Select Package</h3>
             <div style={optionGrid}>
               {Object.entries(packagePrices).map(([key, pkg]) => {
@@ -211,6 +253,7 @@ const toggleExtra = (extraId) => {
               })}
             </div>
           </div>
+)}
 
           {/* VEHICLE */}
           <div style={sectionSpacing}>
@@ -274,7 +317,13 @@ const toggleExtra = (extraId) => {
           <div style={summarySection}>
             <div style={summaryRow}>
               <span style={summaryLabel}>Package</span>
-              <span>{selectedPackageData.name}</span>
+             <span>
+  {serviceType === "package"
+    ? selectedPackageData.name
+    : serviceType === "exterior"
+    ? "Exterior Detailing Only"
+    : "Interior Detailing Only"}
+</span>
             </div>
 
             <div style={summaryRow}>
