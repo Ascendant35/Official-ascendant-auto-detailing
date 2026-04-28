@@ -350,12 +350,11 @@ export default function BookNow() {
           >
             Confirm Appointment
           </a>
-        </div>
-            </section>
+                </div>
+      </section>
     </div>
   );
 }
-
 /* STYLES */
 
 const heroStyle = {
