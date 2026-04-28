@@ -7,6 +7,7 @@ export default function BookNow() {
   const [selectedPackage, setSelectedPackage] = useState("care");
   const [selectedVehicle, setSelectedVehicle] = useState("sedan");
   const [selectedExtras, setSelectedExtras] = useState([]);
+  const [serviceType, setServiceType] = useState("package");
 
   const packagePrices = {
     care: {
