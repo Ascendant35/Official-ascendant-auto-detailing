@@ -62,7 +62,6 @@ const extras = [
     ],
   }
 ];
-
 const toggleExtra = (extraId) => {
     setSelectedExtras((prev) =>
       prev.includes(extraId)
