@@ -36,14 +36,14 @@ export default function BookNow() {
   };
 
   const extras = [
-    { id: "petHair", name: "Pet Hair", price: 30 },
-    { id: "saltRemoval", name: "Salt / Calcium", price: 35 },
-    { id: "odorTreatment", name: "Odor Treatment", price: 50 },
-    { id: "specificStains", name: "Specific Stains", price: 40 },
-    { id: "engineCleaning", name: "Engine Cleaning", price: 60 },
-    { id: "leatherTreatment", name: "Leather Treatment", price: 70 },
-    {
-  const extras = [
+  { id: "petHair", name: "Pet Hair", price: 30 },
+  { id: "saltRemoval", name: "Salt / Calcium", price: 35 },
+  { id: "odorTreatment", name: "Odor Treatment", price: 50 },
+  { id: "specificStains", name: "Specific Stains", price: 40 },
+  { id: "engineCleaning", name: "Engine Cleaning", price: 60 },
+  { id: "leatherTreatment", name: "Leather Treatment", price: 70 },
+
+  // NEW ONES (correctly added)
   {
     id: "exteriorOnly",
     name: "Exterior Detailing Only",
