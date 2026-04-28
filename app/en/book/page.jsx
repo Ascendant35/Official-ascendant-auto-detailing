@@ -351,7 +351,7 @@ export default function BookNow() {
             Confirm Appointment
           </a>
         </div>
-      </section>
+            </section>
     </div>
   );
 }
