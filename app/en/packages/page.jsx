@@ -138,12 +138,14 @@ export default function TarifsFR() {
           </div>
 
           <ul style={list}>
-            <li>Full vacuum</li>
-            <li>Light interior cleaning</li>
-            <li>Exterior wash</li>
-            <li>Windows</li>
-            <li>Final finish</li>
-          </ul>
+      <li>Full interior vacuum (seats, carpets, trunk)</li>
+      <li>Surface wipe-down (dashboard, console, doors)</li>
+      <li>Interior & exterior windows cleaned</li>
+      <li>Exterior hand wash & dry</li>
+      <li>Wheels & tires cleaned</li>
+      <li>Interior dressing (plastics & surfaces)</li>
+      <li>Clean finishing touch</li>
+    </ul>
 
           <Link href="/fr/reserver" style={btn}>Book Now</Link>
         </div>
@@ -177,13 +179,16 @@ export default function TarifsFR() {
           </div>
 
           <ul style={list}>
-            <li>Everything included in Care</li>
-            <li>Seat shampoo</li>
-            <li>Carpet cleaning</li>
-            <li>Degreasing</li>
-            <li>Detailed exterior</li>
-            <li>Premium finish</li>
-          </ul>
+      <li>Everything included in Care</li>
+      <li>Deep interior shampoo (seats & carpets)</li>
+      <li>Steam cleaning treatment</li>
+      <li>Stain & salt removal</li>
+      <li>Leather cleaning & conditioning</li>
+      <li>Door jambs cleaned</li>
+      <li>Full interior detailing (plastics, trim, panels)</li>
+      <li>Exterior wash + protective wax</li>
+      <li>Tire shine & trim enhancement</li>
+    </ul>
 
           <Link href="/fr/reserver" style={goldBtn}>Book Now</Link>
         </div>
@@ -216,11 +221,15 @@ export default function TarifsFR() {
 
           <ul style={list}>
             <li>Everything included in Elite</li>
-            <li>Deep cleaning</li>
-            <li>Full treatment</li>
-            <li>High-end finish</li>
-            <li>Meticulous detailing</li>
-          </ul>
+      <li>Paint decontamination (iron remover + clay treatment)</li>
+      <li>Light paint enhancement / polish (restore gloss & clarity)</li>
+      <li>Premium wax or sealant protection</li>
+      <li>Engine bay cleaning & degreasing</li>
+      <li>Odor neutralization treatment</li>
+      <li>Precision interior detailing (vents, crevices, fine areas)</li>
+      <li>Deep shampoo of all fabrics</li>
+      <li>Meticulous final detailing finish</li>
+    </ul>
 
           <Link href="/fr/reserver" style={btn}>Book Now</Link>
         </div>
