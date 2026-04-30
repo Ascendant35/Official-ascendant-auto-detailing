@@ -132,12 +132,14 @@ export default function TarifsFR() {
           </div>
 
           <ul style={list}>
-            <li>Aspiration complète</li>
-            <li>Nettoyage intérieur léger</li>
-            <li>Lavage extérieur</li>
-            <li>Vitres</li>
-            <li>Finition finale</li>
-          </ul>
+            <li>Aspiration complète de l’intérieur (sièges, tapis, coffre)</li>
+      <li>Nettoyage des surfaces (tableau de bord, console, portes)</li>
+      <li>Nettoyage des vitres intérieures et extérieures</li>
+      <li>Lavage extérieur à la main et séchage</li>
+      <li>Nettoyage des roues et pneus</li>
+      <li>Application légère de produit sur les plastiques intérieurs</li>
+      <li>Finition propre et complète</li>
+    </ul>
 
           <Link href="/fr/reserver" style={btn}>Réserver</Link>
         </div>
@@ -167,12 +169,15 @@ export default function TarifsFR() {
 
           <ul style={list}>
             <li>Tout ce qui est inclus dans Care</li>
-            <li>Shampoing des sièges</li>
-            <li>Nettoyage des tapis</li>
-            <li>Dégraissage</li>
-            <li>Détail extérieur complet</li>
-            <li>Finition premium</li>
-          </ul>
+      <li>Shampooing intérieur en profondeur (sièges et tapis)</li>
+      <li>Nettoyage à la vapeur</li>
+      <li>Élimination des taches et du sel</li>
+      <li>Nettoyage et traitement du cuir</li>
+      <li>Nettoyage des cadrages de portes</li>
+      <li>Détaillage complet de l’intérieur (plastiques, garnitures, panneaux)</li>
+      <li>Lavage extérieur avec cire protectrice</li>
+      <li>Brillance des pneus et rehaussement des plastiques extérieurs</li>
+    </ul>
 
           <Link href="/fr/reserver" style={goldBtn}>Réserver</Link>
         </div>
@@ -199,13 +204,16 @@ export default function TarifsFR() {
           </div>
 
           <ul style={list}>
-            <li>Tout ce qui est inclus dans Elite</li>
-            <li>Nettoyage en profondeur</li>
-            <li>Traitement complet</li>
-            <li>Finition haut de gamme</li>
-            <li>Détail méticuleux</li>
-          </ul>
-
+             <li>Tout ce qui est inclus dans Elite</li>
+      <li>Décontamination de la peinture (dissolvant de fer + traitement à la barre d’argile)</li>
+      <li>Correction légère de la peinture / polissage (restauration du brillant)</li>
+      <li>Cire ou scellant protecteur haut de gamme</li>
+      <li>Nettoyage et dégraissage du compartiment moteur</li>
+      <li>Traitement neutralisant les odeurs</li>
+      <li>Détaillage intérieur de précision (bouches d’aération, recoins, zones fines)</li>
+      <li>Shampooing complet des tissus</li>
+      <li>Finition méticuleuse pour un résultat comme neuf</li>
+    </ul>
           <Link href="/fr/reserver" style={btn}>Réserver</Link>
         </div>
       </section>
