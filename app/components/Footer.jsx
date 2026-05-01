@@ -22,14 +22,13 @@ export default function Footer({ lang = "en" }) {
           gap: "40px",
         }}
       >
-        {/* LOGO + BRAND */}
+        {/* LOGO */}
         <div style={{ flex: "1", minWidth: "220px", maxWidth: "300px" }}>
           <img
             src="/AscendantAutoDetailing.png"
             alt="logo"
             style={{ width: "250px", marginBottom: "15px" }}
           />
-
           <p style={{ color: "#aaa", lineHeight: "1.6" }}>
             {isFR
               ? "Esthétique automobile haut de gamme. Précision. Excellence. Ascendant."
@@ -39,26 +38,17 @@ export default function Footer({ lang = "en" }) {
 
         {/* CONTACT */}
         <div style={{ flex: "1", minWidth: "220px" }}>
-          <h4 style={title}>{isFR ? "Contact" : "Contact"}</h4>
+          <h4 style={title}>Contact</h4>
 
-          <p style={text}>
-            📍 Montreal, Laval, South Shore, North Shore
-          </p>
-
-          <p style={text}>
-            📧 ascendantautodetailing@gmail.com
-          </p>
-
-          <p style={text}>
-            📞 (514) 000-0000
-          </p>
-
+          <p style={text}>📍 Montreal, Laval, South Shore, North Shore</p>
+          <p style={text}>📧 ascendantautodetailing@gmail.com</p>
+          <p style={text}>📞 (514) 000-0000</p>
           <p style={text}>
             {isFR ? "Sur rendez-vous uniquement" : "By appointment only"}
           </p>
         </div>
 
-                {/* SOCIALS */}
+        {/* SOCIALS */}
         <div style={{ flex: "1", minWidth: "220px" }}>
           <h4 style={title}>Socials</h4>
 
@@ -96,7 +86,7 @@ export default function Footer({ lang = "en" }) {
               </span>
             </a>
           </div>
-        </div> {/* ✅ SOCIALS CLOSED PROPERLY */}
+        </div>
 
         {/* CTA */}
         <div style={{ flex: "1", minWidth: "220px" }}>
@@ -106,6 +96,7 @@ export default function Footer({ lang = "en" }) {
             {isFR ? "Réserver maintenant" : "Book Now"}
           </a>
         </div>
+      </div>
 
       {/* BOTTOM */}
       <div
@@ -133,7 +124,6 @@ const text = {
   color: "#aaa",
   marginBottom: "6px",
   lineHeight: "1.6",
-  whiteSpace: "normal",
 };
 
 const social = {
