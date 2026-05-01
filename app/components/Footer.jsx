@@ -58,20 +58,25 @@ export default function Footer({ lang = "en" }) {
           </p>
         </div>
 
-        {/* SOCIALS */}
+                {/* SOCIALS */}
         <div>
           <h4 style={title}>Socials</h4>
+
           <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-  <a href="https://instagram.com/ascendantautodetail" target="_blank" style={social}>
-    📸 Instagram @ascendantautodetail
-  </a>
-  <a href="https://tiktok.com/@ascendantautodetail" target="_blank" style={social}>
-    🎵 TikTok @ascendantautodetail
-  </a>
-  <a href="https://snapchat.com/add/ascendantautodetail" target="_blank" style={social}>
-    👻 Snapchat @ascendantautodetail
-  </a>
-</div>  {/* ← THIS MUST EXIST */}
+            <a href="https://instagram.com/ascendantautodetail" target="_blank" rel="noopener noreferrer" style={social}>
+              📸 Instagram @ascendantautodetail
+            </a>
+
+            <a href="https://tiktok.com/@ascendantautodetail" target="_blank" rel="noopener noreferrer" style={social}>
+              🎵 TikTok @ascendantautodetail
+            </a>
+
+            <a href="https://snapchat.com/add/ascendantautodetail" target="_blank" rel="noopener noreferrer" style={social}>
+              👻 Snapchat @ascendantautodetail
+            </a>
+          </div>
+        </div> {/* ✅ THIS WAS MISSING */}
+
         {/* CTA */}
         <div>
           <h4 style={title}>{isFR ? "Réserver" : "Book"}</h4>
@@ -83,7 +88,7 @@ export default function Footer({ lang = "en" }) {
             {isFR ? "Réserver maintenant" : "Book Now"}
           </a>
         </div>
-      </div>
+        </div>
 
       {/* BOTTOM */}
       <div
