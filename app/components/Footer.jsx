@@ -58,73 +58,54 @@ export default function Footer({ lang = "en" }) {
           </p>
         </div>
 
-        {/* SOCIALS */}
-        <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-  <a
-    href="https://instagram.com/ascendantautodetail"
-    target="_blank"
-    rel="noopener noreferrer"
-    style={social}
-  >
-    📸 Instagram @ascendantautodetail
-  </a>
+                {/* SOCIALS */}
+        <div style={{ flex: "1", minWidth: "220px" }}>
+          <h4 style={title}>Socials</h4>
 
-  <a
-    href="https://tiktok.com/@ascendantautodetail"
-    target="_blank"
-    rel="noopener noreferrer"
-    style={social}
-  >
-    🎵 TikTok @ascendantautodetail
-  </a>
+          <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+            <a href="https://instagram.com/ascendantautodetail" target="_blank" rel="noopener noreferrer" style={social}>
+              📸 Instagram @ascendantautodetail
+            </a>
 
-  <a
-    href="https://snapchat.com/add/ascendantautodetail"
-    target="_blank"
-    rel="noopener noreferrer"
-    style={social}
-  >
-    👻 Snapchat @ascendantautodetail
-  </a>
+            <a href="https://tiktok.com/@ascendantautodetail" target="_blank" rel="noopener noreferrer" style={social}>
+              🎵 TikTok @ascendantautodetail
+            </a>
 
-  {/* FACEBOOK */}
-  <a
-    href="https://facebook.com/AscendantAutoDetail"
-    target="_blank"
-    rel="noopener noreferrer"
-    style={social}
-  >
-    <span style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
-      
-      {/* FACEBOOK ICON */}
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="18"
-        height="18"
-        viewBox="0 0 24 24"
-        fill="#1877F2"
-      >
-        <path d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-3h2.5V9.5c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.7-1.6 1.5V12H17l-.4 3h-2.7v7A10 10 0 0 0 22 12z" />
-      </svg>
+            <a href="https://snapchat.com/add/ascendantautodetail" target="_blank" rel="noopener noreferrer" style={social}>
+              👻 Snapchat @ascendantautodetail
+            </a>
 
-      Facebook @ascendantautodetailing
-    </span>
-  </a>
-</div>
-        </div>
+            {/* FACEBOOK */}
+            <a
+              href="https://facebook.com/AscendantAutoDetail"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={social}
+            >
+              <span style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="#1877F2"
+                >
+                  <path d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-3h2.5V9.5c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.7-1.6 1.5V12H17l-.4 3h-2.7v7A10 10 0 0 0 22 12z" />
+                </svg>
+                Facebook @ascendantautodetailing
+              </span>
+            </a>
+          </div>
+        </div> {/* ✅ SOCIALS CLOSED PROPERLY */}
 
         {/* CTA */}
         <div style={{ flex: "1", minWidth: "220px" }}>
           <h4 style={title}>{isFR ? "Réserver" : "Book"}</h4>
 
-          <a
-            href={isFR ? "/fr/reserver" : "/en/book"}
-            style={button}
-          >
+          <a href={isFR ? "/fr/reserver" : "/en/book"} style={button}>
             {isFR ? "Réserver maintenant" : "Book Now"}
           </a>
         </div>
-      </div>
 
       {/* BOTTOM */}
       <div
