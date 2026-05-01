@@ -63,11 +63,30 @@ export default function Footer({ lang = "en" }) {
           <h4 style={title}>Socials</h4>
 
           <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-            <a href="#" style={social}>📸 Instagram</a>
-            <a href="#" style={social}>🎵 TikTok</a>
-            <a href="#" style={social}>👻 Snapchat</a>
-          </div>
-        </div>
+  <a 
+    href="https://instagram.com/ascendantautodetail" 
+    target="_blank" 
+    style={social}
+  >
+    📸 Instagram @ascendantautodetail
+  </a>
+
+  <a 
+    href="https://tiktok.com/@ascendantautodetail" 
+    target="_blank" 
+    style={social}
+  >
+    🎵 TikTok @ascendantautodetail
+  </a>
+
+  <a 
+    href="https://snapchat.com/add/ascendantautodetail" 
+    target="_blank" 
+    style={social}
+  >
+    👻 Snapchat @ascendantautodetail
+  </a>
+</div>
 
         {/* CTA */}
         <div>
