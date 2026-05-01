@@ -92,7 +92,7 @@ export default function ContactEN() {
       </span>
     </h3>
 
-    <p style={cardText}>AscendantAutoDetail</p>
+    <p style={cardText}>@ascendantautodetail</p>
   </div>
 </a>
 
