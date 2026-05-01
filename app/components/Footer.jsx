@@ -23,7 +23,7 @@ export default function Footer({ lang = "en" }) {
         }}
       >
         {/* LOGO + BRAND */}
-        <div style={{ maxWidth: "300px" }}>
+        <div style={{ flex: "1", minWidth: "220px", maxWidth: "300px" }}>
           <img
             src="/AscendantAutoDetailing.png"
             alt="logo"
@@ -38,11 +38,11 @@ export default function Footer({ lang = "en" }) {
         </div>
 
         {/* CONTACT */}
-        <div>
+        <div style={{ flex: "1", minWidth: "220px" }}>
           <h4 style={title}>{isFR ? "Contact" : "Contact"}</h4>
 
           <p style={text}>
-            📍 Montreal, Laval, South Shore, North Shore <br />
+            📍 Montreal, Laval, South Shore, North Shore
           </p>
 
           <p style={text}>
@@ -58,27 +58,42 @@ export default function Footer({ lang = "en" }) {
           </p>
         </div>
 
-                {/* SOCIALS */}
-        <div>
+        {/* SOCIALS */}
+        <div style={{ flex: "1", minWidth: "220px" }}>
           <h4 style={title}>Socials</h4>
 
           <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-            <a href="https://instagram.com/ascendantautodetail" target="_blank" rel="noopener noreferrer" style={social}>
+            <a
+              href="https://instagram.com/ascendantautodetail"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={social}
+            >
               📸 Instagram @ascendantautodetail
             </a>
 
-            <a href="https://tiktok.com/@ascendantautodetail" target="_blank" rel="noopener noreferrer" style={social}>
+            <a
+              href="https://tiktok.com/@ascendantautodetail"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={social}
+            >
               🎵 TikTok @ascendantautodetail
             </a>
 
-            <a href="https://snapchat.com/add/ascendantautodetail" target="_blank" rel="noopener noreferrer" style={social}>
+            <a
+              href="https://snapchat.com/add/ascendantautodetail"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={social}
+            >
               👻 Snapchat @ascendantautodetail
             </a>
           </div>
-        </div> {/* ✅ THIS WAS MISSING */}
+        </div>
 
         {/* CTA */}
-        <div>
+        <div style={{ flex: "1", minWidth: "220px" }}>
           <h4 style={title}>{isFR ? "Réserver" : "Book"}</h4>
 
           <a
@@ -88,7 +103,7 @@ export default function Footer({ lang = "en" }) {
             {isFR ? "Réserver maintenant" : "Book Now"}
           </a>
         </div>
-        </div>
+      </div>
 
       {/* BOTTOM */}
       <div
@@ -116,6 +131,7 @@ const text = {
   color: "#aaa",
   marginBottom: "6px",
   lineHeight: "1.6",
+  whiteSpace: "normal",
 };
 
 const social = {
