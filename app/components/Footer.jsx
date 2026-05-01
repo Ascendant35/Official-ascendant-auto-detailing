@@ -111,7 +111,7 @@ export default function Footer({ lang = "en" }) {
     </span>
   </a>
 </div>
-        /div>
+        </div>
 
         {/* CTA */}
         <div style={{ flex: "1", minWidth: "220px" }}>
