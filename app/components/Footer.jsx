@@ -61,33 +61,17 @@ export default function Footer({ lang = "en" }) {
         {/* SOCIALS */}
         <div>
           <h4 style={title}>Socials</h4>
-
           <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-  <a 
-    href="https://instagram.com/ascendantautodetail" 
-    target="_blank" 
-    style={social}
-  >
+  <a href="https://instagram.com/ascendantautodetail" target="_blank" style={social}>
     📸 Instagram @ascendantautodetail
   </a>
-
-  <a 
-    href="https://tiktok.com/@ascendantautodetail" 
-    target="_blank" 
-    style={social}
-  >
+  <a href="https://tiktok.com/@ascendantautodetail" target="_blank" style={social}>
     🎵 TikTok @ascendantautodetail
   </a>
-
-  <a 
-    href="https://snapchat.com/add/ascendantautodetail" 
-    target="_blank" 
-    style={social}
-  >
+  <a href="https://snapchat.com/add/ascendantautodetail" target="_blank" style={social}>
     👻 Snapchat @ascendantautodetail
   </a>
-</div>
-
+</div>  {/* ← THIS MUST EXIST */}
         {/* CTA */}
         <div>
           <h4 style={title}>{isFR ? "Réserver" : "Book"}</h4>
