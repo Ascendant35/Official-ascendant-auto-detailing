@@ -53,17 +53,48 @@ export default function ContactEN() {
         </div>
       </section>
 
-      {/* SOCIAL MEDIA (CLICKABLE ADDED) */}
-      <section style={section}>
-        <h2 style={sectionTitle}>Find Us on Social Media</h2>
+     {/* SOCIAL MEDIA (UPGRADED) */}
+<section style={section}>
+  <h2 style={sectionTitle}>Find Us on Social Media</h2>
 
-        <div style={grid}>
-          <a href="#" target="_blank" style={cardLink}><div style={card}><h3 style={cardTitle}>Instagram</h3></div></a>
-          <a href="#" target="_blank" style={cardLink}><div style={card}><h3 style={cardTitle}>Facebook</h3></div></a>
-          <a href="#" target="_blank" style={cardLink}><div style={card}><h3 style={cardTitle}>TikTok</h3></div></a>
-          <a href="#" target="_blank" style={cardLink}><div style={card}><h3 style={cardTitle}>Snapchat</h3></div></a>
-        </div>
-      </section>
+  <div style={grid}>
+    <a
+      href="https://instagram.com/ascendantautodetail"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={cardLink}
+    >
+      <div style={card}>
+        <h3 style={cardTitle}>📸 Instagram</h3>
+        <p style={cardText}>@ascendantautodetail</p>
+      </div>
+    </a>
+
+    <a
+      href="https://tiktok.com/@ascendantautodetail"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={cardLink}
+    >
+      <div style={card}>
+        <h3 style={cardTitle}>🎵 TikTok</h3>
+        <p style={cardText}>@ascendantautodetail</p>
+      </div>
+    </a>
+
+    <a
+      href="https://snapchat.com/add/ascendantautodetail"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={cardLink}
+    >
+      <div style={card}>
+        <h3 style={cardTitle}>👻 Snapchat</h3>
+        <p style={cardText}>@ascendantautodetail</p>
+      </div>
+    </a>
+  </div>
+</section>
 
       {/* GOOGLE MAP (FIXED ZOOM - MONTREAL ONLY) */}
       <section style={section}>
