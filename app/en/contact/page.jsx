@@ -53,7 +53,7 @@ export default function ContactEN() {
         </div>
       </section>
 
-     {/* SOCIAL MEDIA (UPGRADED) */}
+    {/* SOCIAL MEDIA (FINAL) */}
 <section style={section}>
   <h2 style={sectionTitle}>Find Us on Social Media</h2>
 
@@ -67,6 +67,18 @@ export default function ContactEN() {
       <div style={card}>
         <h3 style={cardTitle}>📸 Instagram</h3>
         <p style={cardText}>@ascendantautodetail</p>
+      </div>
+    </a>
+
+    <a
+      href="https://facebook.com/AscendantAutoDetail"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={cardLink}
+    >
+      <div style={card}>
+        <h3 style={cardTitle}>📘 Facebook</h3>
+        <p style={cardText}>AscendantAutoDetail</p>
       </div>
     </a>
 
