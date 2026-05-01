@@ -78,7 +78,7 @@ export default function ContactEN() {
     >
       <div style={card}>
         <h3 style={cardTitle}>📘 Facebook</h3>
-        <p style={cardText}>AscendantAutoDetail</p>
+        <p style={cardText}>@ascendantAutoDetail</p>
       </div>
     </a>
 
