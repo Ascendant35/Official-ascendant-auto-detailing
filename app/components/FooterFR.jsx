@@ -20,14 +20,13 @@ export default function FooterFR() {
           gap: "40px",
         }}
       >
-        {/* LOGO + BRAND */}
+        {/* LOGO */}
         <div style={{ flex: "1", minWidth: "220px", maxWidth: "300px" }}>
           <img
             src="/AscendantAutoDetailing.png"
             alt="logo"
             style={{ width: "250px", marginBottom: "15px" }}
           />
-
           <p style={{ color: "#aaa", lineHeight: "1.6" }}>
             Esthétique automobile haut de gamme. Précision. Excellence. Ascendant.
           </p>
@@ -38,17 +37,10 @@ export default function FooterFR() {
           <h4 style={title}>Contact</h4>
 
           <p style={text}>
-            📍 Montréal, Laval, Rive-Nord, Rive-Sud
+            📍 Montréal, Laval, Rive-Sud, Rive-Nord
           </p>
-
-          <p style={text}>
-            📧 ascendantautodetailing@gmail.com
-          </p>
-
-          <p style={text}>
-            📞 (514) 000-0000
-          </p>
-
+          <p style={text}>📧 ascendantautodetailing@gmail.com</p>
+          <p style={text}>📞 (514) 000-0000</p>
           <p style={text}>
             Sur rendez-vous uniquement
           </p>
@@ -59,31 +51,37 @@ export default function FooterFR() {
           <h4 style={title}>Réseaux sociaux</h4>
 
           <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-            <a
-              href="https://instagram.com/ascendantautodetail"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={social}
-            >
+            <a href="https://instagram.com/ascendantautodetail" target="_blank" rel="noopener noreferrer" style={social}>
               📸 Instagram @ascendantautodetail
             </a>
 
-            <a
-              href="https://tiktok.com/@ascendantautodetail"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={social}
-            >
+            <a href="https://tiktok.com/@ascendantautodetail" target="_blank" rel="noopener noreferrer" style={social}>
               🎵 TikTok @ascendantautodetail
             </a>
 
+            <a href="https://snapchat.com/add/ascendantautodetail" target="_blank" rel="noopener noreferrer" style={social}>
+              👻 Snapchat @ascendantautodetail
+            </a>
+
+            {/* FACEBOOK */}
             <a
-              href="https://snapchat.com/add/ascendantautodetail"
+              href="https://facebook.com/AscendantAutoDetail"
               target="_blank"
               rel="noopener noreferrer"
               style={social}
             >
-              👻 Snapchat @ascendantautodetail
+              <span style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="#1877F2"
+                >
+                  <path d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-3h2.5V9.5c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.7-1.6 1.5V12H17l-.4 3h-2.7v7A10 10 0 0 0 22 12z" />
+                </svg>
+                Facebook @ascendantautodetail
+              </span>
             </a>
           </div>
         </div>
