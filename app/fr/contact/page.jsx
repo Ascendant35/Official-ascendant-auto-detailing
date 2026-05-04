@@ -40,7 +40,7 @@ export default function ContactFR() {
         <div style={container}>
           <h1 style={heroTitle}>Contactez-nous</h1>
           <p style={heroText}>
-            Une expérience haut de gamme commence par une simple conversation.
+            Nous sommes là pour vous offrir une expérience haut de gamme dès votre premier message.
           </p>
         </div>
       </section>
@@ -48,15 +48,14 @@ export default function ContactFR() {
       {/* INTRO */}
       <section style={section}>
         <div style={box}>
-          <h2 style={boxTitle}>Un service raffiné commence par un échange</h2>
+          <h2 style={boxTitle}>Un service raffiné commence par une simple conversation</h2>
           <p style={boxText}>
-            Que vous ayez des questions concernant nos services, que vous ayez besoin
-            d’aide pour choisir le bon forfait ou que vous soyez prêt à réserver,
-            cette page vous donne un accès direct à notre équipe.
+            Que vous ayez des questions concernant nos services, que vous ayez besoin d’aide pour choisir le bon forfait,
+            ou que vous soyez prêt à réserver votre prochain entretien, cette page vous donne un accès direct à notre équipe.
           </p>
           <p style={boxText}>
-            Choisissez le moyen de communication qui vous convient et nous vous répondrons
-            rapidement avec le niveau de professionnalisme que vous attendez.
+            Choisissez le moyen de communication qui vous convient et nous vous répondrons rapidement avec le niveau de
+            professionnalisme que vous attendez.
           </p>
         </div>
       </section>
@@ -104,9 +103,23 @@ export default function ContactFR() {
       {showPopup && (
         <div style={popupOverlay}>
           <div style={popupBox}>
+            <div style={checkmarkCircle}>
+              <svg width="40" height="40" viewBox="0 0 24 24">
+                <path
+                  d="M20 6L9 17l-5-5"
+                  fill="none"
+                  stroke="#d4af37"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
+
             <h3 style={popupTitle}>Message envoyé</h3>
+
             <p style={popupText}>
-              Merci pour votre message. Notre équipe vous répondra sous peu.
+              Merci de nous avoir contactés. Notre équipe vous répondra sous peu.
             </p>
           </div>
         </div>
@@ -231,7 +244,8 @@ const popupOverlay = {
   left: 0,
   width: "100%",
   height: "100%",
-  backgroundColor: "rgba(0,0,0,0.7)",
+  backdropFilter: "blur(8px)",
+  backgroundColor: "rgba(0,0,0,0.6)",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
@@ -240,15 +254,27 @@ const popupOverlay = {
 
 const popupBox = {
   background: "linear-gradient(180deg, #111, #0a0a0a)",
-  padding: "40px",
-  borderRadius: "20px",
+  padding: "50px 40px",
+  borderRadius: "24px",
   border: "1px solid rgba(212,175,55,0.4)",
   textAlign: "center",
-  maxWidth: "400px",
+  maxWidth: "420px",
+  boxShadow: "0 0 40px rgba(212,175,55,0.15)",
+};
+
+const checkmarkCircle = {
+  width: "70px",
+  height: "70px",
+  borderRadius: "50%",
+  border: "1px solid rgba(212,175,55,0.4)",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  margin: "0 auto 20px auto",
 };
 
 const popupTitle = {
-  fontSize: "24px",
+  fontSize: "26px",
   marginBottom: "10px",
   color: "#d4af37",
 };
