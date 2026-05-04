@@ -142,7 +142,7 @@ export default function ContactFR() {
       <section style={section}>
         <h2 style={sectionTitle}>Envoyez-nous un message</h2>
 
-        <form action="/api/contact" method="POST" style={form}>
+        <form action="https://formspree.io/f/mgodaarq" method="POST" style={form}>
           <input name="name" placeholder="Votre nom" required style={input} />
           <input name="email" placeholder="Votre courriel" required style={input} />
           <textarea name="message" placeholder="Votre message" required style={textarea}></textarea>
