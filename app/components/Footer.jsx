@@ -38,9 +38,13 @@ export default function Footer({ lang = "en" }) {
 
         {/* CONTACT */}
         <div style={{ flex: "1", minWidth: "220px" }}>
-          <h4 style={title}>Contact</h4>
+          <h4 style={title}>{isFR ? "Contact" : "Contact"}</h4>
 
-          <p style={text}>📍 Montreal, Laval, South Shore, North Shore</p>
+          <p style={text}>
+            📍 {isFR
+              ? "Montréal, Laval, Rive-Sud, Rive-Nord"
+              : "Montreal, Laval, South Shore, North Shore"}
+          </p>
           <p style={text}>📧 ascendantautodetailing@gmail.com</p>
           <p style={text}>📞 (514) 000-0000</p>
           <p style={text}>
@@ -50,7 +54,7 @@ export default function Footer({ lang = "en" }) {
 
         {/* SOCIALS */}
         <div style={{ flex: "1", minWidth: "220px" }}>
-          <h4 style={title}>Socials</h4>
+          <h4 style={title}>{isFR ? "Réseaux sociaux" : "Socials"}</h4>
 
           <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
             <a href="https://instagram.com/ascendantautodetail" target="_blank" rel="noopener noreferrer" style={social}>
