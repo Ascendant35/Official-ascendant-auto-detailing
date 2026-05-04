@@ -100,35 +100,34 @@ export default function ContactEN() {
 
       {/* POPUP */}
       {showPopup && (
-  <div style={popupOverlay}>
-    <div style={popupBox}>
-      
-      {/* CHECKMARK */}
-      <div style={checkmarkCircle}>
-        <svg width="40" height="40" viewBox="0 0 24 24">
-          <path
-            d="M20 6L9 17l-5-5"
-            fill="none"
-            stroke="#d4af37"
-            strokeWidth="2.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
-      </div>
+        <div style={popupOverlay}>
+          <div style={popupBox}>
+            <div style={checkmarkCircle}>
+              <svg width="40" height="40" viewBox="0 0 24 24">
+                <path
+                  d="M20 6L9 17l-5-5"
+                  fill="none"
+                  stroke="#d4af37"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
 
-      <h3 style={popupTitle}>Message Sent</h3>
+            <h3 style={popupTitle}>Message Sent</h3>
 
-      <p style={popupText}>
-        Thank you for reaching out. Our team will get back to you shortly.
-      </p>
-
+            <p style={popupText}>
+              Thank you for reaching out. Our team will get back to you shortly.
+            </p>
+          </div>
+        </div>
+      )}
     </div>
-  </div>
-));
+  );
 }
 
-/* STYLES (UNCHANGED + POPUP ADDED) */
+/* STYLES */
 
 const heroStyle = {
   minHeight: "60vh",
@@ -244,7 +243,8 @@ const popupOverlay = {
   left: 0,
   width: "100%",
   height: "100%",
-  backgroundColor: "rgba(0,0,0,0.7)",
+  backdropFilter: "blur(8px)",
+  backgroundColor: "rgba(0,0,0,0.6)",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
@@ -253,15 +253,27 @@ const popupOverlay = {
 
 const popupBox = {
   background: "linear-gradient(180deg, #111, #0a0a0a)",
-  padding: "40px",
-  borderRadius: "20px",
+  padding: "50px 40px",
+  borderRadius: "24px",
   border: "1px solid rgba(212,175,55,0.4)",
   textAlign: "center",
-  maxWidth: "400px",
+  maxWidth: "420px",
+  boxShadow: "0 0 40px rgba(212,175,55,0.15)",
+};
+
+const checkmarkCircle = {
+  width: "70px",
+  height: "70px",
+  borderRadius: "50%",
+  border: "1px solid rgba(212,175,55,0.4)",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  margin: "0 auto 20px auto",
 };
 
 const popupTitle = {
-  fontSize: "24px",
+  fontSize: "26px",
   marginBottom: "10px",
   color: "#d4af37",
 };
