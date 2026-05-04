@@ -100,18 +100,32 @@ export default function ContactEN() {
 
       {/* POPUP */}
       {showPopup && (
-        <div style={popupOverlay}>
-          <div style={popupBox}>
-            <h3 style={popupTitle}>Message Sent</h3>
-            <p style={popupText}>
-              Thank you for reaching out. Our team will get back to you shortly.
-            </p>
-          </div>
-        </div>
-      )}
+  <div style={popupOverlay}>
+    <div style={popupBox}>
+      
+      {/* CHECKMARK */}
+      <div style={checkmarkCircle}>
+        <svg width="40" height="40" viewBox="0 0 24 24">
+          <path
+            d="M20 6L9 17l-5-5"
+            fill="none"
+            stroke="#d4af37"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </div>
+
+      <h3 style={popupTitle}>Message Sent</h3>
+
+      <p style={popupText}>
+        Thank you for reaching out. Our team will get back to you shortly.
+      </p>
+
     </div>
-  );
-}
+  </div>
+)}
 
 /* STYLES (UNCHANGED + POPUP ADDED) */
 
