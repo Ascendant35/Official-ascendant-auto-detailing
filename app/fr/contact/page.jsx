@@ -83,6 +83,90 @@ export default function ContactFR() {
         </div>
       </section>
 
+      {/* SOCIAL MEDIA */}
+     {/* SOCIAL MEDIA (FINAL) */}
+<section style={section}>
+  <h2 style={sectionTitle}>Find Us on Social Media</h2>
+
+  <div style={grid}>
+    <a
+      href="https://instagram.com/ascendantautodetail"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={cardLink}
+    >
+      <div style={card}>
+        <h3 style={cardTitle}>📸 Instagram</h3>
+        <p style={cardText}>@ascendantautodetail</p>
+      </div>
+    </a>
+
+   <a
+  href="https://facebook.com/AscendantAutoDetail"
+  target="_blank"
+  rel="noopener noreferrer"
+  style={cardLink}
+>
+  <div style={card}>
+    <h3 style={cardTitle}>
+      <span style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="#1877F2"
+        >
+          <path d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-3h2.5V9.5c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.7-1.6 1.5V12H17l-.4 3h-2.7v7A10 10 0 0 0 22 12z" />
+        </svg>
+        Facebook
+      </span>
+    </h3>
+
+    <p style={cardText}>@ascendantautodetail</p>
+  </div>
+</a>
+    <a
+      href="https://tiktok.com/@ascendantautodetail"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={cardLink}
+    >
+      <div style={card}>
+        <h3 style={cardTitle}>🎵 TikTok</h3>
+        <p style={cardText}>@ascendantautodetail</p>
+      </div>
+    </a>
+
+    <a
+      href="https://snapchat.com/add/ascendantautodetail"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={cardLink}
+    >
+      <div style={card}>
+        <h3 style={cardTitle}>👻 Snapchat</h3>
+        <p style={cardText}>@ascendantautodetail</p>
+      </div>
+    </a>
+  </div>
+</section>
+
+      {/* MAP */}
+      <section style={section}>
+        <h2 style={sectionTitle}>Zone de service</h2>
+
+        <div style={mapContainer}>
+          <iframe
+            src="https://www.google.com/maps?q=Montreal,QC&z=11&output=embed"
+            width="100%"
+            height="320"
+            style={{ border: "0", borderRadius: "20px" }}
+            loading="lazy"
+          ></iframe>
+        </div>
+      </section>
+
       {/* FORM */}
       <section style={section}>
         <h2 style={sectionTitle}>Envoyez-nous un message</h2>
