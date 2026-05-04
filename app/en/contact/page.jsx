@@ -125,7 +125,8 @@ export default function ContactEN() {
 
     </div>
   </div>
-)}
+));
+}
 
 /* STYLES (UNCHANGED + POPUP ADDED) */
 
