@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Header from "../../components/Header";
 
-export default function ContactFR() {
+export default function ContactEN() {
   const [showPopup, setShowPopup] = useState(false);
 
   const handleSubmit = async (e) => {
@@ -27,20 +27,20 @@ export default function ContactFR() {
         setShowPopup(false);
       }, 3000);
     } else {
-      alert("Erreur lors de l'envoi. Veuillez réessayer.");
+      alert("Error sending message. Please try again.");
     }
   };
 
   return (
     <div style={{ backgroundColor: "#0a0a0a", color: "#f5f5f5", minHeight: "100vh" }}>
-      <Header lang="fr" />
+      <Header lang="en" />
 
       {/* HERO */}
       <section style={heroStyle}>
         <div style={container}>
-          <h1 style={heroTitle}>Contactez-nous</h1>
+          <h1 style={heroTitle}>Contact Us</h1>
           <p style={heroText}>
-            Une expérience haut de gamme commence par une simple conversation.
+            We’re here to provide a seamless, premium experience from your first message.
           </p>
         </div>
       </section>
@@ -48,36 +48,34 @@ export default function ContactFR() {
       {/* INTRO */}
       <section style={section}>
         <div style={box}>
-          <h2 style={boxTitle}>Un service raffiné commence par un échange</h2>
+          <h2 style={boxTitle}>A refined service starts with a simple conversation</h2>
           <p style={boxText}>
-            Que vous ayez des questions concernant nos services, que vous ayez besoin
-            d’aide pour choisir le bon forfait ou que vous soyez prêt à réserver,
-            cette page vous donne un accès direct à notre équipe.
+            Whether you have questions about our services, need guidance selecting the right package,
+            or are ready to book your next detailing session, this page gives you direct access to our team.
           </p>
           <p style={boxText}>
-            Choisissez le moyen de communication qui vous convient et nous vous répondrons
-            rapidement avec le niveau de professionnalisme que vous attendez.
+            Choose the method that suits you best and we will respond promptly with the level of care and professionalism you expect.
           </p>
         </div>
       </section>
 
       {/* CONTACT METHODS */}
       <section style={section}>
-        <h2 style={sectionTitle}>Méthodes de contact</h2>
+        <h2 style={sectionTitle}>Contact Methods</h2>
 
         <div style={grid}>
           <a href="tel:+10000000000" style={cardLink}>
             <div style={card}>
-              <h3 style={cardTitle}>Téléphone</h3>
-              <p style={cardText}>Appelez-nous directement pour une assistance immédiate.</p>
+              <h3 style={cardTitle}>Phone</h3>
+              <p style={cardText}>Call us directly for immediate assistance.</p>
               <p style={goldText}>+1 (000) 000-0000</p>
             </div>
           </a>
 
           <a href="mailto:ascendantautodetailing@gmail.com" style={cardLink}>
             <div style={card}>
-              <h3 style={cardTitle}>Courriel</h3>
-              <p style={cardText}>Pour toute demande, réservation ou information détaillée.</p>
+              <h3 style={cardTitle}>Email</h3>
+              <p style={cardText}>For inquiries, bookings, or detailed requests.</p>
               <p style={goldText}>ascendantautodetailing@gmail.com</p>
             </div>
           </a>
@@ -86,17 +84,17 @@ export default function ContactFR() {
 
       {/* FORM */}
       <section style={section}>
-        <h2 style={sectionTitle}>Envoyez-nous un message</h2>
+        <h2 style={sectionTitle}>Send Us a Message</h2>
 
         <form onSubmit={handleSubmit} style={form}>
-          <input type="hidden" name="_subject" value="Nouveau message depuis votre site" />
+          <input type="hidden" name="_subject" value="New message from your website" />
           <input type="text" name="_gotcha" style={{ display: "none" }} />
 
-          <input name="name" placeholder="Votre nom" required style={input} />
-          <input name="email" placeholder="Votre courriel" required style={input} />
-          <textarea name="message" placeholder="Votre message" required style={textarea}></textarea>
+          <input name="name" placeholder="Your Name" required style={input} />
+          <input name="email" placeholder="Your Email" required style={input} />
+          <textarea name="message" placeholder="Your Message" required style={textarea}></textarea>
 
-          <button type="submit" style={button}>Envoyer le message</button>
+          <button type="submit" style={button}>Send Message</button>
         </form>
       </section>
 
@@ -104,9 +102,9 @@ export default function ContactFR() {
       {showPopup && (
         <div style={popupOverlay}>
           <div style={popupBox}>
-            <h3 style={popupTitle}>Message envoyé</h3>
+            <h3 style={popupTitle}>Message Sent</h3>
             <p style={popupText}>
-              Merci pour votre message. Notre équipe vous répondra sous peu.
+              Thank you for reaching out. Our team will get back to you shortly.
             </p>
           </div>
         </div>
@@ -115,7 +113,7 @@ export default function ContactFR() {
   );
 }
 
-/* STYLES */
+/* STYLES (UNCHANGED + POPUP ADDED) */
 
 const heroStyle = {
   minHeight: "60vh",
