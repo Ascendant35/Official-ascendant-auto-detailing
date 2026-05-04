@@ -45,22 +45,24 @@ overflow: "hidden", // 👈 keeps header clean
           }}
         >
           {isFR ? (
-            <>
-              <Link href="/fr/services" style={linkStyle}>Services</Link>
-              <Link href="/fr/tarifs" style={linkStyle}>Tarifs</Link>
-              <Link href="/fr/reserver" style={linkStyle}>Réserver</Link>
-              <Link href="/fr/contact" style={linkStyle}>Contactez-Nous</Link>
-              <Link href="/fr/about" style={linkStyle}>À Propos</Link>
-            </>
-          ) : (
-            <>
-              <Link href="/en/services" style={linkStyle}>Services</Link>
-              <Link href="/en/packages" style={linkStyle}>Packages</Link>
-              <Link href="/en/book" style={linkStyle}>Book Now</Link>
-              <Link href="/en/contact" style={linkStyle}>Contact Us</Link>
-              <Link href="/en/about" style={linkStyle}>About Us</Link>
-            </>
-          )}
+  <>
+    <Link href="/fr" style={linkStyle}>Accueil</Link>
+    <Link href="/fr/services" style={linkStyle}>Services</Link>
+    <Link href="/fr/tarifs" style={linkStyle}>Tarifs</Link>
+    <Link href="/fr/reserver" style={linkStyle}>Réserver</Link>
+    <Link href="/fr/contact" style={linkStyle}>Contact</Link>
+    <Link href="/fr/a-propos" style={linkStyle}>À propos</Link>
+  </>
+) : (
+  <>
+    <Link href="/en" style={linkStyle}>Home</Link>
+    <Link href="/en/services" style={linkStyle}>Services</Link>
+    <Link href="/en/packages" style={linkStyle}>Packages</Link>
+    <Link href="/en/book" style={linkStyle}>Book Now</Link>
+    <Link href="/en/contact" style={linkStyle}>Contact</Link>
+    <Link href="/en/about" style={linkStyle}>About</Link>
+  </>
+)}
         </nav>
 
         {/* LANGUAGE SWITCH */}
