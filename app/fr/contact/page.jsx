@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Header from "../../components/Header";
 
-export default function ContactFR() {
+export default function ContactEN() {
   const [showPopup, setShowPopup] = useState(false);
 
   const handleSubmit = async (e) => {
@@ -27,20 +27,20 @@ export default function ContactFR() {
         setShowPopup(false);
       }, 3000);
     } else {
-      alert("Erreur lors de l'envoi. Veuillez réessayer.");
+      alert("Error sending message. Please try again.");
     }
   };
 
   return (
     <div style={{ backgroundColor: "#0a0a0a", color: "#f5f5f5", minHeight: "100vh" }}>
-      <Header lang="fr" />
+      <Header lang="en" />
 
       {/* HERO */}
       <section style={heroStyle}>
         <div style={container}>
-          <h1 style={heroTitle}>Contactez-nous</h1>
+          <h1 style={heroTitle}>Contact Us</h1>
           <p style={heroText}>
-            Nous sommes là pour vous offrir une expérience haut de gamme dès votre premier message.
+            We’re here to provide a seamless, premium experience from your first message.
           </p>
         </div>
       </section>
@@ -48,35 +48,34 @@ export default function ContactFR() {
       {/* INTRO */}
       <section style={section}>
         <div style={box}>
-          <h2 style={boxTitle}>Un service raffiné commence par une simple conversation</h2>
+          <h2 style={boxTitle}>A refined service starts with a simple conversation</h2>
           <p style={boxText}>
-            Que vous ayez des questions concernant nos services, que vous ayez besoin d’aide pour choisir le bon forfait,
-            ou que vous soyez prêt à réserver votre prochain entretien, cette page vous donne un accès direct à notre équipe.
+            Whether you have questions about our services, need guidance selecting the right package,
+            or are ready to book your next detailing session, this page gives you direct access to our team.
           </p>
           <p style={boxText}>
-            Choisissez le moyen de communication qui vous convient et nous vous répondrons rapidement avec le niveau de
-            professionnalisme que vous attendez.
+            Choose the method that suits you best and we will respond promptly with the level of care and professionalism you expect.
           </p>
         </div>
       </section>
 
       {/* CONTACT METHODS */}
       <section style={section}>
-        <h2 style={sectionTitle}>Méthodes de contact</h2>
+        <h2 style={sectionTitle}>Contact Methods</h2>
 
         <div style={grid}>
           <a href="tel:+10000000000" style={cardLink}>
             <div style={card}>
-              <h3 style={cardTitle}>Téléphone</h3>
-              <p style={cardText}>Appelez-nous directement pour une assistance immédiate.</p>
+              <h3 style={cardTitle}>Phone</h3>
+              <p style={cardText}>Call us directly for immediate assistance.</p>
               <p style={goldText}>+1 (000) 000-0000</p>
             </div>
           </a>
 
           <a href="mailto:ascendantautodetailing@gmail.com" style={cardLink}>
             <div style={card}>
-              <h3 style={cardTitle}>Courriel</h3>
-              <p style={cardText}>Pour toute demande, réservation ou information détaillée.</p>
+              <h3 style={cardTitle}>Email</h3>
+              <p style={cardText}>For inquiries, bookings, or detailed requests.</p>
               <p style={goldText}>ascendantautodetailing@gmail.com</p>
             </div>
           </a>
@@ -84,77 +83,50 @@ export default function ContactFR() {
       </section>
 
       {/* SOCIAL MEDIA */}
-     {/* SOCIAL MEDIA (FINAL) */}
-<section style={section}>
-  <h2 style={sectionTitle}>Find Us on Social Media</h2>
+      <section style={section}>
+        <h2 style={sectionTitle}>Find Us on Social Media</h2>
 
-  <div style={grid}>
-    <a
-      href="https://instagram.com/ascendantautodetail"
-      target="_blank"
-      rel="noopener noreferrer"
-      style={cardLink}
-    >
-      <div style={card}>
-        <h3 style={cardTitle}>📸 Instagram</h3>
-        <p style={cardText}>@ascendantautodetail</p>
-      </div>
-    </a>
+        <div style={grid}>
+          <a href="https://instagram.com/ascendantautodetail" target="_blank" rel="noopener noreferrer" style={cardLink}>
+            <div style={card}>
+              <h3 style={cardTitle}>📸 Instagram</h3>
+              <p style={cardText}>@ascendantautodetail</p>
+            </div>
+          </a>
 
-   <a
-  href="https://facebook.com/AscendantAutoDetail"
-  target="_blank"
-  rel="noopener noreferrer"
-  style={cardLink}
->
-  <div style={card}>
-    <h3 style={cardTitle}>
-      <span style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          fill="#1877F2"
-        >
-          <path d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-3h2.5V9.5c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.7-1.6 1.5V12H17l-.4 3h-2.7v7A10 10 0 0 0 22 12z" />
-        </svg>
-        Facebook
-      </span>
-    </h3>
+          <a href="https://facebook.com/AscendantAutoDetail" target="_blank" rel="noopener noreferrer" style={cardLink}>
+            <div style={card}>
+              <h3 style={cardTitle}>
+                <span style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#1877F2">
+                    <path d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-3h2.5V9.5c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.7-1.6 1.5V12H17l-.4 3h-2.7v7A10 10 0 0 0 22 12z" />
+                  </svg>
+                  Facebook
+                </span>
+              </h3>
+              <p style={cardText}>@ascendantautodetail</p>
+            </div>
+          </a>
 
-    <p style={cardText}>@ascendantautodetail</p>
-  </div>
-</a>
-    <a
-      href="https://tiktok.com/@ascendantautodetail"
-      target="_blank"
-      rel="noopener noreferrer"
-      style={cardLink}
-    >
-      <div style={card}>
-        <h3 style={cardTitle}>🎵 TikTok</h3>
-        <p style={cardText}>@ascendantautodetail</p>
-      </div>
-    </a>
+          <a href="https://tiktok.com/@ascendantautodetail" target="_blank" rel="noopener noreferrer" style={cardLink}>
+            <div style={card}>
+              <h3 style={cardTitle}>🎵 TikTok</h3>
+              <p style={cardText}>@ascendantautodetail</p>
+            </div>
+          </a>
 
-    <a
-      href="https://snapchat.com/add/ascendantautodetail"
-      target="_blank"
-      rel="noopener noreferrer"
-      style={cardLink}
-    >
-      <div style={card}>
-        <h3 style={cardTitle}>👻 Snapchat</h3>
-        <p style={cardText}>@ascendantautodetail</p>
-      </div>
-    </a>
-  </div>
-</section>
+          <a href="https://snapchat.com/add/ascendantautodetail" target="_blank" rel="noopener noreferrer" style={cardLink}>
+            <div style={card}>
+              <h3 style={cardTitle}>👻 Snapchat</h3>
+              <p style={cardText}>@ascendantautodetail</p>
+            </div>
+          </a>
+        </div>
+      </section>
 
       {/* MAP */}
       <section style={section}>
-        <h2 style={sectionTitle}>Zone de service</h2>
+        <h2 style={sectionTitle}>Our Service Area</h2>
 
         <div style={mapContainer}>
           <iframe
@@ -169,17 +141,17 @@ export default function ContactFR() {
 
       {/* FORM */}
       <section style={section}>
-        <h2 style={sectionTitle}>Envoyez-nous un message</h2>
+        <h2 style={sectionTitle}>Send Us a Message</h2>
 
         <form onSubmit={handleSubmit} style={form}>
-          <input type="hidden" name="_subject" value="Nouveau message depuis votre site" />
+          <input type="hidden" name="_subject" value="New message from your website" />
           <input type="text" name="_gotcha" style={{ display: "none" }} />
 
-          <input name="name" placeholder="Votre nom" required style={input} />
-          <input name="email" placeholder="Votre courriel" required style={input} />
-          <textarea name="message" placeholder="Votre message" required style={textarea}></textarea>
+          <input name="name" placeholder="Your Name" required style={input} />
+          <input name="email" placeholder="Your Email" required style={input} />
+          <textarea name="message" placeholder="Your Message" required style={textarea}></textarea>
 
-          <button type="submit" style={button}>Envoyer le message</button>
+          <button type="submit" style={button}>Send Message</button>
         </form>
       </section>
 
@@ -189,21 +161,13 @@ export default function ContactFR() {
           <div style={popupBox}>
             <div style={checkmarkCircle}>
               <svg width="40" height="40" viewBox="0 0 24 24">
-                <path
-                  d="M20 6L9 17l-5-5"
-                  fill="none"
-                  stroke="#d4af37"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
+                <path d="M20 6L9 17l-5-5" fill="none" stroke="#d4af37" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </div>
 
-            <h3 style={popupTitle}>Message envoyé</h3>
-
+            <h3 style={popupTitle}>Message Sent</h3>
             <p style={popupText}>
-              Merci de nous avoir contactés. Notre équipe vous répondra sous peu.
+              Thank you for reaching out. Our team will get back to you shortly.
             </p>
           </div>
         </div>
@@ -292,6 +256,12 @@ const cardText = {
 const goldText = {
   color: "#d4af37",
   fontWeight: "600",
+};
+
+const mapContainer = {
+  border: "1px solid rgba(212,175,55,0.3)",
+  borderRadius: "20px",
+  overflow: "hidden",
 };
 
 const form = {
