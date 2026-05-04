@@ -51,7 +51,7 @@ overflow: "hidden", // 👈 keeps header clean
     <Link href="/fr/tarifs" style={linkStyle}>Tarifs</Link>
     <Link href="/fr/reserver" style={linkStyle}>Réserver</Link>
     <Link href="/fr/contact" style={linkStyle}>Contactez-Nous</Link>
-    <Link href="/fr/about">À propos</Link>
+    <Link href="/fr/about" style={linkStyle}>À Propos</Link>
   </>
 ) : (
   <>
