@@ -26,6 +26,8 @@ export default function ContactFR() {
       setTimeout(() => {
         setShowPopup(false);
       }, 3000);
+    } else {
+      alert("Erreur lors de l'envoi. Veuillez réessayer.");
     }
   };
 
@@ -43,7 +45,7 @@ export default function ContactFR() {
         </div>
       </section>
 
-      {/* INTRO BOX */}
+      {/* INTRO */}
       <section style={section}>
         <div style={box}>
           <h2 style={boxTitle}>Un service raffiné commence par un échange</h2>
@@ -82,7 +84,7 @@ export default function ContactFR() {
         </div>
       </section>
 
-      {/* CONTACT FORM */}
+      {/* FORM */}
       <section style={section}>
         <h2 style={sectionTitle}>Envoyez-nous un message</h2>
 
@@ -113,7 +115,7 @@ export default function ContactFR() {
   );
 }
 
-/* STYLES (UNCHANGED + POPUP ADDED) */
+/* STYLES */
 
 const heroStyle = {
   minHeight: "60vh",
