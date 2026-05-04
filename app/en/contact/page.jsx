@@ -1,169 +1,121 @@
+"use client";
+
+import { useState } from "react";
 import Header from "../../components/Header";
 
-export default function ContactEN() {
+export default function ContactFR() {
+  const [showPopup, setShowPopup] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(e.target);
+
+    const response = await fetch("https://formspree.io/f/mgodaarq", {
+      method: "POST",
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    });
+
+    if (response.ok) {
+      setShowPopup(true);
+      e.target.reset();
+
+      setTimeout(() => {
+        setShowPopup(false);
+      }, 3000);
+    } else {
+      alert("Erreur lors de l'envoi. Veuillez réessayer.");
+    }
+  };
+
   return (
     <div style={{ backgroundColor: "#0a0a0a", color: "#f5f5f5", minHeight: "100vh" }}>
-      <Header lang="en" />
+      <Header lang="fr" />
 
-      {/* HERO (UNCHANGED) */}
+      {/* HERO */}
       <section style={heroStyle}>
         <div style={container}>
-          <h1 style={heroTitle}>Contact Us</h1>
+          <h1 style={heroTitle}>Contactez-nous</h1>
           <p style={heroText}>
-            We’re here to provide a seamless, premium experience from your first message.
+            Une expérience haut de gamme commence par une simple conversation.
           </p>
         </div>
       </section>
 
-      {/* INTRO BOX (UNCHANGED) */}
+      {/* INTRO */}
       <section style={section}>
         <div style={box}>
-          <h2 style={boxTitle}>A refined service starts with a simple conversation</h2>
+          <h2 style={boxTitle}>Un service raffiné commence par un échange</h2>
           <p style={boxText}>
-            Whether you have questions about our services, need guidance selecting the right package,
-            or are ready to book your next detailing session, this page gives you direct access to our team.
+            Que vous ayez des questions concernant nos services, que vous ayez besoin
+            d’aide pour choisir le bon forfait ou que vous soyez prêt à réserver,
+            cette page vous donne un accès direct à notre équipe.
           </p>
           <p style={boxText}>
-            Choose the method that suits you best and we will respond promptly with the level of care and
-            professionalism you expect.
+            Choisissez le moyen de communication qui vous convient et nous vous répondrons
+            rapidement avec le niveau de professionnalisme que vous attendez.
           </p>
         </div>
       </section>
 
-      {/* CONTACT METHODS (CLICKABLE ADDED) */}
+      {/* CONTACT METHODS */}
       <section style={section}>
-        <h2 style={sectionTitle}>Contact Methods</h2>
+        <h2 style={sectionTitle}>Méthodes de contact</h2>
 
         <div style={grid}>
           <a href="tel:+10000000000" style={cardLink}>
             <div style={card}>
-              <h3 style={cardTitle}>Phone</h3>
-              <p style={cardText}>Call us directly for immediate assistance.</p>
+              <h3 style={cardTitle}>Téléphone</h3>
+              <p style={cardText}>Appelez-nous directement pour une assistance immédiate.</p>
               <p style={goldText}>+1 (000) 000-0000</p>
             </div>
           </a>
 
           <a href="mailto:ascendantautodetailing@gmail.com" style={cardLink}>
             <div style={card}>
-              <h3 style={cardTitle}>Email</h3>
-              <p style={cardText}>For inquiries, bookings, or detailed requests.</p>
+              <h3 style={cardTitle}>Courriel</h3>
+              <p style={cardText}>Pour toute demande, réservation ou information détaillée.</p>
               <p style={goldText}>ascendantautodetailing@gmail.com</p>
             </div>
           </a>
         </div>
       </section>
 
-    {/* SOCIAL MEDIA (FINAL) */}
-<section style={section}>
-  <h2 style={sectionTitle}>Find Us on Social Media</h2>
-
-  <div style={grid}>
-    <a
-      href="https://instagram.com/ascendantautodetail"
-      target="_blank"
-      rel="noopener noreferrer"
-      style={cardLink}
-    >
-      <div style={card}>
-        <h3 style={cardTitle}>📸 Instagram</h3>
-        <p style={cardText}>@ascendantautodetail</p>
-      </div>
-    </a>
-
-    <a
-  href="https://facebook.com/AscendantAutoDetail"
-  target="_blank"
-  rel="noopener noreferrer"
-  style={cardLink}
->
-  <div style={card}>
-    <h3 style={cardTitle}>
-      <span style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          fill="#1877F2"
-        >
-          <path d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-3h2.5V9.5c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.7-1.6 1.5V12H17l-.4 3h-2.7v7A10 10 0 0 0 22 12z" />
-        </svg>
-        Facebook
-      </span>
-    </h3>
-
-    <p style={cardText}>@ascendantautodetail</p>
-  </div>
-</a>
-
-    <a
-      href="https://tiktok.com/@ascendantautodetail"
-      target="_blank"
-      rel="noopener noreferrer"
-      style={cardLink}
-    >
-      <div style={card}>
-        <h3 style={cardTitle}>🎵 TikTok</h3>
-        <p style={cardText}>@ascendantautodetail</p>
-      </div>
-    </a>
-
-    <a
-      href="https://snapchat.com/add/ascendantautodetail"
-      target="_blank"
-      rel="noopener noreferrer"
-      style={cardLink}
-    >
-      <div style={card}>
-        <h3 style={cardTitle}>👻 Snapchat</h3>
-        <p style={cardText}>@ascendantautodetail</p>
-      </div>
-    </a>
-  </div>
-</section>
-
-      {/* GOOGLE MAP (FIXED ZOOM - MONTREAL ONLY) */}
+      {/* FORM */}
       <section style={section}>
-        <h2 style={sectionTitle}>Our Service Area</h2>
+        <h2 style={sectionTitle}>Envoyez-nous un message</h2>
 
-        <div style={mapContainer}>
-          <iframe
-            src="https://www.google.com/maps?q=Montreal,QC&z=11&output=embed"
-            width="100%"
-            height="320"
-            style={{ border: "0", borderRadius: "20px" }}
-            loading="lazy"
-          ></iframe>
-        </div>
-      </section>
+        <form onSubmit={handleSubmit} style={form}>
+          <input type="hidden" name="_subject" value="Nouveau message depuis votre site" />
+          <input type="text" name="_gotcha" style={{ display: "none" }} />
 
-      {/* CONTACT FORM (ADDED AT BOTTOM) */}
-      <section style={section}>
-        <h2 style={sectionTitle}>Send Us a Message</h2>
+          <input name="name" placeholder="Votre nom" required style={input} />
+          <input name="email" placeholder="Votre courriel" required style={input} />
+          <textarea name="message" placeholder="Votre message" required style={textarea}></textarea>
 
-        <form action="/https://formspree.io/f/mgodaarq" method="POST" style={form}>
-          <input name="name" placeholder="Your Name" required style={input} />
-          <input name="email" placeholder="Your Email" required style={input} />
-          <textarea name="message" placeholder="Your Message" required style={textarea}></textarea>
-          <button type="submit" style={button}>Send Message</button>
+          <button type="submit" style={button}>Envoyer le message</button>
         </form>
       </section>
 
-      {/* RESPONSE TIME (UNCHANGED) */}
-      <section style={section}>
-        <div style={box}>
-          <h2 style={boxTitle}>Response Time</h2>
-          <p style={boxText}>
-            We aim to respond to all inquiries within a few hours. During peak periods,
-            response times may extend slightly — but every request is handled with priority and care.
-          </p>
+      {/* POPUP */}
+      {showPopup && (
+        <div style={popupOverlay}>
+          <div style={popupBox}>
+            <h3 style={popupTitle}>Message envoyé</h3>
+            <p style={popupText}>
+              Merci pour votre message. Notre équipe vous répondra sous peu.
+            </p>
+          </div>
         </div>
-      </section>
+      )}
     </div>
   );
 }
 
-/* STYLES (UNCHANGED + SMALL ADDITIONS ONLY) */
+/* STYLES */
 
 const heroStyle = {
   minHeight: "60vh",
@@ -245,12 +197,6 @@ const goldText = {
   fontWeight: "600",
 };
 
-const mapContainer = {
-  border: "1px solid rgba(212,175,55,0.3)",
-  borderRadius: "20px",
-  overflow: "hidden",
-};
-
 const form = {
   display: "flex",
   flexDirection: "column",
@@ -277,4 +223,37 @@ const button = {
   borderRadius: "10px",
   fontWeight: "bold",
   cursor: "pointer",
+};
+
+const popupOverlay = {
+  position: "fixed",
+  top: 0,
+  left: 0,
+  width: "100%",
+  height: "100%",
+  backgroundColor: "rgba(0,0,0,0.7)",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  zIndex: 999,
+};
+
+const popupBox = {
+  background: "linear-gradient(180deg, #111, #0a0a0a)",
+  padding: "40px",
+  borderRadius: "20px",
+  border: "1px solid rgba(212,175,55,0.4)",
+  textAlign: "center",
+  maxWidth: "400px",
+};
+
+const popupTitle = {
+  fontSize: "24px",
+  marginBottom: "10px",
+  color: "#d4af37",
+};
+
+const popupText = {
+  color: "#ccc",
+  lineHeight: "1.6",
 };
