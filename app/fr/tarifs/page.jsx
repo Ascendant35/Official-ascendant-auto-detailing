@@ -373,6 +373,7 @@ export default function TarifsFR() {
             title="Détailing Extérieur Seulement"
             price={
   <>
+  <>
     <p style={{ margin: "0 0 6px 0" }}>Berline: À partir de $99.99</p>
     <p style={{ margin: "0 0 6px 0" }}>VUS: À partir de $124.99</p>
     <p style={{ margin: "0" }}>Camion / Grand VUS: À partir de $159.99</p>
@@ -382,6 +383,7 @@ export default function TarifsFR() {
           <Extra
             title="Détailing Intérieur Seulement"
             price={
+  <>
   <>
     <p style={{ margin: "0 0 6px 0" }}>Berline: À partir de $119.99</p>
     <p style={{ margin: "0 0 6px 0" }}>VUS: À partir de $159.99</p>
