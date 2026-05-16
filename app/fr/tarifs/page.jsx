@@ -396,11 +396,6 @@ export default function TarifsFR() {
     </div>
   );
 }
-        </div>
-      </section>
-    </div>
-  );
-}
 
 /* EXTRA COMPONENT */
 function Extra({ title, price }) {
