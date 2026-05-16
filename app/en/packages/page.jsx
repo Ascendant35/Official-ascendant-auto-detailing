@@ -381,12 +381,13 @@ export default function TarifsFR() {
         </h2>
 
         <div style={extraGrid}>
-          <Extra title="Pet Hair" price="Starting at $30" />
-          <Extra title="Salt / Calcium" price="Starting at $35" />
-          <Extra title="Odor Treatment" price="Starting at $50" />
+          <Extra title="Salt / Calcium Extraction" price="Starting at $30" />
+          <Extra title="Pet Hair Removal" price="Starting at $35" />
+          <Extra title="Odor Removal / Ozone Treatment" price="Starting at $40" />
           <Extra title="Specific Stains" price="Starting at $40" />
-          <Extra title="Engine Cleaning" price="Starting at $60" />
-          <Extra title="Leather Treatment" price="Starting at $70" />
+          <Extra title="Engine Bay Detail" price="Starting at $50" />
+          <Extra title="Leather Treatment" price="Starting at $60" />
+          <Extra title="Spray Sealant / Paint Protection" price="Starting at $70" />
 
           <Extra
             title="Exterior Detailing Only"
