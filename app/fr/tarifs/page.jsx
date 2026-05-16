@@ -361,12 +361,41 @@ export default function TarifsFR() {
         </h2>
 
         <div style={extraGrid}>
-          <Extra title="Poils d’animaux" price="À partir de 30$" />
-          <Extra title="Sel / Calcium" price="À partir de 35$" />
-          <Extra title="Traitement des odeurs" price="À partir de 50$" />
-          <Extra title="Taches spécifiques" price="À partir de 0$" />
-          <Extra title="Nettoyage du moteur" price="À partir de 60$" />
-          <Extra title="Traitement du cuir" price="À partir de 70$" />
+          <Extra title="Extraction du Sel / Calcium" price="À partir de 30$" />
+          <Extra title="Enlèvement des Poils d’animaux" price="À partir de 35$" />
+          <Extra title="Élimination des odeurs" price="À partir de 40$" />
+          <Extra title="Taches spécifiques" price="À partir de 40$" />
+          <Extra title="Détail du moteur" price="À partir de 50$" />
+          <Extra title="Nettoyage et conditionnement du cuir" price="À partir de 60$" />
+          <Extra title="Protection de la peinture avec scellant" price="À partir de 70$" />
+          <Extra title="Restauration des phares" price="À partir de 80$" />
+          
+          Extra
+            title="Détailing Extérieur Seulement"
+            price={
+  <>
+    <p style={{ margin: "0 0 6px 0" }}>Berline: À partir de $99.99</p>
+    <p style={{ margin: "0 0 6px 0" }}>VUS: À partir de $124.99</p>
+    <p style={{ margin: "0" }}>Camion / Grand VUS: À partir de $159.99</p>
+  </>
+}
+          />
+
+          <Extra
+            title="Détailing Intérieur Seulement"
+            price={
+  <>
+    <p style={{ margin: "0 0 6px 0" }}>Berline: À partir de $119.99</p>
+    <p style={{ margin: "0 0 6px 0" }}>VUS: À partir de $159.99</p>
+    <p style={{ margin: "0" }}>Camion / Grand VUS: À partir de $189.99</p>
+  </>
+}
+          />
+        </div>
+      </section>
+    </div>
+  );
+}
         </div>
       </section>
     </div>
