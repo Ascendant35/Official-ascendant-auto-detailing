@@ -388,6 +388,7 @@ export default function TarifsFR() {
           <Extra title="Engine Bay Detail" price="Starting at $50" />
           <Extra title="Leather Treatment" price="Starting at $60" />
           <Extra title="Spray Sealant / Paint Protection" price="Starting at $70" />
+          <Extra title="Headlight Restoation" price="À partir de 80$" />
 
           <Extra
             title="Exterior Detailing Only"
