@@ -37,12 +37,15 @@ export default function BookNow() {
   };
 
   const extras = [
-    { id: "petHair", name: "Pet Hair", price: 30 },
-    { id: "saltRemoval", name: "Salt / Calcium", price: 35 },
-    { id: "odorTreatment", name: "Odor Treatment", price: 50 },
-    { id: "specificStains", name: "Specific Stains", price: 40 },
-    { id: "engineCleaning", name: "Engine Cleaning", price: 60 },
-    { id: "leatherTreatment", name: "Leather Treatment", price: 70 },
+    { id: "saltRemoval", name: "Salt / Calcium Extraction", price: 30 },
+    { id: "petHair", name: "Pet Hair Removal", price: 35 },
+    { id: "odorTreatment", name: "Odor Removal / Ozone Treatment", price: 40 },
+    { id: "specificStains", name: "Specific Stains Removal", price: 40 },
+    { id: "engineCleaning", name: "Engine Bay Detail", price: 50 },
+    { id: "leatherTreatment", name: "Leather Treatment", price: 60 },
+    { id: "paintProtection", name: "Spray Sealant / Paint Protection", price: 70 },
+    { id: "headlightRestoration", name: "Headlight Restoration", price: 80 },
+    { id: "claybarTreatment", name: "Clay Bar Treatment", price: 80 },
   ];
 
   const toggleExtra = (extraId) => {
