@@ -369,10 +369,9 @@ export default function TarifsFR() {
           <Extra title="Nettoyage et conditionnement du cuir" price="À partir de 60$" />
           <Extra title="Protection de la peinture avec scellant" price="À partir de 70$" />
           <Extra title="Restauration des phares" price="À partir de 80$" /> 
-          Extra
+          <Extra
             title="Détailing Extérieur Seulement"
             price={
-  <>
   <>
     <p style={{ margin: "0 0 6px 0" }}>Berline: À partir de $99.99</p>
     <p style={{ margin: "0 0 6px 0" }}>VUS: À partir de $124.99</p>
@@ -383,7 +382,6 @@ export default function TarifsFR() {
           <Extra
             title="Détailing Intérieur Seulement"
             price={
-  <>
   <>
     <p style={{ margin: "0 0 6px 0" }}>Berline: À partir de $119.99</p>
     <p style={{ margin: "0 0 6px 0" }}>VUS: À partir de $159.99</p>
