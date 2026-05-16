@@ -368,7 +368,8 @@ export default function TarifsFR() {
           <Extra title="Détail du moteur" price="À partir de 50$" />
           <Extra title="Nettoyage et conditionnement du cuir" price="À partir de 60$" />
           <Extra title="Protection de la peinture avec scellant" price="À partir de 70$" />
-          <Extra title="Restauration des phares" price="À partir de 80$" /> 
+          <Extra title="Restauration des phares" price="À partir de 80$" />
+          <Extra title="Traitement à la barre d'argile (Clay Bar)" price="À partir de 80$" />
           <Extra
             title="Détailing Extérieur Seulement"
             price={
