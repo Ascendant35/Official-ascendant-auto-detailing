@@ -42,7 +42,7 @@ export default function BookNow() {
     { id: "odorTreatment", name: "Élimination des odeurs", price: 40 },
     { id: "specificStains", name: "Traitement de taches spécifiques", price: 40 },
     { id: "engineCleaning", name: "Détailing du moteur", price: 50 },
-    { id: "leatherTreatment", name: "Traitement du cuir", price: 60 },
+    { id: "leatherTreatment", name: "COnditionnement du cuir", price: 60 },
     { id: "protectiondelapeinture", name: "Protection de la peinture avec scellant", price: 70 },
     { id: "restorationdesPhares", name: "Restoration des phares", price: 80 },
     { id: "traitementbardargile", name: "Traitement à la barre d'argile (Clay Bar)", price: 80 },
