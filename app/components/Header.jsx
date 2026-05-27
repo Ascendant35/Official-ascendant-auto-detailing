@@ -135,19 +135,14 @@ export default function Header({ lang }) {
 
         .hamburger {
   display: none;
-  background-color: transparent;
-  border: none;
-  color: white;
-  font-size: 34px;
-  line-height: 1;
-  padding: 0;
-  margin: 0;
+  background: transparent !important;
+  border: none !important;
+  color: white !important;
+  font-size: 34px !important;
   cursor: pointer;
-  text-decoration: none;
-  outline: none;
-  box-shadow: none;
   appearance: none;
   -webkit-appearance: none;
+}
 }
 
 .hamburger:focus,
@@ -202,12 +197,15 @@ export default function Header({ lang }) {
             padding: 25px 20px 30px;
           }
 
-          .mobile-link {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: 500;
-          }
+          .mobile-link,
+.mobile-link:visited,
+.mobile-link:hover,
+.mobile-link:active {
+  color: white !important;
+  text-decoration: none !important;
+  font-size: 18px;
+  font-weight: 500;
+}
 
           .mobile-language {
             margin-top: 10px;
