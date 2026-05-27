@@ -376,5 +376,54 @@ export default function HomeEN() {
         </div>
       </section>
     </div>
+    <style jsx>{`
+  @media (max-width: 768px) {
+
+    section {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
+
+    h1 {
+      font-size: 42px !important;
+      line-height: 1.15 !important;
+    }
+
+    h2 {
+      font-size: 32px !important;
+      line-height: 1.2 !important;
+    }
+
+    h3 {
+      font-size: 24px !important;
+    }
+
+    p {
+      font-size: 16px !important;
+      line-height: 1.7 !important;
+    }
+
+    div[style*="gridTemplateColumns: \"1.2fr 0.8fr\""] {
+      grid-template-columns: 1fr !important;
+    }
+
+    div[style*="gridTemplateColumns: \"1fr 1fr\""] {
+      grid-template-columns: 1fr !important;
+    }
+
+    div[style*="repeat(3, 1fr)"] {
+      grid-template-columns: 1fr !important;
+    }
+
+    div[style*="display: flex"] {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+    }
+
+    a {
+      text-align: center;
+    }
+  }
+`}</style>
   );
 }
