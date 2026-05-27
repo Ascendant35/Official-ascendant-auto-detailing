@@ -375,8 +375,7 @@ export default function HomeEN() {
           </Link>
         </div>
       </section>
-      </section>
-
+      
 <style jsx>{`
   @media (max-width: 768px) {
 
