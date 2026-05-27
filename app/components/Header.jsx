@@ -64,7 +64,7 @@ export default function Header({ lang }) {
   aria-label="Open menu"
   type="button"
 >
-  ☰
+  &#9776;
 </button>
       </div>
 
@@ -135,16 +135,29 @@ export default function Header({ lang }) {
 
         .hamburger {
   display: none;
-  background: transparent !important;
-  border: none !important;
-  color: white !important;
+  background-color: transparent;
+  border: none;
+  color: white;
   font-size: 34px;
+  line-height: 1;
   padding: 0;
+  margin: 0;
   cursor: pointer;
+  text-decoration: none;
   outline: none;
   box-shadow: none;
   appearance: none;
   -webkit-appearance: none;
+}
+
+.hamburger:focus,
+.hamburger:active,
+.hamburger:hover,
+.hamburger:visited {
+  color: white;
+  background: transparent;
+  outline: none;
+  box-shadow: none;
 }
 
 .hamburger span {
