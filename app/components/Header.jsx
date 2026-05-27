@@ -133,14 +133,14 @@ export default function Header({ lang }) {
         }
 
         .hamburger {
-          display: none;
-          background: none;
-          border: 1px solid rgba(212, 175, 55, 0.6);
-          color: #d4af37;
-          font-size: 30px;
-          padding: 8px 14px;
-          border-radius: 10px;
-          cursor: pointer;
+  display: none;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 34px;
+  padding: 0;
+  cursor: pointer;
+}
         }
 
         .mobile-menu {
