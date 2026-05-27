@@ -25,7 +25,7 @@ export default function HomeEN() {
             maxWidth: "1400px",
             margin: "0 auto",
             width: "100%",
-            padding: "80px clamp(20px, 5vw, 50px)",
+            padding: "80px 20px",
           }}
         >
           <div style={{ maxWidth: "760px" }}>
@@ -113,7 +113,7 @@ export default function HomeEN() {
         style={{
           maxWidth: "1400px",
           margin: "0 auto",
-          padding: "80px 50px 30px 50px",
+          padding: "80px 20px 30px 20px",
         }}
       >
         <div
@@ -227,7 +227,7 @@ export default function HomeEN() {
         style={{
           maxWidth: "1400px",
           margin: "0 auto",
-          padding: "50px 50px 30px 50px",
+          padding: "50px 20px 30px 20px",
         }}
       >
         <p
@@ -295,7 +295,7 @@ export default function HomeEN() {
         style={{
           maxWidth: "1400px",
           margin: "0 auto",
-          padding: "60px 50px 100px 50px",
+         padding: "60px 20px 100px 20px",
         }}
       >
         <p
