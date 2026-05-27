@@ -25,7 +25,7 @@ export default function HomeEN() {
             maxWidth: "1400px",
             margin: "0 auto",
             width: "100%",
-            padding: "80px 50px",
+            padding: "80px clamp(20px, 5vw, 50px)",
           }}
         >
           <div style={{ maxWidth: "760px" }}>
@@ -43,7 +43,7 @@ export default function HomeEN() {
 
             <h1
               style={{
-                fontSize: "64px",
+                fontSize: "clamp(42px, 8vw, 64px)",
                 lineHeight: "1.05",
                 margin: "0 0 22px 0",
                 fontWeight: "700",
