@@ -66,7 +66,14 @@ export default function HomeEN() {
               our services in Montreal, Laval, the North Shore and the South Shore. Our fully equipped mobile detailing service comes directly to you — at your home or workplace — delivering a seamless, high-end experience without interrupting your day.
             </p>
 
-            <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
+            <div
+  style={{
+    display: "flex",
+    gap: "16px",
+    flexWrap: "wrap",
+    width: "100%",
+  }}
+>
               <Link
                 href="/en/book"
                 style={{
