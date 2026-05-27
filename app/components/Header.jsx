@@ -62,10 +62,9 @@ export default function Header({ lang }) {
   className="hamburger"
   onClick={() => setMenuOpen(!menuOpen)}
   aria-label="Open menu"
+  type="button"
 >
-  <span></span>
-  <span></span>
-  <span></span>
+  ☰
 </button>
       </div>
 
@@ -136,12 +135,16 @@ export default function Header({ lang }) {
 
         .hamburger {
   display: none;
-  background: transparent;
-  border: none;
+  background: transparent !important;
+  border: none !important;
+  color: white !important;
+  font-size: 34px;
   padding: 0;
   cursor: pointer;
-  flex-direction: column;
-  gap: 6px;
+  outline: none;
+  box-shadow: none;
+  appearance: none;
+  -webkit-appearance: none;
 }
 
 .hamburger span {
