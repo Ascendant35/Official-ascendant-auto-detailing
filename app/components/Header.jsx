@@ -1,104 +1,193 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Header({ lang }) {
   const isFR = lang === "fr";
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const links = isFR
+    ? [
+        { href: "/fr", label: "Accueil" },
+        { href: "/fr/services", label: "Services" },
+        { href: "/fr/tarifs", label: "Tarifs" },
+        { href: "/fr/reserver", label: "Réserver" },
+        { href: "/fr/contact", label: "Contactez-Nous" },
+        { href: "/fr/about", label: "À Propos" },
+      ]
+    : [
+        { href: "/en", label: "Home" },
+        { href: "/en/services", label: "Services" },
+        { href: "/en/packages", label: "Packages" },
+        { href: "/en/book", label: "Book Now" },
+        { href: "/en/contact", label: "Contact Us" },
+        { href: "/en/about", label: "About Us" },
+      ];
 
   return (
-    <header
-      style={{
-        backgroundColor: "black",
-        color: "white",
-        width: "100%",
-      }}
-    >
-      <div
-        style={{
-          maxWidth: "1400px",
-          margin: "0 auto",
-          height: "120px", // 👈 controls header height
-padding: "0 50px", // 👈 remove vertical padding
-display: "flex",
-alignItems: "center",
-justifyContent: "space-between",
-overflow: "hidden", // 👈 keeps header clean
-        }}
-      >
+    <header className="site-header">
+      <div className="header-inner">
         {/* LOGO */}
         <Link href={isFR ? "/fr" : "/en"}>
           <img
-  src="/AscendantAutoDetailing.png"
+            src="/AscendantAutoDetailing.png"
             alt="Ascendant Auto Detailing"
-            style={{
-              height: "200px",
-              objectFit: "contain",
-            }}
+            className="header-logo"
           />
         </Link>
 
-        {/* NAVIGATION */}
-        <nav
-          style={{
-            display: "flex",
-            gap: "40px",
-            fontSize: "18px",
-            fontWeight: "500",
-          }}
-        >
-          {isFR ? (
-  <>
-    <Link href="/fr" style={linkStyle}>Accueil</Link>
-    <Link href="/fr/services" style={linkStyle}>Services</Link>
-    <Link href="/fr/tarifs" style={linkStyle}>Tarifs</Link>
-    <Link href="/fr/reserver" style={linkStyle}>Réserver</Link>
-    <Link href="/fr/contact" style={linkStyle}>Contactez-Nous</Link>
-    <Link href="/fr/about" style={linkStyle}>À Propos</Link>
-  </>
-) : (
-  <>
-    <Link href="/en" style={linkStyle}>Home</Link>
-    <Link href="/en/services" style={linkStyle}>Services</Link>
-    <Link href="/en/packages" style={linkStyle}>Packages</Link>
-    <Link href="/en/book" style={linkStyle}>Book Now</Link>
-    <Link href="/en/contact" style={linkStyle}>Contact Us</Link>
-    <Link href="/en/about" style={linkStyle}>About Us</Link>
-  </>
-)}
+        {/* DESKTOP NAV */}
+        <nav className="desktop-nav">
+          {links.map((link) => (
+            <Link key={link.href} href={link.href} style={linkStyle}>
+              {link.label}
+            </Link>
+          ))}
         </nav>
 
-        {/* LANGUAGE SWITCH */}
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "10px",
-            fontSize: "15px",
-          }}
-        >
-          <Link
-            href="/fr"
-            style={{
-              color: isFR ? "white" : "#888",
-              textDecoration: "none",
-              fontWeight: isFR ? "bold" : "normal",
-            }}
-          >
+        {/* DESKTOP LANGUAGE SWITCH */}
+        <div className="language-switch desktop-language">
+          <Link href="/fr" style={isFR ? activeLang : inactiveLang}>
             FR
           </Link>
-
           <span style={{ color: "white" }}>|</span>
-
-          <Link
-            href="/en"
-            style={{
-              color: !isFR ? "white" : "#888",
-              textDecoration: "none",
-              fontWeight: !isFR ? "bold" : "normal",
-            }}
-          >
+          <Link href="/en" style={!isFR ? activeLang : inactiveLang}>
             EN
           </Link>
         </div>
+
+        {/* MOBILE HAMBURGER */}
+        <button
+          className="hamburger"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Open menu"
+        >
+          ☰
+        </button>
       </div>
+
+      {/* MOBILE MENU */}
+      {menuOpen && (
+        <div className="mobile-menu">
+          {links.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="mobile-link"
+              onClick={() => setMenuOpen(false)}
+            >
+              {link.label}
+            </Link>
+          ))}
+
+          <div className="language-switch mobile-language">
+            <Link href="/fr" style={isFR ? activeLang : inactiveLang}>
+              FR
+            </Link>
+            <span style={{ color: "white" }}>|</span>
+            <Link href="/en" style={!isFR ? activeLang : inactiveLang}>
+              EN
+            </Link>
+          </div>
+        </div>
+      )}
+
+      <style jsx>{`
+        .site-header {
+          background-color: black;
+          color: white;
+          width: 100%;
+          position: relative;
+          z-index: 1000;
+        }
+
+        .header-inner {
+          max-width: 1400px;
+          margin: 0 auto;
+          height: 120px;
+          padding: 0 50px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          overflow: hidden;
+        }
+
+        .header-logo {
+          height: 200px;
+          object-fit: contain;
+        }
+
+        .desktop-nav {
+          display: flex;
+          gap: 40px;
+          font-size: 18px;
+          font-weight: 500;
+        }
+
+        .language-switch {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-size: 15px;
+        }
+
+        .hamburger {
+          display: none;
+          background: none;
+          border: 1px solid rgba(212, 175, 55, 0.6);
+          color: #d4af37;
+          font-size: 30px;
+          padding: 8px 14px;
+          border-radius: 10px;
+          cursor: pointer;
+        }
+
+        .mobile-menu {
+          display: none;
+        }
+
+        @media (max-width: 768px) {
+          .header-inner {
+            height: 90px;
+            padding: 0 20px;
+          }
+
+          .header-logo {
+            height: 135px;
+          }
+
+          .desktop-nav,
+          .desktop-language {
+            display: none;
+          }
+
+          .hamburger {
+            display: block;
+          }
+
+          .mobile-menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 18px;
+            background-color: black;
+            border-top: 1px solid rgba(212, 175, 55, 0.35);
+            padding: 25px 20px 30px;
+          }
+
+          .mobile-link {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+          }
+
+          .mobile-language {
+            margin-top: 10px;
+          }
+        }
+      `}</style>
     </header>
   );
 }
@@ -106,4 +195,16 @@ overflow: "hidden", // 👈 keeps header clean
 const linkStyle = {
   color: "white",
   textDecoration: "none",
+};
+
+const activeLang = {
+  color: "white",
+  textDecoration: "none",
+  fontWeight: "bold",
+};
+
+const inactiveLang = {
+  color: "#888",
+  textDecoration: "none",
+  fontWeight: "normal",
 };
