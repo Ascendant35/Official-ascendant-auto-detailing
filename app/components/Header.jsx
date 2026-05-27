@@ -59,12 +59,14 @@ export default function Header({ lang }) {
 
         {/* MOBILE HAMBURGER */}
         <button
-          className="hamburger"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Open menu"
-        >
-          ☰
-        </button>
+  className="hamburger"
+  onClick={() => setMenuOpen(!menuOpen)}
+  aria-label="Open menu"
+>
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
       </div>
 
       {/* MOBILE MENU */}
@@ -136,10 +138,18 @@ export default function Header({ lang }) {
   display: none;
   background: transparent;
   border: none;
-  color: white;
-  font-size: 34px;
   padding: 0;
   cursor: pointer;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.hamburger span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
 }
         }
 
