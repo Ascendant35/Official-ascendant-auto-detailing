@@ -375,8 +375,9 @@ export default function HomeEN() {
           </Link>
         </div>
       </section>
-    </div>
-    <style jsx>{`
+      </section>
+
+<style jsx>{`
   @media (max-width: 768px) {
 
     section {
@@ -403,11 +404,11 @@ export default function HomeEN() {
       line-height: 1.7 !important;
     }
 
-    div[style*="gridTemplateColumns: \"1.2fr 0.8fr\""] {
+    div[style*="gridTemplateColumns: \\"1.2fr 0.8fr\\""] {
       grid-template-columns: 1fr !important;
     }
 
-    div[style*="gridTemplateColumns: \"1fr 1fr\""] {
+    div[style*="gridTemplateColumns: \\"1fr 1fr\\""] {
       grid-template-columns: 1fr !important;
     }
 
@@ -425,5 +426,8 @@ export default function HomeEN() {
     }
   }
 `}</style>
+
+</div>
+    </div>
   );
 }
