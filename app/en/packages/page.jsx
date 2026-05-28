@@ -151,7 +151,7 @@ export default function TarifsFR() {
         </div>
 
         {/* ELITE */}
-        <div style={{ ...card, border: "1px solid #d4af37", position: "relative", transform: "scale(1.05)" }}>
+        <div className="elite-package" style={{ ...card, border: "1px solid #d4af37", position: "relative", transform: "scale(1.05)" }}>
           <div style={badge}>MOST POPULAR</div>
 
           <h2 style={title}>Ascendant Elite</h2>
