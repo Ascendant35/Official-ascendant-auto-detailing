@@ -153,7 +153,7 @@ const gridSection = {
   margin: "0 auto",
   padding: "80px 50px",
   display: "grid",
-  gridTemplateColumns: "repeat(3,1fr)",
+  gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
   gap: "40px",
 };
 
