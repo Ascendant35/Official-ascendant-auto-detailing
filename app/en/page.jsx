@@ -307,7 +307,7 @@ export default function HomeEN() {
             marginBottom: "16px",
           }}
         >
-          Why choose us
+          Why choose us?
         </p>
 
         <h2
