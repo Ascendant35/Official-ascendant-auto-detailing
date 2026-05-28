@@ -84,11 +84,22 @@ button {
 @media (max-width: 768px) {
 
   .packages-grid {
-    grid-template-columns: 1fr !important;
+    display: block !important;
+  }
+
+  .packages-grid > div {
+    width: 100% !important;
+    margin-bottom: 30px !important;
+    transform: none !important;
   }
 
   .extras-grid {
-    grid-template-columns: 1fr !important;
+    display: block !important;
+  }
+
+  .extras-grid > div {
+    width: 100% !important;
+    margin-bottom: 20px !important;
   }
 
 }
