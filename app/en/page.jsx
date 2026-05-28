@@ -320,13 +320,8 @@ export default function HomeEN() {
           A clean, refined and high-end approach
         </h2>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
-            gap: "24px",
-          }}
-        >
+        <div className="why-grid">
+          
           <div style={{ backgroundColor: "#101010", borderRadius: "22px", padding: "30px" }}>
             <div style={{ color: "#d4af37", fontSize: "28px", marginBottom: "16px" }}>01</div>
             <h3>Refined results</h3>
