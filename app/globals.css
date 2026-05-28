@@ -103,3 +103,8 @@ button {
   }
 
 }
+@media (max-width: 768px) {
+  .elite-package {
+    transform: none !important;
+  }
+}
