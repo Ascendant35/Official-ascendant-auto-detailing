@@ -457,7 +457,7 @@ const gridSection = {
   margin: "0 auto",
   padding: "100px 50px",
   display: "grid",
-  gridTemplateColumns: "repeat(3,1fr)",
+  gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))",
   gap: "40px",
 };
 
@@ -558,7 +558,7 @@ const extraSection = {
 
 const extraGrid = {
   display: "grid",
-  gridTemplateColumns: "repeat(3,1fr)",
+  gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
   gap: "20px",
 };
 
