@@ -322,7 +322,7 @@ export default function HomeFR() {
             marginBottom: "16px",
           }}
         >
-          Pourquoi nous choisir
+          Pourquoi nous choisir?
         </p>
 
         <h2
