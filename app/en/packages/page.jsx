@@ -375,12 +375,12 @@ export default function TarifsFR() {
       </section>
 
       {/* EXTRA SERVICES */}
-      <div className="extras-grid" style={extraGrid}>
+<section style={extraSection}>
         <h2 style={{ fontSize: "40px", marginBottom: "30px", textAlign: "center" }}>
           Additional Services
         </h2>
 
-        <div style={extraGrid}>
+        <div className="extras-grid" style={extraGrid}>
           <Extra title="Salt / Calcium Extraction" price="Starting at $30" />
           <Extra title="Pet Hair Removal" price="Starting at $35" />
           <Extra title="Odor Removal / Ozone Treatment" price="Starting at $40" />
