@@ -109,7 +109,7 @@ export default function TarifsFR() {
       </section>
 
       {/* PACKAGES */}
-      <section style={gridSection}>
+<section className="packages-grid" style={gridSection}>
         
         {/* CARE */}
         <div style={card}>
@@ -375,7 +375,7 @@ export default function TarifsFR() {
       </section>
 
       {/* EXTRA SERVICES */}
-      <section style={extraSection}>
+      <div className="extras-grid" style={extraGrid}>
         <h2 style={{ fontSize: "40px", marginBottom: "30px", textAlign: "center" }}>
           Additional Services
         </h2>
