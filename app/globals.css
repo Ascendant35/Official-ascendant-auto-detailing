@@ -81,3 +81,14 @@ button {
     padding-right: 20px !important;
   }
 }
+@media (max-width: 768px) {
+
+  .packages-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .extras-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+}
