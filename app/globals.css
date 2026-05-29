@@ -108,22 +108,20 @@ button {
     transform: none !important;
   }
 }
-<style jsx>{`
-  @media (max-width: 768px) {
-    .booking-container {
-      flex-direction: column !important;
-      gap: 25px !important;
-    }
-
-    .booking-left,
-    .booking-right {
-      width: 100% !important;
-      max-width: 100% !important;
-    }
-
-    .booking-right {
-      position: relative !important;
-      top: 0 !important;
-    }
+@media (max-width: 768px) {
+  .booking-container {
+    flex-direction: column !important;
+    gap: 25px !important;
   }
-`}</style>
+
+  .booking-left,
+  .booking-right {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .booking-right {
+    position: relative !important;
+    top: 0 !important;
+  }
+}
