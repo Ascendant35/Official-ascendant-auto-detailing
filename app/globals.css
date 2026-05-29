@@ -3,13 +3,19 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  min-height: 100%;
-  background-color: black;
+  min-height: 100vh;
+  background: #000;
   color: white;
   font-family: Arial, sans-serif;
   overflow-x: hidden;
 }
+html {
+  background-color: #000;
+}
 
+body {
+  background-color: #000;
+}
 body {
   position: relative;
 }
@@ -21,9 +27,12 @@ body {
 #__next {
   width: 100%;
   min-height: 100vh;
-  background-color: black;
+  background-color: #000;
 }
-
+body > div:first-child {
+  min-height: 100vh;
+  background: #000;
+}
 main,
 section,
 div {
@@ -123,5 +132,14 @@ button {
   .booking-right {
     position: relative !important;
     top: 0 !important;
+  }
+}
+@supports (-webkit-touch-callout: none) {
+  body {
+    min-height: -webkit-fill-available;
+  }
+
+  html {
+    height: -webkit-fill-available;
   }
 }
