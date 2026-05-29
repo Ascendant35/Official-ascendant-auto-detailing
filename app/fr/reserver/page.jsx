@@ -448,7 +448,10 @@ const bookingSection = {
   margin: "0 auto",
   padding: "100px 50px",
   display: "grid",
-  gridTemplateColumns: "1.2fr 0.8fr",
+  gridTemplateColumns:
+  typeof window !== "undefined" && window.innerWidth <= 768
+    ? "1fr"
+    : "1.2fr 0.8fr",
   gap: "40px",
 };
 
@@ -465,8 +468,15 @@ const totalBox = {
   borderRadius: "28px",
   border: "1px solid #d4af37",
   alignSelf: "start",
-  position: "sticky",
-  top: "40px",
+  position:
+  typeof window !== "undefined" && window.innerWidth <= 768
+    ? "relative"
+    : "sticky",
+
+top:
+  typeof window !== "undefined" && window.innerWidth <= 768
+    ? "0"
+    : "40px",
 };
 
 const title = {
@@ -492,13 +502,19 @@ const sectionSpacing = {
 
 const optionGrid = {
   display: "grid",
-  gridTemplateColumns: "repeat(3, 1fr)",
+  gridTemplateColumns:
+    typeof window !== "undefined" && window.innerWidth <= 768
+      ? "1fr"
+      : "repeat(3, 1fr)",
   gap: "16px",
 };
 
 const extrasGrid = {
   display: "grid",
-  gridTemplateColumns: "repeat(2, 1fr)",
+  gridTemplateColumns:
+    typeof window !== "undefined" && window.innerWidth <= 768
+      ? "1fr"
+      : "repeat(2, 1fr)",
   gap: "16px",
 };
 
