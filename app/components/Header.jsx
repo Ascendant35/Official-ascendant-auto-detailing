@@ -11,8 +11,8 @@ export default function Header({ lang }) {
     ? [
         { href: "/fr", label: "Accueil" },
         { href: "/fr/services", label: "Services" },
-        { href: "/fr/tarifs", label: "Tarifs" },
-        { href: "/fr/reserver", label: "Réserver" },
+        { href: "/fr/tarifs", label: "Nos Forfaits" },
+        { href: "/fr/reserver", label: "Réserver Maintenant" },
         { href: "/fr/contact", label: "Contactez-Nous" },
         { href: "/fr/about", label: "À Propos" },
       ]
