@@ -1,3 +1,4 @@
+import Link from "next/link";
 export default function FooterFR() {
   return (
     <footer
@@ -90,9 +91,9 @@ export default function FooterFR() {
         <div style={{ flex: "1", minWidth: "220px" }}>
           <h4 style={title}>Réserver</h4>
 
-          <a href="/fr/reserver" style={button}>
-            Réserver maintenant
-          </a>
+          <Link href="/fr/reserver" style={button}>
+  Réserver maintenant
+</Link>
         </div>
       </div>
 
