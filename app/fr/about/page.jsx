@@ -71,7 +71,7 @@ export default function AboutFR() {
             Découvrez ce que le detailing haut de gamme signifie vraiment.
           </p>
           <Link href="/fr/reserver" style={ctaButton}>
-            Réserver
+            Réservez Maintenant
           </Link>
         </div>
       </section>
