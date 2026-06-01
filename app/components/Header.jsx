@@ -77,7 +77,7 @@ export default function Header({ lang }) {
   href={link.href}
   style={{
     color: "white",
-    fontSize: "22px",
+    fontSize: "18px",
     fontWeight: "500",
     letterSpacing: "1px",
     textDecoration: "none",
