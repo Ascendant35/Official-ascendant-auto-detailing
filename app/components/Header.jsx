@@ -201,21 +201,20 @@ export default function Header({ lang }) {
   padding: 35px 20px 40px;
 }
 
-   .mobile-link,
+  .mobile-link,
 .mobile-link:visited,
 .mobile-link:hover,
 .mobile-link:active {
   color: white !important;
   text-decoration: none !important;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 500;
-  letter-spacing: 0.5px;
-  width: 220px;
+  letter-spacing: 1px;
+  width: 260px;
   text-align: center;
-  padding-bottom: 10px;
-  border-bottom: 1px solid rgba(212, 175, 55, 0.35);
+  padding: 0 0 14px 0;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.45);
 }
-
           .mobile-language {
             margin-top: 10px;
           }
