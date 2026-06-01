@@ -34,9 +34,12 @@ body > div:first-child {
   background: #000;
 }
 main,
-section,
-div {
+section {
   max-width: 100%;
+}
+
+div {
+  min-width: 0;
 }
 
 img,
