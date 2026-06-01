@@ -100,7 +100,7 @@ export default function Footer({ lang = "en" }) {
          <Link href={isFR ? "/fr/reserver" : "/en/book"} style={button}>
   {isFR ? "Réserver maintenant" : "Book Now"}
 </Link>
-          </a>
+        
         </div>
       </div>
 
