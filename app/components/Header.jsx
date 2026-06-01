@@ -75,12 +75,15 @@ export default function Header({ lang }) {
             <Link
   key={link.href}
   href={link.href}
-  className="mobile-link"
-  style={{ color: "white", textDecoration: "none" }}
+  style={{
+    color: "red",
+    fontSize: "40px",
+    textDecoration: "none",
+  }}
   onClick={() => setMenuOpen(false)}
 >
-              {link.label}
-            </Link>
+  {link.label}
+</Link>
           ))}
 
           <div className="language-switch mobile-language">
