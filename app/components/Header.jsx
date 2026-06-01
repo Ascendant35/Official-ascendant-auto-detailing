@@ -207,7 +207,7 @@ export default function Header({ lang }) {
 .mobile-link:active {
   color: white !important;
   text-decoration: none !important;
-  font-size: 22px;
+  font-size: 40px !important;
   font-weight: 500;
   letter-spacing: 1px;
   width: 260px;
