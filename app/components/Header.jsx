@@ -188,14 +188,18 @@ export default function Header({ lang }) {
           }
 
           .mobile-menu {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 18px;
-            background-color: black;
-            border-top: 1px solid rgba(212, 175, 55, 0.35);
-            padding: 25px 20px 30px;
-          }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,1),
+    rgba(8,8,8,1)
+  );
+  border-top: 1px solid rgba(212, 175, 55, 0.45);
+  padding: 35px 20px 40px;
+}
 
    .mobile-link,
 .mobile-link:visited,
