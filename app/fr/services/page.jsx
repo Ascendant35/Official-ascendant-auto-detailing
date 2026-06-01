@@ -71,7 +71,9 @@ function Service({ img, title, desc }) {
       <h2 style={titleStyle}>{title}</h2>
       <p style={descStyle}>{desc}</p>
 
-      <a href="/fr/book" style={goldBtn}>
+      <a href="/fr/reserver" style={goldBtn}>
+  Réserver
+</a>
         Réserver
       </a>
     </div>
