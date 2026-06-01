@@ -75,7 +75,6 @@ function Service({ img, title, desc }) {
   Réserver
 </a>
         Réserver
-      </a>
     </div>
   );
 }
