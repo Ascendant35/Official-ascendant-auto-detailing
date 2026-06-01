@@ -77,10 +77,12 @@ export default function Header({ lang }) {
   href={link.href}
   style={{
     color: "white",
-    fontSize: "15px",
+    fontSize: "16px",
     fontWeight: "500",
     letterSpacing: "1px",
-    textDecoration: "none",
+    textDecoration: "underline",
+textDecorationColor: "#C9A34E",
+textUnderlineOffset: "8px",
     width: "260px",
     textAlign: "center",
     paddingBottom: "14px",
