@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Header from "../../components/Header";
 
 export default function Services() {
@@ -71,9 +72,9 @@ function Service({ img, title, desc }) {
       <h2 style={titleStyle}>{title}</h2>
       <p style={descStyle}>{desc}</p>
 
-      <a href="/en/book" style={goldBtn}>
-        Book Now
-      </a>
+      <Link href="/en/book" style={goldBtn}>
+  Book Now
+</Link>
     </div>
   );
 }
