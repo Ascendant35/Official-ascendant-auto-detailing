@@ -143,7 +143,6 @@ export default function Header({ lang }) {
   appearance: none;
   -webkit-appearance: none;
 }
-}
 
 .hamburger:focus,
 .hamburger:active,
