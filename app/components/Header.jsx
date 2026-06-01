@@ -10,7 +10,7 @@ export default function Header({ lang }) {
   const links = isFR
     ? [
         { href: "/fr", label: "Accueil" },
-        { href: "/fr/services", label: "Services" },
+        { href: "/fr/services", label: "Nos Services" },
         { href: "/fr/tarifs", label: "Nos Forfaits" },
         { href: "/fr/reserver", label: "Réserver Maintenant" },
         { href: "/fr/contact", label: "Contactez-Nous" },
@@ -18,8 +18,8 @@ export default function Header({ lang }) {
       ]
     : [
         { href: "/en", label: "Home" },
-        { href: "/en/services", label: "Services" },
-        { href: "/en/packages", label: "Packages" },
+        { href: "/en/services", label: "Our Services" },
+        { href: "/en/packages", label: "Our Packages" },
         { href: "/en/book", label: "Book Now" },
         { href: "/en/contact", label: "Contact Us" },
         { href: "/en/about", label: "About Us" },
