@@ -197,14 +197,19 @@ export default function Header({ lang }) {
             padding: 25px 20px 30px;
           }
 
-          .mobile-link,
+   .mobile-link,
 .mobile-link:visited,
 .mobile-link:hover,
 .mobile-link:active {
   color: white !important;
   text-decoration: none !important;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
+  letter-spacing: 0.5px;
+  width: 220px;
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.35);
 }
 
           .mobile-language {
