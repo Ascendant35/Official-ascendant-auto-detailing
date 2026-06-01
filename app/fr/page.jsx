@@ -95,7 +95,7 @@ export default function HomeFR() {
                   fontSize: "15px",
                 }}
               >
-                Voir les tarifs
+                Consultez nos forfaits
               </Link>
             </div>
           </div>
