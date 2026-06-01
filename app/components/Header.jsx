@@ -73,11 +73,12 @@ export default function Header({ lang }) {
         <div className="mobile-menu">
           {links.map((link) => (
             <Link
-              key={link.href}
-              href={link.href}
-              className="mobile-link"
-              onClick={() => setMenuOpen(false)}
-            >
+  key={link.href}
+  href={link.href}
+  className="mobile-link"
+  style={{ color: "white", textDecoration: "none" }}
+  onClick={() => setMenuOpen(false)}
+>
               {link.label}
             </Link>
           ))}
