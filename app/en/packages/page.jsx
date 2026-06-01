@@ -147,7 +147,7 @@ export default function TarifsFR() {
       <li>Clean finishing touch</li>
     </ul>
 
-          <Link href="/fr/reserver" style={btn}>Book Now</Link>
+          <Link href="/en/book" style={btn}>Book Now</Link>
         </div>
 
         {/* ELITE */}
@@ -190,7 +190,7 @@ export default function TarifsFR() {
       <li>Tire shine & trim enhancement</li>
     </ul>
 
-          <Link href="/fr/reserver" style={goldBtn}>Book Now</Link>
+          <Link href="/en/book" style={goldBtn}>Book Now</Link>
         </div>
 
         {/* SIGNATURE */}
@@ -231,7 +231,7 @@ export default function TarifsFR() {
       <li>Meticulous final detailing finish</li>
     </ul>
 
-          <Link href="/fr/reserver" style={btn}>Book Now</Link>
+          <Link href="/en/book" style={btn}>Book Now</Link>
         </div>
       </section>
 
