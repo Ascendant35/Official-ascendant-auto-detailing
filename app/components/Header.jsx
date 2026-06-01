@@ -76,9 +76,15 @@ export default function Header({ lang }) {
   key={link.href}
   href={link.href}
   style={{
-    color: "red",
-    fontSize: "40px",
+    color: "white",
+    fontSize: "22px",
+    fontWeight: "500",
+    letterSpacing: "1px",
     textDecoration: "none",
+    width: "260px",
+    textAlign: "center",
+    paddingBottom: "14px",
+    borderBottom: "1px solid rgba(212,175,55,0.45)",
   }}
   onClick={() => setMenuOpen(false)}
 >
