@@ -1,3 +1,4 @@
+import Link from "next/link";
 export default function Footer({ lang = "en" }) {
   const isFR = lang === "fr";
 
@@ -36,7 +37,7 @@ export default function Footer({ lang = "en" }) {
           </p>
         </div>
 
-        {/* CONTACT */}
+        {/* CONTACTEZ-NOUS/CONTACT US */}
         <div style={{ flex: "1", minWidth: "220px" }}>
           <h4 style={title}>{isFR ? "Contact" : "Contact"}</h4>
 
@@ -96,8 +97,9 @@ export default function Footer({ lang = "en" }) {
         <div style={{ flex: "1", minWidth: "220px" }}>
           <h4 style={title}>{isFR ? "Réserver" : "Book"}</h4>
 
-          <a href={isFR ? "/fr/reserver" : "/en/book"} style={button}>
-            {isFR ? "Réserver maintenant" : "Book Now"}
+         <Link href={isFR ? "/fr/reserver" : "/en/book"} style={button}>
+  {isFR ? "Réserver maintenant" : "Book Now"}
+</Link>
           </a>
         </div>
       </div>
