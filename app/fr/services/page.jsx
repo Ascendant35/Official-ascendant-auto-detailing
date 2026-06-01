@@ -74,7 +74,7 @@ function Service({ img, title, desc }) {
       <a href="/fr/reserver" style={goldBtn}>
   Réserver Maintenant
 </a>
-        Réservez Maintenant
+        
     </div>
   );
 }
