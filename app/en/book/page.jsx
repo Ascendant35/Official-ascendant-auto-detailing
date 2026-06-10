@@ -90,6 +90,55 @@ export default function BookNow() {
   const gst = subtotal * 0.05;
   const qst = subtotal * 0.09975;
   const total = subtotal + gst + qst;
+  const calendlyLinks = {
+  package: {
+    care: "https://calendly.com/ascendantautodetailing/ascendant-care-mobile-detail",
+    elite: "https://calendly.com/ascendantautodetailing/ascendant-elite",
+    signature: "https://calendly.com/ascendantautodetailing/ascendant-signature-mobile-detail",
+  },
+  exterior: "https://calendly.com/ascendantautodetailing/exterior-only-mobile-detail",
+  interior: "https://calendly.com/ascendantautodetailing/interior-only-mobile-detail",
+};
+
+const getSelectedServiceName = () => {
+  if (serviceType === "package") {
+    return selectedPackageData.name;
+  }
+
+  if (serviceType === "exterior") {
+    return "Exterior Detailing Only";
+  }
+
+  return "Interior Detailing Only";
+};
+
+const getSelectedExtrasText = () => {
+  if (selectedExtras.length === 0) {
+    return "No extras selected";
+  }
+
+  return selectedExtras
+    .map((extraId) => extras.find((extra) => extra.id === extraId)?.name)
+    .filter(Boolean)
+    .join(", ");
+};
+
+const getCalendlyLink = () => {
+  const baseUrl =
+    serviceType === "package"
+      ? calendlyLinks.package[selectedPackage]
+      : calendlyLinks[serviceType];
+
+  const params = new URLSearchParams({
+    a1: getSelectedServiceName(),
+    a2: vehicleLabels[selectedVehicle],
+    a3: getSelectedExtrasText(),
+    a4: `$${subtotal.toFixed(2)}`,
+    a5: `$${total.toFixed(2)}`,
+  });
+
+  return `${baseUrl}?${params.toString()}`;
+};
 
   return (
     <div style={{ backgroundColor: "#0a0a0a", color: "#f5f5f5", minHeight: "100vh" }}>
@@ -414,13 +463,13 @@ export default function BookNow() {
           </div>
 
           <a
-            href="https://calendly.com/YOUR-LINK"
-            target="_blank"
-            rel="noreferrer"
-            style={goldBtn}
-          >
-            Confirm Booking
-          </a>
+  href={getCalendlyLink()}
+  target="_blank"
+  rel="noreferrer"
+  style={goldBtn}
+>
+  Confirm Booking
+</a>
         </div>
       </section>
     </div>
