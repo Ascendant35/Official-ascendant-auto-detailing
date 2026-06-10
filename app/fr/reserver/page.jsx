@@ -90,6 +90,55 @@ export default function BookNow() {
   const gst = subtotal * 0.05;
   const qst = subtotal * 0.09975;
   const total = subtotal + gst + qst;
+  const calendlyLinksFR = {
+  package: {
+    care: "https://calendly.com/ascendantautodetailing/ascendant-care-mobile-detail-clone",
+    elite: "https://calendly.com/ascendantautodetailing/ascendant-elite-mobile-detail-clone",
+    signature: "https://calendly.com/ascendantautodetailing/ascendant-signature-mobile-detail-clone",
+  },
+  exterior: "https://calendly.com/ascendantautodetailing/exterior-only-mobile-detail-clone",
+  interior: "https://calendly.com/ascendantautodetailing/interior-only-mobile-detail-clone",
+};
+
+const getSelectedServiceNameFR = () => {
+  if (serviceType === "package") {
+    return selectedPackageData.name;
+  }
+
+  if (serviceType === "exterior") {
+    return "Extérieur seulement";
+  }
+
+  return "Intérieur seulement";
+};
+
+const getSelectedExtrasTextFR = () => {
+  if (selectedExtras.length === 0) {
+    return "Aucune option sélectionnée";
+  }
+
+  return selectedExtras
+    .map((extraId) => extras.find((extra) => extra.id === extraId)?.name)
+    .filter(Boolean)
+    .join(", ");
+};
+
+const getCalendlyLinkFR = () => {
+  const baseUrl =
+    serviceType === "package"
+      ? calendlyLinksFR.package[selectedPackage]
+      : calendlyLinksFR[serviceType];
+
+  const params = new URLSearchParams({
+    a1: getSelectedServiceNameFR(),
+    a2: vehicleLabels[selectedVehicle],
+    a3: getSelectedExtrasTextFR(),
+    a4: `$${subtotal.toFixed(2)}`,
+    a5: `$${total.toFixed(2)}`,
+  });
+
+  return `${baseUrl}?${params.toString()}`;
+};
 
   return (
     <div style={{ backgroundColor: "#0a0a0a", color: "#f5f5f5", minHeight: "100vh" }}>
@@ -376,14 +425,14 @@ export default function BookNow() {
             </p>
           </div>
 
-          <a
-            href="https://calendly.com/YOUR-LINK"
-            target="_blank"
-            rel="noreferrer"
-            style={goldBtn}
-          >
-            Confirmer le rendez-vous
-          </a>
+         <a
+  href={getCalendlyLinkFR()}
+  target="_blank"
+  rel="noreferrer"
+  style={goldBtn}
+>
+  Confirmer le rendez-vous
+</a>
         </div>
       </section>
     </div>
