@@ -124,20 +124,38 @@ export default function ContactFR() {
         </div>
       </section>
 
-      {/* MAP */}
-      <section style={section}>
-        <h2 style={sectionTitle}>Zone de service</h2>
+      {/* CARTE */}
+<section style={section}>
+  <h2 style={sectionTitle}>
+    Montréal • Laval • Rive-Sud • Rive-Nord
+  </h2>
 
-        <div style={mapContainer}>
-          <iframe
-            src="https://www.google.com/maps?q=Montreal,QC&z=11&output=embed"
-            width="100%"
-            height="320"
-            style={{ border: "0", borderRadius: "20px" }}
-            loading="lazy"
-          ></iframe>
-        </div>
-      </section>
+  <p
+    style={{
+      textAlign: "center",
+      maxWidth: "800px",
+      margin: "0 auto 30px",
+      color: "#ccc",
+      lineHeight: "1.7",
+    }}
+  >
+    Ascendant Auto Detailing est fier de desservir l’ensemble de la grande
+    région de Montréal, incluant Montréal, Laval, la Rive-Sud et la
+    Rive-Nord. Notre service d’esthétique automobile mobile entièrement équipé
+    se déplace directement à votre domicile ou à votre lieu de travail pour
+    vous offrir une expérience pratique et sans tracas.
+  </p>
+
+  <div style={mapContainer}>
+    <iframe
+      src="https://www.google.com/maps?q=Montreal,QC&z=9&output=embed"
+      width="100%"
+      height="320"
+      style={{ border: "0", borderRadius: "20px" }}
+      loading="lazy"
+    ></iframe>
+  </div>
+</section>
 
       {/* FORM */}
       <section style={section}>
