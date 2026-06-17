@@ -125,19 +125,36 @@ export default function ContactEN() {
       </section>
 
       {/* MAP */}
-      <section style={section}>
-        <h2 style={sectionTitle}>Our Service Area</h2>
+<section style={section}>
+  <h2 style={sectionTitle}>
+    Montreal • Laval • South Shore • North Shore
+  </h2>
 
-        <div style={mapContainer}>
-          <iframe
-            src="https://www.google.com/maps?q=Montreal,QC&z=11&output=embed"
-            width="100%"
-            height="320"
-            style={{ border: "0", borderRadius: "20px" }}
-            loading="lazy"
-          ></iframe>
-        </div>
-      </section>
+  <p
+    style={{
+      textAlign: "center",
+      maxWidth: "800px",
+      margin: "0 auto 30px",
+      color: "#ccc",
+      lineHeight: "1.7",
+    }}
+  >
+    Ascendant Auto Detailing proudly serves clients throughout the Greater
+    Montreal Area, including Montreal, Laval, the South Shore, and the North
+    Shore. Our fully equipped mobile detailing service comes directly to your
+    home or workplace for maximum convenience.
+  </p>
+
+  <div style={mapContainer}>
+    <iframe
+      src="https://www.google.com/maps?q=Montreal,QC&z=9&output=embed"
+      width="100%"
+      height="320"
+      style={{ border: "0", borderRadius: "20px" }}
+      loading="lazy"
+    ></iframe>
+  </div>
+</section>
 
       {/* FORM */}
       <section style={section}>
