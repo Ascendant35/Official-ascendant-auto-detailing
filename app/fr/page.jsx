@@ -187,7 +187,7 @@ export default function HomeFR() {
                 color: "#f5f5f5",
               }}
             >
-              Zones desservies
+              Zones désservies
             </h3>
 
             <div style={{ display: "grid", gap: "14px", color: "#d0d0d0", fontSize: "17px" }}>
@@ -429,7 +429,7 @@ export default function HomeFR() {
               fontWeight: "700",
             }}
           >
-            Réserver maintenant
+            Réserver Votre Expérience
           </Link>
 
           <Link
@@ -684,6 +684,122 @@ export default function HomeFR() {
     </div>
   </div>
 </section>
+      ```jsx
+{/* FINAL CTA */}
+<section
+  style={{
+    padding: "100px 20px 120px",
+    backgroundColor: "#000",
+  }}
+>
+  <div
+    style={{
+      maxWidth: "1100px",
+      margin: "0 auto",
+      background:
+        "linear-gradient(180deg, rgba(212,175,55,0.08), rgba(17,17,17,0.98))",
+      border: "1px solid rgba(212, 175, 55, 0.28)",
+      borderRadius: "30px",
+      padding: "70px 40px",
+      textAlign: "center",
+      boxShadow: "0 0 50px rgba(212, 175, 55, 0.08)",
+    }}
+  >
+    <p
+      style={{
+        color: "#d4af37",
+        textTransform: "uppercase",
+        letterSpacing: "2px",
+        fontSize: "13px",
+        marginBottom: "16px",
+      }}
+    >
+      Prêt à découvrir l’expérience Ascendant ?
+    </p>
+
+    <h2
+      style={{
+        fontSize: "clamp(38px, 5vw, 54px)",
+        marginTop: 0,
+        marginBottom: "22px",
+        lineHeight: "1.15",
+      }}
+    >
+      L’esthétique automobile mobile
+      <br />
+      haut de gamme, directement chez vous
+    </h2>
+
+    <p
+      style={{
+        color: "#cfcfcf",
+        fontSize: "18px",
+        lineHeight: "1.9",
+        maxWidth: "760px",
+        margin: "0 auto 40px",
+      }}
+    >
+      Que vous souhaitiez entretenir votre véhicule quotidien ou préserver
+      l’apparence d’un véhicule de prestige, notre service d’esthétique
+      automobile mobile entièrement équipé vous offre des résultats
+      exceptionnels directement à votre domicile ou à votre lieu de travail,
+      partout à Montréal, Laval, sur la Rive-Sud et la Rive-Nord.
+    </p>
+
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        gap: "18px",
+        flexWrap: "wrap",
+      }}
+    >
+      <Link
+        href="/fr/reserver"
+        style={{
+          backgroundColor: "#d4af37",
+          color: "#111",
+          textDecoration: "none",
+          padding: "16px 34px",
+          borderRadius: "999px",
+          fontWeight: "700",
+          fontSize: "15px",
+          transition: "0.3s ease",
+        }}
+      >
+        Réserver Votre Expérience
+      </Link>
+
+      <Link
+        href="/fr/contact"
+        style={{
+          border: "1px solid #d4af37",
+          color: "#f5f5f5",
+          textDecoration: "none",
+          padding: "16px 34px",
+          borderRadius: "999px",
+          fontWeight: "600",
+          fontSize: "15px",
+        }}
+      >
+        Contactez-Nous
+      </Link>
+    </div>
+
+    <div
+      style={{
+        marginTop: "40px",
+        paddingTop: "30px",
+        borderTop: "1px solid rgba(212, 175, 55, 0.15)",
+        color: "#a9a9a9",
+        fontSize: "15px",
+      }}
+    >
+      Service entièrement mobile • À domicile ou au travail • Montréal • Laval • Rive-Sud • Rive-Nord
+    </div>
+  </div>
+</section>
+
     </div>
   );
 }
