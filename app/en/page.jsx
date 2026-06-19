@@ -249,7 +249,7 @@ export default function HomeEN() {
             lineHeight: "1.15",
           }}
         >
-          Why is detailing is the better option?
+          Why is detailing the better option?
         </h2>
 
         <div
