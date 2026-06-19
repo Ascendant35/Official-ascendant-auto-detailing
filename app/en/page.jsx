@@ -268,8 +268,11 @@ export default function HomeEN() {
           >
             <h3>Standard car wash</h3>
             <p style={{ color: "#c7c7c7", lineHeight: "1.85", fontSize: "17px" }}>
-              A regular wash removes surface dirt quickly but does not provide
-              deep cleaning or refined finishing. A regular car wash also damages the paint and the overall condition of your vehicule. 
+              ✓ Quick surface cleaning
+✓ Removes loose dirt and debris
+✓ Focused on speed and convenience
+✓ Limited attention to interior details
+✓ Minimal long-term protection
             </p>
           </div>
 
