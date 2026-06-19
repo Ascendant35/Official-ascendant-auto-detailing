@@ -476,7 +476,7 @@ export default function HomeFR() {
         marginBottom: "16px",
       }}
     >
-      Comment ça fonctionne
+      Comment ça fonctionne?
     </p>
 
     <h2
