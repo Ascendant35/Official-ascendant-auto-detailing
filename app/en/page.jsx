@@ -49,7 +49,7 @@ export default function HomeEN() {
                 fontWeight: "700",
               }}
             >
-              Premium auto detailing for all types of vehicles
+              Premium mobile auto detailing for all types of vehicles
             </h1>
 
             <p
