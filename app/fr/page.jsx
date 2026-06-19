@@ -80,7 +80,7 @@ export default function HomeFR() {
                   fontSize: "15px",
                 }}
               >
-                Réserver votre expérience
+                Réserver Votre Expérience
               </Link>
 
               <Link
@@ -95,7 +95,7 @@ export default function HomeFR() {
                   fontSize: "15px",
                 }}
               >
-                Consultez nos forfaits
+                Consultez Nos Forfaits
               </Link>
             </div>
           </div>
