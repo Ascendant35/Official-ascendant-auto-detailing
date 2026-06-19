@@ -293,9 +293,9 @@ export default function HomeFR() {
               Detailing automobile
             </h3>
             <p style={{ color: "#d8d8d8", lineHeight: "1.85", fontSize: "17px" }}>
-              L'esthétique automobile professionnelle va bien au-delà d'un simple lavage. Grâce à l'utilisation de produits spécialisés, d'équipements professionnels et de techniques adaptées, elle permet de nettoyer en profondeur, de restaurer et de protéger chaque surface du véhicule. Les contaminants incrustés, les taches et les impuretés sont traités avec soin afin d'obtenir une finition plus propre, plus raffinée et durable. Le résultat est un véhicule qui paraît mieux entretenu, qui procure une meilleure expérience au quotidien et qui conserve davantage sa valeur au fil du temps.
-          </div>
-        </div>
+  L'esthétique automobile professionnelle va bien au-delà d'un simple lavage. Grâce à l'utilisation de produits spécialisés, d'équipements professionnels et de techniques adaptées, elle permet de nettoyer en profondeur, de restaurer et de protéger chaque surface du véhicule. Les contaminants incrustés, les taches et les impuretés sont traités avec soin afin d'obtenir une finition plus propre, plus raffinée et durable. Le résultat est un véhicule qui paraît mieux entretenu, qui procure une meilleure expérience au quotidien et qui conserve davantage sa valeur au fil du temps.
+</p>
+</div>
       </section>
 
       {/* WHY CHOOSE US */}
