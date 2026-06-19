@@ -80,7 +80,7 @@ export default function HomeFR() {
                   fontSize: "15px",
                 }}
               >
-                Réserver
+                Réserver votre expérience
               </Link>
 
               <Link
