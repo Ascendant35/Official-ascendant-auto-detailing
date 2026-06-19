@@ -701,7 +701,6 @@ export default function HomeEN() {
       Ready To Experience The Ascendant Difference?
     </p>
 
-```
 <h2
   style={{
     fontSize: "clamp(38px, 5vw, 54px)",
@@ -751,7 +750,7 @@ export default function HomeEN() {
       transition: "0.3s ease",
     }}
   >
-    Book Your Appointment
+    Book Your Detail
   </Link>
 
   <Link
@@ -781,7 +780,6 @@ export default function HomeEN() {
 >
   Fully Mobile Service • Home or Workplace • Montreal • Laval • South Shore • North Shore
 </div>
-```
 
   </div>
 </section>
