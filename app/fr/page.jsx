@@ -447,6 +447,120 @@ export default function HomeFR() {
           </Link>
         </div>
       </section>
+      {/* FAQ SECTION */}
+<section
+  style={{
+    padding: "100px 20px",
+    backgroundColor: "#000",
+  }}
+>
+  <div
+    style={{
+      maxWidth: "1100px",
+      margin: "0 auto",
+      background:
+        "linear-gradient(180deg, rgba(212,175,55,0.07), rgba(17,17,17,0.98))",
+      border: "1px solid rgba(212, 175, 55, 0.28)",
+      borderRadius: "28px",
+      padding: "60px 35px",
+      boxShadow: "0 0 45px rgba(212, 175, 55, 0.08)",
+    }}
+  >
+    <h2
+      style={{
+        textAlign: "center",
+        fontSize: "42px",
+        color: "#d4af37",
+        marginTop: 0,
+        marginBottom: "18px",
+      }}
+    >
+      Questions Fréquemment Posées
+    </h2>
+
+    <p
+      style={{
+        textAlign: "center",
+        color: "#c7c7c7",
+        maxWidth: "700px",
+        margin: "0 auto 50px",
+        lineHeight: "1.8",
+        fontSize: "17px",
+      }}
+    >
+      Tout ce que vous devez savoir avant de réserver votre service d’esthétique automobile mobile.
+    </p>
+
+    <div style={{ display: "grid", gap: "18px" }}>
+      {[
+        {
+          question: "Vous déplacez-vous à mon domicile ou à mon lieu de travail ?",
+          answer:
+            "Oui. Ascendant Auto Detailing est un service entièrement mobile. Nous apportons notre équipement professionnel et nos produits directement à votre domicile, à votre lieu de travail ou à l’endroit de votre choix.",
+        },
+        {
+          question: "Quelles régions desservez-vous ?",
+          answer:
+            "Nous desservons fièrement Montréal, Laval, la Rive-Sud et la Rive-Nord. Si vous n’êtes pas certain que votre emplacement est couvert, n’hésitez pas à nous contacter.",
+        },
+        {
+          question: "Dois-je fournir de l’eau ou de l’électricité ?",
+          answer:
+            "Non. Notre unité mobile est entièrement équipée pour effectuer le service. Si certaines conditions particulières sont nécessaires, nous en discuterons avec vous avant votre rendez-vous.",
+        },
+        {
+          question: "Combien de temps dure un rendez-vous d’esthétique automobile ?",
+          answer:
+            "La durée varie selon le forfait choisi et l’état du véhicule. La plupart des rendez-vous durent entre 2 et 4 heures.",
+        },
+        {
+          question: "Un dépôt est-il requis ?",
+          answer:
+            "Oui. Un dépôt de 50 $ est requis pour confirmer votre rendez-vous. Ce montant est appliqué au coût total du service.",
+        },
+        {
+          question: "Que se passe-t-il en cas de pluie ?",
+          answer:
+            "Nous surveillons attentivement les conditions météorologiques. Nous sommes équipés pour travailler dans la plupart des conditions, mais si la pluie ou des conditions météorologiques sévères nous empêchent d’effectuer le service de façon sécuritaire et optimale, nous communiquerons avec vous afin de replanifier votre rendez-vous à un moment qui vous convient.",
+        },
+      ].map((item, index) => (
+        <details
+          key={index}
+          style={{
+            backgroundColor: "#111",
+            border: "1px solid rgba(212, 175, 55, 0.22)",
+            borderRadius: "20px",
+            padding: "24px 26px",
+          }}
+        >
+          <summary
+            style={{
+              cursor: "pointer",
+              color: "#d4af37",
+              fontSize: "20px",
+              fontWeight: "600",
+              listStyle: "none",
+            }}
+          >
+            {item.question}
+          </summary>
+
+          <p
+            style={{
+              color: "#d8d8d8",
+              lineHeight: "1.8",
+              fontSize: "16px",
+              marginTop: "16px",
+              marginBottom: 0,
+            }}
+          >
+            {item.answer}
+          </p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
     </div>
   );
 }
