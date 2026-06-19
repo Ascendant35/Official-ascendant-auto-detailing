@@ -668,6 +668,124 @@ export default function HomeEN() {
     </div>
   </div>
 </section>
+      {/* FINAL CTA */}
+
+<section
+  style={{
+    padding: "100px 20px 120px",
+    backgroundColor: "#000",
+  }}
+>
+  <div
+    style={{
+      maxWidth: "1100px",
+      margin: "0 auto",
+      background:
+        "linear-gradient(180deg, rgba(212,175,55,0.08), rgba(17,17,17,0.98))",
+      border: "1px solid rgba(212, 175, 55, 0.28)",
+      borderRadius: "30px",
+      padding: "70px 40px",
+      textAlign: "center",
+      boxShadow: "0 0 50px rgba(212, 175, 55, 0.08)",
+    }}
+  >
+    <p
+      style={{
+        color: "#d4af37",
+        textTransform: "uppercase",
+        letterSpacing: "2px",
+        fontSize: "13px",
+        marginBottom: "16px",
+      }}
+    >
+      Ready To Experience The Ascendant Difference?
+    </p>
+
+```
+<h2
+  style={{
+    fontSize: "clamp(38px, 5vw, 54px)",
+    marginTop: 0,
+    marginBottom: "22px",
+    lineHeight: "1.15",
+  }}
+>
+  Premium Mobile Detailing,
+  <br />
+  Delivered Directly To You
+</h2>
+
+<p
+  style={{
+    color: "#cfcfcf",
+    fontSize: "18px",
+    lineHeight: "1.9",
+    maxWidth: "760px",
+    margin: "0 auto 40px",
+  }}
+>
+  Whether you're maintaining your daily driver or preserving a luxury
+  vehicle, our fully equipped mobile detailing service delivers exceptional
+  results directly at your home or workplace throughout Montreal, Laval,
+  the South Shore, and the North Shore.
+</p>
+
+<div
+  style={{
+    display: "flex",
+    justifyContent: "center",
+    gap: "18px",
+    flexWrap: "wrap",
+  }}
+>
+  <Link
+    href="/en/book"
+    style={{
+      backgroundColor: "#d4af37",
+      color: "#111",
+      textDecoration: "none",
+      padding: "16px 34px",
+      borderRadius: "999px",
+      fontWeight: "700",
+      fontSize: "15px",
+      transition: "0.3s ease",
+    }}
+  >
+    Book Your Appointment
+  </Link>
+
+  <Link
+    href="/en/contact"
+    style={{
+      border: "1px solid #d4af37",
+      color: "#f5f5f5",
+      textDecoration: "none",
+      padding: "16px 34px",
+      borderRadius: "999px",
+      fontWeight: "600",
+      fontSize: "15px",
+    }}
+  >
+    Contact Us
+  </Link>
+</div>
+
+<div
+  style={{
+    marginTop: "40px",
+    paddingTop: "30px",
+    borderTop: "1px solid rgba(212, 175, 55, 0.15)",
+    color: "#a9a9a9",
+    fontSize: "15px",
+  }}
+>
+  Fully Mobile Service • Home or Workplace • Montreal • Laval • South Shore • North Shore
+</div>
+```
+
+  </div>
+</section>
+
   
     </div>
   );
