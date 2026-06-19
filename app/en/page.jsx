@@ -86,7 +86,7 @@ export default function HomeEN() {
                   fontSize: "15px",
                 }}
               >
-                Book Now
+                Book Your Detail
               </Link>
 
               <Link
@@ -101,7 +101,7 @@ export default function HomeEN() {
                   fontSize: "15px",
                 }}
               >
-                View Packages
+                View Our Packages
               </Link>
             </div>
           </div>
