@@ -447,6 +447,127 @@ export default function HomeFR() {
           </Link>
         </div>
       </section>
+      {/* COMMENT ÇA FONCTIONNE */}
+<section
+  style={{
+    padding: "100px 20px",
+    backgroundColor: "#000",
+  }}
+>
+  <div
+    style={{
+      maxWidth: "1200px",
+      margin: "0 auto",
+      background:
+        "linear-gradient(180deg, rgba(212,175,55,0.07), rgba(17,17,17,0.98))",
+      border: "1px solid rgba(212, 175, 55, 0.28)",
+      borderRadius: "28px",
+      padding: "60px 35px",
+      boxShadow: "0 0 45px rgba(212, 175, 55, 0.08)",
+    }}
+  >
+    <p
+      style={{
+        color: "#d4af37",
+        textTransform: "uppercase",
+        letterSpacing: "2px",
+        fontSize: "13px",
+        textAlign: "center",
+        marginBottom: "16px",
+      }}
+    >
+      Comment ça fonctionne
+    </p>
+
+    <h2
+      style={{
+        textAlign: "center",
+        fontSize: "42px",
+        marginTop: 0,
+        marginBottom: "18px",
+      }}
+    >
+      Une expérience haut de gamme du début à la fin
+    </h2>
+
+    <p
+      style={{
+        textAlign: "center",
+        color: "#c7c7c7",
+        maxWidth: "750px",
+        margin: "0 auto 60px",
+        lineHeight: "1.8",
+        fontSize: "17px",
+      }}
+    >
+      Réserver un service d’esthétique automobile professionnel n’a jamais été
+      aussi simple. Nous apportons notre unité mobile entièrement équipée
+      directement à votre domicile ou à votre lieu de travail, afin de vous
+      offrir des résultats haut de gamme sans interrompre votre journée.
+    </p>
+
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+        gap: "24px",
+      }}
+    >
+      <div style={{ backgroundColor: "#111", border: "1px solid rgba(212, 175, 55, 0.22)", borderRadius: "22px", padding: "30px", textAlign: "center" }}>
+        <div style={{ color: "#d4af37", fontSize: "42px", fontWeight: "700", marginBottom: "15px" }}>
+          01
+        </div>
+
+        <h3 style={{ marginTop: 0 }}>Choisissez votre forfait</h3>
+
+        <p style={{ color: "#c8c8c8", lineHeight: "1.8" }}>
+          Sélectionnez le forfait d’esthétique automobile qui correspond le mieux
+          à votre véhicule et à vos besoins.
+        </p>
+      </div>
+
+      <div style={{ backgroundColor: "#111", border: "1px solid rgba(212, 175, 55, 0.22)", borderRadius: "22px", padding: "30px", textAlign: "center" }}>
+        <div style={{ color: "#d4af37", fontSize: "42px", fontWeight: "700", marginBottom: "15px" }}>
+          02
+        </div>
+
+        <h3 style={{ marginTop: 0 }}>Réservez votre rendez-vous</h3>
+
+        <p style={{ color: "#c8c8c8", lineHeight: "1.8" }}>
+          Choisissez la date et l’heure qui vous conviennent grâce à notre
+          système de réservation en ligne, puis payez le dépôt de 50 $, qui sera
+          déduit du montant final de votre service.
+        </p>
+      </div>
+
+      <div style={{ backgroundColor: "#111", border: "1px solid rgba(212, 175, 55, 0.22)", borderRadius: "22px", padding: "30px", textAlign: "center" }}>
+        <div style={{ color: "#d4af37", fontSize: "42px", fontWeight: "700", marginBottom: "15px" }}>
+          03
+        </div>
+
+        <h3 style={{ marginTop: 0 }}>Nous venons à vous</h3>
+
+        <p style={{ color: "#c8c8c8", lineHeight: "1.8" }}>
+          Notre unité mobile entièrement équipée arrive à votre domicile ou à
+          votre lieu de travail, prête à effectuer le service.
+        </p>
+      </div>
+
+      <div style={{ backgroundColor: "#111", border: "1px solid rgba(212, 175, 55, 0.22)", borderRadius: "22px", padding: "30px", textAlign: "center" }}>
+        <div style={{ color: "#d4af37", fontSize: "42px", fontWeight: "700", marginBottom: "15px" }}>
+          04
+        </div>
+
+        <h3 style={{ marginTop: 0 }}>Profitez du résultat</h3>
+
+        <p style={{ color: "#c8c8c8", lineHeight: "1.8" }}>
+          Profitez de la confiance de conduire un véhicule détaillé
+          professionnellement selon les plus hauts standards.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
       
       
       {/* FAQ SECTION */}
