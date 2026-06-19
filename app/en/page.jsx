@@ -376,12 +376,7 @@ export default function HomeEN() {
           </Link>
                 </div>
       </section>
-
-     
-    </div>
-  );
-}
-{/* FAQ SECTION */}
+      {/* FAQ SECTION */}
 <section
   style={{
     padding: "100px 20px",
@@ -495,3 +490,7 @@ export default function HomeEN() {
     </div>
   </div>
 </section>
+  
+    </div>
+  );
+}
