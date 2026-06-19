@@ -268,11 +268,7 @@ export default function HomeEN() {
           >
             <h3>Standard car wash</h3>
             <p style={{ color: "#c7c7c7", lineHeight: "1.85", fontSize: "17px" }}>
-              ✓ Quick surface cleaning
-✓ Removes loose dirt and debris
-✓ Focused on speed and convenience
-✓ Limited attention to interior details
-✓ Minimal long-term protection
+              A standard car wash is designed for quick, surface-level cleaning. While it can remove visible dirt from your vehicle's exterior, it often overlooks embedded contaminants, interior details, and long-term protection. The focus is on speed and convenience rather than restoring and preserving your vehicle's overall condition.
             </p>
           </div>
 
