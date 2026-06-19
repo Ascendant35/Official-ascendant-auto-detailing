@@ -270,11 +270,7 @@ export default function HomeFR() {
               Lavage classique
             </h3>
             <p style={{ color: "#c7c7c7", lineHeight: "1.85", fontSize: "17px" }}>
-              Un lavage traditionnel enlève surtout la saleté de surface. C’est
-              rapide et utile pour un entretien de base, mais il ne traite pas en
-              profondeur les détails intérieurs, les finitions, les zones moins
-              visibles ou la présentation globale du véhicule. Un lavage traditionnel peut aussi endommager la peinture de votre vehicule.
-            </p>
+              Un lavage automobile standard est conçu pour nettoyer rapidement les saletés visibles à la surface du véhicule. Bien qu'il puisse améliorer l'apparence générale à court terme, il n'offre pas un nettoyage en profondeur ni l'attention nécessaire pour traiter les contaminants incrustés, les taches ou les détails de l'habitacle. L'objectif principal est la rapidité plutôt que la restauration et la préservation de l'état du véhicule.
           </div>
 
           <div
@@ -296,11 +292,7 @@ export default function HomeFR() {
               Detailing automobile
             </h3>
             <p style={{ color: "#d8d8d8", lineHeight: "1.85", fontSize: "17px" }}>
-              Le detailing va plus loin: meilleure attention aux matériaux,
-              finition plus soignée, nettoyage plus précis et résultat beaucoup
-              plus raffiné. C’est le meilleur choix pour les propriétaires qui
-              veulent un véhicule propre, élégant et entretenu avec sérieux. 
-            </p>
+              L'esthétique automobile professionnelle va bien au-delà d'un simple lavage. Grâce à l'utilisation de produits spécialisés, d'équipements professionnels et de techniques adaptées, elle permet de nettoyer en profondeur, de restaurer et de protéger chaque surface du véhicule. Les contaminants incrustés, les taches et les impuretés sont traités avec soin afin d'obtenir une finition plus propre, plus raffinée et durable. Le résultat est un véhicule qui paraît mieux entretenu, qui procure une meilleure expérience au quotidien et qui conserve davantage sa valeur au fil du temps.
           </div>
         </div>
       </section>
