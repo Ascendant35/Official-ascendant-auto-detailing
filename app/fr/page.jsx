@@ -270,8 +270,9 @@ export default function HomeFR() {
               Lavage classique
             </h3>
             <p style={{ color: "#c7c7c7", lineHeight: "1.85", fontSize: "17px" }}>
-              Un lavage automobile standard est conçu pour nettoyer rapidement les saletés visibles à la surface du véhicule. Bien qu'il puisse améliorer l'apparence générale à court terme, il n'offre pas un nettoyage en profondeur ni l'attention nécessaire pour traiter les contaminants incrustés, les taches ou les détails de l'habitacle. L'objectif principal est la rapidité plutôt que la restauration et la préservation de l'état du véhicule.
-          </div>
+  Un lavage automobile standard est conçu pour nettoyer rapidement les saletés visibles à la surface du véhicule. Bien qu'il puisse améliorer l'apparence générale à court terme, il n'offre pas un nettoyage en profondeur ni l'attention nécessaire pour traiter les contaminants incrustés, les taches ou les détails de l'habitacle. L'objectif principal est la rapidité plutôt que la restauration et la préservation de l'état du véhicule.
+</p>
+</div>
 
           <div
             style={{
