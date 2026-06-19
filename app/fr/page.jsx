@@ -49,7 +49,7 @@ export default function HomeFR() {
                 fontWeight: "700",
               }}
             >
-              Le detailing automobile haut de gamme pour tous les véhicules
+              Service d’esthétique automobile mobile haut de gamme pour tous les véhicules
             </h1>
 
             <p
