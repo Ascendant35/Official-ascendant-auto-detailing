@@ -381,3 +381,117 @@ export default function HomeEN() {
     </div>
   );
 }
+{/* FAQ SECTION */}
+<section
+  style={{
+    padding: "100px 20px",
+    backgroundColor: "#000",
+  }}
+>
+  <div
+    style={{
+      maxWidth: "1100px",
+      margin: "0 auto",
+      background:
+        "linear-gradient(180deg, rgba(212,175,55,0.07), rgba(17,17,17,0.98))",
+      border: "1px solid rgba(212, 175, 55, 0.28)",
+      borderRadius: "28px",
+      padding: "60px 35px",
+      boxShadow: "0 0 45px rgba(212, 175, 55, 0.08)",
+    }}
+  >
+    <h2
+      style={{
+        textAlign: "center",
+        fontSize: "42px",
+        color: "#d4af37",
+        marginTop: 0,
+        marginBottom: "18px",
+      }}
+    >
+      Frequently Asked Questions
+    </h2>
+
+    <p
+      style={{
+        textAlign: "center",
+        color: "#c7c7c7",
+        maxWidth: "700px",
+        margin: "0 auto 50px",
+        lineHeight: "1.8",
+        fontSize: "17px",
+      }}
+    >
+      Everything you need to know before booking your mobile detailing appointment.
+    </p>
+
+    <div style={{ display: "grid", gap: "18px" }}>
+      {[
+        {
+          question: "Do you come to my home or workplace?",
+          answer:
+            "Yes. Ascendant Auto Detailing is a fully mobile service. We bring our professional equipment and products directly to your home, workplace, or preferred location.",
+        },
+        {
+          question: "What areas do you serve?",
+          answer:
+            "We proudly serve Montreal, Laval, the South Shore, and the North Shore. If you are unsure whether your location is within our service area, feel free to contact us.",
+        },
+        {
+          question: "Do I need to provide water or electricity?",
+          answer:
+            "No. Our mobile setup is fully equipped to perform the service. If additional requirements apply, we will discuss them with you before your appointment.",
+        },
+        {
+          question: "How long does a detailing appointment take?",
+          answer:
+            "Service times vary depending on the package selected and the condition of the vehicle. Most appointments take between 2 and 4 hours.",
+        },
+        {
+          question: "Is a deposit required?",
+          answer:
+            "Yes. A $50 retainer is required to confirm your appointment. The retainer is applied toward the total cost of your service.",
+        },
+        {
+          question: "What happens if it rains?",
+          answer:
+            "Weather conditions are monitored closely. We are fully equipped to operate under all weather conditions but if rain or severe weather prevents us from completing the service safely and properly, we will contact you to reschedule at a convenient time.",
+        },
+      ].map((item, index) => (
+        <details
+          key={index}
+          style={{
+            backgroundColor: "#111",
+            border: "1px solid rgba(212, 175, 55, 0.22)",
+            borderRadius: "20px",
+            padding: "24px 26px",
+          }}
+        >
+          <summary
+            style={{
+              cursor: "pointer",
+              color: "#d4af37",
+              fontSize: "20px",
+              fontWeight: "600",
+              listStyle: "none",
+            }}
+          >
+            {item.question}
+          </summary>
+
+          <p
+            style={{
+              color: "#d8d8d8",
+              lineHeight: "1.8",
+              fontSize: "16px",
+              marginTop: "16px",
+              marginBottom: 0,
+            }}
+          >
+            {item.answer}
+          </p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
