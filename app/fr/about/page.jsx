@@ -62,6 +62,88 @@ export default function AboutFR() {
         text="Notre vision est de redéfinir ce que représente l’entretien automobile — en le transformant d’un simple service en une expérience premium. Nous aspirons à établir une nouvelle référence dans le domaine du detailing, où la qualité, la constance et le raffinement ne sont jamais compromis."
         image="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=80"
       />
+```jsx
+{/* CONFIDENTIALITÉ ET RENSEIGNEMENTS PERSONNELS */}
+<section style={section}>
+  <div
+    style={{
+      background:
+        "linear-gradient(180deg, rgba(212,175,55,0.08), rgba(17,17,17,0.98))",
+      border: "1px solid rgba(212, 175, 55, 0.28)",
+      borderRadius: "30px",
+      padding: "60px 40px",
+      boxShadow: "0 0 50px rgba(212, 175, 55, 0.08)",
+    }}
+  >
+    <p
+      style={{
+        color: "#d4af37",
+        textTransform: "uppercase",
+        letterSpacing: "2px",
+        fontSize: "13px",
+        marginBottom: "16px",
+      }}
+    >
+      Confidentialité
+    </p>
+
+    <h2
+      style={{
+        fontSize: "42px",
+        marginTop: 0,
+        marginBottom: "22px",
+        lineHeight: "1.15",
+      }}
+    >
+      Vos renseignements personnels sont importants
+    </h2>
+
+    <p
+      style={{
+        color: "#cfcfcf",
+        fontSize: "18px",
+        lineHeight: "1.9",
+        marginBottom: "20px",
+      }}
+    >
+      Chez Ascendant Auto Detailing, nous respectons votre vie privée et nous
+      nous engageons à protéger vos renseignements personnels. Les informations
+      recueillies par l’entremise de nos formulaires de contact et de notre
+      système de réservation peuvent inclure votre nom, votre adresse courriel,
+      votre numéro de téléphone, l’adresse du service ainsi que les informations
+      relatives à votre véhicule.
+    </p>
+
+    <p
+      style={{
+        color: "#cfcfcf",
+        fontSize: "18px",
+        lineHeight: "1.9",
+        marginBottom: "20px",
+      }}
+    >
+      Ces renseignements sont recueillis uniquement dans le but de communiquer
+      avec vous, de planifier vos rendez-vous, de fournir nos services et
+      d’améliorer votre expérience client. Nous ne vendons ni ne partageons vos
+      renseignements personnels à des tiers, sauf lorsque cela est nécessaire
+      au traitement des rendez-vous ou lorsque la loi l’exige.
+    </p>
+
+    <p
+      style={{
+        color: "#cfcfcf",
+        fontSize: "18px",
+        lineHeight: "1.9",
+        marginBottom: 0,
+      }}
+    >
+      Si vous avez des questions concernant la collecte, l’utilisation ou la
+      protection de vos renseignements personnels, n’hésitez pas à nous
+      contacter. Il nous fera plaisir de vous répondre.
+    </p>
+  </div>
+</section>
+```
 
       {/* CTA */}
       <section style={section}>
