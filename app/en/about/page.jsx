@@ -63,6 +63,87 @@ export default function AboutEN() {
         image="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=80"
       />
 
+      ```jsx
+{/* PRIVACY & CONFIDENTIALITY */}
+<section style={section}>
+  <div
+    style={{
+      background:
+        "linear-gradient(180deg, rgba(212,175,55,0.08), rgba(17,17,17,0.98))",
+      border: "1px solid rgba(212, 175, 55, 0.28)",
+      borderRadius: "30px",
+      padding: "60px 40px",
+      boxShadow: "0 0 50px rgba(212, 175, 55, 0.08)",
+    }}
+  >
+    <p
+      style={{
+        color: "#d4af37",
+        textTransform: "uppercase",
+        letterSpacing: "2px",
+        fontSize: "13px",
+        marginBottom: "16px",
+      }}
+    >
+      Privacy & Confidentiality
+    </p>
+
+    <h2
+      style={{
+        fontSize: "42px",
+        marginTop: 0,
+        marginBottom: "22px",
+        lineHeight: "1.15",
+      }}
+    >
+      Your Information Matters
+    </h2>
+
+    <p
+      style={{
+        color: "#cfcfcf",
+        fontSize: "18px",
+        lineHeight: "1.9",
+        marginBottom: "20px",
+      }}
+    >
+      At Ascendant Auto Detailing, we respect your privacy and are committed to
+      protecting your personal information. Information submitted through our
+      contact forms and booking system may include your name, email address,
+      phone number, service address, and vehicle details.
+    </p>
+
+    <p
+      style={{
+        color: "#cfcfcf",
+        fontSize: "18px",
+        lineHeight: "1.9",
+        marginBottom: "20px",
+      }}
+    >
+      This information is collected solely for the purpose of communicating
+      with you, scheduling appointments, providing our services, and improving
+      your customer experience. We do not sell or share your personal
+      information with third parties except when necessary to process
+      appointments or when required by law.
+    </p>
+
+    <p
+      style={{
+        color: "#cfcfcf",
+        fontSize: "18px",
+        lineHeight: "1.9",
+        marginBottom: 0,
+      }}
+    >
+      If you have any questions regarding the collection, use, or protection
+      of your personal information, please contact us and we will be happy to
+      assist you.
+    </p>
+  </div>
+</section>
+
+
       {/* CTA */}
       <section style={section}>
         <div style={ctaBox}>
