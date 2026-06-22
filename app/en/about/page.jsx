@@ -138,7 +138,7 @@ export default function AboutEN() {
     >
       If you have any questions regarding the collection, use, or protection
       of your personal information, please contact us and we will be happy to
-      assist you.
+      assist you. You can contact us by e-mail at ascendantautodetailing@gmail.com or by phone at 514-000-0000.
     </p>
   </div>
 </section>
