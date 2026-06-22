@@ -84,7 +84,7 @@ export default function AboutFR() {
         marginBottom: "16px",
       }}
     >
-      Confidentialité
+      Confidentialité & Vie Privée
     </p>
 
     <h2
