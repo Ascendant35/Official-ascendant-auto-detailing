@@ -454,17 +454,20 @@ const getCalendlyLink = () => {
             </span>
           </div>
 
-          <div style={retainerBox}>
-            <p style={{ margin: 0, color: "#ddd", lineHeight: 1.6 }}>
-              All appointments require a{" "}
-              <span style={gold}>$50 retainer</span>, which will be
-              fully deducted from your final service total. 
+         <div style={retainerBox}>
+  <div style={{ color: "#ddd", lineHeight: 1.6 }}>
+    <p style={{ margin: 0 }}>
+      All appointments require a{" "}
+      <span style={gold}>$50 retainer</span>, which will be fully deducted from your final service total.
+    </p>
 
-              Please note: All appointments must be booked a minimum of 24 hours in advance. If you require same-day service, please call us to inquire about availability. Same-day appointments cannot be guaranteed.
-            </p>
-          </div>
+    <p style={{ marginTop: "20px", marginBottom: 0 }}>
+      <strong>Booking Notice:</strong> All appointments must be booked a minimum of 24 hours in advance. If you require same-day service, please call us to inquire about availability. Same-day appointments cannot be guaranteed.
+    </p>
+  </div>
+</div>
 
-          <a
+<a
   href={getCalendlyLink()}
   target="_blank"
   rel="noreferrer"
@@ -472,7 +475,7 @@ const getCalendlyLink = () => {
 >
   Confirm Booking
 </a>
-        </div>
+                  </div>
       </section>
     </div>
   );
