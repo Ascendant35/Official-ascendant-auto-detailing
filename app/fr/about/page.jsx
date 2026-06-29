@@ -143,7 +143,7 @@ export default function AboutFR() {
     </p>
   </div>
 </section>
-```
+
 
       {/* CTA */}
       <section style={section}>
