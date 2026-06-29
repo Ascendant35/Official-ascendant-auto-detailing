@@ -423,7 +423,10 @@ const getCalendlyLinkFR = () => {
               Tous les rendez-vous nécessitent un{" "}
               <span style={gold}>dépôt de 50 $</span>, déduit du total final.
 
+
+
               Avis de réservation : Afin d'assurer une planification optimale, tous les rendez-vous doivent être réservés au minimum 24 heures à l'avance. Si vous souhaitez un service le jour même, veuillez nous appeler afin de vérifier les disponibilités. Les rendez-vous le jour même ne peuvent être garantis.
+            
             </p>
           </div>
 
