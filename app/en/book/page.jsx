@@ -498,7 +498,30 @@ const getCalendlyLink = () => {
 }
 
 /* STYLES */
-/* STYLES */
+
+
+const goldAccentBox = {
+  background: "#111",
+  border: "1px solid rgba(212, 175, 55, 0.65)",
+  borderRadius: "18px",
+  padding: "22px",
+  marginTop: "18px",
+  boxShadow: "0 0 10px rgba(212, 175, 55, 0.05)",
+};
+
+const infoTitle = {
+  color: "#d4af37",
+  fontSize: "1.2rem",
+  fontWeight: "700",
+  margin: "0 0 14px",
+};
+
+const infoText = {
+  color: "#ddd",
+  lineHeight: 1.8,
+  fontSize: "1rem",
+  margin: 0,
+};
 
 const goldAccentBox = {
   background: "#111",
