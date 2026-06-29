@@ -62,7 +62,7 @@ export default function AboutFR() {
         text="Notre vision est de redéfinir ce que représente l’entretien automobile — en le transformant d’un simple service en une expérience premium. Nous aspirons à établir une nouvelle référence dans le domaine du detailing, où la qualité, la constance et le raffinement ne sont jamais compromis."
         image="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=80"
       />
-```jsx
+
 {/* CONFIDENTIALITÉ ET RENSEIGNEMENTS PERSONNELS */}
 <section style={section}>
   <div
