@@ -466,6 +466,15 @@ const getCalendlyLink = () => {
     </p>
   </div>
 </div>
+          <div style={goldAccentBox}>
+  <h3 style={{ color: "#d4af37", marginTop: 0 }}>
+    Our Satisfaction Guarantee
+  </h3>
+
+  <p style={{ color: "#ddd", lineHeight: 1.6, marginBottom: 0 }}>
+    Your satisfaction is our priority. Before we leave, we'll review the completed service with you to ensure it meets your expectations.
+  </p>
+</div>
 
 <a
   href={getCalendlyLink()}
