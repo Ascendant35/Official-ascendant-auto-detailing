@@ -492,6 +492,21 @@ const getCalendlyLink = () => {
 
 /* STYLES */
 
+const goldAccentBox = {
+  background: "#111",
+  border: "1px solid #2a2a2a",
+  borderLeft: "4px solid #d4af37",
+  borderRadius: "16px",
+  padding: "20px",
+  marginTop: "20px",
+};
+
+const heroStyle = {
+  minHeight: "58vh",
+  display: "flex",
+  alignItems: "center",
+  position: "relative",
+};
 const heroStyle = {
   minHeight: "58vh",
   display: "flex",
