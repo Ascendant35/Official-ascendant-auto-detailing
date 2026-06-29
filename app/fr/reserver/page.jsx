@@ -419,16 +419,14 @@ const getCalendlyLinkFR = () => {
           </div>
 
          <div style={retainerBox}>
-  <div style={{ color: "#ddd", lineHeight: 1.6 }}>
-    <p style={{ margin: 0 }}>
-      Tous les rendez-vous nécessitent un{" "}
-      <span style={gold}>dépôt de 50 $</span>, déduit du total final.
-    </p>
+  <p style={{ margin: 0, color: "#ddd", lineHeight: 1.6 }}>
+    Tous les rendez-vous nécessitent un{" "}
+    <span style={gold}>dépôt de 50 $</span>, déduit du total final.
+  </p>
 
-    <p style={{ marginTop: "20px", marginBottom: 0 }}>
-      <strong>Avis de réservation :</strong> Afin d'assurer une planification optimale, tous les rendez-vous doivent être réservés au minimum 24 heures à l'avance. Si vous souhaitez un service le jour même, veuillez nous appeler afin de vérifier les disponibilités. Les rendez-vous le jour même ne peuvent être garantis.
-    </p>
-  </div>
+  <p style={{ margin: "20px 0 0", color: "#ddd", lineHeight: 1.6 }}>
+    <strong>Avis de réservation :</strong> Afin d'assurer une planification optimale, tous les rendez-vous doivent être réservés au minimum 24 heures à l'avance. Si vous souhaitez un service le jour même, veuillez nous appeler afin de vérifier les disponibilités. Les rendez-vous le jour même ne peuvent être garantis.
+  </p>
 </div>
 
 <a
@@ -439,7 +437,12 @@ const getCalendlyLinkFR = () => {
 >
   Confirmer le rendez-vous
 </a>
-          
+                  </div>
+      </section>
+    </div>
+  );
+}
+
 /* STYLES */
 
 const heroStyle = {
