@@ -458,7 +458,9 @@ const getCalendlyLink = () => {
             <p style={{ margin: 0, color: "#ddd", lineHeight: 1.6 }}>
               All appointments require a{" "}
               <span style={gold}>$50 retainer</span>, which will be
-              fully deducted from your final service total.
+              fully deducted from your final service total. 
+
+              Please note: All appointments must be booked a minimum of 24 hours in advance. If you require same-day service, please call us to inquire about availability. Same-day appointments cannot be guaranteed.
             </p>
           </div>
 
