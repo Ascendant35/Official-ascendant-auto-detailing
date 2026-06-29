@@ -418,14 +418,33 @@ const getCalendlyLinkFR = () => {
             </span>
           </div>
 
-         <div style={retainerBox}>
-  <p style={{ margin: 0, color: "#ddd", lineHeight: 1.6 }}>
+         <div style={goldAccentBox}>
+  <h3 style={infoTitle}>💰 Politique de dépôt</h3>
+
+  <p style={infoText}>
     Tous les rendez-vous nécessitent un{" "}
     <span style={gold}>dépôt de 50 $</span>, déduit du total final.
   </p>
+</div>
 
-  <p style={{ margin: "20px 0 0", color: "#ddd", lineHeight: 1.6 }}>
-    <strong>Avis de réservation :</strong> Afin d'assurer une planification optimale, tous les rendez-vous doivent être réservés au minimum 24 heures à l'avance. Si vous souhaitez un service le jour même, veuillez nous appeler afin de vérifier les disponibilités. Les rendez-vous le jour même ne peuvent être garantis.
+<div style={goldAccentBox}>
+  <h3 style={infoTitle}>📅 Avis de réservation</h3>
+
+  <p style={infoText}>
+    Tous les rendez-vous doivent être réservés au minimum 24 heures à l'avance.
+    Si vous souhaitez un service le jour même, veuillez nous appeler afin de
+    vérifier les disponibilités. Les rendez-vous le jour même ne peuvent être
+    garantis.
+  </p>
+</div>
+
+<div style={goldAccentBox}>
+  <h3 style={infoTitle}>🛡️ Notre garantie de satisfaction</h3>
+
+  <p style={infoText}>
+    Votre satisfaction est notre priorité. Avant notre départ, nous passerons en
+    revue le service complété avec vous afin de nous assurer qu'il répond à vos
+    attentes.
   </p>
 </div>
 
@@ -444,6 +463,29 @@ const getCalendlyLinkFR = () => {
 }
 
 /* STYLES */
+
+const goldAccentBox = {
+  background: "#111",
+  border: "1px solid rgba(212, 175, 55, 0.65)",
+  borderRadius: "18px",
+  padding: "22px",
+  marginTop: "18px",
+  boxShadow: "0 0 10px rgba(212, 175, 55, 0.05)",
+};
+
+const infoTitle = {
+  color: "#d4af37",
+  fontSize: "1.2rem",
+  fontWeight: "700",
+  margin: "0 0 14px",
+};
+
+const infoText = {
+  color: "#ddd",
+  lineHeight: 1.8,
+  fontSize: "1rem",
+  margin: 0,
+};
 
 const heroStyle = {
   minHeight: "58vh",
