@@ -491,9 +491,13 @@ const getCalendlyLink = () => {
 >
   Confirm Booking
 </a>
+         </div>
+      </section>
+    </div>
   );
 }
 
+/* STYLES */
 /* STYLES */
 
 const goldAccentBox = {
