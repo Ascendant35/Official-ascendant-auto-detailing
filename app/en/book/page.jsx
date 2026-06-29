@@ -454,25 +454,32 @@ const getCalendlyLink = () => {
             </span>
           </div>
 
-         <div style={retainerBox}>
-  <div style={{ color: "#ddd", lineHeight: 1.6 }}>
-    <p style={{ margin: 0 }}>
-      All appointments require a{" "}
-      <span style={gold}>$50 retainer</span>, which will be fully deducted from your final service total.
-    </p>
+         <div style={goldAccentBox}>
+  <h3 style={infoTitle}>💰 Retainer Policy</h3>
 
-    <p style={{ marginTop: "20px", marginBottom: 0 }}>
-      <strong>Booking Notice:</strong> All appointments must be booked a minimum of 24 hours in advance. If you require same-day service, please call us to inquire about availability. Same-day appointments cannot be guaranteed.
-    </p>
-  </div>
+  <p style={infoText}>
+    All appointments require a{" "}
+    <span style={gold}>$50 retainer</span>, which will be fully deducted
+    from your final service total.
+  </p>
 </div>
-          <div style={goldAccentBox}>
-  <h3 style={{ color: "#d4af37", marginTop: 0 }}>
-    Our Satisfaction Guarantee
-  </h3>
 
-  <p style={{ color: "#ddd", lineHeight: 1.6, marginBottom: 0 }}>
-    Your satisfaction is our priority. Before we leave, we'll review the completed service with you to ensure it meets your expectations.
+<div style={goldAccentBox}>
+  <h3 style={infoTitle}>📅 Booking Notice</h3>
+
+  <p style={infoText}>
+    All appointments must be booked a minimum of 24 hours in advance. If
+    you require same-day service, please call us to inquire about
+    availability. Same-day appointments cannot be guaranteed.
+  </p>
+</div>
+
+<div style={goldAccentBox}>
+  <h3 style={infoTitle}>🛡️ Our Satisfaction Guarantee</h3>
+
+  <p style={infoText}>
+    Your satisfaction is our priority. Before we leave, we'll review the
+    completed service with you to ensure it meets your expectations.
   </p>
 </div>
 
@@ -484,9 +491,6 @@ const getCalendlyLink = () => {
 >
   Confirm Booking
 </a>
-                  </div>
-      </section>
-    </div>
   );
 }
 
@@ -494,11 +498,11 @@ const getCalendlyLink = () => {
 
 const goldAccentBox = {
   background: "#111",
-  border: "1px solid #2a2a2a",
-  borderLeft: "4px solid #d4af37",
-  borderRadius: "16px",
-  padding: "20px",
+  border: "1px solid rgba(212, 175, 55, 0.6)",
+  borderRadius: "18px",
+  padding: "22px",
   marginTop: "20px",
+  boxShadow: "0 0 10px rgba(212, 175, 55, 0.05)",
 };
 
 const heroStyle = {
