@@ -380,8 +380,10 @@ const [binCount, setBinCount] = useState(0);
       </div>
     </div>
   </div>
-   </div>    
+   </div>   
 
+          
+ </div> 
         <div style={totalBox}>
           <h2 style={title}>Your Total</h2>
 
