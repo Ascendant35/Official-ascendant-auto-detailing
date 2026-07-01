@@ -392,25 +392,28 @@ export default function TarifsFR() {
           <Extra title="Clay Bar Treatment" price="Starting at 80$" />
 
           <Extra
-            title="Exterior Detailing Only"
-            price={
-  <>
-    <p style={{ margin: "0 0 6px 0" }}>Sedan: Starting at $99.99</p>
-    <p style={{ margin: "0 0 6px 0" }}>SUV: Starting at $124.99</p>
-    <p style={{ margin: "0" }}>Truck / Large SUV: Starting at $159.99</p>
-  </>
-}
-          />
+  title="Exterior Detailing Only"
+  price={
+    <>
+      <p style={{ margin: "0 0 6px 0" }}>Sedan: Starting at $99.99</p>
+      <p style={{ margin: "0 0 6px 0" }}>SUV: Starting at $124.99</p>
+      <p style={{ margin: "0" }}>Truck / Large SUV: Starting at $159.99</p>
+    </>
+  }
+/>
 
-          <Extra
-            title="Interior Detailing Only"
-            price={
-  <>
-    <p style={{ margin: "0 0 6px 0" }}>Sedan: Starting at $119.99</p>
-    <p style={{ margin: "0 0 6px 0" }}>SUV: Starting at $159.99</p>
-    <p style={{ margin: "0" }}>Truck / Large SUV: Starting at $189.99</p>
+<Extra
+  title="Interior Detailing Only"
+  price={
+    <>
+      <p style={{ margin: "0 0 6px 0" }}>Sedan: Starting at $119.99</p>
+      <p style={{ margin: "0 0 6px 0" }}>SUV: Starting at $159.99</p>
+      <p style={{ margin: "0" }}>Truck / Large SUV: Starting at $189.99</p>
+    </>
+  }
+/>
 
-   <Extra
+<Extra
   title="Trash & Recycling Bin Sanitization"
   price={
     <>
