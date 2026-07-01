@@ -793,7 +793,9 @@ export default function HomeEN() {
     </div>
   );
 }
-
+    </div>
+  );
+}
 const floatingCallButton = {
   position: "fixed",
   bottom: "28px",
@@ -811,6 +813,3 @@ const floatingCallButton = {
   boxShadow: "0 10px 30px rgba(212,175,55,.35)",
   zIndex: 9999,
 };
-    </div>
-  );
-}
