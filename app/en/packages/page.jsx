@@ -410,13 +410,17 @@ export default function TarifsFR() {
     <p style={{ margin: "0 0 6px 0" }}>SUV: Starting at $159.99</p>
     <p style={{ margin: "0" }}>Truck / Large SUV: Starting at $189.99</p>
 
-   <div style={addonCard}>
-  <h3 style={addonTitle}>Trash & Recycling Bin Refresh</h3>
-  <p style={addonPrice}>
-    1 bin: 20$<br />
-    2 bins: 35$<br />
-    3 bins: 50$<br />
-    4+ bins: 15$/bin
+   <Extra
+  title="Trash & Recycling Bin Sanitization"
+  price={
+    <>
+      <p style={{ margin: "0 0 6px 0" }}>1 bin: $20</p>
+      <p style={{ margin: "0 0 6px 0" }}>2 bins: $35</p>
+      <p style={{ margin: "0 0 6px 0" }}>3 bins: $50</p>
+      <p style={{ margin: "0" }}>4+ bins: $15 / bin</p>
+    </>
+  }
+/>
   </p>
 </div>
   </>
