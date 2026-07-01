@@ -447,8 +447,7 @@ const getCalendlyLinkFR = () => {
                   </div>
                 );
               })
-      {selectedExtras.map((extraId) => {
-  ...
+     
 })}
 {binCount > 0 && (
   <div style={summaryRow}>
