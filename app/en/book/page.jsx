@@ -411,24 +411,6 @@ const [binCount, setBinCount] = useState(0);
 
           <div style={divider} />
 
-              <p style={{ color: "#888", margin: 0 }}>No extras selected</p>
-            ) : (
-              selectedExtras.map((extraId) => {
-                const extra = extras.find((item) => item.id === extraId);
-                if (!extra) return null;
-
-                return (
-                  <div key={extraId} style={summaryRow}>
-                    <span style={summaryLabel}>{extra.name}</span>
-                    <span>+${extra.price.toFixed(2)}</span>
-                  </div>
-                );
-              })
-            )}
-          </div>
-
-          <div style={divider} />
-
                     <div style={summarySection}>
             <p style={{ ...subTitle, marginBottom: "14px" }}>Extras</p>
 
