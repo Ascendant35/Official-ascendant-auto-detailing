@@ -392,7 +392,7 @@ export default function TarifsFR() {
             />
           
             <Extra
-  title="Rafraîchissement des bacs à déchets et recyclage"
+  title="Nettoyage complet des bacs à déchets et recyclage"
   price={
     <>
       <p style={{ margin: "0 0 6px 0" }}>1 bac : 20 $</p>
