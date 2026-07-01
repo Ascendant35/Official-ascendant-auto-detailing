@@ -424,11 +424,7 @@ export default function TarifsFR() {
     </>
   }
 />
-  </p>
-</div>
-  </>
-}
-          />
+  
         </div>
       </section>
     </div>
