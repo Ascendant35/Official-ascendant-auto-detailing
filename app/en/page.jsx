@@ -783,7 +783,33 @@ export default function HomeEN() {
 
   </div>
 </section>
-
+      <a
+        href="tel:+15145563322"
+        style={floatingCallButton}
+        aria-label="Call Ascendant Auto Detailing"
+      >
+        📞
+      </a>
+    </div>
+  );
+}
+const floatingCallButton = {
+  position: "fixed",
+  bottom: "28px",
+  right: "28px",
+  width: "64px",
+  height: "64px",
+  borderRadius: "50%",
+  background: "linear-gradient(145deg, #d4af37, #c19b2b)",
+  color: "#111",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  textDecoration: "none",
+  fontSize: "28px",
+  boxShadow: "0 10px 30px rgba(212,175,55,.35)",
+  zIndex: 9999,
+};
   
     </div>
   );
