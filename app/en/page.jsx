@@ -784,6 +784,27 @@ export default function HomeEN() {
   </div>
 </section>
 
+      return (
+  <div style={{ backgroundColor: "#0a0a0a" }}>
+
+    <Header lang="en" />
+
+    <section>...</section>
+
+    <section>...</section>
+
+    <Footer />
+
+    <a
+      href="tel:+15145563322"
+      style={floatingCallButton}
+      aria-label="Call Ascendant Auto Detailing"
+    >
+      📞
+    </a>
+
+  </div>
+);
   
     </div>
   );
