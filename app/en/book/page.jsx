@@ -341,39 +341,7 @@ const [binCount, setBinCount] = useState(0);
             </div>
           </div>
         </div>
-        <div style={sectionSpacing}>
-  <h3 style={subTitle}>Trash & Recycling Bin Sanitization</h3>
-
-  <p style={{ color: "#bbb", marginBottom: "14px" }}>
-    Select the number of bins you'd like cleaned during your appointment.
-  </p>
-
-  <div style={optionGrid} className="optionGrid">
-    {[
-      { count: 0, label: "No bins", price: "$0" },
-      { count: 1, label: "1 Bin", price: "$20" },
-      { count: 2, label: "2 Bins", price: "$35" },
-      { count: 3, label: "3 Bins", price: "$50" },
-      { count: 4, label: "4+ Bins", price: "$15 / bin" },
-    ].map((option) => {
-      const active = binCount === option.count;
-
-      return (
-        <button
-          key={option.count}
-          type="button"
-          onClick={() => setBinCount(option.count)}
-          style={{
-            ...optionCard,
-            ...(active ? activeOptionCard : {}),
-          }}
-        >
-          <span style={optionTitle}>{option.label}</span>
-          <span style={optionSmallPrice}>{option.price}</span>
-        </button>
-      );
-    })}
-  </div>
+      
 </div>
 
         <div style={totalBox}>
