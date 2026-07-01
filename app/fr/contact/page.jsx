@@ -68,7 +68,7 @@ export default function ContactFR() {
             <div style={card}>
               <h3 style={cardTitle}>Téléphone</h3>
               <p style={cardText}>Appelez-nous directement pour une assistance immédiate.</p>
-              <p style={goldText}>+1 (000) 000-0000</p>
+              <p style={goldText}>+1 (514) 556-3322</p>
             </div>
           </a>
 
