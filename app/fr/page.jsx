@@ -799,7 +799,35 @@ export default function HomeFR() {
     </div>
   </div>
 </section>
+      <a
+  href="tel:+15145563322"
+  style={floatingCallButton}
+  aria-label="Appeler Ascendant Auto Detailing"
+>
+  <span style={{ fontSize: "20px" }}>📞</span>
+  <span>Appelez-nous</span>
+</a>
 
     </div>
   );
 }
+const floatingCallButton = {
+  position: "fixed",
+  bottom: "28px",
+  right: "28px",
+  display: "flex",
+  alignItems: "center",
+  gap: "10px",
+  padding: "14px 22px",
+  background: "#d4af37",
+  color: "#111",
+  borderRadius: "999px",
+  textDecoration: "none",
+  fontWeight: "700",
+  fontSize: "16px",
+  fontFamily: "inherit",
+  boxShadow: "0 10px 30px rgba(212,175,55,.30)",
+  border: "1px solid rgba(255,255,255,.15)",
+  zIndex: 9999,
+  transition: "all .25s ease",
+};
