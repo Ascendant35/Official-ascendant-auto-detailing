@@ -96,6 +96,13 @@ const [binCount, setBinCount] = useState(0);
   if (binCount >= 4) return binCount * 15;
   return 0;
 }, [binCount]);
+  const getBinPriceLabel = () => {
+  if (binCount === 0) return "Select quantity";
+  if (binCount === 1) return "+$20.00";
+  if (binCount === 2) return "+$35.00";
+  if (binCount === 3) return "+$50.00";
+  return `+$${binCleaningTotal.toFixed(2)}`;
+};
 
   const subtotal = packageBasePrice + extrasTotal + binCleaningTotal;
   const gst = subtotal * 0.05;
@@ -320,28 +327,60 @@ const [binCount, setBinCount] = useState(0);
           </div>
 
           <div style={sectionSpacing}>
-            <h3 style={subTitle}>Add Extras</h3>
-            <div style={extrasGrid} className="extrasGrid">
-              {extras.map((extra) => {
-                const active = selectedExtras.includes(extra.id);
-                return (
-                  <button
-                    key={extra.id}
-                    onClick={() => toggleExtra(extra.id)}
-                    style={{
-                      ...extraCard,
-                      ...(active ? activeOptionCard : {}),
-                    }}
-                  >
-                    <span>{extra.name}</span>
-                    <span style={optionSmallPrice}>+${extra.price.toFixed(2)}</span>
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-      
+  <h3 style={subTitle}>Add Extras</h3>
+
+  <div style={extrasGrid} className="extrasGrid">
+    {extras.map((extra) => {
+      const active = selectedExtras.includes(extra.id);
+
+      return (
+        <button
+          key={extra.id}
+          onClick={() => toggleExtra(extra.id)}
+          style={{
+            ...extraCard,
+            ...(active ? activeOptionCard : {}),
+          }}
+        >
+          <span>{extra.name}</span>
+          <span style={optionSmallPrice}>+${extra.price.toFixed(2)}</span>
+        </button>
+      );
+    })}
+
+    <div
+      style={{
+        ...binOptionCard,
+        ...(binCount > 0 ? activeOptionCard : {}),
+      }}
+    >
+      <div>
+        <span>Trash & Recycling Bin Sanitization</span>
+        <p style={binHint}>Choose how many bins you want cleaned</p>
+      </div>
+
+      <div style={{ display: "flex", flexDirection: "column", gap: "8px", alignItems: "flex-end" }}>
+        <span style={optionSmallPrice}>{getBinPriceLabel()}</span>
+
+        <select
+          value={binCount}
+          onChange={(e) => setBinCount(Number(e.target.value))}
+          style={binSelect}
+        >
+          <option value={0}>None</option>
+          <option value={1}>1 bin</option>
+          <option value={2}>2 bins</option>
+          <option value={3}>3 bins</option>
+          <option value={4}>4 bins</option>
+          <option value={5}>5 bins</option>
+          <option value={6}>6 bins</option>
+          <option value={7}>7 bins</option>
+          <option value={8}>8 bins</option>
+        </select>
+      </div>
+    </div>
+  </div>
+   </div>    
 </div>
 
         <div style={totalBox}>
@@ -372,9 +411,6 @@ const [binCount, setBinCount] = useState(0);
 
           <div style={divider} />
 
-          <div style={summarySection}>
-            <p style={{ ...subTitle, marginBottom: "14px" }}>Extras</p>
-            {selectedExtras.length === 0 ? (
               <p style={{ color: "#888", margin: 0 }}>No extras selected</p>
             ) : (
               selectedExtras.map((extraId) => {
@@ -673,6 +709,33 @@ const extraCard = {
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
+};
+const binOptionCard = {
+  backgroundColor: "#0d0d0d",
+  border: "1px solid rgba(255,255,255,0.06)",
+  borderRadius: "18px",
+  padding: "18px",
+  color: "#f5f5f5",
+  textAlign: "left",
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  gap: "16px",
+};
+
+const binSelect = {
+  backgroundColor: "#111",
+  color: "#f5f5f5",
+  border: "1px solid rgba(212,175,55,0.5)",
+  borderRadius: "10px",
+  padding: "8px 10px",
+  outline: "none",
+};
+
+const binHint = {
+  color: "#888",
+  fontSize: "12px",
+  margin: "6px 0 0",
 };
 
 const activeOptionCard = {
