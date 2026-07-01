@@ -437,6 +437,18 @@ const getCalendlyLinkFR = () => {
     garantis.
   </p>
 </div>
+          <div style={goldAccentBox}>
+  <h3 style={infoTitle}>❌ Politique d’annulation</h3>
+
+  <p style={infoText}>
+    Afin d’assurer une planification optimale et une disponibilité équitable
+    pour tous les clients, les rendez-vous doivent être annulés au moins{" "}
+    <span style={gold}>24 heures à l’avance</span> afin d’être admissibles
+    au remboursement complet du <span style={gold}>dépôt de 50 $</span>. Les
+    annulations effectuées dans les 24 heures précédant le rendez-vous ne
+    sont pas remboursables.
+  </p>
+</div>
 
 <div style={goldAccentBox}>
   <h3 style={infoTitle}>🛡️ Notre garantie de satisfaction</h3>
