@@ -416,6 +416,8 @@ export default function BookNow() {
               All appointments must be booked a minimum of 24 hours in advance.
               If you require same-day service, please call us to inquire about
               availability. Same-day appointments cannot be guaranteed. 
+               </p>
+</div>
 
               <div style={goldAccentBox}>
   <h3 style={infoTitle}>❌ Cancellation Policy</h3>
