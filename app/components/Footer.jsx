@@ -47,7 +47,7 @@ export default function Footer({ lang = "en" }) {
               : "Montreal, Laval, South Shore, North Shore"}
           </p>
           <p style={text}>📧 ascendantautodetailing@gmail.com</p>
-          <p style={text}>📞 (514) 000-0000</p>
+          <p style={text}>📞 (514) 556-3322 </p>
           <p style={text}>
             {isFR ? "Sur rendez-vous uniquement" : "By appointment only"}
           </p>
