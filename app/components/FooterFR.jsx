@@ -41,7 +41,7 @@ export default function FooterFR() {
             📍 Montréal, Laval, Rive-Sud, Rive-Nord
           </p>
           <p style={text}>📧 ascendantautodetailing@gmail.com</p>
-          <p style={text}>📞 (514) 000-0000</p>
+          <p style={text}>📞 (514) 556-3322</p>
           <p style={text}>
             Sur rendez-vous uniquement
           </p>
