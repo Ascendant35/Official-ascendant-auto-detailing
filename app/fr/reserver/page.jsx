@@ -436,7 +436,7 @@ const getCalendlyLinkFR = () => {
                 Aucune option sélectionnée
               </p>
             ) : (
-              s              {selectedExtras.map((extraId) => {
+                            {selectedExtras.map((extraId) => {
                 const extra = extras.find((item) => item.id === extraId);
                 if (!extra) return null;
 
