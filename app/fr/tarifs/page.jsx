@@ -402,7 +402,7 @@ export default function TarifsFR() {
     </>
   }
 />
-          />
+    
         </div>
       </section>
     </div>
