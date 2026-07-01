@@ -436,7 +436,7 @@ const getCalendlyLinkFR = () => {
                 Aucune option sélectionnée
               </p>
             ) : (
-              selectedExtras.map((extraId) => {
+              s              {selectedExtras.map((extraId) => {
                 const extra = extras.find((item) => item.id === extraId);
                 if (!extra) return null;
 
@@ -446,10 +446,17 @@ const getCalendlyLinkFR = () => {
                     <span>+${extra.price.toFixed(2)}</span>
                   </div>
                 );
-              })
-     
-})}
-{binCount > 0 && (
+              })}
+
+              {binCount > 0 && (
+                <div style={summaryRow}>
+                  <span style={summaryLabel}>
+                    Assainissement des bacs à déchets et recyclage ({binCount} bac
+                    {binCount > 1 ? "s" : ""})
+                  </span>
+                  <span>+${binCleaningTotal.toFixed(2)}</span>
+                </div>
+              )}
   <div style={summaryRow}>
     <span style={summaryLabel}>
       Assainissement des bacs à déchets et recyclage ({binCount} bac
