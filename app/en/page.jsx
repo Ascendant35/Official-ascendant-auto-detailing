@@ -784,12 +784,13 @@ export default function HomeEN() {
   </div>
 </section>
                   <a
-        href="tel:+15145563322"
-        style={floatingCallButton}
-        aria-label="Call Ascendant Auto Detailing"
-      >
-        📞
-      </a>
+  href="tel:+15145563322"
+  style={floatingCallButton}
+  aria-label="Call Ascendant Auto Detailing"
+>
+  <span style={{ fontSize: "20px" }}>📞</span>
+  <span>Call Now</span>
+</a>
     </div>
   );
 }
@@ -798,16 +799,19 @@ const floatingCallButton = {
   position: "fixed",
   bottom: "28px",
   right: "28px",
-  width: "64px",
-  height: "64px",
-  borderRadius: "50%",
-  background: "linear-gradient(145deg, #d4af37, #c19b2b)",
-  color: "#111",
   display: "flex",
   alignItems: "center",
-  justifyContent: "center",
+  gap: "10px",
+  padding: "14px 22px",
+  background: "#d4af37",
+  color: "#111",
+  borderRadius: "999px",
   textDecoration: "none",
-  fontSize: "28px",
-  boxShadow: "0 10px 30px rgba(212,175,55,.35)",
+  fontWeight: "700",
+  fontSize: "16px",
+  fontFamily: "inherit",
+  boxShadow: "0 10px 30px rgba(212,175,55,.30)",
+  border: "1px solid rgba(255,255,255,.15)",
   zIndex: 9999,
+  transition: "all .25s ease",
 };
