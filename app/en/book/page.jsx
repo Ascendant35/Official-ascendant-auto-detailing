@@ -5,10 +5,10 @@ import Header from "../../components/Header";
 
 export default function BookNow() {
   const [selectedPackage, setSelectedPackage] = useState("care");
-const [selectedVehicle, setSelectedVehicle] = useState("sedan");
-const [selectedExtras, setSelectedExtras] = useState([]);
-const [serviceType, setServiceType] = useState("package");
-const [binCount, setBinCount] = useState(0);
+  const [selectedVehicle, setSelectedVehicle] = useState("sedan");
+  const [selectedExtras, setSelectedExtras] = useState([]);
+  const [serviceType, setServiceType] = useState("package");
+  const [binCount, setBinCount] = useState(0);
 
   const packagePrices = {
     care: {
@@ -49,8 +49,6 @@ const [binCount, setBinCount] = useState(0);
     { id: "claybarTreatment", name: "Clay Bar Treatment", price: 80 },
   ];
 
-  
-
   const toggleExtra = (extraId) => {
     setSelectedExtras((prev) =>
       prev.includes(extraId)
@@ -88,21 +86,22 @@ const [binCount, setBinCount] = useState(0);
       return total + (found?.price || 0);
     }, 0);
   }, [selectedExtras]);
-  
+
   const binCleaningTotal = useMemo(() => {
-  if (binCount === 1) return 20;
-  if (binCount === 2) return 35;
-  if (binCount === 3) return 50;
-  if (binCount >= 4) return binCount * 15;
-  return 0;
-}, [binCount]);
+    if (binCount === 1) return 20;
+    if (binCount === 2) return 35;
+    if (binCount === 3) return 50;
+    if (binCount >= 4) return binCount * 15;
+    return 0;
+  }, [binCount]);
+
   const getBinPriceLabel = () => {
-  if (binCount === 0) return "Select quantity";
-  if (binCount === 1) return "+$20.00";
-  if (binCount === 2) return "+$35.00";
-  if (binCount === 3) return "+$50.00";
-  return `+$${binCleaningTotal.toFixed(2)}`;
-};
+    if (binCount === 0) return "Select quantity";
+    if (binCount === 1) return "+$20.00";
+    if (binCount === 2) return "+$35.00";
+    if (binCount === 3) return "+$50.00";
+    return `+$${binCleaningTotal.toFixed(2)}`;
+  };
 
   const subtotal = packageBasePrice + extrasTotal + binCleaningTotal;
   const gst = subtotal * 0.05;
@@ -113,10 +112,13 @@ const [binCount, setBinCount] = useState(0);
     package: {
       care: "https://calendly.com/ascendantautodetailing/ascendant-care-mobile-detail",
       elite: "https://calendly.com/ascendantautodetailing/ascendant-elite",
-      signature: "https://calendly.com/ascendantautodetailing/ascendant-signature-mobile-detail",
+      signature:
+        "https://calendly.com/ascendantautodetailing/ascendant-signature-mobile-detail",
     },
-    exterior: "https://calendly.com/ascendantautodetailing/exterior-only-mobile-detail",
-    interior: "https://calendly.com/ascendantautodetailing/interior-only-mobile-detail",
+    exterior:
+      "https://calendly.com/ascendantautodetailing/exterior-only-mobile-detail",
+    interior:
+      "https://calendly.com/ascendantautodetailing/interior-only-mobile-detail",
   };
 
   const getSelectedServiceName = () => {
@@ -126,22 +128,24 @@ const [binCount, setBinCount] = useState(0);
   };
 
   const getSelectedExtrasText = () => {
-  const selectedExtraNames = selectedExtras
-    .map((extraId) => extras.find((extra) => extra.id === extraId)?.name)
-    .filter(Boolean);
+    const selectedExtraNames = selectedExtras
+      .map((extraId) => extras.find((extra) => extra.id === extraId)?.name)
+      .filter(Boolean);
 
-  if (binCount > 0) {
-    selectedExtraNames.push(
-      `Trash & Recycling Bin Sanitization (${binCount === 4 ? "4+ bins" : `${binCount} bin${binCount > 1 ? "s" : ""}`})`
-    );
-  }
+    if (binCount > 0) {
+      selectedExtraNames.push(
+        `Trash & Recycling Bin Sanitization (${binCount} bin${
+          binCount > 1 ? "s" : ""
+        })`
+      );
+    }
 
-  if (selectedExtraNames.length === 0) {
-    return "No extras selected";
-  }
+    if (selectedExtraNames.length === 0) {
+      return "No extras selected";
+    }
 
-  return selectedExtraNames.join(", ");
-};
+    return selectedExtraNames.join(", ");
+  };
 
   const getCalendlyLink = () => {
     const baseUrl =
@@ -161,7 +165,13 @@ const [binCount, setBinCount] = useState(0);
   };
 
   return (
-    <div style={{ backgroundColor: "#0a0a0a", color: "#f5f5f5", minHeight: "100vh" }}>
+    <div
+      style={{
+        backgroundColor: "#0a0a0a",
+        color: "#f5f5f5",
+        minHeight: "100vh",
+      }}
+    >
       <Header lang="en" />
 
       <section style={heroStyle}>
@@ -171,8 +181,8 @@ const [binCount, setBinCount] = useState(0);
             <p style={eyebrow}>BOOK NOW</p>
             <h1 style={heroTitle}>Reserve Your Premium Detailing Experience</h1>
             <p style={heroText}>
-              Select your service, choose your vehicle type, add any extras you need,
-              and review your total before confirming your appointment.
+              Select your service, choose your vehicle type, add any extras you
+              need, and review your total before confirming your appointment.
             </p>
           </div>
         </div>
@@ -210,12 +220,28 @@ const [binCount, setBinCount] = useState(0);
             Book Your Service
           </h2>
 
-          <p style={{ fontSize: "18px", lineHeight: "1.8", color: "#ccc", marginBottom: "20px" }}>
-            Enjoy a premium detailing experience without leaving your home. Our fully equipped mobile service comes directly to you.
+          <p
+            style={{
+              fontSize: "18px",
+              lineHeight: "1.8",
+              color: "#ccc",
+              marginBottom: "20px",
+            }}
+          >
+            Enjoy a premium detailing experience without leaving your home. Our
+            fully equipped mobile service comes directly to you.
           </p>
 
-          <p style={{ fontSize: "18px", lineHeight: "1.8", color: "#ccc", marginBottom: "20px" }}>
-            Select your package, choose your vehicle type, and customize your service.
+          <p
+            style={{
+              fontSize: "18px",
+              lineHeight: "1.8",
+              color: "#ccc",
+              marginBottom: "20px",
+            }}
+          >
+            Select your package, choose your vehicle type, and customize your
+            service.
           </p>
 
           <p style={{ fontSize: "16px", color: "#aaa" }}>
@@ -249,6 +275,7 @@ const [binCount, setBinCount] = useState(0);
                 { id: "interior", label: "Interior Only" },
               ].map((option) => {
                 const active = serviceType === option.id;
+
                 return (
                   <button
                     key={option.id}
@@ -271,6 +298,7 @@ const [binCount, setBinCount] = useState(0);
               <div style={optionGrid} className="optionGrid">
                 {Object.entries(packagePrices).map(([key, pkg]) => {
                   const active = selectedPackage === key;
+
                   return (
                     <button
                       key={key}
@@ -327,63 +355,71 @@ const [binCount, setBinCount] = useState(0);
           </div>
 
           <div style={sectionSpacing}>
-  <h3 style={subTitle}>Add Extras</h3>
+            <h3 style={subTitle}>Add Extras</h3>
 
-  <div style={extrasGrid} className="extrasGrid">
-    {extras.map((extra) => {
-      const active = selectedExtras.includes(extra.id);
+            <div style={extrasGrid} className="extrasGrid">
+              {extras.map((extra) => {
+                const active = selectedExtras.includes(extra.id);
 
-      return (
-        <button
-          key={extra.id}
-          onClick={() => toggleExtra(extra.id)}
-          style={{
-            ...extraCard,
-            ...(active ? activeOptionCard : {}),
-          }}
-        >
-          <span>{extra.name}</span>
-          <span style={optionSmallPrice}>+${extra.price.toFixed(2)}</span>
-        </button>
-      );
-    })}
+                return (
+                  <button
+                    key={extra.id}
+                    onClick={() => toggleExtra(extra.id)}
+                    style={{
+                      ...extraCard,
+                      ...(active ? activeOptionCard : {}),
+                    }}
+                  >
+                    <span>{extra.name}</span>
+                    <span style={optionSmallPrice}>
+                      +${extra.price.toFixed(2)}
+                    </span>
+                  </button>
+                );
+              })}
 
-    <div
-      style={{
-        ...binOptionCard,
-        ...(binCount > 0 ? activeOptionCard : {}),
-      }}
-    >
-      <div>
-        <span>Trash & Recycling Bin Sanitization</span>
-        <p style={binHint}>Choose how many bins you want cleaned</p>
-      </div>
+              <div
+                style={{
+                  ...binOptionCard,
+                  ...(binCount > 0 ? activeOptionCard : {}),
+                }}
+              >
+                <div>
+                  <span>Trash & Recycling Bin Sanitization</span>
+                  <p style={binHint}>Choose how many bins you want cleaned</p>
+                </div>
 
-      <div style={{ display: "flex", flexDirection: "column", gap: "8px", alignItems: "flex-end" }}>
-        <span style={optionSmallPrice}>{getBinPriceLabel()}</span>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "8px",
+                    alignItems: "flex-end",
+                  }}
+                >
+                  <span style={optionSmallPrice}>{getBinPriceLabel()}</span>
 
-        <select
-          value={binCount}
-          onChange={(e) => setBinCount(Number(e.target.value))}
-          style={binSelect}
-        >
-          <option value={0}>None</option>
-          <option value={1}>1 bin</option>
-          <option value={2}>2 bins</option>
-          <option value={3}>3 bins</option>
-          <option value={4}>4 bins</option>
-          <option value={5}>5 bins</option>
-          <option value={6}>6 bins</option>
-          <option value={7}>7 bins</option>
-          <option value={8}>8 bins</option>
-        </select>
-      </div>
-    </div>
-  </div>
-   </div>   
+                  <select
+                    value={binCount}
+                    onChange={(e) => setBinCount(Number(e.target.value))}
+                    style={binSelect}
+                  >
+                    <option value={0}>None</option>
+                    <option value={1}>1 bin</option>
+                    <option value={2}>2 bins</option>
+                    <option value={3}>3 bins</option>
+                    <option value={4}>4 bins</option>
+                    <option value={5}>5 bins</option>
+                    <option value={6}>6 bins</option>
+                    <option value={7}>7 bins</option>
+                    <option value={8}>8 bins</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-          
- </div> 
         <div style={totalBox}>
           <h2 style={title}>Your Total</h2>
 
@@ -412,7 +448,7 @@ const [binCount, setBinCount] = useState(0);
 
           <div style={divider} />
 
-                    <div style={summarySection}>
+          <div style={summarySection}>
             <p style={{ ...subTitle, marginBottom: "14px" }}>Extras</p>
 
             {selectedExtras.length === 0 && binCount === 0 ? (
@@ -434,19 +470,20 @@ const [binCount, setBinCount] = useState(0);
                 {binCount > 0 && (
                   <div style={summaryRow}>
                     <span style={summaryLabel}>
-                      Trash & Recycling Bin Sanitization{" "}
-                      ({binCount === 4 ? "4+ bins" : `${binCount} bin${binCount > 1 ? "s" : ""}`})
+                      Trash & Recycling Bin Sanitization ({binCount} bin
+                      {binCount > 1 ? "s" : ""})
                     </span>
                     <span>+${binCleaningTotal.toFixed(2)}</span>
                   </div>
                 )}
               </>
             )}
-          </div>
+
             <div style={summaryRow}>
               <span style={summaryLabel}>GST (5%)</span>
               <span>${gst.toFixed(2)}</span>
             </div>
+
             <div style={summaryRow}>
               <span style={summaryLabel}>QST (9.975%)</span>
               <span>${qst.toFixed(2)}</span>
@@ -469,50 +506,51 @@ const [binCount, setBinCount] = useState(0);
           </div>
 
           <div style={goldAccentBox}>
-  <h3 style={infoTitle}>💰 Retainer Policy</h3>
-  <p style={infoText}>
-    All appointments require a{" "}
-    <span style={gold}>$50 retainer</span>, which will be fully deducted
-    from your final service total.
-  </p>
-</div>
+            <h3 style={infoTitle}>💰 Retainer Policy</h3>
+            <p style={infoText}>
+              All appointments require a <span style={gold}>$50 retainer</span>,
+              which will be fully deducted from your final service total.
+            </p>
+          </div>
 
-<div style={goldAccentBox}>
-  <h3 style={infoTitle}>📅 Booking Notice</h3>
-  <p style={infoText}>
-    All appointments must be booked a minimum of 24 hours in advance.
-    If you require same-day service, please call us to inquire about
-    availability. Same-day appointments cannot be guaranteed.
-  </p>
-</div>
+          <div style={goldAccentBox}>
+            <h3 style={infoTitle}>📅 Booking Notice</h3>
+            <p style={infoText}>
+              All appointments must be booked a minimum of 24 hours in advance.
+              If you require same-day service, please call us to inquire about
+              availability. Same-day appointments cannot be guaranteed.
+            </p>
+          </div>
 
-<div style={goldAccentBox}>
-  <h3 style={infoTitle}>❌ Cancellation Policy</h3>
-  <p style={infoText}>
-    To ensure optimal scheduling and availability for all clients, all
-    appointments must be cancelled at least{" "}
-    <span style={gold}>24 hours in advance</span> to qualify for a full refund
-    of the <span style={gold}>$50 retainer</span>. Cancellations made
-    within 24 hours of the scheduled appointment are non-refundable.
-  </p>
-</div>
+          <div style={goldAccentBox}>
+            <h3 style={infoTitle}>❌ Cancellation Policy</h3>
+            <p style={infoText}>
+              To ensure optimal scheduling and availability for all clients, all
+              appointments must be cancelled at least{" "}
+              <span style={gold}>24 hours in advance</span> to qualify for a
+              full refund of the <span style={gold}>$50 retainer</span>.
+              Cancellations made within 24 hours of the scheduled appointment
+              are non-refundable.
+            </p>
+          </div>
 
-<div style={goldAccentBox}>
-  <h3 style={infoTitle}>🛡️ Our Satisfaction Guarantee</h3>
-  <p style={infoText}>
-    Your satisfaction is our priority. Before we leave, we'll review the
-    completed service with you to ensure it meets your expectations.
-  </p>
-</div>
+          <div style={goldAccentBox}>
+            <h3 style={infoTitle}>🛡️ Our Satisfaction Guarantee</h3>
+            <p style={infoText}>
+              Your satisfaction is our priority. Before we leave, we'll review
+              the completed service with you to ensure it meets your
+              expectations.
+            </p>
+          </div>
 
-<a
-  href={getCalendlyLink()}
-  target="_blank"
-  rel="noreferrer"
-  style={goldBtn}
->
-  Confirm Booking
-</a>
+          <a
+            href={getCalendlyLink()}
+            target="_blank"
+            rel="noreferrer"
+            style={goldBtn}
+          >
+            Confirm Booking
+          </a>
         </div>
       </section>
 
@@ -693,6 +731,7 @@ const extraCard = {
   justifyContent: "space-between",
   alignItems: "center",
 };
+
 const binOptionCard = {
   backgroundColor: "#0d0d0d",
   border: "1px solid rgba(255,255,255,0.06)",
@@ -756,14 +795,6 @@ const divider = {
   height: "1px",
   backgroundColor: "rgba(255,255,255,0.08)",
   margin: "24px 0",
-};
-
-const retainerBox = {
-  marginTop: "30px",
-  padding: "18px",
-  backgroundColor: "#0d0d0d",
-  borderRadius: "16px",
-  border: "1px solid rgba(212,175,55,0.18)",
 };
 
 const gold = {
