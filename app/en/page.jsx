@@ -791,8 +791,7 @@ export default function HomeEN() {
         📞
       </a>
     </div>
-  );
-}
+    
     </div>
   );
 }
