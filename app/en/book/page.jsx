@@ -422,9 +422,9 @@ export default function BookNow() {
 <div style={goldAccentBox}>
   <h3 style={infoTitle}>❌ Cancellation Policy</h3>
   <p style={infoText}>
-    To ensure optimal scheduling and availability for all clients,
+    To ensure optimal scheduling and availability for all clients, all
     appointments must be cancelled at least{" "}
-    <span style={gold}>24 hours in advance</span> to qualify for a refund
+    <span style={gold}>24 hours in advance</span> to qualify for a full refund
     of the <span style={gold}>$50 retainer</span>. Cancellations made
     within 24 hours of the scheduled appointment are non-refundable.
   </p>
