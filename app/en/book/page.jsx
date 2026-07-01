@@ -5,9 +5,10 @@ import Header from "../../components/Header";
 
 export default function BookNow() {
   const [selectedPackage, setSelectedPackage] = useState("care");
-  const [selectedVehicle, setSelectedVehicle] = useState("sedan");
-  const [selectedExtras, setSelectedExtras] = useState([]);
-  const [serviceType, setServiceType] = useState("package");
+const [selectedVehicle, setSelectedVehicle] = useState("sedan");
+const [selectedExtras, setSelectedExtras] = useState([]);
+const [serviceType, setServiceType] = useState("package");
+const [binCount, setBinCount] = useState(0);
 
   const packagePrices = {
     care: {
@@ -48,6 +49,50 @@ export default function BookNow() {
     { id: "claybarTreatment", name: "Clay Bar Treatment", price: 80 },
   ];
 
+  <div style={sectionSpacing}>
+  <h3 style={subTitle}>Trash & Recycling Bin Sanitization</h3>
+
+  <p style={{ color: "#bbb", lineHeight: 1.7, marginBottom: "14px" }}>
+    Add professional bin cleaning during your detailing appointment.
+  </p>
+
+  <div style={optionGrid}>
+    {[
+      { count: 0, label: "No bins", price: "$0" },
+      { count: 1, label: "1 bin", price: "$20" },
+      { count: 2, label: "2 bins", price: "$35" },
+      { count: 3, label: "3 bins", price: "$50" },
+      { count: 4, label: "4+ bins", price: "$15 / bin" },
+    ].map((option) => {
+      const active = binCount === option.count;
+
+      return (
+        <button
+          key={option.count}
+          type="button"
+          onClick={() => setBinCount(option.count)}
+          style={{
+            ...optionCard,
+            ...(active ? activeOptionCard : {}),
+          }}
+        >
+          <span style={optionTitle}>{option.label}</span>
+          <span style={optionSmallPrice}>{option.price}</span>
+        </button>
+      );
+    })}
+  </div>
+</div>
+
+  {binCount > 0 && (
+  <div style={summaryRow}>
+    <span style={summaryLabel}>
+      Trash & Recycling Bin Sanitization ({binCount === 4 ? "4+ bins" : `${binCount} bin${binCount > 1 ? "s" : ""}`})
+    </span>
+    <span>+${binCleaningTotal.toFixed(2)}</span>
+  </div>
+)}
+
   const toggleExtra = (extraId) => {
     setSelectedExtras((prev) =>
       prev.includes(extraId)
@@ -85,8 +130,16 @@ export default function BookNow() {
       return total + (found?.price || 0);
     }, 0);
   }, [selectedExtras]);
+  
+  const binCleaningTotal = useMemo(() => {
+  if (binCount === 1) return 20;
+  if (binCount === 2) return 35;
+  if (binCount === 3) return 50;
+  if (binCount >= 4) return binCount * 15;
+  return 0;
+}, [binCount]);
 
-  const subtotal = packageBasePrice + extrasTotal;
+  const subtotal = packageBasePrice + extrasTotal + binCleaningTotal;
   const gst = subtotal * 0.05;
   const qst = subtotal * 0.09975;
   const total = subtotal + gst + qst;
@@ -108,13 +161,22 @@ export default function BookNow() {
   };
 
   const getSelectedExtrasText = () => {
-    if (selectedExtras.length === 0) return "No extras selected";
+  const selectedExtraNames = selectedExtras
+    .map((extraId) => extras.find((extra) => extra.id === extraId)?.name)
+    .filter(Boolean);
 
-    return selectedExtras
-      .map((extraId) => extras.find((extra) => extra.id === extraId)?.name)
-      .filter(Boolean)
-      .join(", ");
-  };
+  if (binCount > 0) {
+    selectedExtraNames.push(
+      `Trash & Recycling Bin Sanitization (${binCount === 4 ? "4+ bins" : `${binCount} bin${binCount > 1 ? "s" : ""}`})`
+    );
+  }
+
+  if (selectedExtraNames.length === 0) {
+    return "No extras selected";
+  }
+
+  return selectedExtraNames.join(", ");
+};
 
   const getCalendlyLink = () => {
     const baseUrl =
