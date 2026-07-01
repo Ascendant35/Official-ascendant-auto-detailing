@@ -49,49 +49,7 @@ const [binCount, setBinCount] = useState(0);
     { id: "claybarTreatment", name: "Clay Bar Treatment", price: 80 },
   ];
 
-  <div style={sectionSpacing}>
-  <h3 style={subTitle}>Trash & Recycling Bin Sanitization</h3>
-
-  <p style={{ color: "#bbb", lineHeight: 1.7, marginBottom: "14px" }}>
-    Add professional bin cleaning during your detailing appointment.
-  </p>
-
-  <div style={optionGrid}>
-    {[
-      { count: 0, label: "No bins", price: "$0" },
-      { count: 1, label: "1 bin", price: "$20" },
-      { count: 2, label: "2 bins", price: "$35" },
-      { count: 3, label: "3 bins", price: "$50" },
-      { count: 4, label: "4+ bins", price: "$15 / bin" },
-    ].map((option) => {
-      const active = binCount === option.count;
-
-      return (
-        <button
-          key={option.count}
-          type="button"
-          onClick={() => setBinCount(option.count)}
-          style={{
-            ...optionCard,
-            ...(active ? activeOptionCard : {}),
-          }}
-        >
-          <span style={optionTitle}>{option.label}</span>
-          <span style={optionSmallPrice}>{option.price}</span>
-        </button>
-      );
-    })}
-  </div>
-</div>
-
-  {binCount > 0 && (
-  <div style={summaryRow}>
-    <span style={summaryLabel}>
-      Trash & Recycling Bin Sanitization ({binCount === 4 ? "4+ bins" : `${binCount} bin${binCount > 1 ? "s" : ""}`})
-    </span>
-    <span>+${binCleaningTotal.toFixed(2)}</span>
-  </div>
-)}
+  
 
   const toggleExtra = (extraId) => {
     setSelectedExtras((prev) =>
@@ -383,6 +341,40 @@ const [binCount, setBinCount] = useState(0);
             </div>
           </div>
         </div>
+        <div style={sectionSpacing}>
+  <h3 style={subTitle}>Trash & Recycling Bin Sanitization</h3>
+
+  <p style={{ color: "#bbb", marginBottom: "14px" }}>
+    Select the number of bins you'd like cleaned during your appointment.
+  </p>
+
+  <div style={optionGrid} className="optionGrid">
+    {[
+      { count: 0, label: "No bins", price: "$0" },
+      { count: 1, label: "1 Bin", price: "$20" },
+      { count: 2, label: "2 Bins", price: "$35" },
+      { count: 3, label: "3 Bins", price: "$50" },
+      { count: 4, label: "4+ Bins", price: "$15 / bin" },
+    ].map((option) => {
+      const active = binCount === option.count;
+
+      return (
+        <button
+          key={option.count}
+          type="button"
+          onClick={() => setBinCount(option.count)}
+          style={{
+            ...optionCard,
+            ...(active ? activeOptionCard : {}),
+          }}
+        >
+          <span style={optionTitle}>{option.label}</span>
+          <span style={optionSmallPrice}>{option.price}</span>
+        </button>
+      );
+    })}
+  </div>
+</div>
 
         <div style={totalBox}>
           <h2 style={title}>Your Total</h2>
@@ -433,11 +425,37 @@ const [binCount, setBinCount] = useState(0);
 
           <div style={divider} />
 
-          <div style={summarySection}>
-            <div style={summaryRow}>
-              <span style={summaryLabel}>Subtotal</span>
-              <span>${subtotal.toFixed(2)}</span>
-            </div>
+                    <div style={summarySection}>
+            <p style={{ ...subTitle, marginBottom: "14px" }}>Extras</p>
+
+            {selectedExtras.length === 0 && binCount === 0 ? (
+              <p style={{ color: "#888", margin: 0 }}>No extras selected</p>
+            ) : (
+              <>
+                {selectedExtras.map((extraId) => {
+                  const extra = extras.find((item) => item.id === extraId);
+                  if (!extra) return null;
+
+                  return (
+                    <div key={extraId} style={summaryRow}>
+                      <span style={summaryLabel}>{extra.name}</span>
+                      <span>+${extra.price.toFixed(2)}</span>
+                    </div>
+                  );
+                })}
+
+                {binCount > 0 && (
+                  <div style={summaryRow}>
+                    <span style={summaryLabel}>
+                      Trash & Recycling Bin Sanitization{" "}
+                      ({binCount === 4 ? "4+ bins" : `${binCount} bin${binCount > 1 ? "s" : ""}`})
+                    </span>
+                    <span>+${binCleaningTotal.toFixed(2)}</span>
+                  </div>
+                )}
+              </>
+            )}
+          </div>
             <div style={summaryRow}>
               <span style={summaryLabel}>GST (5%)</span>
               <span>${gst.toFixed(2)}</span>
