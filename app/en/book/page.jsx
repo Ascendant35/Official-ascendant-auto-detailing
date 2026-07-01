@@ -95,31 +95,20 @@ export default function BookNow() {
     package: {
       care: "https://calendly.com/ascendantautodetailing/ascendant-care-mobile-detail",
       elite: "https://calendly.com/ascendantautodetailing/ascendant-elite",
-      signature:
-        "https://calendly.com/ascendantautodetailing/ascendant-signature-mobile-detail",
+      signature: "https://calendly.com/ascendantautodetailing/ascendant-signature-mobile-detail",
     },
-    exterior:
-      "https://calendly.com/ascendantautodetailing/exterior-only-mobile-detail",
-    interior:
-      "https://calendly.com/ascendantautodetailing/interior-only-mobile-detail",
+    exterior: "https://calendly.com/ascendantautodetailing/exterior-only-mobile-detail",
+    interior: "https://calendly.com/ascendantautodetailing/interior-only-mobile-detail",
   };
 
   const getSelectedServiceName = () => {
-    if (serviceType === "package") {
-      return selectedPackageData.name;
-    }
-
-    if (serviceType === "exterior") {
-      return "Exterior Detailing Only";
-    }
-
+    if (serviceType === "package") return selectedPackageData.name;
+    if (serviceType === "exterior") return "Exterior Detailing Only";
     return "Interior Detailing Only";
   };
 
   const getSelectedExtrasText = () => {
-    if (selectedExtras.length === 0) {
-      return "No extras selected";
-    }
+    if (selectedExtras.length === 0) return "No extras selected";
 
     return selectedExtras
       .map((extraId) => extras.find((extra) => extra.id === extraId)?.name)
@@ -145,34 +134,23 @@ export default function BookNow() {
   };
 
   return (
-    <div
-      style={{
-        backgroundColor: "#0a0a0a",
-        color: "#f5f5f5",
-        minHeight: "100vh",
-        overflowX: "hidden",
-      }}
-    >
+    <div style={{ backgroundColor: "#0a0a0a", color: "#f5f5f5", minHeight: "100vh" }}>
       <Header lang="en" />
 
-      {/* HERO */}
       <section style={heroStyle}>
         <div style={heroOverlay} />
-        <div style={container} className="book-container">
+        <div style={container}>
           <div style={heroContent}>
             <p style={eyebrow}>BOOK NOW</p>
-            <h1 style={heroTitle} className="hero-title">
-              Reserve Your Premium Detailing Experience
-            </h1>
-            <p style={heroText} className="hero-text">
-              Select your service, choose your vehicle type, add any extras you
-              need, and review your total before confirming your appointment.
+            <h1 style={heroTitle}>Reserve Your Premium Detailing Experience</h1>
+            <p style={heroText}>
+              Select your service, choose your vehicle type, add any extras you need,
+              and review your total before confirming your appointment.
             </p>
           </div>
         </div>
       </section>
 
-      {/* BOOKING INTRO SECTION */}
       <section
         style={{
           backgroundColor: "#0a0a0a",
@@ -192,7 +170,6 @@ export default function BookNow() {
             boxShadow: "0 0 40px rgba(212,175,55,0.08)",
             textAlign: "center",
           }}
-          className="intro-box"
         >
           <h2
             style={{
@@ -202,45 +179,20 @@ export default function BookNow() {
               letterSpacing: "1px",
               color: "white",
             }}
-            className="intro-title"
           >
             Book Your Service
           </h2>
 
-          <p
-            style={{
-              fontSize: "18px",
-              lineHeight: "1.8",
-              color: "#ccc",
-              marginBottom: "20px",
-            }}
-          >
-            Enjoy a premium detailing experience without leaving your home. Our
-            fully equipped mobile service comes directly to you, allowing you to
-            save time while your vehicle receives the highest level of care.
+          <p style={{ fontSize: "18px", lineHeight: "1.8", color: "#ccc", marginBottom: "20px" }}>
+            Enjoy a premium detailing experience without leaving your home. Our fully equipped mobile service comes directly to you.
           </p>
 
-          <p
-            style={{
-              fontSize: "18px",
-              lineHeight: "1.8",
-              color: "#ccc",
-              marginBottom: "20px",
-            }}
-          >
-            Select your package, choose your vehicle type, and customize your
-            service with optional add-ons tailored to your needs — all handled
-            on-site with precision and attention to detail.
+          <p style={{ fontSize: "18px", lineHeight: "1.8", color: "#ccc", marginBottom: "20px" }}>
+            Select your package, choose your vehicle type, and customize your service.
           </p>
 
-          <p
-            style={{
-              fontSize: "16px",
-              color: "#aaa",
-            }}
-          >
-            Once your request is submitted, we will contact you to confirm your
-            appointment and finalize the details at your convenience.
+          <p style={{ fontSize: "16px", color: "#aaa" }}>
+            We will contact you to confirm your appointment.
           </p>
 
           <div
@@ -254,22 +206,16 @@ export default function BookNow() {
         </div>
       </section>
 
-      {/* MAIN BOOKING SECTION */}
-      <section style={bookingSection} className="booking-section">
-        {/* LEFT BOX */}
-        <div style={bookingBox} className="booking-box">
-          <h2 style={title} className="section-title">
-            Build Your Appointment
-          </h2>
+      <section style={bookingSection} className="bookingSection">
+        <div style={bookingBox}>
+          <h2 style={title}>Build Your Appointment</h2>
           <p style={desc}>
-            Choose the service level that best fits your vehicle and customize
-            it with any additional care you would like to include.
+            Choose your service and customize it based on your needs.
           </p>
 
-          {/* SERVICE TYPE */}
           <div style={sectionSpacing}>
             <h3 style={subTitle}>Select Service Type</h3>
-            <div style={optionGrid} className="option-grid">
+            <div style={optionGrid} className="optionGrid">
               {[
                 { id: "package", label: "Full Detailing Package" },
                 { id: "exterior", label: "Exterior Only" },
@@ -279,7 +225,6 @@ export default function BookNow() {
                 return (
                   <button
                     key={option.id}
-                    type="button"
                     onClick={() => setServiceType(option.id)}
                     style={{
                       ...optionCard,
@@ -293,17 +238,15 @@ export default function BookNow() {
             </div>
           </div>
 
-          {/* PACKAGE */}
           {serviceType === "package" && (
             <div style={sectionSpacing}>
               <h3 style={subTitle}>Select Package</h3>
-              <div style={optionGrid} className="option-grid">
+              <div style={optionGrid} className="optionGrid">
                 {Object.entries(packagePrices).map(([key, pkg]) => {
                   const active = selectedPackage === key;
                   return (
                     <button
                       key={key}
-                      type="button"
                       onClick={() => setSelectedPackage(key)}
                       style={{
                         ...optionCard,
@@ -318,10 +261,9 @@ export default function BookNow() {
             </div>
           )}
 
-          {/* VEHICLE */}
           <div style={sectionSpacing}>
             <h3 style={subTitle}>Vehicle Type</h3>
-            <div style={optionGrid} className="option-grid">
+            <div style={optionGrid} className="optionGrid">
               {Object.entries(vehicleLabels).map(([key, label]) => {
                 const active = selectedVehicle === key;
 
@@ -343,7 +285,6 @@ export default function BookNow() {
                 return (
                   <button
                     key={key}
-                    type="button"
                     onClick={() => setSelectedVehicle(key)}
                     style={{
                       ...optionCard,
@@ -358,16 +299,14 @@ export default function BookNow() {
             </div>
           </div>
 
-          {/* EXTRAS */}
           <div style={sectionSpacing}>
             <h3 style={subTitle}>Add Extras</h3>
-            <div style={extrasGrid} className="extras-grid">
+            <div style={extrasGrid} className="extrasGrid">
               {extras.map((extra) => {
                 const active = selectedExtras.includes(extra.id);
                 return (
                   <button
                     key={extra.id}
-                    type="button"
                     onClick={() => toggleExtra(extra.id)}
                     style={{
                       ...extraCard,
@@ -375,9 +314,7 @@ export default function BookNow() {
                     }}
                   >
                     <span>{extra.name}</span>
-                    <span style={optionSmallPrice}>
-                      +${extra.price.toFixed(2)}
-                    </span>
+                    <span style={optionSmallPrice}>+${extra.price.toFixed(2)}</span>
                   </button>
                 );
               })}
@@ -385,11 +322,8 @@ export default function BookNow() {
           </div>
         </div>
 
-        {/* RIGHT BOX */}
-        <div style={totalBox} className="total-box">
-          <h2 style={title} className="section-title">
-            Your Total
-          </h2>
+        <div style={totalBox}>
+          <h2 style={title}>Your Total</h2>
 
           <div style={summarySection}>
             <div style={summaryRow}>
@@ -471,8 +405,8 @@ export default function BookNow() {
             <h3 style={infoTitle}>💰 Retainer Policy</h3>
             <p style={infoText}>
               All appointments require a{" "}
-              <span style={gold}>$50 retainer</span>, which will be fully
-              deducted from your final service total.
+              <span style={gold}>$50 retainer</span>, which will be fully deducted
+              from your final service total.
             </p>
           </div>
 
@@ -488,9 +422,8 @@ export default function BookNow() {
           <div style={goldAccentBox}>
             <h3 style={infoTitle}>🛡️ Our Satisfaction Guarantee</h3>
             <p style={infoText}>
-              Your satisfaction is our priority. Before we leave, we'll review
-              the completed service with you to ensure it meets your
-              expectations.
+              Your satisfaction is our priority. Before we leave, we'll review the
+              completed service with you to ensure it meets your expectations.
             </p>
           </div>
 
@@ -507,64 +440,15 @@ export default function BookNow() {
 
       <style jsx global>{`
         @media (max-width: 768px) {
-          html,
-          body {
-            overflow-x: hidden !important;
-            width: 100% !important;
-          }
-
-          .book-container {
-            padding: 70px 22px !important;
-          }
-
-          .hero-title {
-            font-size: 38px !important;
-            line-height: 1.12 !important;
-          }
-
-          .hero-text {
-            font-size: 16px !important;
-          }
-
-          .intro-box {
-            padding: 34px 22px !important;
-            border-radius: 22px !important;
-          }
-
-          .intro-title {
-            font-size: 32px !important;
-          }
-
-          .booking-section {
-            display: flex !important;
-            flex-direction: column !important;
-            grid-template-columns: none !important;
-            padding: 50px 20px !important;
-            gap: 30px !important;
-            width: 100% !important;
-            max-width: 100% !important;
-            box-sizing: border-box !important;
-          }
-
-          .booking-box,
-          .total-box {
-            width: 100% !important;
-            max-width: 100% !important;
-            padding: 28px 22px !important;
-            position: static !important;
-            top: auto !important;
-            box-sizing: border-box !important;
-          }
-
-          .option-grid,
-          .extras-grid {
+          .bookingSection {
             display: grid !important;
             grid-template-columns: 1fr !important;
-            gap: 14px !important;
+            padding: 50px 20px !important;
           }
 
-          .section-title {
-            font-size: 30px !important;
+          .optionGrid,
+          .extrasGrid {
+            grid-template-columns: 1fr !important;
           }
         }
       `}</style>
@@ -573,6 +457,15 @@ export default function BookNow() {
 }
 
 /* STYLES */
+
+const goldAccentBox = {
+  background: "#111",
+  border: "1px solid rgba(212, 175, 55, 0.65)",
+  borderRadius: "18px",
+  padding: "22px",
+  marginTop: "18px",
+  boxShadow: "0 0 10px rgba(212, 175, 55, 0.05)",
+};
 
 const infoTitle = {
   color: "#d4af37",
@@ -586,15 +479,6 @@ const infoText = {
   lineHeight: 1.8,
   fontSize: "1rem",
   margin: 0,
-};
-
-const goldAccentBox = {
-  background: "#111",
-  border: "1px solid rgba(212, 175, 55, 0.6)",
-  borderRadius: "18px",
-  padding: "22px",
-  marginTop: "20px",
-  boxShadow: "0 0 10px rgba(212, 175, 55, 0.05)",
 };
 
 const heroStyle = {
