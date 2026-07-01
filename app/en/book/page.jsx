@@ -419,6 +419,7 @@ export default function BookNow() {
 
               <div style={goldAccentBox}>
   <h3 style={infoTitle}>❌ Cancellation Policy</h3>
+
   <p style={infoText}>
     To ensure optimal scheduling and availability for all clients,all
     appointments must be cancelled at least{" "}
