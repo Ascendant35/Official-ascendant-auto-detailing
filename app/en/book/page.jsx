@@ -415,11 +415,19 @@ export default function BookNow() {
             <p style={infoText}>
               All appointments must be booked a minimum of 24 hours in advance.
               If you require same-day service, please call us to inquire about
-              availability. Same-day appointments cannot be guaranteed.
-            </p>
-          </div>
+              availability. Same-day appointments cannot be guaranteed. 
 
-          <div style={goldAccentBox}>
+              <div style={goldAccentBox}>
+  <h3 style={infoTitle}>❌ Cancellation Policy</h3>
+  <p style={infoText}>
+    To ensure optimal scheduling and availability for all clients,all
+    appointments must be cancelled at least{" "}
+    <span style={gold}>24 hours in advance</span> to qualify for a full refund of
+    the <span style={gold}>$50 retainer</span>. Cancellations made within
+    24 hours of the scheduled appointment are non-refundable.
+  </p>
+</div>
+              
             <h3 style={infoTitle}>🛡️ Our Satisfaction Guarantee</h3>
             <p style={infoText}>
               Your satisfaction is our priority. Before we leave, we'll review the
