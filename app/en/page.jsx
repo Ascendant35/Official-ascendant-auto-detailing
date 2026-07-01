@@ -783,7 +783,7 @@ export default function HomeEN() {
 
   </div>
 </section>
-            <a
+                  <a
         href="tel:+15145563322"
         style={floatingCallButton}
         aria-label="Call Ascendant Auto Detailing"
@@ -791,10 +791,9 @@ export default function HomeEN() {
         📞
       </a>
     </div>
-    
-    </div>
   );
 }
+
 const floatingCallButton = {
   position: "fixed",
   bottom: "28px",
