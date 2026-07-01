@@ -389,6 +389,8 @@ export default function TarifsFR() {
     <p style={{ margin: "0" }}>Camion / Grand VUS: À partir de $189.99</p>
   </>
 }
+            />
+          
             <Extra
   title="Rafraîchissement des bacs à déchets et recyclage"
   price={
