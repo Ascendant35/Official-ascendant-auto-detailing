@@ -88,81 +88,82 @@ export default function BookNow() {
   }, [selectedExtras]);
 
   const binCleaningTotal = useMemo(() => {
-  if (binCount === 1) return 20;
-  if (binCount === 2) return 35;
-  if (binCount === 3) return 50;
-  if (binCount >= 4) return binCount * 15;
-  return 0;
-}, [binCount]);
+    if (binCount === 1) return 20;
+    if (binCount === 2) return 35;
+    if (binCount === 3) return 50;
+    if (binCount >= 4) return binCount * 15;
+    return 0;
+  }, [binCount]);
 
-const getBinPriceLabel = () => {
-  if (binCount === 0) return "Choisir la quantité";
-  if (binCount === 1) return "+20,00 $";
-  if (binCount === 2) return "+35,00 $";
-  if (binCount === 3) return "+50,00 $";
-  return `+${binCleaningTotal.toFixed(2)} $`;
-};
+  const getBinPriceLabel = () => {
+    if (binCount === 0) return "Choisir la quantité";
+    if (binCount === 1) return "+20,00 $";
+    if (binCount === 2) return "+35,00 $";
+    if (binCount === 3) return "+50,00 $";
+    return `+${binCleaningTotal.toFixed(2)} $`;
+  };
 
-const subtotal = packageBasePrice + extrasTotal + binCleaningTotal;
+  const subtotal = packageBasePrice + extrasTotal + binCleaningTotal;
   const gst = subtotal * 0.05;
   const qst = subtotal * 0.09975;
   const total = subtotal + gst + qst;
+
   const calendlyLinksFR = {
-  package: {
-    care: "https://calendly.com/ascendantautodetailing/ascendant-care-mobile-detail-clone",
-    elite: "https://calendly.com/ascendantautodetailing/ascendant-elite-mobile-detail-clone",
-    signature: "https://calendly.com/ascendantautodetailing/ascendant-signature-mobile-detail-clone",
-  },
-  exterior: "https://calendly.com/ascendantautodetailing/exterior-only-mobile-detail-clone",
-  interior: "https://calendly.com/ascendantautodetailing/interior-only-mobile-detail-clone",
-};
+    package: {
+      care: "https://calendly.com/ascendantautodetailing/ascendant-care-mobile-detail-clone",
+      elite: "https://calendly.com/ascendantautodetailing/ascendant-elite-mobile-detail-clone",
+      signature: "https://calendly.com/ascendantautodetailing/ascendant-signature-mobile-detail-clone",
+    },
+    exterior: "https://calendly.com/ascendantautodetailing/exterior-only-mobile-detail-clone",
+    interior: "https://calendly.com/ascendantautodetailing/interior-only-mobile-detail-clone",
+  };
 
-const getSelectedServiceNameFR = () => {
-  if (serviceType === "package") {
-    return selectedPackageData.name;
-  }
+  const getSelectedServiceNameFR = () => {
+    if (serviceType === "package") {
+      return selectedPackageData.name;
+    }
 
-  if (serviceType === "exterior") {
-    return "Extérieur seulement";
-  }
+    if (serviceType === "exterior") {
+      return "Extérieur seulement";
+    }
 
-  return "Intérieur seulement";
-};
+    return "Intérieur seulement";
+  };
 
-const getSelectedExtrasTextFR = () => {
-  const selectedExtraNames = selectedExtras
-    .map((extraId) => extras.find((extra) => extra.id === extraId)?.name)
-    .filter(Boolean);
+  const getSelectedExtrasTextFR = () => {
+    const selectedExtraNames = selectedExtras
+      .map((extraId) => extras.find((extra) => extra.id === extraId)?.name)
+      .filter(Boolean);
 
-  if (binCount > 0) {
-    selectedExtraNames.push(
-      `Assainissement des bacs à déchets et recyclage (${binCount} bac${binCount > 1 ? "s" : ""})`
-    );
-  }
+    if (binCount > 0) {
+      selectedExtraNames.push(
+        `Nettoyage complet des bacs à déchets et recyclage (${binCount} bac${binCount > 1 ? "s" : ""})`
+      );
+    }
 
-  if (selectedExtraNames.length === 0) {
-    return "Aucune option sélectionnée";
-  }
+    if (selectedExtraNames.length === 0) {
+      return "Aucune option sélectionnée";
+    }
 
-  return selectedExtraNames.join(", ");
-};
+    return selectedExtraNames.join(", ");
+  };
 
-const getCalendlyLinkFR = () => {
-  const baseUrl =
-    serviceType === "package"
-      ? calendlyLinksFR.package[selectedPackage]
-      : calendlyLinksFR[serviceType];
+  const getCalendlyLinkFR = () => {
+    const baseUrl =
+      serviceType === "package"
+        ? calendlyLinksFR.package[selectedPackage]
+        : calendlyLinksFR[serviceType];
 
-  const params = new URLSearchParams({
-    a1: getSelectedServiceNameFR(),
-    a2: vehicleLabels[selectedVehicle],
-    a3: getSelectedExtrasTextFR(),
-    a4: `$${subtotal.toFixed(2)}`,
-    a5: `$${total.toFixed(2)}`,
-  });
+    const params = new URLSearchParams({
+      a1: getSelectedServiceNameFR(),
+      a2: vehicleLabels[selectedVehicle],
+      a3: getSelectedExtrasTextFR(),
+      a4: `$${subtotal.toFixed(2)}`,
+      a5: `$${total.toFixed(2)}`,
+    });
 
-  return `${baseUrl}?${params.toString()}`;
-};
+    return `${baseUrl}?${params.toString()}`;
+  };
 
   return (
     <div style={{ backgroundColor: "#0a0a0a", color: "#f5f5f5", minHeight: "100vh" }}>
@@ -273,7 +274,8 @@ const getCalendlyLinkFR = () => {
               })}
             </div>
           </div>
-                    {/* PACKAGE */}
+
+          {/* PACKAGE */}
           {serviceType === "package" && (
             <div style={sectionSpacing}>
               <h3 style={subTitle}>Choisissez un forfait</h3>
@@ -356,46 +358,47 @@ const getCalendlyLinkFR = () => {
                   </button>
                 );
               })}
+
               <div
-  style={{
-    ...binOptionCard,
-    ...(binCount > 0 ? activeOptionCard : {}),
-  }}
->
-  <div>
-    <span>Nettoyage complet des bacs à déchets et recyclage</span>
-    <p style={binHint}>
-      Choisissez le nombre de bacs à nettoyer
-    </p>
-  </div>
+                style={{
+                  ...binOptionCard,
+                  ...(binCount > 0 ? activeOptionCard : {}),
+                }}
+              >
+                <div>
+                  <span>Nettoyage complet des bacs à déchets et recyclage</span>
+                  <p style={binHint}>
+                    Choisissez le nombre de bacs à nettoyer
+                  </p>
+                </div>
 
-  <div
-    style={{
-      display: "flex",
-      flexDirection: "column",
-      gap: "8px",
-      alignItems: "flex-end",
-    }}
-  >
-    <span style={optionSmallPrice}>{getBinPriceLabel()}</span>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "8px",
+                    alignItems: "flex-end",
+                  }}
+                >
+                  <span style={optionSmallPrice}>{getBinPriceLabel()}</span>
 
-    <select
-      value={binCount}
-      onChange={(e) => setBinCount(Number(e.target.value))}
-      style={binSelect}
-    >
-      <option value={0}>Aucun</option>
-      <option value={1}>1 bac</option>
-      <option value={2}>2 bacs</option>
-      <option value={3}>3 bacs</option>
-      <option value={4}>4 bacs</option>
-      <option value={5}>5 bacs</option>
-      <option value={6}>6 bacs</option>
-      <option value={7}>7 bacs</option>
-      <option value={8}>8 bacs</option>
-    </select>
-  </div>
-</div>
+                  <select
+                    value={binCount}
+                    onChange={(e) => setBinCount(Number(e.target.value))}
+                    style={binSelect}
+                  >
+                    <option value={0}>Aucun</option>
+                    <option value={1}>1 bac</option>
+                    <option value={2}>2 bacs</option>
+                    <option value={3}>3 bacs</option>
+                    <option value={4}>4 bacs</option>
+                    <option value={5}>5 bacs</option>
+                    <option value={6}>6 bacs</option>
+                    <option value={7}>7 bacs</option>
+                    <option value={8}>8 bacs</option>
+                  </select>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -431,43 +434,35 @@ const getCalendlyLinkFR = () => {
 
           <div style={summarySection}>
             <p style={{ ...subTitle, marginBottom: "14px" }}>Options</p>
+
             {selectedExtras.length === 0 && binCount === 0 ? (
               <p style={{ color: "#888", margin: 0 }}>
                 Aucune option sélectionnée
               </p>
             ) : (
-                            {selectedExtras.map((extraId) => {
-                const extra = extras.find((item) => item.id === extraId);
-                if (!extra) return null;
+              <>
+                {selectedExtras.map((extraId) => {
+                  const extra = extras.find((item) => item.id === extraId);
+                  if (!extra) return null;
 
-                return (
-                  <div key={extraId} style={summaryRow}>
-                    <span style={summaryLabel}>{extra.name}</span>
-                    <span>+${extra.price.toFixed(2)}</span>
+                  return (
+                    <div key={extraId} style={summaryRow}>
+                      <span style={summaryLabel}>{extra.name}</span>
+                      <span>+${extra.price.toFixed(2)}</span>
+                    </div>
+                  );
+                })}
+
+                {binCount > 0 && (
+                  <div style={summaryRow}>
+                    <span style={summaryLabel}>
+                      Nettoyage complet des bacs à déchets et recyclage ({binCount} bac
+                      {binCount > 1 ? "s" : ""})
+                    </span>
+                    <span>+${binCleaningTotal.toFixed(2)}</span>
                   </div>
-                );
-              })}
-
-              {binCount > 0 && (
-                <div style={summaryRow}>
-                  <span style={summaryLabel}>
-                    Assainissement des bacs à déchets et recyclage ({binCount} bac
-                    {binCount > 1 ? "s" : ""})
-                  </span>
-                  <span>+${binCleaningTotal.toFixed(2)}</span>
-                </div>
-              )}
-  <div style={summaryRow}>
-    <span style={summaryLabel}>
-      Assainissement des bacs à déchets et recyclage ({binCount} bac
-      {binCount > 1 ? "s" : ""})
-    </span>
-    <span>+${binCleaningTotal.toFixed(2)}</span>
-  </div>
-)}
-
-</>
-)}
+                )}
+              </>
             )}
           </div>
 
@@ -503,57 +498,58 @@ const getCalendlyLinkFR = () => {
             </span>
           </div>
 
-         <div style={goldAccentBox}>
-  <h3 style={infoTitle}>💰 Politique de dépôt</h3>
-
-  <p style={infoText}>
-    Tous les rendez-vous nécessitent un{" "}
-    <span style={gold}>dépôt de 50 $</span>, déduit du total final.
-  </p>
-</div>
-
-<div style={goldAccentBox}>
-  <h3 style={infoTitle}>📅 Avis de réservation</h3>
-
-  <p style={infoText}>
-    Tous les rendez-vous doivent être réservés au minimum 24 heures à l'avance.
-    Si vous souhaitez un service le jour même, veuillez nous appeler afin de
-    vérifier les disponibilités. Les rendez-vous le jour même ne peuvent être
-    garantis.
-  </p>
-</div>
           <div style={goldAccentBox}>
-  <h3 style={infoTitle}>❌ Politique d’annulation</h3>
+            <h3 style={infoTitle}>💰 Politique de dépôt</h3>
 
-  <p style={infoText}>
-    Afin d’assurer une planification optimale et une disponibilité équitable
-    pour tous les clients, les rendez-vous doivent être annulés au moins{" "}
-    <span style={gold}>24 heures à l’avance</span> afin d’être admissibles
-    au remboursement complet du <span style={gold}>dépôt de 50 $</span>. Les
-    annulations effectuées dans les 24 heures précédant le rendez-vous ne
-    sont pas remboursables.
-  </p>
-</div>
+            <p style={infoText}>
+              Tous les rendez-vous nécessitent un{" "}
+              <span style={gold}>dépôt de 50 $</span>, déduit du total final.
+            </p>
+          </div>
 
-<div style={goldAccentBox}>
-  <h3 style={infoTitle}>🛡️ Notre garantie de satisfaction</h3>
+          <div style={goldAccentBox}>
+            <h3 style={infoTitle}>📅 Avis de réservation</h3>
 
-  <p style={infoText}>
-    Votre satisfaction est notre priorité. Avant notre départ, nous passerons en
-    revue le service complété avec vous afin de nous assurer qu'il répond à vos
-    attentes.
-  </p>
-</div>
+            <p style={infoText}>
+              Tous les rendez-vous doivent être réservés au minimum 24 heures à l'avance.
+              Si vous souhaitez un service le jour même, veuillez nous appeler afin de
+              vérifier les disponibilités. Les rendez-vous le jour même ne peuvent être
+              garantis.
+            </p>
+          </div>
 
-<a
-  href={getCalendlyLinkFR()}
-  target="_blank"
-  rel="noreferrer"
-  style={goldBtn}
->
-  Confirmer le rendez-vous
-</a>
-                  </div>
+          <div style={goldAccentBox}>
+            <h3 style={infoTitle}>❌ Politique d’annulation</h3>
+
+            <p style={infoText}>
+              Afin d’assurer une planification optimale et une disponibilité équitable
+              pour tous les clients, les rendez-vous doivent être annulés au moins{" "}
+              <span style={gold}>24 heures à l’avance</span> afin d’être admissibles
+              au remboursement complet du <span style={gold}>dépôt de 50 $</span>. Les
+              annulations effectuées dans les 24 heures précédant le rendez-vous ne
+              sont pas remboursables.
+            </p>
+          </div>
+
+          <div style={goldAccentBox}>
+            <h3 style={infoTitle}>🛡️ Notre garantie de satisfaction</h3>
+
+            <p style={infoText}>
+              Votre satisfaction est notre priorité. Avant notre départ, nous passerons en
+              revue le service complété avec vous afin de nous assurer qu'il répond à vos
+              attentes.
+            </p>
+          </div>
+
+          <a
+            href={getCalendlyLinkFR()}
+            target="_blank"
+            rel="noreferrer"
+            style={goldBtn}
+          >
+            Confirmer le rendez-vous
+          </a>
+        </div>
       </section>
     </div>
   );
@@ -641,9 +637,9 @@ const bookingSection = {
   padding: "100px 50px",
   display: "grid",
   gridTemplateColumns:
-  typeof window !== "undefined" && window.innerWidth <= 768
-    ? "1fr"
-    : "1.2fr 0.8fr",
+    typeof window !== "undefined" && window.innerWidth <= 768
+      ? "1fr"
+      : "1.2fr 0.8fr",
   gap: "40px",
 };
 
@@ -661,14 +657,13 @@ const totalBox = {
   border: "1px solid #d4af37",
   alignSelf: "start",
   position:
-  typeof window !== "undefined" && window.innerWidth <= 768
-    ? "relative"
-    : "sticky",
-
-top:
-  typeof window !== "undefined" && window.innerWidth <= 768
-    ? "0"
-    : "40px",
+    typeof window !== "undefined" && window.innerWidth <= 768
+      ? "relative"
+      : "sticky",
+  top:
+    typeof window !== "undefined" && window.innerWidth <= 768
+      ? "0"
+      : "40px",
 };
 
 const title = {
@@ -735,6 +730,7 @@ const extraCard = {
   justifyContent: "space-between",
   alignItems: "center",
 };
+
 const binOptionCard = {
   backgroundColor: "#0d0d0d",
   border: "1px solid rgba(255,255,255,0.06)",
@@ -763,6 +759,7 @@ const binHint = {
   fontSize: "12px",
   margin: "6px 0 0",
 };
+
 const activeOptionCard = {
   border: "1px solid #d4af37",
   boxShadow: "0 0 0 1px rgba(212,175,55,0.15) inset",
