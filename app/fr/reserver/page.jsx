@@ -607,16 +607,19 @@ export default function BookNow() {
     }
 
     .total-box-fr {
-      position: relative !important;
-      top: 0 !important;
-      width: 100% !important;
-      max-width: 100% !important;
-      min-width: 0 !important;
-      box-sizing: border-box !important;
-    }
-  }
-`}</style>
-  
+            position: relative !important;
+            top: 0 !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            min-width: 0 !important;
+            box-sizing: border-box !important;
+          }
+        }
+      `}</style>
+    </div>
+  );
+}
+
 /* STYLES */
 
 const goldAccentBox = {
