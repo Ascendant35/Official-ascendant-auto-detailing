@@ -166,7 +166,16 @@ export default function BookNow() {
   };
 
   return (
-    <div style={{ backgroundColor: "#0a0a0a", color: "#f5f5f5", minHeight: "100vh" }}>
+   <div
+  style={{
+    backgroundColor: "#0a0a0a",
+    color: "#f5f5f5",
+    minHeight: "100vh",
+    width: "100%",
+    maxWidth: "100%",
+    overflowX: "hidden",
+  }}
+>
       <Header lang="fr" />
 
       {/* HERO */}
