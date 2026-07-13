@@ -551,8 +551,6 @@ export default function BookNow() {
           </a>
         </div>
       </section>
-              </div>
-      </section>
 
       <style>{`
         @media (max-width: 768px) {
