@@ -242,7 +242,7 @@ export default function BookNow() {
       </section>
 
       {/* MAIN BOOKING SECTION */}
-      <section style={bookingSection}>
+     <section className="booking-section-fr" style={bookingSection}>
         <div style={bookingBox}>
           <h2 style={title}>Créer votre rendez-vous</h2>
           <p style={desc}>
@@ -252,7 +252,7 @@ export default function BookNow() {
           {/* SERVICE TYPE */}
           <div style={sectionSpacing}>
             <h3 style={subTitle}>Choisissez votre service</h3>
-            <div style={optionGrid}>
+            <div className="option-grid-fr" style={optionGrid}>
               {[
                 { id: "package", label: "Forfait complet" },
                 { id: "exterior", label: "Extérieur seulement" },
@@ -279,7 +279,7 @@ export default function BookNow() {
           {serviceType === "package" && (
             <div style={sectionSpacing}>
               <h3 style={subTitle}>Choisissez un forfait</h3>
-              <div style={optionGrid}>
+              <div className="option-grid-fr" style={optionGrid}>
                 {Object.entries(packagePrices).map(([key, pkg]) => {
                   const active = selectedPackage === key;
                   return (
@@ -302,7 +302,7 @@ export default function BookNow() {
           {/* VEHICLE */}
           <div style={sectionSpacing}>
             <h3 style={subTitle}>Type de véhicule</h3>
-            <div style={optionGrid}>
+            <div className="option-grid-fr" style={optionGrid}>
               {Object.entries(vehicleLabels).map(([key, label]) => {
                 const active = selectedVehicle === key;
 
@@ -341,7 +341,7 @@ export default function BookNow() {
           {/* EXTRAS */}
           <div style={sectionSpacing}>
             <h3 style={subTitle}>Options supplémentaires</h3>
-            <div style={extrasGrid}>
+            <div className="extras-grid-fr" style={extrasGrid}>
               {extras.map((extra) => {
                 const active = selectedExtras.includes(extra.id);
                 return (
@@ -404,7 +404,7 @@ export default function BookNow() {
         </div>
 
         {/* RIGHT BOX */}
-        <div style={totalBox}>
+        <div className="total-box-fr" style={totalBox}>
           <h2 style={title}>Votre total</h2>
 
           <div style={summarySection}>
@@ -551,6 +551,51 @@ export default function BookNow() {
           </a>
         </div>
       </section>
+              </div>
+      </section>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .booking-section-fr {
+            grid-template-columns: 1fr !important;
+            padding: 60px 20px !important;
+            gap: 24px !important;
+            width: 100% !important;
+            max-width: 100% !important;
+          }
+
+          .booking-section-fr > div {
+            width: 100% !important;
+            max-width: 100% !important;
+            min-width: 0 !important;
+          }
+
+          .option-grid-fr,
+          .extras-grid-fr {
+            grid-template-columns: 1fr !important;
+            width: 100% !important;
+            min-width: 0 !important;
+          }
+
+          .option-grid-fr button,
+          .extras-grid-fr button {
+            width: 100% !important;
+            max-width: 100% !important;
+            min-width: 0 !important;
+          }
+
+          .total-box-fr {
+            position: relative !important;
+            top: 0 !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            min-width: 0 !important;
+          }
+        }
+      `}</style>
+    </div>
+  );
+}
     </div>
   );
 }
@@ -636,10 +681,7 @@ const bookingSection = {
   margin: "0 auto",
   padding: "100px 50px",
   display: "grid",
-  gridTemplateColumns:
-    typeof window !== "undefined" && window.innerWidth <= 768
-      ? "1fr"
-      : "1.2fr 0.8fr",
+  gridTemplateColumns: "1.2fr 0.8fr",
   gap: "40px",
 };
 
@@ -656,14 +698,8 @@ const totalBox = {
   borderRadius: "28px",
   border: "1px solid #d4af37",
   alignSelf: "start",
-  position:
-    typeof window !== "undefined" && window.innerWidth <= 768
-      ? "relative"
-      : "sticky",
-  top:
-    typeof window !== "undefined" && window.innerWidth <= 768
-      ? "0"
-      : "40px",
+  position: "sticky",
+  top: "40px",
 };
 
 const title = {
@@ -689,19 +725,13 @@ const sectionSpacing = {
 
 const optionGrid = {
   display: "grid",
-  gridTemplateColumns:
-    typeof window !== "undefined" && window.innerWidth <= 768
-      ? "1fr"
-      : "repeat(3, 1fr)",
+  gridTemplateColumns: "repeat(3, 1fr)",
   gap: "16px",
 };
 
-const extrasGrid = {
+cconst extrasGrid = {
   display: "grid",
-  gridTemplateColumns:
-    typeof window !== "undefined" && window.innerWidth <= 768
-      ? "1fr"
-      : "repeat(2, 1fr)",
+  gridTemplateColumns: "repeat(2, 1fr)",
   gap: "16px",
 };
 
