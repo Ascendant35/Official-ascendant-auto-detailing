@@ -724,7 +724,7 @@ const optionGrid = {
   gap: "16px",
 };
 
-cconst extrasGrid = {
+const extrasGrid = {
   display: "grid",
   gridTemplateColumns: "repeat(2, 1fr)",
   gap: "16px",
