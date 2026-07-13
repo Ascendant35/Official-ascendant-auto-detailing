@@ -562,47 +562,60 @@ export default function BookNow() {
       </section>
 
       <style>{`
-        @media (max-width: 768px) {
-          .booking-section-fr {
-            grid-template-columns: 1fr !important;
-            padding: 60px 20px !important;
-            gap: 24px !important;
-            width: 100% !important;
-            max-width: 100% !important;
-          }
+  @media (max-width: 768px) {
+    html,
+    body {
+      width: 100% !important;
+      max-width: 100% !important;
+      overflow-x: hidden !important;
+    }
 
-          .booking-section-fr > div {
-            width: 100% !important;
-            max-width: 100% !important;
-            min-width: 0 !important;
-          }
+    .booking-section-fr {
+      grid-template-columns: minmax(0, 1fr) !important;
+      padding: 60px 20px !important;
+      gap: 24px !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      min-width: 0 !important;
+      box-sizing: border-box !important;
+      overflow: hidden !important;
+    }
 
-          .option-grid-fr,
-          .extras-grid-fr {
-            grid-template-columns: 1fr !important;
-            width: 100% !important;
-            min-width: 0 !important;
-          }
+    .booking-section-fr > div {
+      width: 100% !important;
+      max-width: 100% !important;
+      min-width: 0 !important;
+      box-sizing: border-box !important;
+    }
 
-          .option-grid-fr button,
-          .extras-grid-fr button {
-            width: 100% !important;
-            max-width: 100% !important;
-            min-width: 0 !important;
-          }
+    .option-grid-fr,
+    .extras-grid-fr {
+      grid-template-columns: minmax(0, 1fr) !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      min-width: 0 !important;
+      box-sizing: border-box !important;
+    }
 
-          .total-box-fr {
-            position: relative !important;
-            top: 0 !important;
-            width: 100% !important;
-            max-width: 100% !important;
-            min-width: 0 !important;
-          }
-        }
-      `}</style>
-    </div>
-  );
-}
+    .option-grid-fr button,
+    .extras-grid-fr button {
+      width: 100% !important;
+      max-width: 100% !important;
+      min-width: 0 !important;
+      box-sizing: border-box !important;
+      overflow-wrap: anywhere !important;
+    }
+
+    .total-box-fr {
+      position: relative !important;
+      top: 0 !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      min-width: 0 !important;
+      box-sizing: border-box !important;
+    }
+  }
+`}</style>
   
 /* STYLES */
 
