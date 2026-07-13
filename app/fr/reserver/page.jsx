@@ -596,10 +596,7 @@ export default function BookNow() {
     </div>
   );
 }
-    </div>
-  );
-}
-
+  
 /* STYLES */
 
 const goldAccentBox = {
